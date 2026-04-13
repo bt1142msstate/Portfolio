@@ -144,8 +144,8 @@
                             </div>
                             <p class="date">May 2021</p>
                         </div>
-                        <p class="detail">Decatur, MS</p>
-                        <p class="detail">Honors: Phi Theta Kappa, President's List, Dean's List, C++ Programming Award</p>
+                        <p class="detail">Decatur, MS | GPA: 3.85/4.0</p>
+                        <p class="detail">Honors: Phi Theta Kappa, Gamma Beta Phi, President's List, Dean's List, C++ Programming Award</p>
                     </article>
                 </div>
 
@@ -188,23 +188,6 @@
             </div>
         </section>
     </main>
-    <script>
-        (function () {
-            const printButton = document.getElementById("print-resume-button");
-            const shouldAutoPrint = new URLSearchParams(window.location.search).get("print") === "1";
-
-            if (printButton) {
-                printButton.addEventListener("click", function () {
-                    window.print();
-                });
-            }
-
-            if (shouldAutoPrint) {
-                window.addEventListener("load", function () {
-                    window.print();
-                }, { once: true });
-            }
-        }());
-    </script>
+    <script type="module" src="print.js"></script>
 </body>
 </html>
