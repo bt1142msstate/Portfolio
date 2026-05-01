@@ -24,7 +24,8 @@ body {
 }
 
 .page-break {
-    break-before: auto;
+    break-before: page;
+    page-break-before: always;
     padding-top: 0;
 }
 
@@ -46,10 +47,14 @@ h2 {
     margin-bottom: 0.08in;
     padding-top: 0;
     font-size: 9pt;
+    break-after: avoid-page;
+    page-break-after: avoid;
 }
 
 h3 {
     font-size: 10pt;
+    break-after: avoid-page;
+    page-break-after: avoid;
 }
 
 .summary {
@@ -59,6 +64,12 @@ h3 {
 
 .section {
     margin-top: 0.14in;
+}
+
+.entry-header,
+.project-subtitle {
+    break-after: avoid-page;
+    page-break-after: avoid;
 }
 
 .skills-grid,
@@ -72,11 +83,10 @@ h3 {
 }
 
 .two-column {
-    display: block;
-}
-
-.two-column > div + div {
-    margin-top: 0.16in;
+    display: grid;
+    grid-template-columns: 1.14fr 0.92fr;
+    gap: 0.18in;
+    align-items: start;
 }
 
 .entry,
@@ -87,9 +97,14 @@ h3 {
     page-break-inside: avoid;
 }
 
+.two-column > div {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+}
+
 .entry + .entry,
 .project + .project {
-    margin-top: 0.1in;
+    margin-top: 0.08in;
 }
 
 .entry-header {
@@ -108,6 +123,8 @@ ul {
     margin-top: 0.05in;
     margin-bottom: 0;
     padding-left: 0.16in;
+    break-before: avoid-page;
+    page-break-before: avoid;
 }
 
 li {
@@ -119,5 +136,5 @@ li + li {
 }
 
 .project {
-    padding: 0.09in 0.1in;
+    padding: 0.07in 0.09in;
 }
