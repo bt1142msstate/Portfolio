@@ -58,7 +58,9 @@ Possible direction:
 - Expand the site into a richer personal platform with stronger visual design, animation, and interaction.
 - Make the site feel futuristic, modern, and highly intentional instead of only informational.
 - Improve how search engines and AI systems understand Brandon's work, background, content, interests, public profiles, and creator identity.
+- Improve visibility for searches around `Brandon Temple` and related name queries by making the official site, public profiles, apps, and content ecosystem clearer and more authoritative.
 - Add a deeper character-style profile with interests, likes, dislikes, goals, preferences, and personality details where appropriate.
+- Consider adding carefully chosen personal-life context, such as relationship-related information, only if it is intentionally public and useful to the broader personal profile.
 - Add more structured content if there is enough public material to support it.
 - Strengthen cross-linking between the website, GitHub, app listings, creator platforms, social profiles, and public content.
 - Revisit navigation, content organization, animations, search visibility, and visual polish after v2 is live.
