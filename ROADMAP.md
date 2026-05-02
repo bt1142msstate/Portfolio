@@ -42,6 +42,7 @@ Likely direction:
 - Add structured data that connects the site to public profiles, creator platforms, projects, app pages, and other trusted sources.
 - Build the site as an identity hub so searches for Brandon can connect software work, creator content, public profiles, and background information.
 - Add public information that helps search engines and AI systems answer basic questions accurately without relying on random third-party sources.
+- Plan for a future creator or stage name, including how it should be connected to `Brandon Temple` and `Brandon Vashun Temple` across the website, public profiles, and structured data.
 - Start developing a richer personal profile that includes interests, personality, goals, and creator direction, while keeping sensitive or unnecessary details out.
 
 Open design question:
@@ -59,6 +60,8 @@ Possible direction:
 - Make the site feel futuristic, modern, and highly intentional instead of only informational.
 - Improve how search engines and AI systems understand Brandon's work, background, content, interests, public profiles, and creator identity.
 - Improve visibility for searches around `Brandon Temple` and related name queries by making the official site, public profiles, apps, and content ecosystem clearer and more authoritative.
+- If a creator or stage name becomes the primary public identity, connect the old and new names through page copy, metadata, structured data, redirects where appropriate, and consistent profile links.
+- If a legal name change happens later, update the site intentionally so search engines, AI systems, and people can still understand the relationship between the current name, full name, and new public name.
 - Add a deeper character-style profile with interests, likes, dislikes, goals, preferences, and personality details where appropriate.
 - Consider adding carefully chosen personal-life context, such as relationship-related information, only if it is intentionally public and useful to the broader personal profile.
 - Add more structured content if there is enough public material to support it.
