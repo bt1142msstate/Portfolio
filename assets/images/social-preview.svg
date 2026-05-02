@@ -34,17 +34,17 @@
   <text x="130" y="380" fill="#ffffff" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="800" letter-spacing="-4">Brandon Temple</text>
   <text x="134" y="432" fill="#cbd5e1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="500">Desktop tools, internal web apps, reporting systems,</text>
   <text x="134" y="471" fill="#cbd5e1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="500">workflow automation, and practical machine learning.</text>
-  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700" text-anchor="middle">
     <rect x="132" y="500" width="82" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
-    <text x="157" y="527" fill="#f8fafc">C#</text>
+    <text x="173" y="527" fill="#f8fafc">C#</text>
     <rect x="226" y="500" width="116" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
-    <text x="251" y="527" fill="#f8fafc">Python</text>
+    <text x="284" y="527" fill="#f8fafc">Python</text>
     <rect x="354" y="500" width="126" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
-    <text x="379" y="527" fill="#f8fafc">WinUI 3</text>
+    <text x="417" y="527" fill="#f8fafc">WinUI 3</text>
     <rect x="492" y="500" width="102" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
-    <text x="518" y="527" fill="#f8fafc">SQL</text>
-    <rect x="606" y="500" width="186" height="40" rx="20" fill="#2ee6a6" fill-opacity="0.16" stroke="#2ee6a6" stroke-opacity="0.28"/>
-    <text x="632" y="527" fill="#d8fff5">Machine Learning</text>
+    <text x="543" y="527" fill="#f8fafc">SQL</text>
+    <rect x="606" y="500" width="242" height="40" rx="20" fill="#2ee6a6" fill-opacity="0.16" stroke="#2ee6a6" stroke-opacity="0.28"/>
+    <text x="727" y="527" fill="#d8fff5">Machine Learning</text>
   </g>
-  <text x="1068" y="164" fill="#94a3b8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700" text-anchor="end">brandontemple.com</text>
+  <text x="946" y="273" fill="#cbd5e1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="700" text-anchor="middle">brandontemple.com</text>
 </svg>
