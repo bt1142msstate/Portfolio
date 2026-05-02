@@ -118,7 +118,7 @@ window.profileData = {
                 "President's List: Fall 2019, Spring 2020",
                 "Dean's List: Fall 2020",
                 "C++ Programming Award",
-                "Outstanding ECCC CS Student Award"
+                "Outstanding ECCC CS Student Award, awarded by Mississippi State University (custom cowbell)"
             ]
         }
     ],
