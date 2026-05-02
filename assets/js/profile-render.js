@@ -114,11 +114,11 @@
             "</svg>" +
             "<span>" + escapeHtml(data.contact.email) + "</span>" +
             "</a>" +
-            '<a href="' + escapeHtml(data.contact.githubUrl) + '" target="_blank" rel="noopener" class="contact-item">' +
+            '<a href="' + escapeHtml(data.contact.githubUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             githubIconSvg(24) +
             "<span>" + escapeHtml(data.contact.githubLabel) + "</span>" +
             "</a>" +
-            '<a href="' + escapeHtml(data.contact.instagramUrl) + '" target="_blank" rel="noopener" class="contact-item">' +
+            '<a href="' + escapeHtml(data.contact.instagramUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             instagramIconSvg(24) +
             "<span>" + escapeHtml(data.contact.instagramLabel) + "</span>" +
             "</a>" +
