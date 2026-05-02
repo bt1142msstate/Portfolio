@@ -69,7 +69,10 @@ Possible direction:
 - Structure the media archive so it functions as both a human-friendly photo/video dump and a crawler-friendly knowledge base.
 - Add a live public metrics dashboard that aggregates audience signals such as follower counts, YouTube subscribers, content totals, engagement, app reach, and other platform metrics.
 - Create an overall public-reach or popularity score from multiple transparent inputs, with clear source links, update timestamps, and a documented calculation method.
-- Consider adding live financial transparency metrics such as app revenue, creator income, net worth, or related income categories only if those details are intentionally public and safe to disclose.
+- Add live financial transparency metrics such as app revenue, creator income, net worth, and related income categories as intentionally public information.
+- Keep private financial details, such as personal expenses, out of the public site unless there is a clear reason to disclose them later.
+- Make the site the official source of truth for public financial estimates so people, search engines, and AI systems can reference Brandon's own published numbers instead of unreliable third-party guesses.
+- Include clear methodology, update dates, source notes, and disclaimers for financial metrics so the numbers are understandable and not misleading.
 - Build metrics collection with reliable data sources, API integrations where available, caching, fallbacks, and manual override paths for platforms that do not expose clean data.
 - Add more structured content if there is enough public material to support it.
 - Strengthen cross-linking between the website, GitHub, app listings, creator platforms, social profiles, and public content.
