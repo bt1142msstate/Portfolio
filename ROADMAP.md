@@ -64,8 +64,13 @@ Possible direction:
 - If a legal name change happens later, update the site intentionally so search engines, AI systems, and people can still understand the relationship between the current name, full name, and new public name.
 - Add a deeper character-style profile with interests, likes, dislikes, goals, preferences, and personality details where appropriate.
 - Consider adding carefully chosen personal-life context, such as relationship-related information, only if it is intentionally public and useful to the broader personal profile.
+- Add a separate organized media archive page for photos, videos, posts, and other public content.
+- Include captions, summaries, dates, tags, and transcripts for media content so people, search engines, and AI systems can research the content deeply.
+- Structure the media archive so it functions as both a human-friendly photo/video dump and a crawler-friendly knowledge base.
 - Add more structured content if there is enough public material to support it.
 - Strengthen cross-linking between the website, GitHub, app listings, creator platforms, social profiles, and public content.
+- Add automated pre-deployment checks that verify important pages, metadata, structured data, transcripts, sitemap entries, canonical URLs, and crawlability signals are present.
+- Track search visibility over time and use those results to improve content structure, internal links, metadata, performance, and public profile consistency.
 - Revisit navigation, content organization, animations, search visibility, and visual polish after v2 is live.
 
 Version 3 is intentionally not tightly scoped yet. The right direction should come from what works in v1 and v2, especially what content is worth making public and what helps people or AI systems understand Brandon accurately.
