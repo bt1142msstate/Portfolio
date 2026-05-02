@@ -67,6 +67,10 @@ Possible direction:
 - Add a separate organized media archive page for photos, videos, posts, and other public content.
 - Include captions, summaries, dates, tags, and transcripts for media content so people, search engines, and AI systems can research the content deeply.
 - Structure the media archive so it functions as both a human-friendly photo/video dump and a crawler-friendly knowledge base.
+- Add a live public metrics dashboard that aggregates audience signals such as follower counts, YouTube subscribers, content totals, engagement, app reach, and other platform metrics.
+- Create an overall public-reach or popularity score from multiple transparent inputs, with clear source links, update timestamps, and a documented calculation method.
+- Consider adding live financial transparency metrics such as app revenue, creator income, net worth, or related income categories only if those details are intentionally public and safe to disclose.
+- Build metrics collection with reliable data sources, API integrations where available, caching, fallbacks, and manual override paths for platforms that do not expose clean data.
 - Add more structured content if there is enough public material to support it.
 - Strengthen cross-linking between the website, GitHub, app listings, creator platforms, social profiles, and public content.
 - Add automated pre-deployment checks that verify important pages, metadata, structured data, transcripts, sitemap entries, canonical URLs, and crawlability signals are present.
