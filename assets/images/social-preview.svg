@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Brandon Temple portfolio preview">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#141a2a"/>
+      <stop offset="0.48" stop-color="#09070d"/>
+      <stop offset="1" stop-color="#0f3b3c"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1005 108) rotate(129.8) scale(382 442)">
+      <stop stop-color="#2ee6a6" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#2ee6a6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(155 560) rotate(-24.4) scale(410 268)">
+      <stop stop-color="#7dd3fc" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="112" y1="96" x2="1052" y2="558" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="1200" height="630" fill="url(#glowA)"/>
+  <rect width="1200" height="630" fill="url(#glowB)"/>
+  <path d="M946 82 1128 264 946 446 764 264 946 82Z" fill="none" stroke="#2ee6a6" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M1002 134 1076 208 1002 282 928 208 1002 134Z" fill="#2ee6a6" fill-opacity="0.12"/>
+  <path d="M102 477c72-37 149-32 230 15 72 41 152 43 240 4" fill="none" stroke="#7dd3fc" stroke-opacity="0.22" stroke-width="3"/>
+  <rect x="92" y="84" width="1016" height="462" rx="36" fill="url(#panel)" stroke="#ffffff" stroke-opacity="0.15"/>
+  <rect x="132" y="124" width="112" height="112" rx="28" fill="#09070d" stroke="#2ee6a6" stroke-opacity="0.45" stroke-width="2"/>
+  <text x="160" y="196" fill="#f8fafc" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="48" font-weight="800" letter-spacing="-3">BT</text>
+  <text x="132" y="296" fill="#2ee6a6" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700" letter-spacing="4">SOFTWARE ENGINEER</text>
+  <text x="130" y="380" fill="#ffffff" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="800" letter-spacing="-4">Brandon Temple</text>
+  <text x="134" y="432" fill="#cbd5e1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="500">Desktop tools, internal web apps, reporting systems,</text>
+  <text x="134" y="471" fill="#cbd5e1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="500">workflow automation, and practical machine learning.</text>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">
+    <rect x="132" y="500" width="82" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="157" y="527" fill="#f8fafc">C#</text>
+    <rect x="226" y="500" width="116" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="251" y="527" fill="#f8fafc">Python</text>
+    <rect x="354" y="500" width="126" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="379" y="527" fill="#f8fafc">WinUI 3</text>
+    <rect x="492" y="500" width="102" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="518" y="527" fill="#f8fafc">SQL</text>
+    <rect x="606" y="500" width="186" height="40" rx="20" fill="#2ee6a6" fill-opacity="0.16" stroke="#2ee6a6" stroke-opacity="0.28"/>
+    <text x="632" y="527" fill="#d8fff5">Machine Learning</text>
+  </g>
+  <text x="1068" y="164" fill="#94a3b8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700" text-anchor="end">brandontemple.com</text>
+</svg>
