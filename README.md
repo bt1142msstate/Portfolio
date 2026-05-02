@@ -8,7 +8,7 @@ Live site: [www.brandontemple.com](https://www.brandontemple.com)
 
 - Professional experience, education, and contact information
 - Featured project section covering `MetaTable`, `HTMLConverter`, `Query`, `Ady Resolver`, and `MobileFlex`
-- Downloadable resume view optimized for print/PDF export
+- Static resume PDF download generated from the shared resume page
 - Responsive single-page layout with a dark theme
 
 ## Project Structure
@@ -17,6 +17,7 @@ Live site: [www.brandontemple.com](https://www.brandontemple.com)
 - `assets/css/site.css` - site styling
 - `assets/js/site.js` - navigation and UI behavior
 - `resume/index.html` - printable resume view
+- `resume/brandon-temple-resume.pdf` - canonical PDF download
 - `resume/resume.css` - resume styling
 - `resume/resume-print.css` - print-specific resume styles
 
