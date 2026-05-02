@@ -24,6 +24,13 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         if (!href) {
             return;
         }
+        if (href === "#") {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+            return;
+        }
         var target = document.querySelector(href);
         if (target) {
             var offsetTop = target.offsetTop - 80;
