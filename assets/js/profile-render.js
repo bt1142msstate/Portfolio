@@ -14,6 +14,14 @@
             "</svg>";
     }
 
+    function instagramIconSvg(size) {
+        return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+            '<rect x="3" y="3" width="18" height="18" rx="5"/>' +
+            '<circle cx="12" cy="12" r="4"/>' +
+            '<circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>' +
+            "</svg>";
+    }
+
     function renderList(items) {
         return items.map(function (item) {
             return "<li>" + escapeHtml(item) + "</li>";
@@ -109,6 +117,10 @@
             '<a href="' + escapeHtml(data.contact.githubUrl) + '" target="_blank" rel="noopener" class="contact-item">' +
             githubIconSvg(24) +
             "<span>" + escapeHtml(data.contact.githubLabel) + "</span>" +
+            "</a>" +
+            '<a href="' + escapeHtml(data.contact.instagramUrl) + '" target="_blank" rel="noopener" class="contact-item">' +
+            instagramIconSvg(24) +
+            "<span>" + escapeHtml(data.contact.instagramLabel) + "</span>" +
             "</a>" +
             '<div class="contact-item">' +
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +

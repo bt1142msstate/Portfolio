@@ -3,7 +3,9 @@ window.profileData = {
         location: "Starkville, MS",
         email: "bt1142@msstate.edu",
         githubUrl: "https://github.com/bt1142msstate",
-        githubLabel: "github.com/bt1142msstate"
+        githubLabel: "github.com/bt1142msstate",
+        instagramUrl: "https://www.instagram.com/brandonvtemple/",
+        instagramLabel: "instagram.com/brandonvtemple"
     },
     site: {
         about: [
