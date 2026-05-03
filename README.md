@@ -9,7 +9,7 @@ Live site: [www.brandontemple.com](https://www.brandontemple.com)
 - Professional experience, education, and contact information
 - Featured project section covering `MetaTable`, `HTMLConverter`, `Query`, `Ady Resolver`, and `connect4-ai`
 - Static resume PDF download generated from the shared resume page
-- Crawler-friendly static HTML generated from the shared profile data
+- Shared portfolio and resume content managed from `assets/js/profile-data.js`
 - Responsive single-page layout with a dark theme
 
 ## Project Structure
@@ -18,13 +18,11 @@ Live site: [www.brandontemple.com](https://www.brandontemple.com)
 - `assets/css/site.css` - site styling
 - `assets/js/site.js` - navigation and UI behavior
 - `assets/js/profile-data.js` - shared portfolio and resume content source
+- `assets/js/profile-render.js` - renders shared content into the site and resume
 - `resume/index.html` - printable resume view
 - `resume/brandon-temple-resume.pdf` - canonical PDF download
 - `resume/resume.css` - resume styling
 - `resume/resume-print.css` - print-specific resume styles
-- `llms.txt` - AI-readable site summary
-- `tools/render-static-content.js` - renders crawlable HTML from shared profile data
-- `tools/seo-audit.js` - validates key SEO and crawlability requirements
 
 ## Local Preview
 
@@ -35,17 +33,3 @@ python3 -m http.server 8000
 ```
 
 Then open `http://127.0.0.1:8000`.
-
-## Content And SEO Checks
-
-After editing `assets/js/profile-data.js`, regenerate the static HTML fallbacks:
-
-```bash
-node tools/render-static-content.js
-```
-
-Before deploying, run the crawlability audit:
-
-```bash
-node tools/seo-audit.js
-```
