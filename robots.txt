@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.brandontemple.com/sitemap.xml
+Sitemap: https://brandontemple.com/sitemap.xml

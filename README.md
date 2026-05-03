@@ -2,7 +2,7 @@
 
 Personal portfolio site for Brandon Temple, focused on software engineering work across desktop applications, internal tooling, reporting workflows, and practical machine learning projects.
 
-Live site: [www.brandontemple.com](https://www.brandontemple.com)
+Live site: [brandontemple.com](https://brandontemple.com)
 
 ## Highlights
 

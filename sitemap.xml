@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.brandontemple.com/</loc>
+    <loc>https://brandontemple.com/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.brandontemple.com/assets/images/brandon-profile-photo.jpg</image:loc>
+      <image:loc>https://brandontemple.com/assets/images/brandon-profile-photo.jpg</image:loc>
       <image:title>Brandon Temple profile image</image:title>
       <image:caption>Illustrated portrait of Brandon Temple</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.brandontemple.com/assets/images/social-preview.png</image:loc>
+      <image:loc>https://brandontemple.com/assets/images/social-preview.png</image:loc>
       <image:title>Brandon Temple software engineer portfolio preview</image:title>
       <image:caption>Social preview image for Brandon Temple's software engineer portfolio</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.brandontemple.com/resume/</loc>
+    <loc>https://brandontemple.com/resume/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://www.brandontemple.com/assets/images/social-preview.png</image:loc>
+      <image:loc>https://brandontemple.com/assets/images/social-preview.png</image:loc>
       <image:title>Brandon Temple resume preview</image:title>
       <image:caption>Social preview image for Brandon Temple's software engineer resume</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.brandontemple.com/resume/brandon-temple-resume.pdf</loc>
+    <loc>https://brandontemple.com/resume/brandon-temple-resume.pdf</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
