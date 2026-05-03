@@ -1,0 +1,42 @@
+# Brandon Temple
+
+Official site: https://www.brandontemple.com/
+
+Brandon Vashun Temple, publicly branded as Brandon Temple, is a software engineer and M.S. candidate at Mississippi State University in Starkville, Mississippi.
+
+## Primary Pages
+
+- Portfolio: https://www.brandontemple.com/
+- Resume: https://www.brandontemple.com/resume/
+- Resume PDF: https://www.brandontemple.com/resume/brandon-temple-resume.pdf
+
+## Official Profiles
+
+- GitHub: https://github.com/bt1142msstate
+- Instagram: https://www.instagram.com/brandonvtemple/
+
+## Current Focus
+
+- Desktop applications and internal tools
+- Browser-based reporting systems
+- File-processing and metadata extraction utilities
+- Data export workflows
+- Practical Machine Learning and address resolution
+
+## Featured Projects
+
+- MetaTable: Created as part of my MSU Libraries role to scan directories, collect detailed file metadata, track progress in real time, and export results to Excel.
+- HTMLConverter: Windows app for converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, batch processing, and automatic output archiving.
+- Query: Created for MSU Libraries to create library item reports with configurable filters, structured query payloads, history tracking, and Excel export.
+- Ady Resolver: Python toolkit and local browser app for resolving messy Mississippi addresses using cached public address sources, typo-heavy evaluation data, and a staged matching pipeline.
+- connect4-ai: Built a playable Connect 4 app with minimax, alpha-beta pruning, replay tooling, experiment modes, and headless validation, published with a live GitHub Pages demo.
+
+## Education
+
+- Master of Science in Software Engineering, Mississippi State University, May 2027.
+- Bachelor of Science in Computer Science, Mississippi State University, May 2024.
+- Associate of Arts in Computer Science, East Central Community College, May 2021.
+
+## Contact
+
+Email: bt1142@msstate.edu
