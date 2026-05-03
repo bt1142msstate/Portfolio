@@ -4,10 +4,13 @@ var navbar = document.querySelector(".nav-container");
 var themeStyles = getComputedStyle(document.documentElement);
 var navBackground = themeStyles.getPropertyValue("--nav-bg").trim();
 var navBackgroundStrong = themeStyles.getPropertyValue("--nav-bg-strong").trim();
+var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 if (mobileMenuToggle && navLinks) {
     mobileMenuToggle.addEventListener("click", function () {
+        var isExpanded = mobileMenuToggle.getAttribute("aria-expanded") === "true";
         mobileMenuToggle.classList.toggle("active");
         navLinks.classList.toggle("active");
+        mobileMenuToggle.setAttribute("aria-expanded", String(!isExpanded));
     });
 }
 var navLinkItems = document.querySelectorAll(".nav-links a");
@@ -15,6 +18,7 @@ navLinkItems.forEach(function (link) {
     link.addEventListener("click", function () {
         mobileMenuToggle === null || mobileMenuToggle === void 0 ? void 0 : mobileMenuToggle.classList.remove("active");
         navLinks === null || navLinks === void 0 ? void 0 : navLinks.classList.remove("active");
+        mobileMenuToggle === null || mobileMenuToggle === void 0 ? void 0 : mobileMenuToggle.setAttribute("aria-expanded", "false");
     });
 });
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -27,16 +31,19 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         if (href === "#") {
             window.scrollTo({
                 top: 0,
-                behavior: "smooth",
+                behavior: prefersReducedMotion ? "auto" : "smooth",
             });
             return;
         }
         var target = document.querySelector(href);
         if (target) {
             var offsetTop = target.offsetTop - 80;
+            if (target.id === "main-content") {
+                target.focus({ preventScroll: true });
+            }
             window.scrollTo({
                 top: offsetTop,
-                behavior: "smooth",
+                behavior: prefersReducedMotion ? "auto" : "smooth",
             });
         }
     });
