@@ -8,9 +8,13 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.brandontemple.com/assets/images/brandon-profile-photo.jpg</image:loc>
+      <image:title>Brandon Temple profile image</image:title>
+      <image:caption>Illustrated portrait of Brandon Temple</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.brandontemple.com/assets/images/social-preview.png</image:loc>
+      <image:title>Brandon Temple software engineer portfolio preview</image:title>
+      <image:caption>Social preview image for Brandon Temple's software engineer portfolio</image:caption>
     </image:image>
   </url>
   <url>
@@ -20,6 +24,8 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.brandontemple.com/assets/images/social-preview.png</image:loc>
+      <image:title>Brandon Temple resume preview</image:title>
+      <image:caption>Social preview image for Brandon Temple's software engineer resume</image:caption>
     </image:image>
   </url>
   <url>

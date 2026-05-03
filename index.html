@@ -9,6 +9,8 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#09070d">
     <link rel="canonical" href="https://www.brandontemple.com/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" href="/assets/images/favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
     <meta property="og:type" content="profile">
@@ -32,53 +34,99 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Brandon Vashun Temple",
-        "givenName": "Brandon",
-        "additionalName": "Vashun",
-        "familyName": "Temple",
-        "alternateName": [
-            "Brandon Temple",
-            "brandonvtemple",
-            "bt1142msstate"
-        ],
-        "url": "https://www.brandontemple.com/",
-        "image": "https://www.brandontemple.com/assets/images/brandon-profile-photo.jpg",
-        "email": "mailto:bt1142@msstate.edu",
-        "jobTitle": "Software Engineer",
-        "description": "Software engineer and M.S. candidate at Mississippi State University building desktop tools, internal web apps, reporting systems, data export workflows, and practical machine learning projects.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Starkville",
-            "addressRegion": "MS",
-            "addressCountry": "US"
-        },
-        "alumniOf": [
+        "@graph": [
             {
-                "@type": "CollegeOrUniversity",
-                "name": "Mississippi State University"
+                "@type": "Person",
+                "@id": "https://www.brandontemple.com/#brandon-temple",
+                "name": "Brandon Vashun Temple",
+                "givenName": "Brandon",
+                "additionalName": "Vashun",
+                "familyName": "Temple",
+                "alternateName": [
+                    "Brandon Temple",
+                    "brandonvtemple",
+                    "bt1142msstate"
+                ],
+                "url": "https://www.brandontemple.com/",
+                "image": {
+                    "@id": "https://www.brandontemple.com/#profile-image"
+                },
+                "email": "mailto:bt1142@msstate.edu",
+                "jobTitle": "Software Engineer",
+                "description": "Software engineer and M.S. candidate at Mississippi State University building desktop tools, internal web apps, reporting systems, data export workflows, and practical machine learning projects.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Starkville",
+                    "addressRegion": "MS",
+                    "addressCountry": "US"
+                },
+                "alumniOf": [
+                    {
+                        "@type": "CollegeOrUniversity",
+                        "name": "Mississippi State University"
+                    },
+                    {
+                        "@type": "CollegeOrUniversity",
+                        "name": "East Central Community College"
+                    }
+                ],
+                "sameAs": [
+                    "https://github.com/bt1142msstate",
+                    "https://www.instagram.com/brandonvtemple/"
+                ],
+                "knowsAbout": [
+                    "C#",
+                    "Python",
+                    "JavaScript",
+                    ".NET",
+                    "WPF",
+                    "WinUI 3",
+                    "SQL",
+                    "Machine Learning",
+                    "Address Resolution",
+                    "Reporting Tools",
+                    "Workflow Automation"
+                ]
             },
             {
-                "@type": "CollegeOrUniversity",
-                "name": "East Central Community College"
+                "@type": "ImageObject",
+                "@id": "https://www.brandontemple.com/#profile-image",
+                "url": "https://www.brandontemple.com/assets/images/brandon-profile-photo.jpg",
+                "contentUrl": "https://www.brandontemple.com/assets/images/brandon-profile-photo.jpg",
+                "width": 487,
+                "height": 487,
+                "caption": "Illustrated portrait of Brandon Temple",
+                "representativeOfPage": true
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://www.brandontemple.com/#website",
+                "url": "https://www.brandontemple.com/",
+                "name": "Brandon Temple",
+                "publisher": {
+                    "@id": "https://www.brandontemple.com/#brandon-temple"
+                }
+            },
+            {
+                "@type": "ProfilePage",
+                "@id": "https://www.brandontemple.com/#webpage",
+                "url": "https://www.brandontemple.com/",
+                "name": "Brandon Temple | Software Engineer Portfolio",
+                "description": "Official portfolio for Brandon Vashun Temple, a Mississippi State M.S. candidate building desktop tools, reporting apps, automation workflows, and practical ML projects.",
+                "isPartOf": {
+                    "@id": "https://www.brandontemple.com/#website"
+                },
+                "about": {
+                    "@id": "https://www.brandontemple.com/#brandon-temple"
+                },
+                "mainEntity": {
+                    "@id": "https://www.brandontemple.com/#brandon-temple"
+                },
+                "primaryImageOfPage": {
+                    "@id": "https://www.brandontemple.com/#profile-image"
+                },
+                "thumbnailUrl": "https://www.brandontemple.com/assets/images/brandon-profile-photo.jpg"
             }
-        ],
-        "sameAs": [
-            "https://github.com/bt1142msstate",
-            "https://www.instagram.com/brandonvtemple/"
-        ],
-        "knowsAbout": [
-            "C#",
-            "Python",
-            "JavaScript",
-            ".NET",
-            "WPF",
-            "WinUI 3",
-            "SQL",
-            "Machine Learning",
-            "Address Resolution",
-            "Reporting Tools",
-            "Workflow Automation"
         ]
     }
     </script>
