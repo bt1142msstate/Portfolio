@@ -158,13 +158,33 @@ a {
     width: 100%;
 }
 
+.hero-photo-shell {
+    width: 148px;
+    height: 148px;
+    margin: 0 auto 1.5rem;
+    padding: 0.45rem;
+    border-radius: 34px;
+    background:
+        linear-gradient(145deg, rgba(125, 199, 255, 0.3), rgba(207, 84, 100, 0.26)),
+        rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.38);
+}
+
+.hero-profile-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 26px;
+}
+
 .hero-title {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     letter-spacing: -0.03em;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    animation: fadeInUp 0.8s ease;
 }
 
 .hero-subtitle {
@@ -172,23 +192,22 @@ a {
     font-weight: 500;
     margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.9);
-    animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
 .hero-description {
     font-size: 1.125rem;
-    margin-bottom: 2rem;
+    max-width: 680px;
+    margin: 0 auto 2rem;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.8;
-    animation: fadeInUp 0.8s ease 0.4s backwards;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 2rem;
-    animation: fadeInUp 0.8s ease 0.6s backwards;
+    max-width: 440px;
+    margin: 0 auto 2rem;
 }
 
 .btn {
@@ -230,7 +249,6 @@ a {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    animation: fadeInUp 0.8s ease 0.8s backwards;
 }
 
 .hero-social a {
@@ -670,6 +688,16 @@ a {
     .hero-title {
         font-size: 2.5rem;
     }
+
+    .hero-photo-shell {
+        width: 128px;
+        height: 128px;
+        border-radius: 30px;
+    }
+
+    .hero-profile-image {
+        border-radius: 22px;
+    }
     
     .hero-subtitle {
         font-size: 1.25rem;
@@ -678,6 +706,7 @@ a {
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
+        max-width: 360px;
     }
 
     .btn {
@@ -691,6 +720,7 @@ a {
     .hero-description {
         font-size: 1rem;
         line-height: 1.7;
+        max-width: 360px;
     }
     
     .section-title {
@@ -750,12 +780,23 @@ a {
         font-size: 2rem;
     }
 
+    .hero-photo-shell {
+        width: 112px;
+        height: 112px;
+        margin-bottom: 1.2rem;
+    }
+
     .hero-subtitle {
         font-size: 1.05rem;
     }
 
     .hero-content {
         padding: 2.5rem 1rem;
+    }
+
+    .hero-description,
+    .hero-buttons {
+        max-width: 330px;
     }
     
     .section {
