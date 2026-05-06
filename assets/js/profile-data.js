@@ -5,7 +5,9 @@ window.profileData = {
         githubUrl: "https://github.com/bt1142msstate",
         githubLabel: "github.com/bt1142msstate",
         instagramUrl: "https://www.instagram.com/brandonvtemple/",
-        instagramLabel: "instagram.com/brandonvtemple"
+        instagramLabel: "instagram.com/brandonvtemple",
+        indeedUrl: "https://profile.indeed.com/p/nvwkkmq",
+        indeedLabel: "profile.indeed.com/p/nvwkkmq"
     },
     site: {
         about: [

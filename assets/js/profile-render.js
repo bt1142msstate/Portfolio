@@ -22,6 +22,14 @@
             "</svg>";
     }
 
+    function indeedIconSvg(size) {
+        return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">' +
+            '<circle cx="12" cy="5" r="1.8" fill="currentColor" stroke="none"/>' +
+            '<path d="M12 10v9"/>' +
+            '<path d="M8.5 12.5c1-1.2 2.2-1.8 3.5-1.8s2.5.6 3.5 1.8"/>' +
+            "</svg>";
+    }
+
     function renderList(items) {
         return items.map(function (item) {
             return "<li>" + escapeHtml(item) + "</li>";
@@ -122,6 +130,10 @@
             instagramIconSvg(24) +
             "<span>" + escapeHtml(data.contact.instagramLabel) + "</span>" +
             "</a>" +
+            '<a href="' + escapeHtml(data.contact.indeedUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
+            indeedIconSvg(24) +
+            "<span>" + escapeHtml(data.contact.indeedLabel) + "</span>" +
+            "</a>" +
             '<div class="contact-item">' +
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">' +
             '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>' +
@@ -148,7 +160,8 @@
         contact.innerHTML =
             "<p>" + escapeHtml(data.contact.location) + "</p>" +
             '<p><a href="mailto:' + escapeHtml(data.contact.email) + '">' + escapeHtml(data.contact.email) + "</a></p>" +
-            '<p><a href="' + escapeHtml(data.contact.githubUrl) + '">' + escapeHtml(data.contact.githubLabel) + "</a></p>";
+            '<p><a href="' + escapeHtml(data.contact.githubUrl) + '">' + escapeHtml(data.contact.githubLabel) + "</a></p>" +
+            '<p><a href="' + escapeHtml(data.contact.indeedUrl) + '">' + escapeHtml(data.contact.indeedLabel) + "</a></p>";
 
         skills.innerHTML = data.resume.skills.map(function (group) {
             return "<p><span>" + escapeHtml(group.label) + "</span> " + escapeHtml(group.value) + "</p>";
