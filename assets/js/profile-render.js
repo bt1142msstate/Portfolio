@@ -130,19 +130,19 @@
             "</a>" +
             '<a href="' + escapeHtml(data.contact.githubUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             githubIconSvg(24) +
-            "<span>" + escapeHtml(data.contact.githubLabel) + "</span>" +
+            "<span>GitHub</span>" +
             "</a>" +
             '<a href="' + escapeHtml(data.contact.linkedinUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             linkedinIconSvg(24) +
-            "<span>" + escapeHtml(data.contact.linkedinLabel) + "</span>" +
+            "<span>LinkedIn</span>" +
             "</a>" +
             '<a href="' + escapeHtml(data.contact.instagramUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             instagramIconSvg(24) +
-            "<span>" + escapeHtml(data.contact.instagramLabel) + "</span>" +
+            "<span>Instagram</span>" +
             "</a>" +
             '<a href="' + escapeHtml(data.contact.indeedUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             indeedIconSvg(24) +
-            "<span>" + escapeHtml(data.contact.indeedLabel) + "</span>" +
+            "<span>Indeed</span>" +
             "</a>" +
             '<div class="contact-item">' +
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">' +
