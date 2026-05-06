@@ -4,6 +4,8 @@ window.profileData = {
         email: "bt1142@msstate.edu",
         githubUrl: "https://github.com/bt1142msstate",
         githubLabel: "github.com/bt1142msstate",
+        linkedinUrl: "https://www.linkedin.com/in/brandon-temple-763619407/",
+        linkedinLabel: "linkedin.com/in/brandon-temple-763619407",
         instagramUrl: "https://www.instagram.com/brandonvtemple/",
         instagramLabel: "instagram.com/brandonvtemple",
         indeedUrl: "https://profile.indeed.com/p/nvwkkmq",

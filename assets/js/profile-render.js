@@ -14,6 +14,12 @@
             "</svg>";
     }
 
+    function linkedinIconSvg(size) {
+        return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">' +
+            '<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.25 8.25h4.5V23h-4.5V8.25zM8 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-7.24c0-1.73-.03-3.95-2.4-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8V8.25z"/>' +
+            "</svg>";
+    }
+
     function instagramIconSvg(size) {
         return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">' +
             '<rect x="3" y="3" width="18" height="18" rx="5"/>' +
@@ -126,6 +132,10 @@
             githubIconSvg(24) +
             "<span>" + escapeHtml(data.contact.githubLabel) + "</span>" +
             "</a>" +
+            '<a href="' + escapeHtml(data.contact.linkedinUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
+            linkedinIconSvg(24) +
+            "<span>" + escapeHtml(data.contact.linkedinLabel) + "</span>" +
+            "</a>" +
             '<a href="' + escapeHtml(data.contact.instagramUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             instagramIconSvg(24) +
             "<span>" + escapeHtml(data.contact.instagramLabel) + "</span>" +
@@ -161,6 +171,7 @@
             "<p>" + escapeHtml(data.contact.location) + "</p>" +
             '<p><a href="mailto:' + escapeHtml(data.contact.email) + '">' + escapeHtml(data.contact.email) + "</a></p>" +
             '<p><a href="' + escapeHtml(data.contact.githubUrl) + '">' + escapeHtml(data.contact.githubLabel) + "</a></p>" +
+            '<p><a href="' + escapeHtml(data.contact.linkedinUrl) + '">' + escapeHtml(data.contact.linkedinLabel) + "</a></p>" +
             '<p><a href="' + escapeHtml(data.contact.indeedUrl) + '">' + escapeHtml(data.contact.indeedLabel) + "</a></p>";
 
         skills.innerHTML = data.resume.skills.map(function (group) {
