@@ -69,6 +69,8 @@ Possible direction:
 - Structure the media archive so it functions as both a human-friendly photo/video dump and a crawler-friendly knowledge base.
 - Add a live public metrics dashboard that aggregates audience signals such as follower counts, YouTube subscribers, content totals, engagement, app reach, and other platform metrics.
 - Create an overall public-reach or popularity score from multiple transparent inputs, with clear source links, update timestamps, and a documented calculation method.
+- Pull in search and discovery metrics where available, including how often `Brandon Temple` is searched, how many people visit the site, which pages they visit, and how the site ranks for important name and identity searches over time.
+- Track public name visibility with a clear dashboard showing search impressions, traffic trends, click-through behavior, and ranking movement for searches such as `Brandon Temple`, `Brandon Vashun Temple`, future creator or stage names, and related public-profile queries.
 - Add live financial transparency metrics such as app revenue, creator income, net worth, and related income categories as intentionally public information.
 - Keep private financial details, such as personal expenses, out of the public site unless there is a clear reason to disclose them later.
 - Make the site the official source of truth for public financial estimates so people, search engines, and AI systems can reference Brandon's own published numbers instead of unreliable third-party guesses.
