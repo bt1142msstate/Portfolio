@@ -76,6 +76,8 @@ Possible direction:
 - Make the site the official source of truth for public financial estimates so people, search engines, and AI systems can reference Brandon's own published numbers instead of unreliable third-party guesses.
 - Include clear methodology, update dates, source notes, and disclaimers for financial metrics so the numbers are understandable and not misleading.
 - Build metrics collection with reliable data sources, API integrations where available, caching, fallbacks, and manual override paths for platforms that do not expose clean data.
+- Add a public challenges, jobs, or bounties section where people can view tasks they can complete for money, such as content challenges, research help, community tasks, app-related jobs, or other paid opportunities.
+- Include clear rules, payout amounts, deadlines, submission requirements, review status, completed examples, payment terms, and moderation/fraud-prevention controls for any paid challenges or jobs.
 - Add more structured content if there is enough public material to support it.
 - Strengthen cross-linking between the website, GitHub, app listings, creator platforms, social profiles, and public content.
 - Add automated pre-deployment checks that verify important pages, metadata, structured data, transcripts, sitemap entries, canonical URLs, and crawlability signals are present.
