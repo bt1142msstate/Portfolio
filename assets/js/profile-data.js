@@ -33,44 +33,43 @@ window.profileData = {
         ]
     },
     resume: {
-        summary: "Software engineer and M.S. candidate building practical desktop and web applications with a strong focus on automation, reporting, data export, maintainable UI-driven workflows, and practical machine learning applications.",
+        summary: "Software engineer and M.S. candidate building automation-focused desktop, web, and data systems with C#, Python, Perl, SQL, JavaScript, and API integrations. Experienced in reporting workflows, metadata extraction, Excel export, data structures, systems fundamentals, and AI-assisted engineering with human review for correctness, performance, and maintainability.",
         skills: [
             { label: "Languages", value: "C#, C++, C, Java, Python, TypeScript, JavaScript, HTML, SQL, Swift, Kotlin" },
             { label: "Frameworks", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3" },
             { label: "Databases", value: "SQL Server, PostgreSQL, EF Core" },
             { label: "Libraries", value: "WebView2, EPPlus, ExcelJS" },
             { label: "Tools", value: "Git, Visual Studio, VS Code, Postman, MSTest, CSS, SASS" },
-            { label: "Methods", value: "OOP, REST APIs, Event-Driven Architecture, TDD, Agile, UI/UX Design, Machine Learning, Address Resolution" }
+            { label: "Methods", value: "OOP, Data Structures, Algorithms, REST APIs, Event-Driven Architecture, TDD, Agile, AI-Assisted Development, Machine Learning, Address Resolution" }
         ]
     },
     experience: {
         professional: [
             {
-                title: "Technology & Support Services Coordinator",
+                title: "Software Engineer (Data Systems) / Technology Coordinator",
                 organization: "MSU Libraries, Mississippi State University",
                 location: "Starkville, MS",
                 date: "Aug 2024 - Present",
                 bullets: [
-                    "Built and maintained internal software tools for MSU Libraries using C#, Python, Perl, SQL, JavaScript, HTML, and API integrations.",
-                    "Developed browser-based reporting tools for live library item data with configurable filters, API-backed query payloads, report history, and Excel export.",
-                    "Built file-processing and metadata extraction utilities to support staff workflows, reporting needs, and day-to-day library operations.",
-                    "Automated repetitive reporting and export workflows, reducing manual steps in library operational processes.",
-                    "Integrated SirsiDynix APIs and SQL-backed data sources to customize ILS workflows and support internal reporting.",
-                    "Supported nontechnical users by delivering maintainable tools that improved workflow efficiency and reliability."
-                ]
-            },
-            {
-                title: "Community Assistant",
-                organization: "College View, Mississippi State University",
-                location: "Starkville, MS",
-                date: "2022 - 2024",
-                bullets: [
-                    "Served in an apartment-style resident assistant role supporting student residents at College View.",
-                    "Handled resident communication, policy enforcement, community support, and incident response for the property."
+                    "Built and maintained C#, Python, Perl, SQL, JavaScript, and HTML tools for MSU Libraries to automate reporting, file processing, metadata extraction, data export, and operational workflows.",
+                    "Developed Query, a browser-based reporting tool with configurable filters, API-backed query payloads, report history, and Excel export for live library item data.",
+                    "Built MetaTable, a WPF metadata scanner that processes directory trees, extracts file attributes, tracks progress in real time, and exports structured results to Excel.",
+                    "Automated repetitive reporting and data-preparation workflows that previously required manual collection, cleanup, formatting, and staff handoff.",
+                    "Integrated SirsiDynix APIs, SQL-backed data sources, and Excel export libraries to support internal reporting and library systems operations.",
+                    "Used C#, C++, data structures, and systems fundamentals to evaluate AI-assisted code for correctness, algorithmic efficiency, memory behavior, and maintainability."
                 ]
             }
         ],
         additional: [
+            {
+                title: "Community Assistant",
+                organization: "College View, Mississippi State University",
+                date: "2022 - 2024",
+                bullets: [
+                    "Supported student residents through communication, policy enforcement, community operations, and incident response.",
+                    "Coordinated resident support workflows while balancing graduate-level software engineering coursework."
+                ]
+            },
             {
                 title: "STEM Leader & Math Tutor",
                 organization: "Afternoon Adventure Learning Center",
