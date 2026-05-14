@@ -567,7 +567,9 @@ button:focus-visible {
 
 .about-portrait-card {
     position: relative;
-    align-self: start;
+    align-self: center;
+    justify-self: center;
+    width: min(100%, 390px);
     margin: 0;
     padding: 0.65rem;
     aspect-ratio: 1 / 1;
