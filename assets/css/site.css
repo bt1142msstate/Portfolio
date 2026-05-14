@@ -575,7 +575,7 @@ button:focus-visible {
     width: min(100%, 390px);
     margin: 0;
     padding: 0.65rem;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
     border-radius: var(--radius-lg);
     background:
         linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
@@ -613,15 +613,23 @@ button:focus-visible {
     opacity: 0.34;
 }
 
-.about-portrait-image {
+.about-portrait-picture {
     position: relative;
     z-index: 1;
     display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
+    height: 100%;
     border-radius: calc(var(--radius-lg) - 8px);
+    overflow: hidden;
+}
+
+.about-portrait-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
 }
 
 .skills-grid {
@@ -1139,6 +1147,7 @@ button:focus-visible {
         width: min(100%, 380px);
         min-height: auto;
         margin: 0 auto;
+        aspect-ratio: 1 / 1;
     }
 
     .about-portrait-image {
@@ -1241,6 +1250,7 @@ button:focus-visible {
         border-radius: 24px;
     }
 
+    .about-portrait-picture,
     .about-portrait-image {
         border-radius: 18px;
     }

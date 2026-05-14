@@ -135,7 +135,7 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="./assets/css/site.css?v=20260514-about-no-caption">
+    <link rel="stylesheet" href="./assets/css/site.css?v=20260514-illustrated-portrait">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -226,8 +226,11 @@
                 <div class="about-feature">
                     <div class="about-text" id="about-text"></div>
                     <figure class="about-portrait-card" aria-label="Illustrated profile portrait">
-                        <img src="/assets/images/brandon-illustrated-profile-photo.jpg" alt="Illustrated portrait of Brandon Temple" width="1254" height="1254" class="about-portrait-image" loading="lazy" decoding="async">
-                        <a href="/assets/images/brandon-illustrated-profile-photo.jpg" download="brandon-temple-illustrated-profile-photo.jpg" class="image-download-button" aria-label="Download illustrated profile photo">
+                        <picture class="about-portrait-picture">
+                            <source media="(max-width: 768px)" srcset="/assets/images/brandon-illustrated-profile-photo-square.jpg?v=20260514-illustrated-portrait">
+                            <img src="/assets/images/brandon-illustrated-profile-photo.jpg?v=20260514-illustrated-portrait" alt="Illustrated portrait of Brandon Temple" width="1120" height="1400" class="about-portrait-image" loading="lazy" decoding="async">
+                        </picture>
+                        <a href="/assets/images/brandon-illustrated-profile-photo.jpg?v=20260514-illustrated-portrait" download="brandon-temple-illustrated-profile-photo.jpg" class="image-download-button" aria-label="Download illustrated profile photo">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                                 <path d="M12 3v12"></path>
                                 <path d="m7 10 5 5 5-5"></path>
