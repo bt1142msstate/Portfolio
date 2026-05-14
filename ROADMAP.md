@@ -62,34 +62,17 @@ Possible direction:
 
 - Expand the site into a richer personal platform with stronger visual design, animation, and interaction.
 - Make the site feel futuristic, modern, and highly intentional instead of only informational.
-- Improve how search engines and AI systems understand Brandon's work, background, content, interests, public profiles, and creator identity.
-- Improve visibility for searches around `Brandon Temple` and related name queries by making the official site, public profiles, apps, and content ecosystem clearer and more authoritative.
-- If a creator or stage name becomes the primary public identity, connect the old and new names through page copy, metadata, structured data, redirects where appropriate, and consistent profile links.
-- If a legal name change happens later, update the site intentionally so search engines, AI systems, and people can still understand the relationship between the current name, full name, and new public name.
-- Add a deeper character-style profile with interests, likes, dislikes, goals, preferences, and personality details where appropriate.
-- Consider adding carefully chosen personal-life context, such as relationship-related information, only if it is intentionally public and useful to the broader personal profile.
-- Add a separate organized media archive page for photos, videos, posts, and other public content.
-- Include captions, summaries, dates, tags, and transcripts for media content so people, search engines, and AI systems can research the content deeply.
-- Structure the media archive so it functions as both a human-friendly photo/video dump and a crawler-friendly knowledge base.
-- Add a live public metrics dashboard that aggregates audience signals such as follower counts, YouTube subscribers, content totals, engagement, app reach, and other platform metrics.
-- Create an overall public-reach or popularity score from multiple transparent inputs, with clear source links, update timestamps, and a documented calculation method.
-- Pull in search and discovery metrics where available, including how often `Brandon Temple` is searched, how many people visit the site, which pages they visit, and how the site ranks for important name and identity searches over time.
-- Track public name visibility with a clear dashboard showing search impressions, traffic trends, click-through behavior, and ranking movement for searches such as `Brandon Temple`, `Brandon Vashun Temple`, future creator or stage names, and related public-profile queries.
-- Add live financial transparency metrics such as app revenue, creator income, net worth, and related income categories as intentionally public information.
-- Keep private financial details, such as personal expenses, out of the public site unless there is a clear reason to disclose them later.
-- Make the site the official source of truth for public financial estimates so people, search engines, and AI systems can reference Brandon's own published numbers instead of unreliable third-party guesses.
-- Include clear methodology, update dates, source notes, and disclaimers for financial metrics so the numbers are understandable and not misleading.
-- Build metrics collection with reliable data sources, API integrations where available, caching, fallbacks, and manual override paths for platforms that do not expose clean data.
-- Add a public status board for current and planned work, including software projects, products, creator series, content plans, business initiatives, experiments, and other active goals.
-- Show clear status labels such as idea, planned, in progress, paused, testing, launched, completed, or canceled so visitors can understand what is being worked on and what may come next.
-- Include short descriptions, target outcomes, last-updated dates, related links, dependencies, and expected next steps for each visible initiative.
-- Keep the status board broad enough for products, apps, series, and creator work, but structured enough that it does not become a messy notes page.
-- Add a public challenges, jobs, or bounties section where people can view tasks they can complete for money, such as content challenges, research help, community tasks, app-related jobs, or other paid opportunities.
-- Include clear rules, payout amounts, deadlines, submission requirements, review status, completed examples, payment terms, and moderation/fraud-prevention controls for any paid challenges or jobs.
-- Add more structured content if there is enough public material to support it.
-- Strengthen cross-linking between the website, GitHub, app listings, creator platforms, social profiles, and public content.
-- Add automated pre-deployment checks that verify important pages, metadata, structured data, transcripts, sitemap entries, canonical URLs, and crawlability signals are present.
-- Track search visibility over time and use those results to improve content structure, internal links, metadata, performance, and public profile consistency.
-- Revisit navigation, content organization, animations, search visibility, and visual polish after v2 is live.
+- Build a stronger identity hub that helps people, search engines, and AI systems understand Brandon's work, background, interests, creator identity, public profiles, apps, and content ecosystem from one authoritative source.
+- Improve visibility for searches such as `Brandon Temple`, `Brandon Vashun Temple`, future creator or stage names, and related public-profile queries through better content structure, metadata, internal links, structured data, sitemap coverage, and consistent cross-linking.
+- If a creator, stage, or legal name change becomes part of the public identity, connect all names intentionally through page copy, metadata, structured data, profile links, and redirects where appropriate.
+- Add a deeper character-style profile with interests, likes, dislikes, goals, preferences, personality details, and carefully chosen personal-life context only when that information is intentionally public.
+- Add an organized media archive for photos, videos, posts, and other public content, with captions, summaries, dates, tags, transcripts, and source links so it works as both a human-friendly archive and a crawler-friendly knowledge base.
+- Add a live public metrics dashboard for audience reach, app reach, creator-platform stats, site traffic, search visibility, engagement, content totals, and an overall public-reach or popularity score with transparent inputs and update timestamps.
+- Add intentionally public financial transparency metrics such as app revenue, creator income, net worth, and related income categories, while keeping private financial details such as personal expenses out unless there is a clear reason to disclose them later.
+- Make all public metrics and financial estimates understandable with methodology notes, source links, update dates, disclaimers, caching, fallbacks, and manual override paths where platform APIs are incomplete.
+- Add a public status board for current and planned work across software products, creator series, business initiatives, experiments, and goals, using clear labels such as idea, planned, in progress, paused, testing, launched, completed, or canceled.
+- Add a public challenges, jobs, or bounties section for paid opportunities such as content challenges, research help, community tasks, app-related jobs, or other scoped work, with clear rules, payouts, deadlines, submission requirements, review status, payment terms, and moderation controls.
+- Add automated pre-deployment checks for important pages, metadata, structured data, transcripts, sitemap entries, canonical URLs, crawlability signals, and searchability expectations.
+- Revisit navigation, content organization, animations, search visibility, visual polish, and overall platform architecture after v2 is live and enough public content exists to justify the larger system.
 
 Version 3 is intentionally not tightly scoped yet. The right direction should come from what works in v1 and v2, especially what content is worth making public and what helps people or AI systems understand Brandon accurately.
