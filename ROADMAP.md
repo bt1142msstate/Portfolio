@@ -1,20 +1,24 @@
 # Portfolio Roadmap
 
-This roadmap tracks the planned direction for BrandonTemple.com. Version 1 stays focused on hiring and software credibility. Later versions can expand the site into a broader personal brand, creator presence, and search-friendly identity hub.
+This roadmap tracks the planned direction for BrandonTemple.com. Version 1 stays focused on software credibility, hiring strength, and the first serious product launch. Later versions can expand the site into a broader personal brand, creator presence, and search-friendly identity hub.
 
-## Version 1: Software Portfolio Foundation
+## Version 1: Software Portfolio And Product Foundation
 
 Status: Work in progress.
 
-Primary goal: make the site strong for recruiters, hiring managers, and people evaluating software engineering work.
+Primary goal: make the site strong for recruiters, hiring managers, and people evaluating software engineering work while shifting the center of gravity toward Brandon's own software company and first commercial product.
 
 Planned before v1 is considered complete:
 
-- Add one more featured project for the mobile app once it is ready.
-- Present the app as a polished iOS and Android project, not just another code repository.
-- Add app links when available, such as App Store, Google Play, landing page, or demo.
-- Decide the publishing and business setup for the app, including whether to release it under an LLC or another app publisher identity.
-- Clarify the app monetization model at a high level: free core app with subscription-based extra features.
+- Launch the first lifestyle app as the main v1 product milestone instead of treating it as just another portfolio project.
+- Form or finalize the software LLC or app publisher identity that will release the app.
+- Present the app as a polished product released under Brandon's software company, not as a student project or simple GitHub demo.
+- Target native releases for iOS, Android, Windows, and macOS, with platform-specific store links when available.
+- Add app links when available, such as App Store, Google Play, Microsoft Store, Mac app listing, landing page, waitlist, press kit, or demo.
+- Clarify the business model at a high level: free core app with subscription-based premium features.
+- Document the product stack where appropriate, including Firebase and Google GenAI/Gemini integration.
+- Build the v1 site narrative around product ownership, cross-platform release, subscriptions, AI-enabled features, and maintainable software execution.
+- Keep MSU Libraries, MetaTable, Query, Ady Resolver, and earlier projects as supporting proof of engineering ability, not the long-term center of the brand.
 - Move portfolio contact to a domain-based email address once it is set up.
 - Update public profile links if the GitHub handle changes to a more name-based account.
 - Keep the public site recruiter-focused, clean, and professional.
