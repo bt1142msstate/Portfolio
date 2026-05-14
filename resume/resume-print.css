@@ -1,6 +1,6 @@
 @page {
     size: Letter;
-    margin: 0.45in;
+    margin: 0.42in;
 }
 
 html {
@@ -29,11 +29,17 @@ body {
 }
 
 h1 {
-    font-size: 24pt;
+    font-size: 23.5pt;
+}
+
+.hero {
+    margin-bottom: 0.13in;
+    padding: 0.18in 0.2in 0.16in;
+    border-radius: 0.14in;
 }
 
 h2 {
-    margin-bottom: 0.08in;
+    margin-bottom: 0.07in;
     padding-top: 0;
     font-size: 9pt;
     break-after: avoid-page;
@@ -47,17 +53,17 @@ h3 {
 }
 
 .summary {
-    margin-top: 0.08in;
-    margin-bottom: 0.08in;
-    font-size: 9.8pt;
+    margin-top: 0.07in;
+    margin-bottom: 0.07in;
+    font-size: 9.5pt;
 }
 
 .contact-card {
-    font-size: 8.8pt;
+    font-size: 8.6pt;
 }
 
 .section {
-    margin-top: 0.12in;
+    margin-top: 0.105in;
 }
 
 .entry-header,
@@ -75,7 +81,7 @@ h3 {
 
 .entry + .entry,
 .project + .project {
-    margin-top: 0.08in;
+    margin-top: 0.075in;
 }
 
 .entry-header {
