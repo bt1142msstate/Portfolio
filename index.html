@@ -132,32 +132,32 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="./assets/css/site.css?v=20260514-dark-nav">
+    <link rel="stylesheet" href="./assets/css/site.css?v=20260514-nav-layer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body data-page="site">
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="nav-container">
+        <a href="#top" class="nav-logo" aria-label="Back to top">Brandon Temple</a>
+        <ul class="nav-links" id="primary-navigation">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="/resume/">Resume</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
     <!-- Header/Hero Section -->
     <header class="hero" id="top">
-        <nav class="nav-container">
-            <a href="#top" class="nav-logo" aria-label="Back to top">Brandon Temple</a>
-            <ul class="nav-links" id="primary-navigation">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="/resume/">Resume</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-        
         <div class="hero-content">
             <div class="hero-photo-shell">
                 <img src="/assets/images/brandon-profile-photo.jpg" alt="Portrait of Brandon Temple at the beach" width="1120" height="1400" class="hero-profile-image" fetchpriority="high">
@@ -263,8 +263,8 @@
         </div>
     </footer>
 
-    <script src="./assets/js/profile-data.js?v=20260514-dark-nav"></script>
-    <script src="./assets/js/profile-render.js?v=20260514-dark-nav"></script>
-    <script src="./assets/js/site.js?v=20260514-dark-nav"></script>
+    <script src="./assets/js/profile-data.js?v=20260514-nav-layer"></script>
+    <script src="./assets/js/profile-render.js?v=20260514-nav-layer"></script>
+    <script src="./assets/js/site.js?v=20260514-nav-layer"></script>
 </body>
 </html>
