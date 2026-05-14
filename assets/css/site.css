@@ -537,6 +537,7 @@ button:focus-visible {
 .about-feature {
     display: grid;
     grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.75fr);
+    grid-template-areas: "about-text about-portrait";
     gap: clamp(1.5rem, 3vw, 2.25rem);
     align-items: stretch;
     max-width: 1120px;
@@ -544,6 +545,7 @@ button:focus-visible {
 }
 
 .about-text {
+    grid-area: about-text;
     font-size: 1.125rem;
     line-height: 1.8;
     color: var(--text-gray);
@@ -566,6 +568,7 @@ button:focus-visible {
 }
 
 .about-portrait-card {
+    grid-area: about-portrait;
     position: relative;
     align-self: center;
     justify-self: center;
@@ -1138,6 +1141,9 @@ button:focus-visible {
 
     .about-feature {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "about-portrait"
+            "about-text";
     }
 
     .about-text {
