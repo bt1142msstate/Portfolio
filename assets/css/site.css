@@ -14,8 +14,8 @@
     --glass: rgba(255, 255, 255, 0.075);
     --glass-strong: rgba(255, 255, 255, 0.11);
     --border: rgba(255, 255, 255, 0.1);
-    --nav-bg: linear-gradient(180deg, rgba(9, 7, 13, 0.82), rgba(9, 7, 13, 0.48) 68%, rgba(9, 7, 13, 0));
-    --nav-bg-strong: rgba(9, 7, 13, 0.86);
+    --nav-bg: rgba(8, 7, 11, 0.94);
+    --nav-bg-strong: rgba(6, 5, 9, 0.97);
     --shadow: rgba(0, 0, 0, 0.34);
     --shadow-hover: rgba(0, 0, 0, 0.52);
     --radius-lg: 26px;
@@ -124,9 +124,9 @@ button:focus-visible {
     right: 0;
     width: 100%;
     background: var(--nav-bg);
-    -webkit-backdrop-filter: blur(18px) saturate(145%);
-    backdrop-filter: blur(18px) saturate(145%);
-    box-shadow: none;
+    -webkit-backdrop-filter: blur(24px) saturate(145%);
+    backdrop-filter: blur(24px) saturate(145%);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.24);
     border: none;
     border-radius: 0;
     z-index: 5000;
@@ -135,10 +135,10 @@ button:focus-visible {
 }
 
 .nav-container.is-scrolled {
-    background: rgba(8, 7, 11, 0.9);
-    -webkit-backdrop-filter: blur(26px) saturate(150%);
-    backdrop-filter: blur(26px) saturate(150%);
-    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.36);
+    background: var(--nav-bg-strong);
+    -webkit-backdrop-filter: blur(28px) saturate(150%);
+    backdrop-filter: blur(28px) saturate(150%);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.42);
 }
 
 .nav-logo {
