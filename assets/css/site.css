@@ -179,24 +179,29 @@ button:focus-visible {
 }
 
 .hero-content {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: minmax(300px, 440px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2.5rem, 5vw, 5.5rem);
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 4rem 2rem;
-    text-align: center;
+    padding: 4.5rem 2rem;
+    text-align: left;
     width: 100%;
 }
 
 .hero-photo-shell {
-    width: 148px;
-    height: 148px;
-    margin: 0 auto 1.5rem;
-    padding: 0.45rem;
-    border-radius: 34px;
+    grid-row: 1 / span 5;
+    width: min(36vw, 440px);
+    min-width: 320px;
+    aspect-ratio: 4 / 5;
+    padding: 0.65rem;
+    border-radius: 42px;
     background:
         linear-gradient(145deg, rgba(125, 199, 255, 0.3), rgba(207, 84, 100, 0.26)),
         rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.48);
 }
 
 .hero-profile-image {
@@ -204,7 +209,7 @@ button:focus-visible {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 26px;
+    border-radius: 32px;
 }
 
 .hero-title {
@@ -225,7 +230,7 @@ button:focus-visible {
 .hero-description {
     font-size: 1.125rem;
     max-width: 680px;
-    margin: 0 auto 2rem;
+    margin: 0 0 2rem;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.8;
 }
@@ -233,9 +238,9 @@ button:focus-visible {
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 440px;
-    margin: 0 auto 2rem;
+    margin: 0 0 2rem;
 }
 
 .btn {
@@ -276,7 +281,7 @@ button:focus-visible {
 .hero-social {
     display: flex;
     gap: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .hero-social a {
@@ -717,14 +722,23 @@ button:focus-visible {
         font-size: 2.5rem;
     }
 
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
     .hero-photo-shell {
-        width: 128px;
-        height: 128px;
-        border-radius: 30px;
+        grid-row: auto;
+        width: clamp(300px, 62vw, 360px);
+        min-width: 0;
+        margin: 0 auto;
+        border-radius: 38px;
     }
 
     .hero-profile-image {
-        border-radius: 22px;
+        border-radius: 29px;
     }
     
     .hero-subtitle {
@@ -735,20 +749,22 @@ button:focus-visible {
         flex-direction: column;
         align-items: stretch;
         max-width: 360px;
+        margin: 0 auto 2rem;
     }
 
     .btn {
         width: 100%;
     }
 
-    .hero-content {
-        padding: 3rem 1.5rem;
-    }
-
     .hero-description {
         font-size: 1rem;
         line-height: 1.7;
         max-width: 360px;
+        margin: 0 auto 2rem;
+    }
+
+    .hero-social {
+        justify-content: center;
     }
     
     .section-title {
@@ -809,8 +825,7 @@ button:focus-visible {
     }
 
     .hero-photo-shell {
-        width: 112px;
-        height: 112px;
+        width: clamp(270px, 72vw, 300px);
         margin-bottom: 1.2rem;
     }
 
