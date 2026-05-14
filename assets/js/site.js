@@ -98,11 +98,11 @@ window.addEventListener("scroll", function () {
     }
     if (currentScroll > 100) {
         navbar.style.background = navBackgroundStrong;
-        navbar.style.boxShadow = "0 18px 60px rgba(0, 0, 0, 0.38)";
+        navbar.style.boxShadow = "0 12px 38px rgba(0, 0, 0, 0.18)";
     }
     else {
         navbar.style.background = navBackground;
-        navbar.style.boxShadow = "0 18px 60px rgba(0, 0, 0, 0.32)";
+        navbar.style.boxShadow = "none";
     }
 });
 window.addEventListener("load", function () {
