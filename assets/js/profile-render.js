@@ -183,9 +183,8 @@
                 '<div class="entry-header">' +
                 "<div>" +
                 "<h3>" + escapeHtml(role.title) + "</h3>" +
-                '<p class="meta">' + escapeHtml(role.organization + " | " + role.location) + "</p>" +
+                '<p class="meta">' + escapeHtml(role.organization + " | " + role.location + " | " + role.date) + "</p>" +
                 "</div>" +
-                '<p class="date">' + escapeHtml(role.date) + "</p>" +
                 "</div>" +
                 "<ul>" + renderList(role.bullets) + "</ul>" +
                 "</article>";
@@ -196,9 +195,8 @@
                 '<div class="entry-header">' +
                 "<div>" +
                 "<h3>" + escapeHtml(role.title) + "</h3>" +
-                '<p class="meta">' + escapeHtml(role.organization) + "</p>" +
+                '<p class="meta">' + escapeHtml(role.organization + " | " + role.date) + "</p>" +
                 "</div>" +
-                '<p class="date">' + escapeHtml(role.date) + "</p>" +
                 "</div>" +
                 "<ul>" + renderList(role.bullets) + "</ul>" +
                 "</article>";
@@ -213,9 +211,8 @@
                 '<div class="entry-header">' +
                 "<div>" +
                 "<h3>" + escapeHtml(degree) + "</h3>" +
-                '<p class="meta">' + escapeHtml(item.school) + "</p>" +
+                '<p class="meta">' + escapeHtml(item.school + " | " + item.date) + "</p>" +
                 "</div>" +
-                '<p class="date">' + escapeHtml(item.date) + "</p>" +
                 "</div>" +
                 '<p class="detail">' + escapeHtml(item.location + " | GPA: " + item.gpa) + "</p>" +
                 honors +
