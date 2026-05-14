@@ -30,26 +30,46 @@ if (skipLink) {
 }
 var sections = document.querySelectorAll("section[id]");
 var navItems = document.querySelectorAll(".nav-links a");
+function setActiveNavItem(activeSectionId) {
+    navItems.forEach(function (item) {
+        item.classList.remove("active");
+        item.removeAttribute("aria-current");
+        if (activeSectionId && item.getAttribute("href") === "#".concat(activeSectionId)) {
+            item.classList.add("active");
+            item.setAttribute("aria-current", "page");
+        }
+    });
+}
 function highlightNavigation() {
-    var scrollPosition = window.scrollY + 150;
+    if (!sections.length) {
+        setActiveNavItem("");
+        return;
+    }
+    var activationOffset = 120;
+    var scrollPosition = window.scrollY + activationOffset;
+    var firstSectionTop = sections[0].offsetTop;
+    if (scrollPosition < firstSectionTop) {
+        setActiveNavItem("");
+        return;
+    }
+    var activeSectionId = "";
     sections.forEach(function (section) {
         var sectionTop = section.offsetTop;
-        var sectionHeight = section.offsetHeight;
         var sectionId = section.getAttribute("id");
         if (!sectionId) {
             return;
         }
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            navItems.forEach(function (item) {
-                item.classList.remove("active");
-                if (item.getAttribute("href") === "#".concat(sectionId)) {
-                    item.classList.add("active");
-                }
-            });
+        if (scrollPosition >= sectionTop) {
+            activeSectionId = sectionId;
         }
     });
+    var isAtPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    if (isAtPageBottom) {
+        var lastSection = sections[sections.length - 1];
+        activeSectionId = lastSection.getAttribute("id") || activeSectionId;
+    }
+    setActiveNavItem(activeSectionId);
 }
-window.addEventListener("scroll", highlightNavigation);
 window.addEventListener("load", highlightNavigation);
 var observerOptions = {
     threshold: 0.1,
