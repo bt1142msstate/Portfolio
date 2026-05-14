@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://brandontemple.com/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/brandon-profile-photo.jpg</image:loc>
       <image:title>Brandon Temple profile image</image:title>
-      <image:caption>Illustrated portrait of Brandon Temple</image:caption>
+      <image:caption>Portrait of Brandon Temple at the beach</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/social-preview.png</image:loc>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://brandontemple.com/resume/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://brandontemple.com/resume/brandon-temple-resume.pdf</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
