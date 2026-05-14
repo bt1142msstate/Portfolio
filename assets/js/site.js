@@ -98,15 +98,15 @@ window.addEventListener("scroll", function () {
     }
     if (currentScroll > 100) {
         navbar.style.background = navBackgroundStrong;
-        navbar.style.boxShadow = "0 2px 15px rgba(0, 0, 0, 0.15)";
+        navbar.style.boxShadow = "0 18px 60px rgba(0, 0, 0, 0.38)";
     }
     else {
         navbar.style.background = navBackground;
-        navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+        navbar.style.boxShadow = "0 18px 60px rgba(0, 0, 0, 0.32)";
     }
 });
 window.addEventListener("load", function () {
-    var heroElements = document.querySelectorAll(".hero-title, .hero-subtitle, .hero-description, .hero-buttons, .hero-social");
+    var heroElements = document.querySelectorAll(".hero-eyebrow, .hero-title, .hero-subtitle, .hero-description, .hero-buttons, .hero-social");
     heroElements.forEach(function (element, index) {
         setTimeout(function () {
             element.style.opacity = "1";
