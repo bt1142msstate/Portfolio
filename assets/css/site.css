@@ -497,12 +497,21 @@ button:focus-visible {
     gap: 2.5rem;
 }
 
+.about-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.75fr);
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+    align-items: stretch;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
 .about-text {
     font-size: 1.125rem;
     line-height: 1.8;
     color: var(--text-gray);
-    max-width: 920px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
     padding: clamp(1.4rem, 3vw, 2rem);
     border-radius: var(--radius-lg);
     background:
@@ -513,6 +522,82 @@ button:focus-visible {
 
 .about-text p {
     margin-bottom: 1.5rem;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-portrait-card {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding: 0.65rem;
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
+        rgba(255, 255, 255, 0.03);
+    box-shadow:
+        0 26px 70px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    isolation: isolate;
+    animation: portraitDrift 7s ease-in-out infinite;
+}
+
+.about-portrait-card::before,
+.about-portrait-card::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.about-portrait-card::before {
+    inset: -38%;
+    background:
+        radial-gradient(circle at 18% 12%, rgba(139, 215, 255, 0.2), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(214, 95, 111, 0.18), transparent 30%);
+    filter: blur(18px);
+    opacity: 0.72;
+}
+
+.about-portrait-card::after {
+    inset: 0.65rem;
+    border-radius: calc(var(--radius-lg) - 8px);
+    background: linear-gradient(130deg, rgba(255, 255, 255, 0.16), transparent 34%, rgba(255, 255, 255, 0.04));
+    mix-blend-mode: screen;
+    opacity: 0.34;
+}
+
+.about-portrait-image {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: calc(var(--radius-lg) - 8px);
+}
+
+.about-portrait-card figcaption {
+    position: absolute;
+    left: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 3;
+    width: fit-content;
+    padding: 0.48rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(8, 7, 11, 0.66);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    backdrop-filter: blur(18px) saturate(145%);
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .skills-grid {
@@ -877,6 +962,16 @@ button:focus-visible {
     }
 }
 
+@keyframes portraitDrift {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     html {
@@ -995,9 +1090,23 @@ button:focus-visible {
         font-size: 2rem;
     }
 
+    .about-feature {
+        grid-template-columns: 1fr;
+    }
+
     .about-text {
         font-size: 1rem;
         line-height: 1.7;
+    }
+
+    .about-portrait-card {
+        width: min(100%, 380px);
+        min-height: auto;
+        margin: 0 auto;
+    }
+
+    .about-portrait-image {
+        min-height: 0;
     }
     
     .timeline-header {
@@ -1082,8 +1191,17 @@ button:focus-visible {
 
     .timeline-content,
     .project-card,
-    .education-card {
+    .education-card,
+    .about-text {
         padding: 1.25rem;
+    }
+
+    .about-portrait-card {
+        border-radius: 24px;
+    }
+
+    .about-portrait-image {
+        border-radius: 18px;
     }
 
     .project-header {
