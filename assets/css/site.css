@@ -1095,11 +1095,13 @@ button:focus-visible {
     }
 
     .about-text {
+        order: 2;
         font-size: 1rem;
         line-height: 1.7;
     }
 
     .about-portrait-card {
+        order: 1;
         width: min(100%, 380px);
         min-height: auto;
         margin: 0 auto;
