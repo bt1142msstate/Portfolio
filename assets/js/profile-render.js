@@ -170,9 +170,8 @@
         contact.innerHTML =
             "<p>" + escapeHtml(data.contact.location) + "</p>" +
             '<p><a href="mailto:' + escapeHtml(data.contact.email) + '">' + escapeHtml(data.contact.email) + "</a></p>" +
-            '<p><a href="' + escapeHtml(data.contact.githubUrl) + '">' + escapeHtml(data.contact.githubLabel) + "</a></p>" +
-            '<p><a href="' + escapeHtml(data.contact.linkedinUrl) + '">' + escapeHtml(data.contact.linkedinLabel) + "</a></p>" +
-            '<p><a href="' + escapeHtml(data.contact.indeedUrl) + '">' + escapeHtml(data.contact.indeedLabel) + "</a></p>";
+            '<p><a href="' + escapeHtml(data.contact.websiteUrl) + '">' + escapeHtml(data.contact.websiteLabel) + "</a></p>" +
+            '<p><a href="' + escapeHtml(data.contact.githubUrl) + '">' + escapeHtml(data.contact.githubLabel) + "</a></p>";
 
         skills.innerHTML = data.resume.skills.map(function (group) {
             return "<p><span>" + escapeHtml(group.label) + "</span> " + escapeHtml(group.value) + "</p>";

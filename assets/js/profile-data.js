@@ -2,6 +2,8 @@ window.profileData = {
     contact: {
         location: "Starkville, MS",
         email: "bt1142@msstate.edu",
+        websiteUrl: "https://brandontemple.com/",
+        websiteLabel: "brandontemple.com",
         githubUrl: "https://github.com/bt1142msstate",
         githubLabel: "github.com/bt1142msstate",
         linkedinUrl: "https://www.linkedin.com/in/brandon-temple-763619407/",
