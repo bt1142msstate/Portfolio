@@ -31,6 +31,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 86px;
 }
 
 body {
@@ -128,7 +129,16 @@ button:focus-visible {
     box-shadow: none;
     border: none;
     border-radius: 0;
-    z-index: 1000;
+    z-index: 5000;
+    pointer-events: auto;
+    transition: background 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+.nav-container.is-scrolled {
+    background: rgba(255, 250, 244, 0.94);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    backdrop-filter: blur(18px) saturate(145%);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
 }
 
 .nav-logo {
@@ -137,6 +147,10 @@ button:focus-visible {
     font-weight: 700;
     color: var(--text-dark);
     letter-spacing: -0.02em;
+}
+
+.nav-container.is-scrolled .nav-logo {
+    color: #141016;
 }
 
 .nav-links {
@@ -157,10 +171,20 @@ button:focus-visible {
     position: relative;
 }
 
+.nav-container.is-scrolled .nav-links a {
+    color: rgba(20, 16, 22, 0.72);
+}
+
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--text-dark);
     background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-container.is-scrolled .nav-links a:hover,
+.nav-container.is-scrolled .nav-links a.active {
+    color: #141016;
+    background: rgba(20, 16, 22, 0.08);
 }
 
 .nav-links a::after {
@@ -183,6 +207,10 @@ button:focus-visible {
     border-radius: 999px;
     background: var(--text-dark);
     transition: all 0.3s ease;
+}
+
+.nav-container.is-scrolled .mobile-menu-toggle span {
+    background: #141016;
 }
 
 /* Hero Section */
@@ -870,6 +898,11 @@ button:focus-visible {
         padding: 0.75rem;
         box-shadow: 0 24px 70px var(--shadow);
         gap: 0.25rem;
+    }
+
+    .nav-container.is-scrolled .nav-links {
+        background: rgba(255, 250, 244, 0.97);
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
     }
 
     .nav-links a {
