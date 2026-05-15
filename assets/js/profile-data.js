@@ -69,6 +69,7 @@ window.profileData = {
                 date: "2022 - 2024",
                 bullets: [
                     "Supported student residents through communication, policy enforcement, community operations, and incident response.",
+                    "Served a 600+ student residential community through crisis response, resident support, and escalation coordination.",
                     "Coordinated resident support workflows while balancing graduate-level software engineering coursework."
                 ]
             },
