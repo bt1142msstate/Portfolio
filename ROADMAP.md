@@ -17,6 +17,7 @@ Planned before v1 is considered complete:
 - Add app links when available, such as App Store, Google Play, Microsoft Store, Mac app listing, landing page, waitlist, press kit, or demo.
 - Clarify the business model at a high level: free core app with subscription-based premium features.
 - Document the product stack where appropriate, including Firebase and Google GenAI/Gemini integration.
+- Define how the lifestyle app handles wellness or therapy-adjacent features, including safety boundaries, disclaimers, privacy expectations, and whether any licensed professional support is needed later.
 - Build the v1 site narrative around product ownership, cross-platform release, subscriptions, AI-enabled features, and maintainable software execution.
 - Keep MSU Libraries, MetaTable, Query, Ady Resolver, and earlier projects as supporting proof of engineering ability, not the long-term center of the brand.
 - Move portfolio contact to a domain-based email address once it is set up.
@@ -40,6 +41,11 @@ Likely direction:
 - Add a fuller bio that covers Brandon as a person, not only as a software developer.
 - Add content creation and influencer presence in a dedicated area.
 - Add social links and creator-platform context where appropriate.
+- Plan a therapy-focused or wellness-oriented community direction for people who feel socially isolated, deal with social anxiety, want healthier relationship or attachment-style support, or need a safer environment to connect with others.
+- Explore whether that community starts as a Discord, local in-person group, hybrid organization, or multiple groups with different levels of structure.
+- Consider creating a nonprofit or related organization later to support community programming and fund therapy, wellness, or social-connection research that can also inform the lifestyle app.
+- Connect the lifestyle app's therapy/wellness features to the broader community mission without making the website or app imply licensed clinical care unless that infrastructure exists.
+- Track a separate safer social app concept focused on AI-assisted moderation, pre-send filtering for hate speech or bullying, user-controlled content filters, healthier feeds, and safer digital communication.
 - Consider a separate page such as `/about/`, `/creator/`, or `/media/`.
 - Add a subtle main-site path to the expanded profile, such as a `More About Me` button.
 - Keep resume and professional experience focused on software work.
