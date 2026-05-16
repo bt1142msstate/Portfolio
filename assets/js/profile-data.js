@@ -100,14 +100,14 @@ window.profileData = {
             degree: "Master of Science in Software Engineering",
             school: "Mississippi State University",
             location: "Starkville, MS",
-            date: "May 2027",
+            date: "Fall 2024 - May 2027",
             gpa: "4.0/4.0"
         },
         {
             degree: "Bachelor of Science in Computer Science",
             school: "Mississippi State University",
             location: "Starkville, MS",
-            date: "May 2024",
+            date: "Fall 2021 - May 2024",
             gpa: "3.68/4.0",
             inlineHonors: "(Cum Laude)",
             honorsLines: ["Honors: Phi Theta Kappa, Gamma Beta Phi"],
@@ -117,7 +117,7 @@ window.profileData = {
             degree: "Associate of Arts in Computer Science",
             school: "East Central Community College",
             location: "Decatur, MS",
-            date: "May 2021",
+            date: "Fall 2019 - May 2021",
             gpa: "3.85/4.0",
             honorsLines: [
                 "Honors: Phi Theta Kappa, Gamma Beta Phi",
