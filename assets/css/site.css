@@ -650,6 +650,10 @@ button:focus-visible {
         inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
+.skill-category:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
 .skill-category h3 {
     font-size: 1.25rem;
     color: var(--maroon-light);
