@@ -57,7 +57,7 @@ window.profileData = {
                     "Built automation and reporting tools in C#, Python, Perl, SQL, JavaScript, and HTML to streamline file processing, metadata extraction, data export, and staff workflows for MSU Libraries and Mississippi Library Partnership operations across 12 library systems and 76 branches/campus libraries.",
                     "Developed Query, a browser-based reporting system with configurable filters, API-backed payloads, report history, and Excel export for live library item data.",
                     "Created MetaTable, a WPF metadata scanner for large directory trees with real-time progress tracking and structured Excel exports.",
-                    "Integrated SirsiDynix APIs, SQL-backed data sources, and Excel libraries to support internal reporting and operational data workflows.",
+                    "Translated staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
                     "Applied AI-assisted engineering with C# and C++ systems fundamentals, data structures, debugging, and code review to validate generated code for correctness, performance, and maintainability."
                 ]
             }
