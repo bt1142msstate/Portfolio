@@ -52,7 +52,7 @@ Likely direction:
 - Add structured data that connects the site to public profiles, creator platforms, projects, app pages, and other trusted sources.
 - Build the site as an identity hub so searches for Brandon can connect software work, creator content, public profiles, and background information.
 - Add public information that helps search engines and AI systems answer basic questions accurately without relying on random third-party sources.
-- Add an interactive context layer for skills, technical terms, project concepts, wellness/community terms, and other less-common topics so visitors can click a pill, phrase, or card and quickly learn what it means and how it connects to Brandon's work without leaving the site.
+- Add an interactive context layer for skills, technical terms, project concepts, wellness/community terms, and other less-common topics so visitors can click a pill, phrase, or card and open a trusted external definition or reference instead of building a separate on-site glossary.
 - Improve modularization across shared data, reusable sections, visual components, and page-specific rendering so the site is easier to maintain while the broader personal-brand direction is still forming.
 - Plan for a future creator or stage name, including how it should be connected to `Brandon Temple` and `Brandon Vashun Temple` across the website, public profiles, and structured data.
 - Start developing a richer personal profile that includes interests, personality, goals, and creator direction, while keeping sensitive or unnecessary details out.

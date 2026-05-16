@@ -42,65 +42,19 @@
         }).join("");
     }
 
-    function findSkillCategory(data, skillName) {
-        var matchingGroup = data.site.skills.find(function (group) {
-            return group.items.indexOf(skillName) !== -1;
-        });
-        return matchingGroup ? matchingGroup.title : "Skill";
+    function getSkillLink(data, label) {
+        return data.site.skillLinks && data.site.skillLinks[label]
+            ? data.site.skillLinks[label]
+            : "";
     }
 
-    function findRelatedProjects(data, skillName) {
-        return data.projects.filter(function (project) {
-            return project.featuredOnSite && project.siteTags && project.siteTags.indexOf(skillName) !== -1;
-        });
-    }
-
-    function renderSkillDetail(data, skillName, skillDetailCard, shouldMove) {
-        var category = findSkillCategory(data, skillName);
-        var description = data.site.skillDetails && data.site.skillDetails[skillName]
-            ? data.site.skillDetails[skillName]
-            : "This is one of the skills I use across practical software, automation, and data-system work.";
-        var relatedProjects = findRelatedProjects(data, skillName);
-        var relatedMarkup = relatedProjects.length
-            ? '<p class="skill-detail-related"><span>Related work:</span> ' + relatedProjects.map(function (project) {
-                return escapeHtml(project.title);
-            }).join(", ") + "</p>"
-            : '<p class="skill-detail-related"><span>Related work:</span> MSU Libraries tooling, project work, coursework, or engineering workflow.</p>';
-
-        skillDetailCard.innerHTML =
-            '<p class="skill-detail-eyebrow">' + escapeHtml(category) + "</p>" +
-            "<h3>" + escapeHtml(skillName) + "</h3>" +
-            "<p>" + escapeHtml(description) + "</p>" +
-            relatedMarkup;
-
-        document.querySelectorAll(".skill-pill").forEach(function (button) {
-            var isActive = button.getAttribute("data-skill") === skillName;
-            button.classList.toggle("active", isActive);
-            button.setAttribute("aria-pressed", String(isActive));
-        });
-
-        if (shouldMove) {
-            skillDetailCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
-            skillDetailCard.focus({ preventScroll: true });
-        }
-    }
-
-    function setupSkillDetails(data, skillsGrid, skillDetailCard) {
-        if (!skillDetailCard) {
-            return;
+    function renderLinkedPill(data, label, className) {
+        var href = getSkillLink(data, label);
+        if (!href) {
+            return '<span class="' + escapeHtml(className) + '">' + escapeHtml(label) + "</span>";
         }
 
-        skillsGrid.addEventListener("click", function (event) {
-            var button = event.target.closest(".skill-pill");
-            if (!button || !skillsGrid.contains(button)) {
-                return;
-            }
-            var skillName = button.getAttribute("data-skill");
-            if (!skillName) {
-                return;
-            }
-            renderSkillDetail(data, skillName, skillDetailCard, true);
-        });
+        return '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer" class="' + escapeHtml(className) + '" aria-label="Learn more about ' + escapeHtml(label) + '">' + escapeHtml(label) + "</a>";
     }
 
     function getGridColumnCount(grid) {
@@ -164,7 +118,6 @@
         var educationGrid = document.getElementById("education-grid");
         var contactIntro = document.getElementById("contact-intro");
         var contactInfo = document.getElementById("contact-info");
-        var skillDetailCard = document.getElementById("skill-detail-card");
         if (!aboutText || !skillsGrid || !experienceTimeline || !projectsGrid || !educationGrid || !contactIntro || !contactInfo) {
             return;
         }
@@ -178,13 +131,11 @@
                 "<h3>" + escapeHtml(group.title) + "</h3>" +
                 '<div class="skill-tags">' +
                 group.items.map(function (item) {
-                    return '<button type="button" class="skill-pill" data-skill="' + escapeHtml(item) + '" aria-controls="skill-detail-card" aria-pressed="false">' + escapeHtml(item) + "</button>";
+                    return renderLinkedPill(data, item, "skill-pill");
                 }).join("") +
                 "</div>" +
                 "</div>";
         }).join("");
-
-        setupSkillDetails(data, skillsGrid, skillDetailCard);
 
         experienceTimeline.innerHTML = data.experience.professional.map(function (role) {
             return '<div class="timeline-item">' +
@@ -214,7 +165,7 @@
                 '<p class="project-description">' + escapeHtml(project.siteDescription) + "</p>" +
                 '<div class="project-tags">' +
                 project.siteTags.map(function (tag) {
-                    return "<span>" + escapeHtml(tag) + "</span>";
+                    return renderLinkedPill(data, tag, "project-tag");
                 }).join("") +
                 "</div>" +
                 "</div>";
