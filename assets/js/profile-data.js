@@ -17,33 +17,41 @@ window.profileData = {
         about: [
             "I'm Brandon Vashun Temple, a software engineer with hands-on experience building desktop utilities, internal tools, and browser-based reporting applications. My work is centered on practical software that helps people process files, export data, automate repetitive tasks, and navigate complex workflows more efficiently.",
             "My workflow is AI-first but engineering-led: I use AI to accelerate implementation while applying systems fundamentals, data structures, debugging, and architectural judgment to keep code correct, maintainable, and resilient.",
-            "Currently at MSU Libraries, I build and support operational tools using C#, Perl, Python, SQL, HTML, CSS, and raw JavaScript, including MetaTable and Query. My public project work spans WPF and WinUI desktop apps, reporting interfaces, algorithmic browser apps, and Ady Resolver, a Python address-resolution project that combines rule-based matching with a lightweight machine learning stage."
+            "Currently at MSU Libraries, I build and support operational tools using C#, Perl, Python, SQL, HTML, CSS, raw JavaScript, and shell automation, including MetaTable and Query. My public project work spans WPF and WinUI desktop apps, reporting interfaces, algorithmic browser apps, and Ady Resolver, a Python address-resolution project that combines rule-based matching with a lightweight machine learning stage."
         ],
         contactIntro: "I'm interested in software engineering roles centered on AI-first engineering, desktop apps, internal tooling, full-stack product work, and ML-enabled workflow automation. Reach out if you'd like to talk.",
         skills: [
             {
-                title: "Languages",
-                items: ["C#", "Python", "Perl", "SQL", "JavaScript", "TypeScript", "HTML", "CSS", "C++", "C", "Java", "Kotlin", "Swift"]
+                title: "Languages & Markup",
+                items: ["C#", "Python", "Perl", "SQL", "JavaScript", "TypeScript", "HTML", "CSS", "XAML", "Shell", "PowerShell", "C++", "C", "Java", "Kotlin", "Swift"]
             },
             {
-                title: "Frameworks",
-                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Node.js"]
+                title: "Frameworks & UI",
+                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "Node.js", "Tailwind CSS", "Responsive Design"]
             },
             {
-                title: "Technologies",
-                items: ["SQL Server", "PostgreSQL", "WebView2", "EPPlus", "ExcelJS", "Git", "Playwright", "ESLint", "AI-First Engineering", "Architectural Judgment", "Machine Learning", "Address Resolution", "MARC", "CSV/XLSX Workflows", "Algorithms", "REST APIs", "TDD", "Agile"]
+                title: "Data & APIs",
+                items: ["SQL Server", "PostgreSQL", "EF Core", "SirsiDynix APIs", "REST APIs", "CGI", "JSON", "MARC", "CSV/XLSX Workflows", "Excel Export", "Address Resolution", "Record Linkage", "Data Pipelines"]
+            },
+            {
+                title: "Libraries",
+                items: ["WebView2", "EPPlus", "ExcelJS", "MetadataExtractor", "ImageSharp", "AutoNumeric"]
+            },
+            {
+                title: "Tools & Practices",
+                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "AI-First Engineering", "Architectural Judgment", "Machine Learning", "Algorithms", "TDD", "Agile", "CI/CD", "Code Review"]
             }
         ]
     },
     resume: {
         summary: "Software engineer focused on automation and data systems, building desktop and web tools with C#, .NET, Python, SQL, JavaScript, and APIs. Experience designing reporting workflows, file-processing utilities, metadata tools, and API-backed internal systems for operational teams.",
         skills: [
-            { label: "Languages", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML, CSS, C++" },
-            { label: "Frameworks", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3" },
-            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, SirsiDynix APIs, JSON, MARC" },
-            { label: "Libraries", value: "WebView2, EPPlus, ExcelJS" },
-            { label: "Tools", value: "Git, Visual Studio, VS Code, Postman, MSTest, ESLint, Playwright" },
-            { label: "Methods", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
+            { label: "Languages", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML, CSS, XAML, C++" },
+            { label: "Frameworks", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, Node.js" },
+            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, SirsiDynix APIs, CGI, JSON, MARC, CSV/XLSX Workflows" },
+            { label: "Libraries", value: "WebView2, EPPlus, ExcelJS, MetadataExtractor, ImageSharp, AutoNumeric" },
+            { label: "Tools", value: "Git, GitHub Actions, Visual Studio, VS Code, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell" },
+            { label: "Methods", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, CI/CD, Machine Learning, Record Linkage" }
         ]
     },
     experience: {
@@ -54,7 +62,7 @@ window.profileData = {
                 location: "Starkville, MS",
                 date: "Aug 2024 - Present",
                 bullets: [
-                    "Built automation and reporting tools in C#, Python, Perl, SQL, JavaScript, HTML, and CSS to streamline file processing, metadata extraction, data export, and staff workflows for MSU Libraries and Mississippi Library Partnership operations across 12 library systems and 76 branches/campus libraries.",
+                    "Built automation and reporting tools in C#, Python, Perl, SQL, JavaScript, HTML, CSS, and shell scripts to streamline file processing, metadata extraction, data export, and staff workflows for MSU Libraries and Mississippi Library Partnership operations across 12 library systems and 76 branches/campus libraries.",
                     "Developed Query, a browser-based reporting system with configurable filters, API-backed payloads, report history, and Excel export for live library item data.",
                     "Created MetaTable, a WPF metadata scanner for large directory trees with real-time progress tracking and structured Excel exports.",
                     "Translated staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
@@ -134,7 +142,7 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/MetaTable",
             siteType: "WPF File Metadata Scanner",
             siteDescription: "Created as part of my MSU Libraries role to scan directories, collect detailed file metadata, track progress in real time, and export results to Excel.",
-            siteTags: ["C#", ".NET 9", "WPF", "EPPlus"],
+            siteTags: ["C#", ".NET 9", "WPF", "XAML", "EPPlus"],
             resumeSubtitle: "WPF File Metadata Scanner | C#, .NET 9, EPPlus",
             resumeDescription: "WPF scanner for large directory trees; extracts file metadata, tracks progress, and exports structured Excel reports for MSU Libraries.",
             featuredOnSite: true,
@@ -145,7 +153,7 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/HTMLConverter",
             siteType: "WinUI 3 Batch PDF Converter",
             siteDescription: "Windows app for converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, batch processing, and automatic output archiving.",
-            siteTags: ["C#", ".NET 8", "WinUI 3", "WebView2"],
+            siteTags: ["C#", ".NET 8", "WinUI 3", "Windows App SDK", "WebView2"],
             resumeSubtitle: "WinUI 3 Batch PDF Converter | .NET 8, WebView2",
             resumeDescription: "WinUI 3 app for batch converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, and output archiving.",
             featuredOnSite: true,
@@ -156,7 +164,7 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/Query",
             siteType: "Browser-Based Report Builder",
             siteDescription: "Created for MSU Libraries to create library item reports with configurable filters, structured query payloads, history tracking, and Excel export.",
-            siteTags: ["JavaScript", "HTML", "CSS", "ExcelJS"],
+            siteTags: ["JavaScript", "HTML", "CSS", "ExcelJS", "Tailwind CSS", "Playwright"],
             resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
             resumeDescription: "Browser-based MSU Libraries reporting tool with configurable filters, structured API payloads, report history, and Excel export.",
             featuredOnSite: true,
@@ -167,7 +175,7 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/Ady-Resolver",
             siteType: "Mississippi Address Resolution Toolkit",
             siteDescription: "Python toolkit and local browser app for resolving messy Mississippi addresses using cached public address sources, typo-heavy evaluation data, and a staged matching pipeline.",
-            siteTags: ["Python", "Machine Learning", "Address Matching", "Data Pipeline"],
+            siteTags: ["Python", "Machine Learning", "Record Linkage", "Address Matching", "Data Pipeline", "CSV/XLSX"],
             resumeSubtitle: "Mississippi Address Resolution Toolkit | Python, Machine Learning",
             resumeDescription: "Python address-resolution toolkit and local browser app using cached public data, staged matching, typo-heavy evaluation data, and lightweight ML.",
             featuredOnSite: true,
@@ -178,7 +186,7 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/connect4-ai",
             siteType: "Browser-Based Game AI Demo",
             siteDescription: "Built a playable Connect 4 app with minimax, alpha-beta pruning, replay tooling, experiment modes, and headless validation, published with a live GitHub Pages demo.",
-            siteTags: ["JavaScript", "Minimax", "Alpha-Beta Pruning", "Game AI"],
+            siteTags: ["JavaScript", "Minimax", "Alpha-Beta Pruning", "Game AI", "GitHub Actions"],
             resumeSubtitle: "Browser-Based Game AI Demo | JavaScript, Minimax, Alpha-Beta Pruning",
             resumeDescription: "Playable browser game AI with minimax, alpha-beta pruning, replay tooling, experiment modes, and headless validation.",
             featuredOnSite: true,
