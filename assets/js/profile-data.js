@@ -22,36 +22,44 @@ window.profileData = {
         contactIntro: "I'm interested in software engineering roles centered on AI-first engineering, desktop apps, internal tooling, full-stack product work, and ML-enabled workflow automation. Reach out if you'd like to talk.",
         skills: [
             {
-                title: "Languages & Markup",
-                items: ["C#", "Python", "Perl", "SQL", "JavaScript", "TypeScript", "HTML", "CSS", "XAML", "Shell", "PowerShell", "C++", "C", "Java", "Kotlin", "Swift"]
+                title: "Programming Languages",
+                items: ["C#", "Python", "Perl", "SQL", "JavaScript", "TypeScript", "C++", "C", "Java", "Kotlin", "Swift"]
             },
             {
-                title: "Frameworks & UI",
-                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "Node.js", "Tailwind CSS", "Responsive Design"]
+                title: "Web & UI",
+                items: ["HTML", "CSS", "XAML", "Node.js", "Tailwind CSS", "Responsive Design", "AutoNumeric"]
+            },
+            {
+                title: ".NET & Desktop",
+                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "WebView2"]
             },
             {
                 title: "Data & APIs",
                 items: ["SQL Server", "PostgreSQL", "EF Core", "SirsiDynix APIs", "REST APIs", "CGI", "JSON", "MARC", "CSV/XLSX Workflows", "Excel Export", "Address Resolution", "Record Linkage", "Data Pipelines"]
             },
             {
-                title: "Libraries",
-                items: ["WebView2", "EPPlus", "ExcelJS", "MetadataExtractor", "ImageSharp", "AutoNumeric"]
+                title: "Libraries & Packages",
+                items: ["EPPlus", "ExcelJS", "MetadataExtractor", "ImageSharp"]
             },
             {
-                title: "Tools & Practices",
-                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "AI-First Engineering", "Architectural Judgment", "Machine Learning", "Algorithms", "TDD", "Agile", "CI/CD", "Code Review"]
+                title: "Tools, Testing & Delivery",
+                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD"]
+            },
+            {
+                title: "Engineering Practices",
+                items: ["AI-First Engineering", "Architectural Judgment", "Machine Learning", "Data Structures", "Algorithms", "TDD", "Agile", "Code Review", "Automation"]
             }
         ]
     },
     resume: {
         summary: "Software engineer focused on automation and data systems, building desktop and web tools with C#, .NET, Python, SQL, JavaScript, and APIs. Experience designing reporting workflows, file-processing utilities, metadata tools, and API-backed internal systems for operational teams.",
         skills: [
-            { label: "Languages", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML, CSS, XAML, C++" },
-            { label: "Frameworks", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, Node.js" },
-            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, SirsiDynix APIs, CGI, JSON, MARC, CSV/XLSX Workflows" },
-            { label: "Libraries", value: "WebView2, EPPlus, ExcelJS, MetadataExtractor, ImageSharp, AutoNumeric" },
-            { label: "Tools", value: "Git, GitHub Actions, Visual Studio, VS Code, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell" },
-            { label: "Methods", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, CI/CD, Machine Learning, Record Linkage" }
+            { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
+            { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2" },
+            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, SirsiDynix APIs, CGI, JSON, MARC, CSV/XLSX Workflows, Record Linkage" },
+            { label: "Libraries", value: "EPPlus, ExcelJS, MetadataExtractor, ImageSharp, AutoNumeric" },
+            { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, VS Code, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell, CI/CD" },
+            { label: "Methods & AI", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
         ]
     },
     experience: {
