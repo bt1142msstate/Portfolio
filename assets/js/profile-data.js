@@ -117,7 +117,7 @@ window.profileData = {
             degree: "Associate of Arts in Computer Science",
             school: "East Central Community College",
             location: "Decatur, MS",
-            date: "Fall 2019 - May 2021",
+            date: "Aug 2019 - May 2021",
             gpa: "3.85/4.0",
             honorsLines: [
                 "Honors: Phi Theta Kappa, Gamma Beta Phi",
