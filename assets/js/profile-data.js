@@ -17,32 +17,32 @@ window.profileData = {
         about: [
             "I'm Brandon Vashun Temple, a software engineer with hands-on experience building desktop utilities, internal tools, and browser-based reporting applications. My work is centered on practical software that helps people process files, export data, automate repetitive tasks, and navigate complex workflows more efficiently.",
             "My workflow is AI-first but engineering-led: I use AI to accelerate implementation while applying systems fundamentals, data structures, debugging, and architectural judgment to keep code correct, maintainable, and resilient.",
-            "Currently at MSU Libraries, I build and support operational tools using C#, Perl, Python, SQL, HTML, and raw JavaScript, including MetaTable and Query. My public project work spans WPF and WinUI desktop apps, reporting interfaces, algorithmic browser apps, and Ady Resolver, a Python address-resolution project that combines rule-based matching with a lightweight machine learning stage."
+            "Currently at MSU Libraries, I build and support operational tools using C#, Perl, Python, SQL, HTML, CSS, and raw JavaScript, including MetaTable and Query. My public project work spans WPF and WinUI desktop apps, reporting interfaces, algorithmic browser apps, and Ady Resolver, a Python address-resolution project that combines rule-based matching with a lightweight machine learning stage."
         ],
         contactIntro: "I'm interested in software engineering roles centered on AI-first engineering, desktop apps, internal tooling, full-stack product work, and ML-enabled workflow automation. Reach out if you'd like to talk.",
         skills: [
             {
                 title: "Languages",
-                items: ["C#", "Python", "TypeScript", "JavaScript", "HTML", "Java", "Kotlin", "Swift", "C++", "C", "SQL"]
+                items: ["C#", "Python", "Perl", "SQL", "JavaScript", "TypeScript", "HTML", "CSS", "C++", "C", "Java", "Kotlin", "Swift"]
             },
             {
                 title: "Frameworks",
-                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3"]
+                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Node.js"]
             },
             {
                 title: "Technologies",
-                items: ["SQL Server", "PostgreSQL", "WebView2", "EPPlus", "ExcelJS", "Git", "AI-First Engineering", "Architectural Judgment", "Machine Learning", "Address Resolution", "Algorithms", "REST APIs", "TDD", "Agile"]
+                items: ["SQL Server", "PostgreSQL", "WebView2", "EPPlus", "ExcelJS", "Git", "Playwright", "ESLint", "AI-First Engineering", "Architectural Judgment", "Machine Learning", "Address Resolution", "MARC", "CSV/XLSX Workflows", "Algorithms", "REST APIs", "TDD", "Agile"]
             }
         ]
     },
     resume: {
         summary: "Software engineer focused on automation and data systems, building desktop and web tools with C#, .NET, Python, SQL, JavaScript, and APIs. Experience designing reporting workflows, file-processing utilities, metadata tools, and API-backed internal systems for operational teams.",
         skills: [
-            { label: "Languages", value: "C#, Python, SQL, JavaScript, TypeScript, HTML, C++" },
+            { label: "Languages", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML, CSS, C++" },
             { label: "Frameworks", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3" },
-            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, SirsiDynix APIs" },
+            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, SirsiDynix APIs, JSON, MARC" },
             { label: "Libraries", value: "WebView2, EPPlus, ExcelJS" },
-            { label: "Tools", value: "Git, Visual Studio, VS Code, Postman, MSTest" },
+            { label: "Tools", value: "Git, Visual Studio, VS Code, Postman, MSTest, ESLint, Playwright" },
             { label: "Methods", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
         ]
     },
@@ -54,7 +54,7 @@ window.profileData = {
                 location: "Starkville, MS",
                 date: "Aug 2024 - Present",
                 bullets: [
-                    "Built automation and reporting tools in C#, Python, Perl, SQL, JavaScript, and HTML to streamline file processing, metadata extraction, data export, and staff workflows for MSU Libraries and Mississippi Library Partnership operations across 12 library systems and 76 branches/campus libraries.",
+                    "Built automation and reporting tools in C#, Python, Perl, SQL, JavaScript, HTML, and CSS to streamline file processing, metadata extraction, data export, and staff workflows for MSU Libraries and Mississippi Library Partnership operations across 12 library systems and 76 branches/campus libraries.",
                     "Developed Query, a browser-based reporting system with configurable filters, API-backed payloads, report history, and Excel export for live library item data.",
                     "Created MetaTable, a WPF metadata scanner for large directory trees with real-time progress tracking and structured Excel exports.",
                     "Translated staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
