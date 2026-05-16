@@ -53,6 +53,7 @@ Likely direction:
 - Build the site as an identity hub so searches for Brandon can connect software work, creator content, public profiles, and background information.
 - Add public information that helps search engines and AI systems answer basic questions accurately without relying on random third-party sources.
 - Add an interactive context layer for skills, technical terms, project concepts, wellness/community terms, and other less-common topics so visitors can click a pill, phrase, or card and quickly learn what it means and how it connects to Brandon's work without leaving the site.
+- Improve modularization across shared data, reusable sections, visual components, and page-specific rendering so the site is easier to maintain while the broader personal-brand direction is still forming.
 - Plan for a future creator or stage name, including how it should be connected to `Brandon Temple` and `Brandon Vashun Temple` across the website, public profiles, and structured data.
 - Start developing a richer personal profile that includes interests, personality, goals, and creator direction, while keeping sensitive or unnecessary details out.
 
@@ -80,6 +81,6 @@ Possible direction:
 - Add a public status board for current and planned work across software products, creator series, business initiatives, experiments, and goals, using clear labels such as idea, planned, in progress, paused, testing, launched, completed, or canceled.
 - Add a public challenges, jobs, or bounties section for paid opportunities such as content challenges, research help, community tasks, app-related jobs, or other scoped work, with clear rules, payouts, deadlines, submission requirements, review status, payment terms, and moderation controls.
 - Add automated pre-deployment checks for important pages, metadata, structured data, transcripts, sitemap entries, canonical URLs, crawlability signals, and searchability expectations.
-- Revisit navigation, content organization, animations, search visibility, visual polish, and overall platform architecture after v2 is live and enough public content exists to justify the larger system.
+- Complete the deeper refactor once the long-term content model is clearer, including navigation, content organization, reusable modules, animations, search visibility, visual polish, and overall platform architecture.
 
 Version 3 is intentionally not tightly scoped yet. The right direction should come from what works in v1 and v2, especially what content is worth making public and what helps people or AI systems understand Brandon accurately.
