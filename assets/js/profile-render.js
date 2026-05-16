@@ -42,6 +42,58 @@
         }).join("");
     }
 
+    function getGridColumnCount(grid) {
+        var columns = window.getComputedStyle(grid).gridTemplateColumns;
+        if (!columns || columns === "none") {
+            return 1;
+        }
+        return columns.split(" ").filter(Boolean).length || 1;
+    }
+
+    function resetGridFill(item) {
+        item.classList.remove("grid-row-fill");
+        item.style.removeProperty("--grid-row-fill-span");
+    }
+
+    function balanceCardGrid(grid) {
+        var items = Array.prototype.slice.call(grid.children);
+        items.forEach(resetGridFill);
+        if (items.length < 2) {
+            return;
+        }
+
+        var columnCount = getGridColumnCount(grid);
+        if (columnCount <= 1 || items.length <= columnCount) {
+            return;
+        }
+
+        var rowTops = items.map(function (item) {
+            return Math.round(item.getBoundingClientRect().top);
+        });
+        var lastRowTop = rowTops[rowTops.length - 1];
+        var lastRowCount = rowTops.filter(function (top) {
+            return Math.abs(top - lastRowTop) <= 2;
+        }).length;
+        if (lastRowCount >= columnCount) {
+            return;
+        }
+
+        var lastItem = items[items.length - 1];
+        var span = columnCount - lastRowCount + 1;
+        lastItem.classList.add("grid-row-fill");
+        lastItem.style.setProperty("--grid-row-fill-span", String(span));
+    }
+
+    function balanceCardGrids() {
+        document.querySelectorAll(".skills-grid, .projects-grid, .education-grid").forEach(balanceCardGrid);
+    }
+
+    var balanceGridRequest = 0;
+    function scheduleBalanceCardGrids() {
+        window.cancelAnimationFrame(balanceGridRequest);
+        balanceGridRequest = window.requestAnimationFrame(balanceCardGrids);
+    }
+
     function renderSite() {
         var data = window.profileData;
         var aboutText = document.getElementById("about-text");
@@ -151,6 +203,8 @@
             "</svg>" +
             "<span>" + escapeHtml(data.contact.location) + "</span>" +
             "</div>";
+
+        scheduleBalanceCardGrids();
     }
 
     function renderResume() {
@@ -232,6 +286,8 @@
 
     if (document.body && document.body.dataset.page === "site") {
         renderSite();
+        window.addEventListener("load", scheduleBalanceCardGrids);
+        window.addEventListener("resize", scheduleBalanceCardGrids);
     }
 
     if (document.body && document.body.dataset.page === "resume") {

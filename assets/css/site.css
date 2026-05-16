@@ -650,8 +650,8 @@ button:focus-visible {
         inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
-.skill-category:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
+.grid-row-fill {
+    grid-column-end: span var(--grid-row-fill-span, 1);
 }
 
 .skill-category h3 {
