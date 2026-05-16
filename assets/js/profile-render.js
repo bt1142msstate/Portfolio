@@ -48,13 +48,123 @@
             : "";
     }
 
-    function renderLinkedPill(data, label, className) {
-        var href = getSkillLink(data, label);
-        if (!href) {
-            return '<span class="' + escapeHtml(className) + '">' + escapeHtml(label) + "</span>";
+    function getSkillDescription(data, label) {
+        return data.site.skillDetails && data.site.skillDetails[label]
+            ? data.site.skillDetails[label]
+            : "This is a technical concept or tool connected to practical software, automation, data systems, or project work.";
+    }
+
+    function findSkillCategory(data, label) {
+        var matchingGroup = data.site.skills.find(function (group) {
+            return group.items.indexOf(label) !== -1;
+        });
+        return matchingGroup ? matchingGroup.title : "Project concept";
+    }
+
+    function findRelatedProjects(data, label) {
+        return data.projects.filter(function (project) {
+            return project.featuredOnSite && project.siteTags && project.siteTags.indexOf(label) !== -1;
+        });
+    }
+
+    function renderRelatedProjects(projects) {
+        if (!projects.length) {
+            return '<p class="skill-overlay-empty">Related across MSU Libraries tooling, coursework, project work, or Brandon&apos;s engineering workflow.</p>';
         }
 
-        return '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer" class="' + escapeHtml(className) + '" aria-label="Learn more about ' + escapeHtml(label) + '">' + escapeHtml(label) + "</a>";
+        return '<ul class="skill-overlay-work-list">' + projects.map(function (project) {
+            return '<li>' +
+                '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(project.title) + "</a>" +
+                '<span>' + escapeHtml(project.siteType) + "</span>" +
+                "</li>";
+        }).join("") + "</ul>";
+    }
+
+    function renderSkillPill(data, label, className) {
+        var href = getSkillLink(data, label);
+        var linkAttribute = href ? ' data-skill-link="' + escapeHtml(href) + '"' : "";
+
+        return '<button type="button" class="' + escapeHtml(className) + '" data-skill-label="' + escapeHtml(label) + '"' + linkAttribute + ' aria-haspopup="dialog" aria-label="Open details for ' + escapeHtml(label) + '">' + escapeHtml(label) + "</button>";
+    }
+
+    var activeSkillTrigger = null;
+
+    function openSkillOverlay(data, label, trigger) {
+        var overlay = document.getElementById("skill-overlay");
+        var panel = document.getElementById("skill-overlay-panel");
+        var eyebrow = document.getElementById("skill-overlay-eyebrow");
+        var title = document.getElementById("skill-overlay-title");
+        var description = document.getElementById("skill-overlay-description");
+        var related = document.getElementById("skill-overlay-related");
+        var externalLink = document.getElementById("skill-overlay-link");
+        var href = getSkillLink(data, label);
+
+        if (!overlay || !panel || !eyebrow || !title || !description || !related || !externalLink) {
+            return;
+        }
+
+        activeSkillTrigger = trigger || null;
+        eyebrow.textContent = findSkillCategory(data, label);
+        title.textContent = label;
+        description.textContent = getSkillDescription(data, label);
+        related.innerHTML = '<p class="skill-overlay-label">Related work</p>' + renderRelatedProjects(findRelatedProjects(data, label));
+
+        if (href) {
+            externalLink.href = href;
+            externalLink.textContent = "Read external reference";
+            externalLink.hidden = false;
+        } else {
+            externalLink.hidden = true;
+        }
+
+        overlay.hidden = false;
+        overlay.classList.add("is-open");
+        document.body.classList.add("skill-overlay-open");
+        window.requestAnimationFrame(function () {
+            panel.focus({ preventScroll: true });
+        });
+    }
+
+    function closeSkillOverlay() {
+        var overlay = document.getElementById("skill-overlay");
+        if (!overlay || overlay.hidden) {
+            return;
+        }
+
+        overlay.classList.remove("is-open");
+        overlay.hidden = true;
+        document.body.classList.remove("skill-overlay-open");
+        if (activeSkillTrigger) {
+            activeSkillTrigger.focus({ preventScroll: true });
+        }
+        activeSkillTrigger = null;
+    }
+
+    function setupSkillOverlay(data) {
+        var overlay = document.getElementById("skill-overlay");
+        if (!overlay || overlay.dataset.ready === "true") {
+            return;
+        }
+
+        overlay.dataset.ready = "true";
+        document.addEventListener("click", function (event) {
+            var pill = event.target.closest("[data-skill-label]");
+            if (pill) {
+                event.preventDefault();
+                openSkillOverlay(data, pill.getAttribute("data-skill-label"), pill);
+                return;
+            }
+
+            if (event.target.closest("[data-skill-overlay-close]")) {
+                closeSkillOverlay();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeSkillOverlay();
+            }
+        });
     }
 
     function getGridColumnCount(grid) {
@@ -131,11 +241,13 @@
                 "<h3>" + escapeHtml(group.title) + "</h3>" +
                 '<div class="skill-tags">' +
                 group.items.map(function (item) {
-                    return renderLinkedPill(data, item, "skill-pill");
+                    return renderSkillPill(data, item, "skill-pill");
                 }).join("") +
                 "</div>" +
                 "</div>";
         }).join("");
+
+        setupSkillOverlay(data);
 
         experienceTimeline.innerHTML = data.experience.professional.map(function (role) {
             return '<div class="timeline-item">' +
@@ -165,7 +277,7 @@
                 '<p class="project-description">' + escapeHtml(project.siteDescription) + "</p>" +
                 '<div class="project-tags">' +
                 project.siteTags.map(function (tag) {
-                    return renderLinkedPill(data, tag, "project-tag");
+                    return renderSkillPill(data, tag, "project-tag");
                 }).join("") +
                 "</div>" +
                 "</div>";
