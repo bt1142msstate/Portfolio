@@ -28,8 +28,18 @@ if (skipLink) {
         }
     });
 }
-var sections = document.querySelectorAll("section[id]");
-var navItems = document.querySelectorAll(".nav-links a");
+var navItems = document.querySelectorAll('.nav-links a[href^="#"]');
+var sections = Array.from(navItems).reduce(function (trackedSections, item) {
+    var sectionId = item.getAttribute("href");
+    if (!sectionId || sectionId === "#top") {
+        return trackedSections;
+    }
+    var section = document.querySelector(sectionId);
+    if (section) {
+        trackedSections.push(section);
+    }
+    return trackedSections;
+}, []);
 function setActiveNavItem(activeSectionId) {
     navItems.forEach(function (item) {
         item.classList.remove("active");
@@ -45,24 +55,33 @@ function highlightNavigation() {
         setActiveNavItem("");
         return;
     }
-    var activationOffset = 120;
-    var scrollPosition = window.scrollY + activationOffset;
-    var firstSectionTop = sections[0].offsetTop;
-    if (scrollPosition < firstSectionTop) {
+
+    var navHeight = navbar ? navbar.offsetHeight : 0;
+    var viewportTop = navHeight + 24;
+    var viewportBottom = window.innerHeight;
+    var firstSectionTop = sections[0].getBoundingClientRect().top;
+    if (firstSectionTop > viewportTop) {
         setActiveNavItem("");
         return;
     }
+
     var activeSectionId = "";
+    var bestVisibleArea = 0;
     sections.forEach(function (section) {
-        var sectionTop = section.offsetTop;
         var sectionId = section.getAttribute("id");
         if (!sectionId) {
             return;
         }
-        if (scrollPosition >= sectionTop) {
+        var rect = section.getBoundingClientRect();
+        var visibleTop = Math.max(rect.top, viewportTop);
+        var visibleBottom = Math.min(rect.bottom, viewportBottom);
+        var visibleArea = Math.max(0, visibleBottom - visibleTop);
+        if (visibleArea > bestVisibleArea) {
+            bestVisibleArea = visibleArea;
             activeSectionId = sectionId;
         }
     });
+
     var isAtPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
     if (isAtPageBottom) {
         var lastSection = sections[sections.length - 1];
@@ -71,6 +90,7 @@ function highlightNavigation() {
     setActiveNavItem(activeSectionId);
 }
 window.addEventListener("load", highlightNavigation);
+window.addEventListener("hashchange", highlightNavigation);
 var observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -167,3 +187,4 @@ function debounce(func, wait) {
     };
 }
 window.addEventListener("scroll", debounce(highlightNavigation, 10));
+window.addEventListener("resize", debounce(highlightNavigation, 50));
