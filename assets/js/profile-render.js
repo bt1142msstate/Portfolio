@@ -268,8 +268,7 @@
         }).map(function (project) {
             var projectClass = project.caseStudy ? "project-card project-card-case-study" : "project-card";
             var caseStudyMarkup = project.caseStudy
-                ? '<p class="project-case-study-label">' + escapeHtml(project.caseStudyLabel || "Operational case study") + "</p>" +
-                    '<p class="project-case-study-outcome">' + escapeHtml(project.caseStudyOutcome || "") + "</p>"
+                ? '<p class="project-case-study-outcome">' + escapeHtml(project.caseStudyOutcome || "") + "</p>"
                 : "";
 
             return '<div class="' + projectClass + '">' +

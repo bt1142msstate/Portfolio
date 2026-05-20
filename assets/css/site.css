@@ -1019,20 +1019,6 @@ button:focus-visible {
     line-height: 1.6;
 }
 
-.project-case-study-label {
-    display: inline-flex;
-    width: fit-content;
-    margin-bottom: 0.85rem;
-    padding: 0.35rem 0.7rem;
-    border-radius: 999px;
-    background: rgba(139, 215, 255, 0.14);
-    color: var(--accent);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
 .project-case-study-outcome {
     margin-bottom: 1.35rem;
     color: var(--text-dark);
