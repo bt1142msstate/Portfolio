@@ -266,7 +266,13 @@
         projectsGrid.innerHTML = data.projects.filter(function (project) {
             return project.featuredOnSite;
         }).map(function (project) {
-            return '<div class="project-card">' +
+            var projectClass = project.caseStudy ? "project-card project-card-case-study" : "project-card";
+            var caseStudyMarkup = project.caseStudy
+                ? '<p class="project-case-study-label">' + escapeHtml(project.caseStudyLabel || "Operational case study") + "</p>" +
+                    '<p class="project-case-study-outcome">' + escapeHtml(project.caseStudyOutcome || "") + "</p>"
+                : "";
+
+            return '<div class="' + projectClass + '">' +
                 '<div class="project-header">' +
                 "<h3>" + escapeHtml(project.title) + "</h3>" +
                 '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View ' + escapeHtml(project.title) + ' on GitHub" class="project-link">' +
@@ -275,6 +281,7 @@
                 "</div>" +
                 '<p class="project-type">' + escapeHtml(project.siteType) + "</p>" +
                 '<p class="project-description">' + escapeHtml(project.siteDescription) + "</p>" +
+                caseStudyMarkup +
                 '<div class="project-tags">' +
                 project.siteTags.map(function (tag) {
                     return renderSkillPill(data, tag, "project-tag");

@@ -529,6 +529,15 @@ button:focus-visible {
     margin: 1rem auto 0;
 }
 
+.section-intro {
+    max-width: 860px;
+    margin: -1.6rem auto 2.4rem;
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.72;
+    text-align: center;
+}
+
 /* About Section */
 .about-content {
     display: grid;
@@ -964,6 +973,16 @@ button:focus-visible {
     transform: translateY(-6px);
 }
 
+.project-card-case-study {
+    background:
+        linear-gradient(145deg, rgba(139, 215, 255, 0.12), transparent 46%),
+        linear-gradient(155deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.028)),
+        rgba(255, 255, 255, 0.024);
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.26),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
 .project-header {
     display: flex;
     justify-content: space-between;
@@ -996,8 +1015,29 @@ button:focus-visible {
 
 .project-description {
     color: var(--text-gray);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     line-height: 1.6;
+}
+
+.project-case-study-label {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(139, 215, 255, 0.14);
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.project-case-study-outcome {
+    margin-bottom: 1.35rem;
+    color: var(--text-dark);
+    line-height: 1.65;
+    font-weight: 600;
 }
 
 .project-tags {

@@ -15,11 +15,11 @@ window.profileData = {
     },
     site: {
         about: [
-            "I'm Brandon Vashun Temple, a software engineer with hands-on experience building desktop utilities, internal tools, and browser-based reporting applications. My work is centered on practical software that helps people process files, export data, automate repetitive tasks, and navigate complex workflows more efficiently.",
-            "My workflow is AI-first but engineering-led: I use AI to accelerate implementation while applying systems fundamentals, data structures, debugging, and architectural judgment to keep code correct, maintainable, and resilient.",
-            "Currently at MSU Libraries, I build and support operational tools using C#, Perl, Python, SQL, HTML, CSS, raw JavaScript, and shell automation, including MetaTable and Query. My public project work spans WPF and WinUI desktop apps, reporting interfaces, algorithmic browser apps, and Ady Resolver, a Python address-resolution project that combines rule-based matching with a lightweight machine learning stage."
+            "I build practical workflow software: .NET desktop apps, browser-based reporting systems, Python/SQL automation, and AI-assisted tools that make real operations faster.",
+            "My strongest work comes from real staff problems. At MSU Libraries, I built Query for API-backed reporting and Excel export workflows, and MetaTable for scanning file systems, extracting metadata, tracking progress, and producing structured reports.",
+            "My workflow is AI-first but engineering-led: I use AI to accelerate implementation while applying systems fundamentals, data structures, debugging, user feedback, and architectural judgment to keep tools correct, maintainable, and useful."
         ],
-        contactIntro: "I'm interested in software engineering roles centered on AI-first engineering, desktop apps, internal tooling, full-stack product work, and ML-enabled workflow automation. Reach out if you'd like to talk.",
+        contactIntro: "I'm interested in software engineering roles centered on practical workflow software: .NET desktop apps, browser-based reporting systems, Python/SQL automation, APIs, Excel exports, internal tooling, and AI-assisted engineering. Reach out if you'd like to talk.",
         skills: [
             {
                 title: "Programming Languages",
@@ -198,7 +198,7 @@ window.profileData = {
         }
     },
     resume: {
-        summary: "Software engineer focused on automation and data systems, building desktop and web tools with C#, .NET, Python, SQL, JavaScript, and APIs. Experience designing reporting workflows, file-processing utilities, metadata tools, and API-backed internal systems for operational teams.",
+        summary: "Software engineer building practical workflow software: .NET desktop apps, browser-based reporting systems, Python/SQL automation, APIs, Excel exports, and AI-assisted tools that make real operations faster. Experience turning staff workflow problems into maintainable internal software.",
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
             { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2" },
@@ -292,10 +292,27 @@ window.profileData = {
     ],
     projects: [
         {
+            title: "Query",
+            githubUrl: "https://github.com/bt1142msstate/Query",
+            siteType: "Operational Case Study | Browser-Based Reporting Tool",
+            siteDescription: "Developed for MSU Libraries staff workflows to turn live library item data into configurable reports with API-backed query payloads, report history, and Excel export.",
+            caseStudy: true,
+            caseStudyLabel: "Real staff reporting workflow",
+            caseStudyOutcome: "Shows production-style work with users, filters, APIs, structured payloads, browser UI, persistent report history, and Excel exports.",
+            siteTags: ["JavaScript", "HTML", "CSS", "ExcelJS", "Tailwind CSS", "Playwright"],
+            resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
+            resumeDescription: "Browser-based MSU Libraries reporting tool with configurable filters, structured API payloads, report history, and Excel export.",
+            featuredOnSite: true,
+            featuredOnResume: true
+        },
+        {
             title: "MetaTable",
             githubUrl: "https://github.com/bt1142msstate/MetaTable",
-            siteType: "WPF File Metadata Scanner",
-            siteDescription: "Created as part of my MSU Libraries role to scan directories, collect detailed file metadata, track progress in real time, and export results to Excel.",
+            siteType: "Operational Case Study | WPF File Metadata Scanner",
+            siteDescription: "Built as part of my MSU Libraries role to scan large directory trees, extract detailed file metadata, track progress in real time, and export structured Excel reports.",
+            caseStudy: true,
+            caseStudyLabel: "Real metadata and file-system workflow",
+            caseStudyOutcome: "Shows desktop engineering with C#, WPF, file-system traversal, metadata extraction, progress reporting, and staff-ready Excel output.",
             siteTags: ["C#", ".NET 9", "WPF", "XAML", "EPPlus"],
             resumeSubtitle: "WPF File Metadata Scanner | C#, .NET 9, EPPlus",
             resumeDescription: "WPF scanner for large directory trees; extracts file metadata, tracks progress, and exports structured Excel reports for MSU Libraries.",
@@ -310,17 +327,6 @@ window.profileData = {
             siteTags: ["C#", ".NET 8", "WinUI 3", "Windows App SDK", "WebView2"],
             resumeSubtitle: "WinUI 3 Batch PDF Converter | .NET 8, WebView2",
             resumeDescription: "WinUI 3 app for batch converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, and output archiving.",
-            featuredOnSite: true,
-            featuredOnResume: true
-        },
-        {
-            title: "Query",
-            githubUrl: "https://github.com/bt1142msstate/Query",
-            siteType: "Browser-Based Report Builder",
-            siteDescription: "Created for MSU Libraries to create library item reports with configurable filters, structured query payloads, history tracking, and Excel export.",
-            siteTags: ["JavaScript", "HTML", "CSS", "ExcelJS", "Tailwind CSS", "Playwright"],
-            resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
-            resumeDescription: "Browser-based MSU Libraries reporting tool with configurable filters, structured API payloads, report history, and Excel export.",
             featuredOnSite: true,
             featuredOnResume: true
         },
