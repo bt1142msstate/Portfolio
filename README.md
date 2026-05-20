@@ -7,7 +7,7 @@ Live site: [brandontemple.com](https://brandontemple.com)
 ## Highlights
 
 - Professional experience, education, and contact information
-- Operational software case studies for `Query` and `MetaTable`, with supporting project cards for `HTMLConverter`, `Ady Resolver`, and `connect4-ai`
+- Operational software and data-quality case studies for `Query`, `MetaTable`, and `Ady Resolver`, with supporting project cards for `HTMLConverter` and `connect4-ai`
 - Static resume PDF download generated from the shared resume page
 - Shared portfolio and resume content managed from `assets/js/profile-data.js`
 - Responsive single-page layout with a dark theme

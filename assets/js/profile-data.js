@@ -320,6 +320,20 @@ window.profileData = {
             featuredOnResume: true
         },
         {
+            title: "Ady Resolver",
+            githubUrl: "https://github.com/bt1142msstate/Ady-Resolver",
+            siteType: "Data Cleanup Case Study | Address Resolution Toolkit",
+            siteDescription: "Built to clean up messy Mississippi address data by combining cached public address sources, staged matching, typo-heavy evaluation data, and lightweight ML-assisted scoring.",
+            caseStudy: true,
+            caseStudyLabel: "Real address cleanup and data-quality workflow",
+            caseStudyOutcome: "Shows Python automation, data pipelines, record linkage, evaluation datasets, local browser tooling, CSV/XLSX workflows, and ML-assisted candidate scoring.",
+            siteTags: ["Python", "Machine Learning", "Record Linkage", "Address Matching", "Data Pipeline", "CSV/XLSX"],
+            resumeSubtitle: "Mississippi Address Resolution Toolkit | Python, Machine Learning",
+            resumeDescription: "Python address-resolution toolkit and local browser app using cached public data, staged matching, typo-heavy evaluation data, and lightweight ML.",
+            featuredOnSite: true,
+            featuredOnResume: true
+        },
+        {
             title: "HTMLConverter",
             githubUrl: "https://github.com/bt1142msstate/HTMLConverter",
             siteType: "WinUI 3 Batch PDF Converter",
@@ -327,17 +341,6 @@ window.profileData = {
             siteTags: ["C#", ".NET 8", "WinUI 3", "Windows App SDK", "WebView2"],
             resumeSubtitle: "WinUI 3 Batch PDF Converter | .NET 8, WebView2",
             resumeDescription: "WinUI 3 app for batch converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, and output archiving.",
-            featuredOnSite: true,
-            featuredOnResume: true
-        },
-        {
-            title: "Ady Resolver",
-            githubUrl: "https://github.com/bt1142msstate/Ady-Resolver",
-            siteType: "Mississippi Address Resolution Toolkit",
-            siteDescription: "Python toolkit and local browser app for resolving messy Mississippi addresses using cached public address sources, typo-heavy evaluation data, and a staged matching pipeline.",
-            siteTags: ["Python", "Machine Learning", "Record Linkage", "Address Matching", "Data Pipeline", "CSV/XLSX"],
-            resumeSubtitle: "Mississippi Address Resolution Toolkit | Python, Machine Learning",
-            resumeDescription: "Python address-resolution toolkit and local browser app using cached public data, staged matching, typo-heavy evaluation data, and lightweight ML.",
             featuredOnSite: true,
             featuredOnResume: true
         },
