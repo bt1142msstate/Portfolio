@@ -15,11 +15,11 @@ window.profileData = {
     },
     site: {
         about: [
-            "I build operational software that turns manual staff workflows into reliable systems: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, and AI-assisted tools.",
-            "My strongest work comes from real staff problems. At MSU Libraries, I built Query for API-backed reporting and Excel export workflows, and MetaTable for scanning file systems, extracting metadata, tracking progress, and producing structured reports.",
+            "I turn manual operational work into reliable internal tools: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted systems.",
+            "At MSU Libraries, my strongest projects started as real staff workflow problems. I built Query for API-backed reporting and Excel export workflows, and MetaTable for scanning file systems, extracting metadata, tracking progress, and producing structured reports.",
             "My workflow is AI-first but engineering-led: I use AI to accelerate implementation while applying systems fundamentals, data structures, debugging, user feedback, and architectural judgment to keep tools correct, maintainable, and useful."
         ],
-        contactIntro: "I'm interested in software engineering roles centered on operational workflow software: .NET desktop apps, browser-based reporting, Python/SQL automation, APIs, Excel exports, internal tooling, and AI-assisted engineering. Reach out if you'd like to talk.",
+        contactIntro: "I'm interested in software engineering roles centered on operational workflow software: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, internal tooling, and AI-assisted engineering. Reach out if you'd like to talk.",
         skills: [
             {
                 title: "Programming Languages",
@@ -198,7 +198,7 @@ window.profileData = {
         }
     },
     resume: {
-        summary: "Software engineer building operational workflow software that turns manual staff processes into reliable internal systems. Experience with .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted engineering.",
+        summary: "Software engineer building operational workflow software that turns manual staff processes into reliable internal systems. Hands-on experience with .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted engineering.",
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
             { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2" },
@@ -220,7 +220,7 @@ window.profileData = {
                     "Developed Query, a browser-based reporting system with configurable filters, API-backed payloads, report history, and Excel export for live library item data.",
                     "Created MetaTable, a WPF metadata scanner for large directory trees with real-time progress tracking and structured Excel exports.",
                     "Translated staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
-                    "Applied AI-assisted engineering with C# and C++ systems fundamentals, data structures, debugging, and code review to validate generated code for correctness, performance, and maintainability."
+                    "Used AI-assisted engineering while applying C# and C++ systems fundamentals, data structures, debugging, and code review to validate generated code for correctness, performance, and maintainability."
                 ]
             }
         ],
@@ -242,7 +242,7 @@ window.profileData = {
                 bullets: [
                     "Tutored students in math, science, and technology.",
                     "Prepared students for exams and improved study strategies.",
-                    "Designed engaging STEM activities with staff."
+                    "Designed STEM activities in coordination with staff."
                 ]
             },
             {
@@ -252,7 +252,7 @@ window.profileData = {
                 bullets: [
                     "Maintained and troubleshot lab computers and systems.",
                     "Assisted students with technical issues and software use.",
-                    "Supported problem solving and computer literacy."
+                    "Supported technical problem-solving and computer literacy."
                 ]
             }
         ]
@@ -297,7 +297,7 @@ window.profileData = {
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
             siteDescription: "Developed for MSU Libraries staff workflows to turn live library item data into configurable reports with API-backed query payloads, report history, and Excel export.",
             caseStudy: true,
-            caseStudyOutcome: "Shows production-style work with users, filters, APIs, structured payloads, browser UI, persistent report history, and Excel exports.",
+            caseStudyOutcome: "Demonstrates production-style work with users, filters, APIs, structured payloads, browser UI, persistent report history, and Excel exports.",
             siteTags: ["JavaScript", "HTML", "CSS", "ExcelJS", "Tailwind CSS", "Playwright"],
             resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
             resumeDescription: "Browser-based MSU Libraries reporting tool with configurable filters, structured API payloads, report history, and Excel export.",
@@ -310,7 +310,7 @@ window.profileData = {
             siteType: "Operational Case Study | WPF File Metadata Scanner",
             siteDescription: "Built as part of my MSU Libraries role to scan large directory trees, extract detailed file metadata, track progress in real time, and export structured Excel reports.",
             caseStudy: true,
-            caseStudyOutcome: "Shows desktop engineering with C#, WPF, file-system traversal, metadata extraction, progress reporting, and staff-ready Excel output.",
+            caseStudyOutcome: "Demonstrates desktop engineering with C#, WPF, file-system traversal, metadata extraction, progress reporting, and staff-ready Excel output.",
             siteTags: ["C#", ".NET 9", "WPF", "XAML", "EPPlus"],
             resumeSubtitle: "WPF File Metadata Scanner | C#, .NET 9, EPPlus",
             resumeDescription: "WPF scanner for large directory trees; extracts file metadata, tracks progress, and exports structured Excel reports for MSU Libraries.",
@@ -323,7 +323,7 @@ window.profileData = {
             siteType: "Data Cleanup Case Study | Address Resolution Toolkit",
             siteDescription: "Built to clean up messy Mississippi address data by combining cached public address sources, staged matching, typo-heavy evaluation data, and lightweight ML-assisted scoring.",
             caseStudy: true,
-            caseStudyOutcome: "Shows Python automation, data pipelines, record linkage, evaluation datasets, local browser tooling, CSV/XLSX workflows, and ML-assisted candidate scoring.",
+            caseStudyOutcome: "Demonstrates Python automation, data pipelines, record linkage, evaluation datasets, local browser tooling, CSV/XLSX workflows, and ML-assisted candidate scoring.",
             siteTags: ["Python", "Machine Learning", "Record Linkage", "Address Matching", "Data Pipeline", "CSV/XLSX"],
             resumeSubtitle: "Mississippi Address Resolution Toolkit | Python, Machine Learning",
             resumeDescription: "Python address-resolution toolkit and local browser app using cached public data, staged matching, typo-heavy evaluation data, and lightweight ML.",
