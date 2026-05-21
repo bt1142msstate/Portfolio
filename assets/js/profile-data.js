@@ -15,16 +15,16 @@ window.profileData = {
     },
     site: {
         about: [
-            "I turn manual operational work into reliable internal tools: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted systems.",
-            "At MSU Libraries, my strongest projects started as real staff workflow problems. I built Query for API-backed reporting and Excel export workflows, and MetaTable for scanning file systems, extracting metadata, tracking progress, and producing structured reports.",
-            "My workflow is AI-first but engineering-led: I use AI to accelerate implementation while applying systems fundamentals, data structures, debugging, user feedback, and architectural judgment to keep tools correct, maintainable, and useful."
+            "I build workflow and data systems that turn manual staff processes into maintainable software: C#/.NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, and Excel-ready reports.",
+            "At MSU Libraries, my strongest projects come from live operational needs. I built Query for API-backed report generation and Excel export, MetaTable for file-system metadata scanning, and automation utilities for reporting, cleanup, and support workflows.",
+            "I use AI as an implementation accelerator, but the engineering judgment stays human: requirements clarification, data structures, debugging, tests, user feedback, and code review."
         ],
         proofPoints: [
             { value: "12", label: "Library systems supported" },
             { value: "76", label: "Branches and campus libraries" },
             { value: "5", label: "Featured software projects" }
         ],
-        contactIntro: "I'm interested in software engineering roles centered on operational workflow software: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, internal tooling, and AI-assisted engineering. Reach out if you'd like to talk.",
+        contactIntro: "I'm looking for software engineering roles where I can own practical workflow and data tooling: C#/.NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, internal tools, and AI-assisted engineering.",
         skills: [
             {
                 title: "Programming Languages",
@@ -203,7 +203,7 @@ window.profileData = {
         }
     },
     resume: {
-        summary: "Software engineer building operational workflow software that turns manual staff processes into reliable internal systems. Hands-on experience with .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted engineering.",
+        summary: "Software engineer focused on workflow and data systems. Builds C#/.NET desktop apps, browser-based reporting tools, Python/SQL automation, API integrations, Excel exports, and AI-assisted internal software for MSU Libraries and Mississippi Library Partnership workflows.",
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
             { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2" },
@@ -221,11 +221,12 @@ window.profileData = {
                 location: "Starkville, MS",
                 date: "Aug 2024 - Present",
                 bullets: [
-                    "Built automation and reporting tools in C#, Python, Perl, SQL, JavaScript, HTML, CSS, and shell scripts to streamline file processing, metadata extraction, data export, and staff workflows for MSU Libraries and Mississippi Library Partnership operations across 12 library systems and 76 branches/campus libraries.",
-                    "Developed Query, a browser-based reporting system with configurable filters, API-backed payloads, report history, and Excel export for live library item data.",
-                    "Created MetaTable, a WPF metadata scanner for large directory trees with real-time progress tracking and structured Excel exports.",
-                    "Translated staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
-                    "Used AI-assisted engineering while applying C# and C++ systems fundamentals, data structures, debugging, and code review to validate generated code for correctness, performance, and maintainability."
+                    "Build and maintain internal software for MSU Libraries and Mississippi Library Partnership operations serving 12 library systems and 76 branches/campus libraries.",
+                    "Automate reporting, file processing, metadata extraction, data cleanup, and Excel-ready staff workflows using C#, .NET, Python, Perl, SQL, JavaScript, HTML/CSS, and shell scripts.",
+                    "Developed Query, a browser-based reporting tool with configurable filters, API-backed payloads, report history, and Excel export for live library item data.",
+                    "Created MetaTable, a C# WPF metadata scanner for large directory trees with real-time progress tracking and structured Excel exports.",
+                    "Translate staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
+                    "Use AI-assisted development while applying C# and C++ systems fundamentals, data structures, debugging, tests, and code review to validate generated code for correctness, performance, and maintainability."
                 ]
             }
         ],
@@ -237,7 +238,7 @@ window.profileData = {
                 bullets: [
                     "Supported student residents through communication, policy enforcement, community operations, and incident response.",
                     "Served a 600+ student residential community through crisis response, resident support, and escalation coordination.",
-                    "Coordinated resident support workflows while balancing graduate-level software engineering coursework."
+                    "Communicated with residents and staff during incidents, documented issues clearly, and escalated concerns through the proper support channels."
                 ]
             },
             {
@@ -300,9 +301,9 @@ window.profileData = {
             title: "Query",
             githubUrl: "https://github.com/bt1142msstate/Query",
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
-            siteDescription: "Developed for MSU Libraries staff workflows to turn live library item data into configurable reports with API-backed query payloads, report history, and Excel export.",
+            siteDescription: "Browser-based reporting tool for MSU Libraries staff that converts live library item data into configurable reports with API-backed payloads, reusable history, and Excel export.",
             caseStudy: true,
-            caseStudyOutcome: "Demonstrates production-style work with users, filters, APIs, structured payloads, browser UI, persistent report history, and Excel exports.",
+            caseStudyOutcome: "Highlights practical web tooling with user-facing filters, API payload design, persistent report history, and staff-ready Excel exports.",
             siteHighlights: [
                 "Configurable filters and API-backed query payloads",
                 "Persistent report history for repeatable staff workflows",
@@ -310,7 +311,7 @@ window.profileData = {
             ],
             siteTags: ["JavaScript", "HTML", "CSS", "ExcelJS", "Tailwind CSS", "Playwright"],
             resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
-            resumeDescription: "Browser-based MSU Libraries reporting tool with configurable filters, structured API payloads, report history, and Excel export.",
+            resumeDescription: "Browser-based MSU Libraries report builder with configurable filters, API-backed payloads, report history, and Excel export for live item data.",
             featuredOnSite: true,
             featuredOnResume: true
         },
@@ -318,9 +319,9 @@ window.profileData = {
             title: "MetaTable",
             githubUrl: "https://github.com/bt1142msstate/MetaTable",
             siteType: "Operational Case Study | WPF File Metadata Scanner",
-            siteDescription: "Built as part of my MSU Libraries role to scan large directory trees, extract detailed file metadata, track progress in real time, and export structured Excel reports.",
+            siteDescription: "C# WPF desktop tool built for MSU Libraries to scan large directory trees, extract file metadata, show progress, and export structured Excel reports for staff review.",
             caseStudy: true,
-            caseStudyOutcome: "Demonstrates desktop engineering with C#, WPF, file-system traversal, metadata extraction, progress reporting, and staff-ready Excel output.",
+            caseStudyOutcome: "Highlights C# desktop engineering with file-system traversal, metadata extraction, progress reporting, and staff-ready Excel output.",
             siteHighlights: [
                 "Recursive file-system traversal for large directory trees",
                 "Real-time progress tracking during long-running scans",
@@ -328,7 +329,7 @@ window.profileData = {
             ],
             siteTags: ["C#", ".NET 9", "WPF", "XAML", "EPPlus"],
             resumeSubtitle: "WPF File Metadata Scanner | C#, .NET 9, EPPlus",
-            resumeDescription: "WPF scanner for large directory trees; extracts file metadata, tracks progress, and exports structured Excel reports for MSU Libraries.",
+            resumeDescription: "C# WPF scanner for large directory trees; extracts file metadata, tracks progress, and exports structured Excel reports for MSU Libraries.",
             featuredOnSite: true,
             featuredOnResume: true
         },
@@ -336,9 +337,9 @@ window.profileData = {
             title: "Ady Resolver",
             githubUrl: "https://github.com/bt1142msstate/Ady-Resolver",
             siteType: "Data Cleanup Case Study | Address Resolution Toolkit",
-            siteDescription: "Built to clean up messy Mississippi address data by combining cached public address sources, staged matching, typo-heavy evaluation data, and lightweight ML-assisted scoring.",
+            siteDescription: "Python data-quality toolkit for messy Mississippi address data, combining cached public sources, staged matching, typo-heavy evaluation data, local browser tooling, and lightweight ML-assisted scoring.",
             caseStudy: true,
-            caseStudyOutcome: "Demonstrates Python automation, data pipelines, record linkage, evaluation datasets, local browser tooling, CSV/XLSX workflows, and ML-assisted candidate scoring.",
+            caseStudyOutcome: "Highlights practical data engineering with repeatable pipelines, record linkage, evaluation datasets, CSV/XLSX workflows, and ML-assisted candidate scoring.",
             siteHighlights: [
                 "Cached public data sources for repeatable local matching",
                 "Typo-heavy evaluation data for resolver validation",
@@ -346,7 +347,7 @@ window.profileData = {
             ],
             siteTags: ["Python", "Machine Learning", "Record Linkage", "Address Matching", "Data Pipeline", "CSV/XLSX"],
             resumeSubtitle: "Mississippi Address Resolution Toolkit | Python, Machine Learning",
-            resumeDescription: "Python address-resolution toolkit and local browser app using cached public data, staged matching, typo-heavy evaluation data, and lightweight ML.",
+            resumeDescription: "Python address-resolution toolkit with cached public data, staged matching, typo-heavy evaluation data, local browser tooling, and lightweight ML.",
             featuredOnSite: true,
             featuredOnResume: true
         },
@@ -354,7 +355,7 @@ window.profileData = {
             title: "HTMLConverter",
             githubUrl: "https://github.com/bt1142msstate/HTMLConverter",
             siteType: "WinUI 3 Batch PDF Converter",
-            siteDescription: "Windows app for converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, batch processing, and automatic output archiving.",
+            siteDescription: "WinUI 3 desktop app that batch-converts HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, WebView2 rendering, scaling controls, and automatic output archiving.",
             siteHighlights: [
                 "Batch intake for files, folders, and ZIP archives",
                 "WebView2 rendering with scaling controls",
@@ -362,7 +363,7 @@ window.profileData = {
             ],
             siteTags: ["C#", ".NET 8", "WinUI 3", "Windows App SDK", "WebView2"],
             resumeSubtitle: "WinUI 3 Batch PDF Converter | .NET 8, WebView2",
-            resumeDescription: "WinUI 3 app for batch converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, and output archiving.",
+            resumeDescription: "WinUI 3 desktop app for batch converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, WebView2 rendering, and output archiving.",
             featuredOnSite: true,
             featuredOnResume: true
         },
@@ -370,7 +371,7 @@ window.profileData = {
             title: "connect4-ai",
             githubUrl: "https://github.com/bt1142msstate/connect4-ai",
             siteType: "Browser-Based Game AI Demo",
-            siteDescription: "Built a playable Connect 4 app with minimax, alpha-beta pruning, replay tooling, experiment modes, and headless validation, published with a live GitHub Pages demo.",
+            siteDescription: "Playable browser game AI with minimax and alpha-beta pruning, replay tooling, experiment modes, and headless validation through GitHub Actions.",
             siteHighlights: [
                 "Minimax search with alpha-beta pruning",
                 "Replay tooling and experiment modes",
@@ -378,7 +379,7 @@ window.profileData = {
             ],
             siteTags: ["JavaScript", "Minimax", "Alpha-Beta Pruning", "Game AI", "GitHub Actions"],
             resumeSubtitle: "Browser-Based Game AI Demo | JavaScript, Minimax, Alpha-Beta Pruning",
-            resumeDescription: "Playable browser game AI with minimax, alpha-beta pruning, replay tooling, experiment modes, and headless validation.",
+            resumeDescription: "Playable browser game AI with minimax, alpha-beta pruning, replay tooling, experiment modes, and GitHub Actions validation.",
             featuredOnSite: true,
             featuredOnResume: true
         }

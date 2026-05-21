@@ -1,13 +1,13 @@
 # Portfolio
 
-Personal portfolio site for Brandon Temple, focused on operational workflow software: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted systems that turn manual staff workflows into reliable internal tools.
+Personal portfolio site for Brandon Temple, focused on workflow and data systems: C#/.NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted tools that turn manual staff workflows into maintainable internal software.
 
 Live site: [brandontemple.com](https://brandontemple.com)
 
 ## Highlights
 
 - Professional experience, education, and contact information
-- Operational software and data-quality case studies for `Query`, `MetaTable`, and `Ady Resolver`, with supporting project cards for `HTMLConverter` and `connect4-ai`
+- Workflow software and data-quality case studies for `Query`, `MetaTable`, and `Ady Resolver`, with supporting project cards for `HTMLConverter` and `connect4-ai`
 - Static resume PDF download generated from the shared resume page
 - Shared portfolio and resume content managed from `assets/js/profile-data.js`
 - Responsive single-page layout with a dark theme
