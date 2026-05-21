@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio site for Brandon Temple, focused on practical workflow software: .NET desktop apps, browser-based reporting systems, Python/SQL automation, APIs, Excel exports, and AI-assisted tools that make real operations faster.
+Personal portfolio site for Brandon Temple, focused on operational workflow software: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted tools that turn manual staff workflows into reliable systems.
 
 Live site: [brandontemple.com](https://brandontemple.com)
 

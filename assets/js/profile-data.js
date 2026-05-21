@@ -15,11 +15,11 @@ window.profileData = {
     },
     site: {
         about: [
-            "I build practical workflow software: .NET desktop apps, browser-based reporting systems, Python/SQL automation, and AI-assisted tools that make real operations faster.",
+            "I build operational software that turns manual staff workflows into reliable systems: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, and AI-assisted tools.",
             "My strongest work comes from real staff problems. At MSU Libraries, I built Query for API-backed reporting and Excel export workflows, and MetaTable for scanning file systems, extracting metadata, tracking progress, and producing structured reports.",
             "My workflow is AI-first but engineering-led: I use AI to accelerate implementation while applying systems fundamentals, data structures, debugging, user feedback, and architectural judgment to keep tools correct, maintainable, and useful."
         ],
-        contactIntro: "I'm interested in software engineering roles centered on practical workflow software: .NET desktop apps, browser-based reporting systems, Python/SQL automation, APIs, Excel exports, internal tooling, and AI-assisted engineering. Reach out if you'd like to talk.",
+        contactIntro: "I'm interested in software engineering roles centered on operational workflow software: .NET desktop apps, browser-based reporting, Python/SQL automation, APIs, Excel exports, internal tooling, and AI-assisted engineering. Reach out if you'd like to talk.",
         skills: [
             {
                 title: "Programming Languages",
@@ -198,7 +198,7 @@ window.profileData = {
         }
     },
     resume: {
-        summary: "Software engineer building practical workflow software: .NET desktop apps, browser-based reporting systems, Python/SQL automation, APIs, Excel exports, and AI-assisted tools that make real operations faster. Experience turning staff workflow problems into maintainable internal software.",
+        summary: "Software engineer building operational workflow software that turns manual staff processes into reliable internal systems. Experience with .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted engineering.",
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
             { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2" },
