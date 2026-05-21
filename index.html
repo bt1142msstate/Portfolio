@@ -18,6 +18,7 @@
     <link rel="shortcut icon" href="/favicon.ico?v=20260514-main-photo">
     <link rel="icon" href="/assets/images/favicon.png?v=20260514-main-photo" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png?v=20260514-main-photo" sizes="180x180">
+    <link rel="preload" as="image" type="image/webp" href="/assets/images/brandon-profile-photo-960.webp?v=20260521-portfolio-audit" imagesrcset="/assets/images/brandon-profile-photo-420.webp?v=20260521-portfolio-audit 420w, /assets/images/brandon-profile-photo-720.webp?v=20260521-portfolio-audit 720w, /assets/images/brandon-profile-photo-960.webp?v=20260521-portfolio-audit 960w, /assets/images/brandon-profile-photo-1120.webp?v=20260521-portfolio-audit 1120w" imagesizes="(max-width: 480px) 72vw, (max-width: 768px) 62vw, 460px" fetchpriority="high">
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Brandon Temple | Software Engineer Portfolio">
     <meta property="og:description" content="Official portfolio for Brandon Vashun Temple, a software engineer building operational workflow software with .NET, Python, SQL, APIs, desktop apps, browser-based reporting, and AI-assisted systems.">
@@ -140,15 +141,16 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="./assets/css/site.css?v=20260520-hiring-polish">
+    <link rel="stylesheet" href="./assets/css/site.css?v=20260521-portfolio-audit">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body data-page="site">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav class="nav-container">
-        <a href="#top" class="nav-logo" aria-label="Back to top">Brandon Temple</a>
+        <a href="#top" class="nav-logo" aria-label="Brandon Temple, back to top">Brandon Temple</a>
         <ul class="nav-links" id="primary-navigation">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -157,7 +159,7 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
+        <button type="button" class="mobile-menu-toggle" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -168,7 +170,10 @@
     <header class="hero" id="top">
         <div class="hero-content">
             <div class="hero-photo-shell">
-                <img src="/assets/images/brandon-profile-photo.jpg?v=20260514-main-photo" alt="Portrait of Brandon Temple at the beach" width="1120" height="1400" class="hero-profile-image" fetchpriority="high">
+                <picture>
+                    <source type="image/webp" srcset="/assets/images/brandon-profile-photo-420.webp?v=20260521-portfolio-audit 420w, /assets/images/brandon-profile-photo-720.webp?v=20260521-portfolio-audit 720w, /assets/images/brandon-profile-photo-960.webp?v=20260521-portfolio-audit 960w, /assets/images/brandon-profile-photo-1120.webp?v=20260521-portfolio-audit 1120w" sizes="(max-width: 480px) 72vw, (max-width: 768px) 62vw, 460px">
+                    <img src="/assets/images/brandon-profile-photo.jpg?v=20260514-main-photo" alt="Portrait of Brandon Temple at the beach" width="1120" height="1400" class="hero-profile-image" fetchpriority="high" decoding="async" sizes="(max-width: 480px) 72vw, (max-width: 768px) 62vw, 460px">
+                </picture>
                 <a href="/assets/images/brandon-profile-photo.jpg?v=20260514-main-photo" download="brandon-temple-profile-photo.jpg" class="image-download-button" aria-label="Download Brandon Temple profile photo">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                         <path d="M12 3v12"></path>
@@ -182,6 +187,7 @@
                 <h1 class="hero-title">Brandon Temple</h1>
                 <p class="hero-subtitle">Operational software for real staff workflows.</p>
                 <p class="hero-description">I turn manual operational work into reliable internal tools: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, and AI-assisted systems.</p>
+                <ul class="hero-proof" id="hero-proof"></ul>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-secondary">View Projects</a>
                     <a href="resume/brandon-temple-resume.pdf" class="btn btn-secondary" download type="application/pdf">Download Resume</a>
@@ -232,8 +238,10 @@
                     <div class="about-text" id="about-text"></div>
                     <figure class="about-portrait-card" aria-label="Illustrated profile portrait">
                         <picture class="about-portrait-picture">
+                            <source media="(max-width: 768px)" type="image/webp" srcset="/assets/images/brandon-illustrated-profile-photo-square-480.webp?v=20260521-portfolio-audit 480w, /assets/images/brandon-illustrated-profile-photo-square-720.webp?v=20260521-portfolio-audit 720w, /assets/images/brandon-illustrated-profile-photo-square-960.webp?v=20260521-portfolio-audit 960w" sizes="(max-width: 480px) calc(100vw - 2rem), 380px">
                             <source media="(max-width: 768px)" srcset="/assets/images/brandon-illustrated-profile-photo-square.jpg?v=20260514-illustrated-portrait">
-                            <img src="/assets/images/brandon-illustrated-profile-photo.jpg?v=20260514-illustrated-portrait" alt="Illustrated portrait of Brandon Temple" width="1120" height="1400" class="about-portrait-image" loading="lazy" decoding="async">
+                            <source type="image/webp" srcset="/assets/images/brandon-illustrated-profile-photo-560.webp?v=20260521-portfolio-audit 560w, /assets/images/brandon-illustrated-profile-photo-840.webp?v=20260521-portfolio-audit 840w, /assets/images/brandon-illustrated-profile-photo-1120.webp?v=20260521-portfolio-audit 1120w" sizes="390px">
+                            <img src="/assets/images/brandon-illustrated-profile-photo.jpg?v=20260514-illustrated-portrait" alt="Illustrated portrait of Brandon Temple" width="1120" height="1400" class="about-portrait-image" loading="lazy" decoding="async" sizes="(max-width: 480px) calc(100vw - 2rem), (max-width: 768px) 380px, 390px">
                         </picture>
                         <a href="/assets/images/brandon-illustrated-profile-photo.jpg?v=20260514-illustrated-portrait" download="brandon-temple-illustrated-profile-photo.jpg" class="image-download-button" aria-label="Download illustrated profile photo">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -299,15 +307,15 @@
         <section class="skill-overlay-panel" id="skill-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="skill-overlay-title" aria-describedby="skill-overlay-description" tabindex="-1">
             <button type="button" class="skill-overlay-close" data-skill-overlay-close aria-label="Close skill details">&times;</button>
             <p class="skill-overlay-eyebrow" id="skill-overlay-eyebrow"></p>
-            <h3 class="skill-overlay-title" id="skill-overlay-title"></h3>
+            <h3 class="skill-overlay-title" id="skill-overlay-title">Skill details</h3>
             <p class="skill-overlay-description" id="skill-overlay-description"></p>
             <div class="skill-overlay-related" id="skill-overlay-related"></div>
             <a class="skill-overlay-link" id="skill-overlay-link" href="#" target="_blank" rel="noopener noreferrer">Read external reference</a>
         </section>
     </div>
 
-    <script src="./assets/js/profile-data.js?v=20260520-hiring-polish"></script>
-    <script src="./assets/js/profile-render.js?v=20260520-hiring-polish"></script>
-    <script src="./assets/js/site.js?v=20260518-nav-highlight"></script>
+    <script src="./assets/js/profile-data.js?v=20260521-portfolio-audit" defer></script>
+    <script src="./assets/js/profile-render.js?v=20260521-portfolio-audit" defer></script>
+    <script src="./assets/js/site.js?v=20260521-portfolio-audit" defer></script>
 </body>
 </html>

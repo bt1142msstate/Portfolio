@@ -19,6 +19,11 @@ window.profileData = {
             "At MSU Libraries, my strongest projects started as real staff workflow problems. I built Query for API-backed reporting and Excel export workflows, and MetaTable for scanning file systems, extracting metadata, tracking progress, and producing structured reports.",
             "My workflow is AI-first but engineering-led: I use AI to accelerate implementation while applying systems fundamentals, data structures, debugging, user feedback, and architectural judgment to keep tools correct, maintainable, and useful."
         ],
+        proofPoints: [
+            { value: "12", label: "Library systems supported" },
+            { value: "76", label: "Branches and campus libraries" },
+            { value: "5", label: "Featured software projects" }
+        ],
         contactIntro: "I'm interested in software engineering roles centered on operational workflow software: .NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, internal tooling, and AI-assisted engineering. Reach out if you'd like to talk.",
         skills: [
             {
@@ -298,6 +303,11 @@ window.profileData = {
             siteDescription: "Developed for MSU Libraries staff workflows to turn live library item data into configurable reports with API-backed query payloads, report history, and Excel export.",
             caseStudy: true,
             caseStudyOutcome: "Demonstrates production-style work with users, filters, APIs, structured payloads, browser UI, persistent report history, and Excel exports.",
+            siteHighlights: [
+                "Configurable filters and API-backed query payloads",
+                "Persistent report history for repeatable staff workflows",
+                "Excel export for live library item data"
+            ],
             siteTags: ["JavaScript", "HTML", "CSS", "ExcelJS", "Tailwind CSS", "Playwright"],
             resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
             resumeDescription: "Browser-based MSU Libraries reporting tool with configurable filters, structured API payloads, report history, and Excel export.",
@@ -311,6 +321,11 @@ window.profileData = {
             siteDescription: "Built as part of my MSU Libraries role to scan large directory trees, extract detailed file metadata, track progress in real time, and export structured Excel reports.",
             caseStudy: true,
             caseStudyOutcome: "Demonstrates desktop engineering with C#, WPF, file-system traversal, metadata extraction, progress reporting, and staff-ready Excel output.",
+            siteHighlights: [
+                "Recursive file-system traversal for large directory trees",
+                "Real-time progress tracking during long-running scans",
+                "Structured Excel exports for metadata review"
+            ],
             siteTags: ["C#", ".NET 9", "WPF", "XAML", "EPPlus"],
             resumeSubtitle: "WPF File Metadata Scanner | C#, .NET 9, EPPlus",
             resumeDescription: "WPF scanner for large directory trees; extracts file metadata, tracks progress, and exports structured Excel reports for MSU Libraries.",
@@ -324,6 +339,11 @@ window.profileData = {
             siteDescription: "Built to clean up messy Mississippi address data by combining cached public address sources, staged matching, typo-heavy evaluation data, and lightweight ML-assisted scoring.",
             caseStudy: true,
             caseStudyOutcome: "Demonstrates Python automation, data pipelines, record linkage, evaluation datasets, local browser tooling, CSV/XLSX workflows, and ML-assisted candidate scoring.",
+            siteHighlights: [
+                "Cached public data sources for repeatable local matching",
+                "Typo-heavy evaluation data for resolver validation",
+                "ML-assisted candidate scoring and CSV/XLSX workflows"
+            ],
             siteTags: ["Python", "Machine Learning", "Record Linkage", "Address Matching", "Data Pipeline", "CSV/XLSX"],
             resumeSubtitle: "Mississippi Address Resolution Toolkit | Python, Machine Learning",
             resumeDescription: "Python address-resolution toolkit and local browser app using cached public data, staged matching, typo-heavy evaluation data, and lightweight ML.",
@@ -335,6 +355,11 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/HTMLConverter",
             siteType: "WinUI 3 Batch PDF Converter",
             siteDescription: "Windows app for converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, batch processing, and automatic output archiving.",
+            siteHighlights: [
+                "Batch intake for files, folders, and ZIP archives",
+                "WebView2 rendering with scaling controls",
+                "Automatic output organization for converted PDFs"
+            ],
             siteTags: ["C#", ".NET 8", "WinUI 3", "Windows App SDK", "WebView2"],
             resumeSubtitle: "WinUI 3 Batch PDF Converter | .NET 8, WebView2",
             resumeDescription: "WinUI 3 app for batch converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, scaling controls, and output archiving.",
@@ -346,6 +371,11 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/connect4-ai",
             siteType: "Browser-Based Game AI Demo",
             siteDescription: "Built a playable Connect 4 app with minimax, alpha-beta pruning, replay tooling, experiment modes, and headless validation, published with a live GitHub Pages demo.",
+            siteHighlights: [
+                "Minimax search with alpha-beta pruning",
+                "Replay tooling and experiment modes",
+                "Headless validation through GitHub Actions"
+            ],
             siteTags: ["JavaScript", "Minimax", "Alpha-Beta Pruning", "Game AI", "GitHub Actions"],
             resumeSubtitle: "Browser-Based Game AI Demo | JavaScript, Minimax, Alpha-Beta Pruning",
             resumeDescription: "Playable browser game AI with minimax, alpha-beta pruning, replay tooling, experiment modes, and headless validation.",

@@ -42,6 +42,10 @@
         }).join("");
     }
 
+    function slugify(value) {
+        return String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    }
+
     function getSkillLink(data, label) {
         return data.site.skillLinks && data.site.skillLinks[label]
             ? data.site.skillLinks[label]
@@ -219,8 +223,48 @@
         balanceGridRequest = window.requestAnimationFrame(balanceCardGrids);
     }
 
+    function renderProjectStructuredData(data) {
+        var existingScript = document.getElementById("project-structured-data");
+        var script = existingScript || document.createElement("script");
+        var featuredProjects = data.projects.filter(function (project) {
+            return project.featuredOnSite;
+        });
+        var structuredData = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "@id": "https://brandontemple.com/#software-projects",
+            name: "Brandon Temple software projects",
+            itemListElement: featuredProjects.map(function (project, index) {
+                return {
+                    "@type": "ListItem",
+                    position: index + 1,
+                    item: {
+                        "@type": "SoftwareSourceCode",
+                        "@id": "https://brandontemple.com/#project-" + slugify(project.title),
+                        name: project.title,
+                        description: project.siteDescription,
+                        codeRepository: project.githubUrl,
+                        url: project.githubUrl,
+                        programmingLanguage: project.siteTags || [],
+                        author: {
+                            "@id": "https://brandontemple.com/#brandon-temple"
+                        }
+                    }
+                };
+            })
+        };
+
+        script.id = "project-structured-data";
+        script.type = "application/ld+json";
+        script.text = JSON.stringify(structuredData);
+        if (!existingScript) {
+            document.head.appendChild(script);
+        }
+    }
+
     function renderSite() {
         var data = window.profileData;
+        var heroProof = document.getElementById("hero-proof");
         var aboutText = document.getElementById("about-text");
         var skillsGrid = document.getElementById("skills-grid");
         var experienceTimeline = document.getElementById("experience-timeline");
@@ -235,6 +279,15 @@
         aboutText.innerHTML = data.site.about.map(function (paragraph) {
             return "<p>" + escapeHtml(paragraph) + "</p>";
         }).join("");
+
+        if (heroProof && data.site.proofPoints) {
+            heroProof.innerHTML = data.site.proofPoints.map(function (point) {
+                return '<li class="hero-proof-item">' +
+                    "<strong>" + escapeHtml(point.value) + "</strong>" +
+                    "<span>" + escapeHtml(point.label) + "</span>" +
+                    "</li>";
+            }).join("");
+        }
 
         skillsGrid.innerHTML = data.site.skills.map(function (group) {
             return '<div class="skill-category">' +
@@ -270,17 +323,21 @@
             var caseStudyMarkup = project.caseStudy
                 ? '<p class="project-case-study-outcome">' + escapeHtml(project.caseStudyOutcome || "") + "</p>"
                 : "";
+            var highlightsMarkup = project.siteHighlights && project.siteHighlights.length
+                ? '<ul class="project-highlights">' + renderList(project.siteHighlights) + "</ul>"
+                : "";
 
             return '<div class="' + projectClass + '">' +
                 '<div class="project-header">' +
                 "<h3>" + escapeHtml(project.title) + "</h3>" +
-                '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View ' + escapeHtml(project.title) + ' on GitHub" class="project-link">' +
+                '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View source code for ' + escapeHtml(project.title) + ' on GitHub" class="project-link">' +
                 githubIconSvg(20) +
                 "</a>" +
                 "</div>" +
                 '<p class="project-type">' + escapeHtml(project.siteType) + "</p>" +
                 '<p class="project-description">' + escapeHtml(project.siteDescription) + "</p>" +
                 caseStudyMarkup +
+                highlightsMarkup +
                 '<div class="project-tags">' +
                 project.siteTags.map(function (tag) {
                     return renderSkillPill(data, tag, "project-tag");
@@ -338,6 +395,7 @@
             "</div>";
 
         scheduleBalanceCardGrids();
+        renderProjectStructuredData(data);
     }
 
     function renderResume() {
