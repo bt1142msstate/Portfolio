@@ -22,7 +22,7 @@ window.profileData = {
         proofPoints: [
             { value: "12", label: "Library systems supported" },
             { value: "76", label: "Branches and campus libraries" },
-            { value: "5", label: "Featured software projects" }
+            { value: "6", label: "Featured software projects" }
         ],
         contactIntro: "I'm looking for software engineering roles where I can own practical workflow and data tooling: C#/.NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, internal tools, and AI-assisted engineering.",
         skills: [
@@ -35,8 +35,8 @@ window.profileData = {
                 items: ["HTML", "CSS", "XAML", "Node.js", "Tailwind CSS", "Responsive Design", "AutoNumeric"]
             },
             {
-                title: ".NET & Desktop",
-                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "WebView2"]
+                title: ".NET, Desktop & Native Apps",
+                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "WebView2", "SwiftUI", "AppKit", "macOS Accessibility APIs"]
             },
             {
                 title: "Data & APIs",
@@ -67,6 +67,9 @@ window.profileData = {
             "Java": "https://docs.oracle.com/javase/tutorial/",
             "Kotlin": "https://kotlinlang.org/docs/home.html",
             "Swift": "https://www.swift.org/documentation/",
+            "SwiftUI": "https://developer.apple.com/documentation/swiftui/",
+            "AppKit": "https://developer.apple.com/documentation/appkit/",
+            "macOS Accessibility APIs": "https://developer.apple.com/documentation/applicationservices",
             "HTML": "https://developer.mozilla.org/en-US/docs/Web/HTML",
             "CSS": "https://developer.mozilla.org/en-US/docs/Web/CSS",
             "XAML": "https://learn.microsoft.com/en-us/dotnet/desktop/xaml-services/",
@@ -115,6 +118,7 @@ window.profileData = {
             "Shell": "https://en.wikipedia.org/wiki/Shell_script",
             "PowerShell": "https://learn.microsoft.com/en-us/powershell/",
             "CI/CD": "https://docs.github.com/en/actions/about-github-actions/understanding-github-actions",
+            "Window Management": "https://en.wikipedia.org/wiki/Window_manager",
             "AI-First Engineering": "https://en.wikipedia.org/wiki/AI-assisted_software_development",
             "Architectural Judgment": "https://en.wikipedia.org/wiki/Software_architecture",
             "Machine Learning": "https://en.wikipedia.org/wiki/Machine_learning",
@@ -140,6 +144,9 @@ window.profileData = {
             "Java": "Java is part of my computer science background and object-oriented programming foundation. It transfers well to backend, Android, and enterprise-style engineering work.",
             "Kotlin": "Kotlin is relevant to Android development and future native mobile work. It fits the direction of shipping apps across Android alongside iOS and desktop platforms.",
             "Swift": "Swift is relevant to iOS and Apple-platform development. It fits the direction of building native app experiences for iPhone, iPad, and Mac.",
+            "SwiftUI": "SwiftUI is Apple's declarative UI framework. I use it in Mac Window Arranger to build a native macOS utility interface.",
+            "AppKit": "AppKit is Apple's mature macOS application framework. Mac Window Arranger uses AppKit alongside SwiftUI for window behavior and desktop integration.",
+            "macOS Accessibility APIs": "macOS Accessibility APIs allow an authorized app to inspect and control windows from other apps. Mac Window Arranger uses them for window resizing and layout restoration.",
             "HTML": "HTML defines the structure of web interfaces. I use it in portfolio work, Query, Ady Resolver's local browser app, and browser-based reporting tools.",
             "CSS": "CSS controls layout, visual design, responsiveness, and polish. I use it for the portfolio, Query, connect4-ai, MobileFlex, and local browser app interfaces.",
             "XAML": "XAML is the UI markup used by WPF and WinUI applications. I use it for Windows desktop interfaces in projects like MetaTable and HTMLConverter.",
@@ -188,6 +195,7 @@ window.profileData = {
             "Shell": "Shell scripting automates command-line tasks. I use shell scripts around library operations, cleanup workflows, checks, and repeatable local commands.",
             "PowerShell": "PowerShell is useful for Windows automation and project tooling. It appears in Windows desktop project support and build-related workflows.",
             "CI/CD": "CI/CD means automated validation and deployment. I use GitHub Actions and repeatable checks so projects can be built, tested, and shipped more safely.",
+            "Window Management": "Window management means controlling where application windows appear, how they are sized, and how workspaces are restored. Mac Window Arranger is built around this problem.",
             "AI-First Engineering": "AI-first engineering means using AI to accelerate implementation while still applying human review, architecture, testing, and debugging judgment.",
             "Architectural Judgment": "Architectural judgment is the ability to choose structure, boundaries, tradeoffs, and failure modes before code becomes hard to maintain.",
             "Machine Learning": "Machine learning appears in Ady Resolver's staged matching pipeline, where a lightweight model helps score and rank address candidates.",
@@ -350,6 +358,22 @@ window.profileData = {
             resumeDescription: "Python address-resolution toolkit with cached public data, staged matching, typo-heavy evaluation data, local browser tooling, and lightweight ML.",
             featuredOnSite: true,
             featuredOnResume: true
+        },
+        {
+            title: "Mac Window Arranger",
+            githubUrl: "https://github.com/bt1142msstate/mac-window-arranger",
+            siteType: "Native macOS Utility | SwiftUI Window Management",
+            siteDescription: "Open-source macOS SwiftUI utility for resizing and arranging windows, saving layouts, reopening apps, and restoring workspaces with AppKit and Accessibility API integration.",
+            siteHighlights: [
+                "Resizes the frontmost window or all standard windows for a selected app",
+                "Arranges windows into columns, grids, focus-stack, and saved custom layouts",
+                "Build script signs and installs the app with stable Accessibility permission metadata"
+            ],
+            siteTags: ["Swift", "SwiftUI", "AppKit", "macOS Accessibility APIs", "Window Management", "Shell"],
+            resumeSubtitle: "macOS Window Management Utility | Swift, SwiftUI, AppKit",
+            resumeDescription: "Open-source macOS SwiftUI utility for resizing windows, saving layouts, reopening apps, and restoring workspaces with Accessibility API integration.",
+            featuredOnSite: true,
+            featuredOnResume: false
         },
         {
             title: "HTMLConverter",
