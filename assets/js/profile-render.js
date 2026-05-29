@@ -14,6 +14,14 @@
             "</svg>";
     }
 
+    function externalLinkIconSvg(size) {
+        return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+            '<path d="M7 17 17 7"/>' +
+            '<path d="M9 7h8v8"/>' +
+            '<path d="M19 19H5V5h6"/>' +
+            "</svg>";
+    }
+
     function linkedinIconSvg(size) {
         return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">' +
             '<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.25 8.25h4.5V23h-4.5V8.25zM8 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-7.24c0-1.73-.03-3.95-2.4-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8V8.25z"/>' +
@@ -244,7 +252,7 @@
                         name: project.title,
                         description: project.siteDescription,
                         codeRepository: project.githubUrl,
-                        url: project.githubUrl,
+                        url: project.liveUrl || project.githubUrl,
                         programmingLanguage: project.siteTags || [],
                         author: {
                             "@id": "https://brandontemple.com/#brandon-temple"
@@ -330,9 +338,14 @@
             return '<div class="' + projectClass + '">' +
                 '<div class="project-header">' +
                 "<h3>" + escapeHtml(project.title) + "</h3>" +
+                '<div class="project-header-links">' +
                 '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View source code for ' + escapeHtml(project.title) + ' on GitHub" class="project-link">' +
                 githubIconSvg(20) +
                 "</a>" +
+                (project.liveUrl
+                    ? '<a href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" aria-label="Open live site for ' + escapeHtml(project.title) + '" class="project-link">' + externalLinkIconSvg(20) + "</a>"
+                    : "") +
+                "</div>" +
                 "</div>" +
                 '<p class="project-type">' + escapeHtml(project.siteType) + "</p>" +
                 '<p class="project-description">' + escapeHtml(project.siteDescription) + "</p>" +

@@ -1033,7 +1033,16 @@ button:focus-visible {
     color: var(--text-dark);
 }
 
+.project-header-links {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
 .project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text-gray);
     transition: all 0.3s ease;
 }

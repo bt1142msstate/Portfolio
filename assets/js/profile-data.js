@@ -22,7 +22,7 @@ window.profileData = {
         proofPoints: [
             { value: "12", label: "Library systems supported" },
             { value: "76", label: "Branches and campus libraries" },
-            { value: "7", label: "Featured software projects" }
+            { value: "8", label: "Featured software projects" }
         ],
         contactIntro: "I'm looking for software engineering roles where I can own practical workflow and data tooling: C#/.NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, internal tools, and AI-assisted engineering.",
         skills: [
@@ -32,7 +32,7 @@ window.profileData = {
             },
             {
                 title: "Web & UI",
-                items: ["HTML", "CSS", "XAML", "Node.js", "Tailwind CSS", "Responsive Design", "AutoNumeric"]
+                items: ["HTML", "CSS", "XAML", "Node.js", "Tailwind CSS", "Responsive Design", "Accessibility", "AutoNumeric"]
             },
             {
                 title: ".NET, Desktop & Native Apps",
@@ -48,7 +48,7 @@ window.profileData = {
             },
             {
                 title: "Tools, Testing & Delivery",
-                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
+                items: ["Git", "GitHub Actions", "GitHub Pages", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
             },
             {
                 title: "Engineering Practices",
@@ -76,6 +76,9 @@ window.profileData = {
             "Node.js": "https://nodejs.org/en/learn",
             "Tailwind CSS": "https://tailwindcss.com/docs",
             "Responsive Design": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design",
+            "Accessibility": "https://developer.mozilla.org/en-US/docs/Web/Accessibility",
+            "Static Sites": "https://en.wikipedia.org/wiki/Static_web_page",
+            "SEO Metadata": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
             "AutoNumeric": "https://docs.autonumeric.org/",
             ".NET 8/9": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
             ".NET 8": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
@@ -108,6 +111,7 @@ window.profileData = {
             "FFmpeg": "https://ffmpeg.org/documentation.html",
             "Git": "https://git-scm.com/doc",
             "GitHub Actions": "https://docs.github.com/en/actions",
+            "GitHub Pages": "https://docs.github.com/en/pages",
             "Visual Studio": "https://learn.microsoft.com/en-us/visualstudio/windows/",
             "VS Code": "https://code.visualstudio.com/docs",
             "Postman": "https://learning.postman.com/docs/introduction/overview/",
@@ -159,6 +163,9 @@ window.profileData = {
             "Node.js": "Node.js lets JavaScript run outside the browser. I use it for tooling, tests, linting, browser smoke checks, and JavaScript project workflows.",
             "Tailwind CSS": "Tailwind CSS is a utility-first CSS framework. I use and understand it as part of modern frontend styling and Query's browser-based UI stack.",
             "Responsive Design": "Responsive design means building interfaces that work cleanly across desktop and mobile. It matters across the portfolio, Query, connect4-ai, and app-style browser screens.",
+            "Accessibility": "Accessibility means making interfaces usable through semantic HTML, keyboard interaction, labels, focus behavior, contrast, and assistive technology support.",
+            "Static Sites": "Static sites are websites served as HTML, CSS, JavaScript, and media files without a backend runtime. The Afternoon Adventure site uses this model for simple, reliable GitHub Pages hosting.",
+            "SEO Metadata": "SEO metadata helps search engines, social previews, and crawlers understand a page through titles, descriptions, canonical URLs, Open Graph tags, robots files, and sitemaps.",
             "AutoNumeric": "AutoNumeric is a browser library for formatted numeric inputs. It appears in Query-style form workflows where clean numeric entry and parsing matter.",
             ".NET 8/9": ".NET is the application platform I use for modern C# desktop and backend-style work. MetaTable targets .NET 9, while HTMLConverter uses .NET 8.",
             ".NET 8": ".NET 8 is a long-term-support .NET release used for modern C# applications, services, and desktop tooling.",
@@ -191,6 +198,7 @@ window.profileData = {
             "FFmpeg": "FFmpeg is a media processing toolkit. I use it in TeslaCamViewer for stream-copy stitching and marked-range video export workflows.",
             "Git": "Git is version control. I use it to manage source history, ship changes, collaborate through GitHub, and keep projects traceable.",
             "GitHub Actions": "GitHub Actions runs automated workflows in GitHub. I use it for build, validation, and test pipelines across public projects.",
+            "GitHub Pages": "GitHub Pages hosts static sites directly from a repository. I use it for public project demos and static websites such as the portfolio, Query, connect4-ai, and Afternoon Adventure.",
             "Visual Studio": "Visual Studio is my primary IDE for C# and Windows desktop projects. It supports .NET, WPF, WinUI, packaging, and debugging workflows.",
             "VS Code": "VS Code is a lightweight editor I use for web, Python, scripts, documentation, and mixed-language projects.",
             "Postman": "Postman is used for testing and inspecting APIs. It helps validate request payloads, responses, and integration behavior.",
@@ -320,6 +328,7 @@ window.profileData = {
         {
             title: "Query",
             githubUrl: "https://github.com/bt1142msstate/Query",
+            liveUrl: "https://bt1142msstate.github.io/Query/",
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
             siteDescription: "Browser-based reporting tool for MSU Libraries staff that converts live library item data into configurable reports with API-backed payloads, reusable history, and Excel export.",
             caseStudy: true,
@@ -374,6 +383,7 @@ window.profileData = {
         {
             title: "TeslaCamViewer",
             githubUrl: "https://github.com/bt1142msstate/TeslaCamViewer",
+            liveUrl: "https://bt1142msstate.github.io/TeslaCamViewer/",
             siteType: "Product-Style Desktop App | WinUI 3 Video + Telemetry Viewer",
             siteDescription: "Source-available Windows app for reviewing TeslaCam footage with stitched multi-camera playback, telemetry HUD, timeline scrubbing, IN/OUT markers, MP4 export, ZIP export, local caching, installer scripts, and Store-readiness documentation.",
             caseStudy: true,
@@ -424,8 +434,27 @@ window.profileData = {
             featuredOnResume: true
         },
         {
+            title: "Afternoon Adventure Website",
+            githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
+            liveUrl: "https://bt1142msstate.github.io/afternoon-adventure/",
+            siteType: "Live Nonprofit Website | Responsive Static Site",
+            siteDescription: "Responsive GitHub Pages website for Afternoon Adventure Learning Center, a Newton, Mississippi nonprofit afterschool and tutoring center, with program details, family resources, registration, donation links, contact paths, media galleries, and SEO metadata.",
+            siteHighlights: [
+                "Built a public static site for a real 501(c)(3) afterschool and tutoring center",
+                "Organizes programs, registration, transportation, tuition, resources, events, donations, and contact details for families",
+                "Includes PDF resource viewing, full-screen image galleries, community updates, and a tuition calculator",
+                "Uses responsive HTML/CSS/JavaScript, accessibility-oriented markup, SEO metadata, sitemap, robots file, and GitHub Pages hosting"
+            ],
+            siteTags: ["HTML", "CSS", "JavaScript", "Responsive Design", "Accessibility", "Static Sites", "GitHub Pages", "SEO Metadata"],
+            resumeSubtitle: "Responsive Nonprofit Website | HTML, CSS, JavaScript",
+            resumeDescription: "Responsive GitHub Pages website for a nonprofit afterschool and tutoring center with program content, PDF resources, media galleries, donation links, contact paths, and SEO metadata.",
+            featuredOnSite: true,
+            featuredOnResume: false
+        },
+        {
             title: "connect4-ai",
             githubUrl: "https://github.com/bt1142msstate/connect4-ai",
+            liveUrl: "https://bt1142msstate.github.io/connect4-ai/",
             siteType: "Browser-Based Game AI Demo",
             siteDescription: "Playable browser game AI with minimax and alpha-beta pruning, replay tooling, experiment modes, and headless validation through GitHub Actions.",
             siteHighlights: [
