@@ -1,6 +1,17 @@
 # Portfolio Roadmap
 
-This roadmap tracks the planned direction for BrandonTemple.com. Version 1 stays focused on software credibility, hiring strength, and the first serious product launch. Later versions can expand the site into a broader personal brand, creator presence, and search-friendly identity hub.
+This roadmap tracks the planned direction for BrandonTemple.com. Version 1 stays focused on software credibility, hiring strength, and the first serious product launch. Later versions can expand the site into a broader personal brand, creator presence, therapy and psychology advocacy, mental-health work, and a search-friendly identity hub.
+
+## Core Long-Term Identity Pillars
+
+These themes should stay visible across later versions even as the site structure changes:
+
+- Software products, apps, automation, AI-assisted engineering, and product ownership.
+- Personal brand, creator work, public identity, photos, videos, and public profile content.
+- Therapy, psychology, mental-health awareness, social connection, loneliness, attachment, depression, and Brandon's intentionally public mental-health journey.
+- Community-building for people who feel isolated, outcast, socially anxious, or unsupported.
+- A future nonprofit or related organization grounded in therapy, psychology, mental-health advocacy, ethical research, and safer support systems.
+- A possible separate therapy/psychology/nonprofit site once that work becomes large enough to need its own brand, domain, content model, governance, and safety boundaries.
 
 ## Version 1: Software Portfolio And Product Foundation
 
@@ -41,9 +52,12 @@ Likely direction:
 - Add a fuller bio that covers Brandon as a person, not only as a software developer.
 - Add content creation and influencer presence in a dedicated area.
 - Add social links and creator-platform context where appropriate.
+- Make therapy, psychology, mental-health awareness, and Brandon's personal growth journey part of the broader identity instead of treating them as side notes.
+- Add carefully scoped public writing or media about Brandon's experience with depression, personal growth, therapy-related ideas, and mental-health learning, while keeping private details private unless they are intentionally public.
 - Plan a therapy-focused or wellness-oriented community direction for people who feel socially isolated, deal with social anxiety, want healthier relationship or attachment-style support, or need a safer environment to connect with others.
 - Explore whether that community starts as a Discord, local in-person group, hybrid organization, or multiple groups with different levels of structure.
-- Consider creating a nonprofit or related organization later to support community programming and fund therapy, wellness, or social-connection research that can also inform the lifestyle app.
+- Consider creating a nonprofit or related organization later to support community programming, mental-health awareness, therapy and psychology research, social-connection work, and safer support systems that can also inform the lifestyle app.
+- Track whether therapy, psychology, mental-health advocacy, and nonprofit work should eventually move to a separate site with its own identity while still linking clearly back to BrandonTemple.com.
 - Connect the lifestyle app's therapy/wellness features to the broader community mission without making the website or app imply licensed clinical care unless that infrastructure exists.
 - Track a separate safer social app concept focused on AI-assisted moderation, pre-send filtering for hate speech or bullying, user-controlled content filters, healthier feeds, and safer digital communication.
 - Consider a separate page such as `/about/`, `/creator/`, or `/media/`.
@@ -82,8 +96,10 @@ Possible direction:
 - Expand the public product ecosystem beyond software-only work to include multiple apps, hardware concepts, and a smart fashion brand direction.
 - Track a tick-themed or tick-infused fashion brand concept that combines wearable technology, practical smart-fashion ideas, and clothing that still looks good as fashion rather than only functioning as tech.
 - Present future apps, hardware ideas, fashion concepts, and therapy-focused products as part of one broader invention and creator ecosystem once the ideas are mature enough to explain publicly.
-- Develop the nonprofit direction around therapy, social-connection research, community spaces, and support for people who feel extremely alone, socially isolated, or outcast.
-- Explore whether the nonprofit can eventually fund therapy-focused research and development, offer free or low-cost therapy access through qualified professionals, and create safer digital or in-person spaces for people who need support.
+- Develop therapy, psychology, and mental-health advocacy into a major public identity pillar, including Brandon's lived experience, public education content, community-building, and carefully scoped personal storytelling.
+- Develop the nonprofit direction around therapy, psychology, mental-health awareness, social-connection research, community spaces, and support for people who feel extremely alone, socially isolated, or outcast.
+- Explore whether the nonprofit can eventually fund original or underexplored therapy and psychology research, support responsible mental-health education, offer free or low-cost therapy access through qualified professionals, and create safer digital or in-person spaces for people who need support.
+- Plan a separate nonprofit or therapy/psychology site if the mental-health mission grows beyond what should live on the main personal portfolio.
 - Investigate long-term research infrastructure for original social, attachment, loneliness, and community-support datasets that could inform future AI models, while being careful about consent, privacy, ethics review, clinical boundaries, and responsible data governance.
 - Add a public challenges, jobs, or bounties section for paid opportunities such as content challenges, research help, community tasks, app-related jobs, or other scoped work, with clear rules, payouts, deadlines, submission requirements, review status, payment terms, and moderation controls.
 - Add automated pre-deployment checks for important pages, metadata, structured data, transcripts, sitemap entries, canonical URLs, crawlability signals, and searchability expectations.
