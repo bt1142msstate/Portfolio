@@ -105,12 +105,44 @@ var observer = new IntersectionObserver(function (entries) {
     });
 }, observerOptions);
 var animatedElements = document.querySelectorAll(".timeline-item, .project-card, .education-card, .skill-category");
+function revealAnimatedElement(element) {
+    element.style.opacity = "1";
+    element.style.transform = "translateY(0)";
+}
 animatedElements.forEach(function (element) {
     element.style.opacity = "0";
     element.style.transform = "translateY(30px)";
     element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
     observer.observe(element);
 });
+function revealVisibleAnimatedElements() {
+    animatedElements.forEach(function (element) {
+        var rect = element.getBoundingClientRect();
+        if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
+            revealAnimatedElement(element);
+        }
+    });
+}
+function revealHashSectionAnimatedElements() {
+    if (!window.location.hash) {
+        return;
+    }
+
+    var target = document.getElementById(window.location.hash.slice(1));
+    if (!target) {
+        return;
+    }
+
+    target.querySelectorAll(".timeline-item, .project-card, .education-card, .skill-category").forEach(revealAnimatedElement);
+}
+function revealInitialAnimatedElements() {
+    window.requestAnimationFrame(function () {
+        revealVisibleAnimatedElements();
+        revealHashSectionAnimatedElements();
+    });
+}
+window.addEventListener("load", revealInitialAnimatedElements);
+window.addEventListener("hashchange", revealInitialAnimatedElements);
 function updateNavbarState() {
     if (!navbar) {
         return;

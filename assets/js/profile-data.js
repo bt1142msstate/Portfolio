@@ -22,7 +22,7 @@ window.profileData = {
         proofPoints: [
             { value: "12", label: "Library systems supported" },
             { value: "76", label: "Branches and campus libraries" },
-            { value: "6", label: "Featured software projects" }
+            { value: "7", label: "Featured software projects" }
         ],
         contactIntro: "I'm looking for software engineering roles where I can own practical workflow and data tooling: C#/.NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, internal tools, and AI-assisted engineering.",
         skills: [
@@ -44,11 +44,11 @@ window.profileData = {
             },
             {
                 title: "Libraries & Packages",
-                items: ["EPPlus", "ExcelJS", "MetadataExtractor", "ImageSharp"]
+                items: ["EPPlus", "ExcelJS", "MetadataExtractor", "ImageSharp", "FFmpeg"]
             },
             {
                 title: "Tools, Testing & Delivery",
-                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD"]
+                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
             },
             {
                 title: "Engineering Practices",
@@ -105,6 +105,7 @@ window.profileData = {
             "ExcelJS": "https://github.com/exceljs/exceljs",
             "MetadataExtractor": "https://github.com/drewnoakes/metadata-extractor-dotnet",
             "ImageSharp": "https://docs.sixlabors.com/",
+            "FFmpeg": "https://ffmpeg.org/documentation.html",
             "Git": "https://git-scm.com/doc",
             "GitHub Actions": "https://docs.github.com/en/actions",
             "Visual Studio": "https://learn.microsoft.com/en-us/visualstudio/windows/",
@@ -118,6 +119,7 @@ window.profileData = {
             "Shell": "https://en.wikipedia.org/wiki/Shell_script",
             "PowerShell": "https://learn.microsoft.com/en-us/powershell/",
             "CI/CD": "https://docs.github.com/en/actions/about-github-actions/understanding-github-actions",
+            "MSIX Packaging": "https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/single-project-msix",
             "Window Management": "https://en.wikipedia.org/wiki/Window_manager",
             "URL Scheme": "https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app",
             "Code Signing": "https://developer.apple.com/documentation/security/code-signing-services",
@@ -186,6 +188,7 @@ window.profileData = {
             "ExcelJS": "ExcelJS is a JavaScript library for building Excel files in browser or Node workflows. Query uses it for client-side report exports.",
             "MetadataExtractor": "MetadataExtractor is a .NET library for reading file metadata. It supports MetaTable's file inspection and metadata reporting features.",
             "ImageSharp": "ImageSharp is a .NET imaging library. It supports image-related processing needs in desktop tooling such as metadata and file analysis workflows.",
+            "FFmpeg": "FFmpeg is a media processing toolkit. I use it in TeslaCamViewer for stream-copy stitching and marked-range video export workflows.",
             "Git": "Git is version control. I use it to manage source history, ship changes, collaborate through GitHub, and keep projects traceable.",
             "GitHub Actions": "GitHub Actions runs automated workflows in GitHub. I use it for build, validation, and test pipelines across public projects.",
             "Visual Studio": "Visual Studio is my primary IDE for C# and Windows desktop projects. It supports .NET, WPF, WinUI, packaging, and debugging workflows.",
@@ -199,6 +202,7 @@ window.profileData = {
             "Shell": "Shell scripting automates command-line tasks. I use shell scripts around library operations, cleanup workflows, checks, and repeatable local commands.",
             "PowerShell": "PowerShell is useful for Windows automation and project tooling. It appears in Windows desktop project support and build-related workflows.",
             "CI/CD": "CI/CD means automated validation and deployment. I use GitHub Actions and repeatable checks so projects can be built, tested, and shipped more safely.",
+            "MSIX Packaging": "MSIX packaging is the Windows app packaging format used for Store-ready app distribution. TeslaCamViewer includes MSIX scaffolding, packaging checks, and Store-readiness documentation.",
             "Window Management": "Window management means controlling where application windows appear, how they are sized, and how workspaces are restored. Mac Window Arranger is built around this problem.",
             "URL Scheme": "A custom URL scheme lets other apps, Shortcuts, launchers, or scripts open a macOS app and trigger supported actions.",
             "Code Signing": "Code signing proves an app bundle was produced by a known signer and helps macOS validate, launch, and permission the app predictably.",
@@ -222,9 +226,9 @@ window.profileData = {
         summary: "Software engineer focused on workflow and data systems. Builds C#/.NET desktop apps, browser-based reporting tools, Python/SQL automation, API integrations, Excel exports, and AI-assisted internal software for MSU Libraries and Mississippi Library Partnership workflows.",
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
-            { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2" },
+            { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2, MSIX Packaging" },
             { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, SirsiDynix APIs, CGI, JSON, MARC, CSV/XLSX Workflows, Record Linkage" },
-            { label: "Libraries", value: "EPPlus, ExcelJS, MetadataExtractor, ImageSharp, AutoNumeric" },
+            { label: "Libraries", value: "EPPlus, ExcelJS, MetadataExtractor, ImageSharp, AutoNumeric, FFmpeg" },
             { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, VS Code, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell, CI/CD" },
             { label: "Methods & AI", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
         ]
@@ -368,6 +372,25 @@ window.profileData = {
             featuredOnResume: true
         },
         {
+            title: "TeslaCamViewer",
+            githubUrl: "https://github.com/bt1142msstate/TeslaCamViewer",
+            siteType: "Product-Style Desktop App | WinUI 3 Video + Telemetry Viewer",
+            siteDescription: "Source-available Windows app for reviewing TeslaCam footage with stitched multi-camera playback, telemetry HUD, timeline scrubbing, IN/OUT markers, MP4 export, ZIP export, local caching, installer scripts, and Store-readiness documentation.",
+            caseStudy: true,
+            caseStudyOutcome: "Highlights product-oriented C# desktop engineering with media processing, telemetry parsing, background caching, release packaging, CI, privacy documentation, and a path toward Microsoft Store distribution.",
+            siteHighlights: [
+                "Groups one-minute camera files into drive sessions with continuous stitched playback",
+                "Displays embedded telemetry such as speed, steering, GPS, pedals, blinkers, heading, gear, and autonomy state",
+                "Exports marked ranges as MP4 or all camera views as a ZIP with telemetry-preservation checks",
+                "Includes GitHub Actions builds, release packaging, install/uninstall scripts, privacy notes, and Store-readiness tracking"
+            ],
+            siteTags: ["C#", ".NET 8", "WinUI 3", "Windows App SDK", "FFmpeg", "PowerShell", "GitHub Actions", "MSIX Packaging"],
+            resumeSubtitle: "WinUI 3 Video + Telemetry Viewer | C#, .NET 8, FFmpeg",
+            resumeDescription: "Windows TeslaCam viewer with stitched multi-camera playback, telemetry HUD, timeline markers, MP4/ZIP export, local caching, installer scripts, CI, and Store-readiness documentation.",
+            featuredOnSite: true,
+            featuredOnResume: true
+        },
+        {
             title: "Mac Window Arranger",
             githubUrl: "https://github.com/bt1142msstate/mac-window-arranger",
             siteType: "Source-Available macOS Utility | SwiftUI Window Management",
@@ -414,7 +437,7 @@ window.profileData = {
             resumeSubtitle: "Browser-Based Game AI Demo | JavaScript, Minimax, Alpha-Beta Pruning",
             resumeDescription: "Playable browser game AI with minimax, alpha-beta pruning, replay tooling, experiment modes, and GitHub Actions validation.",
             featuredOnSite: true,
-            featuredOnResume: true
+            featuredOnResume: false
         }
     ]
 };
