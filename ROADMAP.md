@@ -12,6 +12,7 @@ These themes should stay visible across later versions even as the site structur
 - Community-building for people who feel isolated, outcast, socially anxious, or unsupported.
 - A future nonprofit or related organization grounded in therapy, psychology, mental-health advocacy, ethical research, and safer support systems.
 - A possible separate therapy/psychology/nonprofit site once that work becomes large enough to need its own brand, domain, content model, governance, and safety boundaries.
+- A future-vision track that explains what Brandon hopes the future can become, what problems he wants to help solve, and what products, organizations, communities, research, content, and systems he wants to create to move that future closer.
 
 ## Version 1: Software Portfolio And Product Foundation
 
@@ -66,6 +67,7 @@ Likely direction:
 - Add structured data that connects the site to public profiles, creator platforms, projects, app pages, and other trusted sources.
 - Build the site as an identity hub so searches for Brandon can connect software work, creator content, public profiles, and background information.
 - Add public information that helps search engines and AI systems answer basic questions accurately without relying on random third-party sources.
+- Start a lightweight future-vision section or page that talks about the kind of future Brandon wants to see, the problems he cares about, and the early ideas he hopes to build, without making the homepage feel overloaded.
 - Add an interactive context layer for skills, technical terms, project concepts, wellness/community terms, and other less-common topics so visitors can click a pill, phrase, or card and open a lightweight overlay with a concise explanation, related work, and a trusted external reference link instead of building a separate on-site glossary.
 - Improve modularization across shared data, reusable sections, visual components, and page-specific rendering so the site is easier to maintain while the broader personal-brand direction is still forming.
 - Plan for a future creator or stage name, including how it should be connected to `Brandon Temple` and `Brandon Vashun Temple` across the website, public profiles, and structured data.
@@ -93,6 +95,7 @@ Possible direction:
 - Add intentionally public financial transparency metrics such as app revenue, creator income, net worth, and related income categories, while keeping private financial details such as personal expenses out unless there is a clear reason to disclose them later.
 - Make all public metrics and financial estimates understandable with methodology notes, source links, update dates, disclaimers, caching, fallbacks, and manual override paths where platform APIs are incomplete.
 - Add a public status board for current and planned work across software products, creator series, business initiatives, experiments, and goals, using clear labels such as idea, planned, in progress, paused, testing, launched, completed, or canceled.
+- Add a polished future-vision area for essays, notes, concepts, predictions, and public explanations about what Brandon thinks the future could look like and how he wants to influence it through software, therapy, psychology, community, content, research, fashion, hardware, and business.
 - Expand the public product ecosystem beyond software-only work to include multiple apps, hardware concepts, and a smart fashion brand direction.
 - Track a tick-themed or tick-infused fashion brand concept that combines wearable technology, practical smart-fashion ideas, and clothing that still looks good as fashion rather than only functioning as tech.
 - Present future apps, hardware ideas, fashion concepts, and therapy-focused products as part of one broader invention and creator ecosystem once the ideas are mature enough to explain publicly.
