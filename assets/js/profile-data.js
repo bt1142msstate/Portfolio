@@ -164,7 +164,7 @@ window.profileData = {
             "Tailwind CSS": "Tailwind CSS is a utility-first CSS framework. I use and understand it as part of modern frontend styling and Query's browser-based UI stack.",
             "Responsive Design": "Responsive design means building interfaces that work cleanly across desktop and mobile. It matters across the portfolio, Query, connect4-ai, and app-style browser screens.",
             "Accessibility": "Accessibility means making interfaces usable through semantic HTML, keyboard interaction, labels, focus behavior, contrast, and assistive technology support.",
-            "Static Sites": "Static sites are websites served as HTML, CSS, JavaScript, and media files without a backend runtime. The Afternoon Adventure site uses this model for simple, reliable GitHub Pages hosting.",
+            "Static Sites": "Static sites are websites served as HTML, CSS, JavaScript, and media files without a backend runtime. The Afternoon Adventure site uses this model for simple, reliable custom-domain hosting through GitHub Pages.",
             "SEO Metadata": "SEO metadata helps search engines, social previews, and crawlers understand a page through titles, descriptions, canonical URLs, Open Graph tags, robots files, and sitemaps.",
             "AutoNumeric": "AutoNumeric is a browser library for formatted numeric inputs. It appears in Query-style form workflows where clean numeric entry and parsing matter.",
             ".NET 8/9": ".NET is the application platform I use for modern C# desktop and backend-style work. MetaTable targets .NET 9, while HTMLConverter uses .NET 8.",
@@ -436,18 +436,18 @@ window.profileData = {
         {
             title: "Afternoon Adventure Website",
             githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
-            liveUrl: "https://bt1142msstate.github.io/afternoon-adventure/",
+            liveUrl: "https://afternoonadventure.org/",
             siteType: "Live Nonprofit Website | Responsive Static Site",
-            siteDescription: "Responsive GitHub Pages website for Afternoon Adventure Learning Center, a Newton, Mississippi nonprofit afterschool and tutoring center, with program details, family resources, registration, donation links, contact paths, media galleries, and SEO metadata.",
+            siteDescription: "Responsive custom-domain website for Afternoon Adventure Learning Center, a Newton, Mississippi nonprofit afterschool and tutoring center, with program details, family resources, registration, donation links, contact paths, media galleries, and SEO metadata.",
             siteHighlights: [
                 "Built a public static site for a real 501(c)(3) afterschool and tutoring center",
                 "Organizes programs, registration, transportation, tuition, resources, events, donations, and contact details for families",
                 "Includes PDF resource viewing, full-screen image galleries, community updates, and a tuition calculator",
-                "Uses responsive HTML/CSS/JavaScript, accessibility-oriented markup, SEO metadata, sitemap, robots file, and GitHub Pages hosting"
+                "Uses responsive HTML/CSS/JavaScript, accessibility-oriented markup, SEO metadata, sitemap, robots file, and custom-domain GitHub Pages hosting"
             ],
             siteTags: ["HTML", "CSS", "JavaScript", "Responsive Design", "Accessibility", "Static Sites", "GitHub Pages", "SEO Metadata"],
             resumeSubtitle: "Responsive Nonprofit Website | HTML, CSS, JavaScript",
-            resumeDescription: "Responsive GitHub Pages website for a nonprofit afterschool and tutoring center with program content, PDF resources, media galleries, donation links, contact paths, and SEO metadata.",
+            resumeDescription: "Responsive custom-domain website for a nonprofit afterschool and tutoring center with program content, PDF resources, media galleries, donation links, contact paths, and SEO metadata.",
             featuredOnSite: true,
             featuredOnResume: false
         },
