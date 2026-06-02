@@ -35,6 +35,10 @@ window.profileData = {
                 items: ["HTML", "CSS", "XAML", "Node.js", "Tailwind CSS", "Responsive Design", "Accessibility", "AutoNumeric"]
             },
             {
+                title: "Backend, Cloud & Hosting",
+                items: ["Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "GitHub Pages"]
+            },
+            {
                 title: ".NET, Desktop & Native Apps",
                 items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "WebView2", "SwiftUI", "AppKit", "macOS Accessibility APIs"]
             },
@@ -48,7 +52,7 @@ window.profileData = {
             },
             {
                 title: "Tools, Testing & Delivery",
-                items: ["Git", "GitHub Actions", "GitHub Pages", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
+                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
             },
             {
                 title: "Engineering Practices",
@@ -80,6 +84,11 @@ window.profileData = {
             "Static Sites": "https://en.wikipedia.org/wiki/Static_web_page",
             "SEO Metadata": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
             "AutoNumeric": "https://docs.autonumeric.org/",
+            "Firebase": "https://firebase.google.com/docs",
+            "Firestore": "https://firebase.google.com/docs/firestore",
+            "Firebase Authentication": "https://firebase.google.com/docs/auth",
+            "Firebase Storage": "https://firebase.google.com/docs/storage",
+            "Cloud Functions": "https://firebase.google.com/docs/functions",
             ".NET 8/9": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
             ".NET 8": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
             ".NET 9": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview",
@@ -164,9 +173,14 @@ window.profileData = {
             "Tailwind CSS": "Tailwind CSS is a utility-first CSS framework. I use and understand it as part of modern frontend styling and Query's browser-based UI stack.",
             "Responsive Design": "Responsive design means building interfaces that work cleanly across desktop and mobile. It matters across the portfolio, Query, connect4-ai, and app-style browser screens.",
             "Accessibility": "Accessibility means making interfaces usable through semantic HTML, keyboard interaction, labels, focus behavior, contrast, and assistive technology support.",
-            "Static Sites": "Static sites are websites served as HTML, CSS, JavaScript, and media files without a backend runtime. The Afternoon Adventure site uses this model for simple, reliable custom-domain hosting through GitHub Pages.",
+            "Static Sites": "Static sites are websites served as HTML, CSS, JavaScript, and media files without a backend runtime. Afternoon Adventure still serves the public frontend this way through GitHub Pages, while Firebase handles managed content, accounts, submissions, and staff tools.",
             "SEO Metadata": "SEO metadata helps search engines, social previews, and crawlers understand a page through titles, descriptions, canonical URLs, Open Graph tags, robots files, and sitemaps.",
             "AutoNumeric": "AutoNumeric is a browser library for formatted numeric inputs. It appears in Query-style form workflows where clean numeric entry and parsing matter.",
+            "Firebase": "Firebase is Google's app backend platform. I use it on Afternoon Adventure for authentication, Firestore data, Storage assets, security rules, and function-backed notification workflows.",
+            "Firestore": "Firestore is Firebase's document database. Afternoon Adventure uses it for editable public content, admin roles, contact questions, enrollment submissions, events, documents, and live dashboard listeners.",
+            "Firebase Authentication": "Firebase Authentication provides account sign-in. Afternoon Adventure uses Google sign-in for families and staff, with dashboard access controlled by approved Firestore admin records.",
+            "Firebase Storage": "Firebase Storage stores uploaded files. Afternoon Adventure uses it for managed public photos, PDFs, closure calendars, and generated enrollment submission PDFs protected by Storage rules.",
+            "Cloud Functions": "Cloud Functions run backend code in response to events. Afternoon Adventure includes function code for question notifications, enrollment receipts, and dashboard reply emails.",
             ".NET 8/9": ".NET is the application platform I use for modern C# desktop and backend-style work. MetaTable targets .NET 9, while HTMLConverter uses .NET 8.",
             ".NET 8": ".NET 8 is a long-term-support .NET release used for modern C# applications, services, and desktop tooling.",
             ".NET 9": ".NET 9 is the newer .NET release used by current C# projects such as MetaTable for modern runtime and platform capabilities.",
@@ -198,7 +212,7 @@ window.profileData = {
             "FFmpeg": "FFmpeg is a media processing toolkit. I use it in TeslaCamViewer for stream-copy stitching and marked-range video export workflows.",
             "Git": "Git is version control. I use it to manage source history, ship changes, collaborate through GitHub, and keep projects traceable.",
             "GitHub Actions": "GitHub Actions runs automated workflows in GitHub. I use it for build, validation, and test pipelines across public projects.",
-            "GitHub Pages": "GitHub Pages hosts static sites directly from a repository. I use it for public project demos and static websites such as the portfolio, Query, connect4-ai, and Afternoon Adventure.",
+            "GitHub Pages": "GitHub Pages hosts static sites directly from a repository. I use it for public project demos and static frontends such as the portfolio, Query, connect4-ai, and Afternoon Adventure.",
             "Visual Studio": "Visual Studio is my primary IDE for C# and Windows desktop projects. It supports .NET, WPF, WinUI, packaging, and debugging workflows.",
             "VS Code": "VS Code is a lightweight editor I use for web, Python, scripts, documentation, and mixed-language projects.",
             "Postman": "Postman is used for testing and inspecting APIs. It helps validate request payloads, responses, and integration behavior.",
@@ -437,17 +451,19 @@ window.profileData = {
             title: "Afternoon Adventure Website",
             githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
             liveUrl: "https://afternoonadventure.org/",
-            siteType: "Live Nonprofit Website | Responsive Static Site",
-            siteDescription: "Responsive custom-domain website for Afternoon Adventure Learning Center, a Newton, Mississippi nonprofit afterschool and tutoring center, with program details, family resources, registration, donation links, contact paths, media galleries, and SEO metadata.",
+            siteType: "Live Nonprofit Website | Firebase-Backed Static Frontend",
+            siteDescription: "Custom-domain nonprofit website for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, with responsive public content, Firebase-powered accounts, managed content, Storage-backed photos/PDFs, staff dashboard tooling, contact and enrollment workflows, and SEO metadata.",
             siteHighlights: [
-                "Built a public static site for a real 501(c)(3) afterschool and tutoring center",
+                "Built a public website for a real 501(c)(3) afterschool and tutoring center",
                 "Organizes programs, registration, transportation, tuition, resources, events, donations, and contact details for families",
-                "Includes PDF resource viewing, full-screen image galleries, community updates, and a tuition calculator",
+                "Uses Firebase Authentication, Firestore, and Storage for Google sign-in, editable site content, admin roles, submissions, public photos, and managed PDFs",
+                "Includes a staff/admin dashboard with live Firestore listeners, on-site edit controls, content reordering, question/enrollment review, and center settings management",
+                "Includes PDF resource viewing, full-screen image galleries, community updates, a tuition calculator, Firestore/Storage security rules, and Cloud Functions notification code",
                 "Uses responsive HTML/CSS/JavaScript, accessibility-oriented markup, SEO metadata, sitemap, robots file, and custom-domain GitHub Pages hosting"
             ],
-            siteTags: ["HTML", "CSS", "JavaScript", "Responsive Design", "Accessibility", "Static Sites", "GitHub Pages", "SEO Metadata"],
-            resumeSubtitle: "Responsive Nonprofit Website | HTML, CSS, JavaScript",
-            resumeDescription: "Responsive custom-domain website for a nonprofit afterschool and tutoring center with program content, PDF resources, media galleries, donation links, contact paths, and SEO metadata.",
+            siteTags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "GitHub Pages", "SEO Metadata"],
+            resumeSubtitle: "Firebase-Backed Nonprofit Website | HTML, CSS, JavaScript",
+            resumeDescription: "Responsive custom-domain nonprofit website with Firebase Auth, Firestore-managed content, Storage-backed photos/PDFs, staff dashboard tooling, contact/enrollment workflows, media galleries, donation links, and SEO metadata.",
             featuredOnSite: true,
             featuredOnResume: false
         },
