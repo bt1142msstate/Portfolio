@@ -253,8 +253,8 @@ window.profileData = {
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
             { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2, MSIX Packaging" },
-            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, SirsiDynix APIs, CGI, JSON, MARC, CSV/XLSX Workflows, Record Linkage" },
-            { label: "Libraries", value: "EPPlus, ExcelJS, MetadataExtractor, ImageSharp, AutoNumeric, FFmpeg" },
+            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, Firebase Auth, Firestore, Firebase Storage, Cloud Functions, SirsiDynix APIs, CGI, JSON, MARC, Record Linkage" },
+            { label: "Libraries", value: "EPPlus, ExcelJS, PDF.js, PDF-LIB, MetadataExtractor, ImageSharp, AutoNumeric, FFmpeg" },
             { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, VS Code, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell, CI/CD" },
             { label: "Methods & AI", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
         ]
@@ -449,7 +449,7 @@ window.profileData = {
             resumeSubtitle: "WinUI 3 Batch PDF Converter | .NET 8, WebView2",
             resumeDescription: "WinUI 3 desktop app for batch converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, WebView2 rendering, and output archiving.",
             featuredOnSite: true,
-            featuredOnResume: true
+            featuredOnResume: false
         },
         {
             title: "Afternoon Adventure Website",
@@ -470,7 +470,7 @@ window.profileData = {
             resumeSubtitle: "Firebase-Backed Nonprofit Web Platform | HTML, CSS, JavaScript",
             resumeDescription: "Responsive custom-domain nonprofit web platform with Firebase Auth, Firestore-managed content, Storage-backed media/PDFs, generated enrollment PDFs, family account tracking, staff dashboard tools, live notification functions, and SEO metadata.",
             featuredOnSite: true,
-            featuredOnResume: false
+            featuredOnResume: true
         },
         {
             title: "connect4-ai",
