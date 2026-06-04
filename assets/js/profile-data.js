@@ -15,8 +15,9 @@ window.profileData = {
     },
     site: {
         about: [
-            "I build workflow and data systems that turn manual staff processes into maintainable software: C#/.NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, and Excel-ready reports.",
+            "I build workflow, data, and production web systems that turn real operational needs into maintainable software: C#/.NET desktop apps, browser-based reporting, Firebase-backed web platforms, Python/SQL automation, API integrations, and Excel-ready reports.",
             "At MSU Libraries, my strongest projects come from live operational needs. I built Query for API-backed report generation and Excel export, MetaTable for file-system metadata scanning, and automation utilities for reporting, cleanup, and support workflows.",
+            "I also ship public-facing systems such as Afternoon Adventure, a live nonprofit platform with Firebase Auth, Firestore, Storage, staff dashboard tools, family accounts, generated enrollment PDFs, protected submissions, and notification workflows.",
             "I use AI as an implementation accelerator, but the engineering judgment stays human: requirements clarification, data structures, debugging, tests, user feedback, and code review."
         ],
         proofPoints: [
@@ -24,7 +25,7 @@ window.profileData = {
             { value: "76", label: "Branches and campus libraries" },
             { value: "8", label: "Featured software projects" }
         ],
-        contactIntro: "I'm looking for software engineering roles where I can own practical workflow and data tooling: C#/.NET desktop apps, browser-based reporting, Python/SQL automation, API integrations, Excel exports, internal tools, and AI-assisted engineering.",
+        contactIntro: "I'm looking for software engineering roles where I can own practical workflow, data, and production web tooling: C#/.NET desktop apps, browser-based reporting, Firebase-backed web platforms, Python/SQL automation, API integrations, Excel exports, internal tools, and AI-assisted engineering.",
         skills: [
             {
                 title: "Programming Languages",
@@ -249,7 +250,7 @@ window.profileData = {
         }
     },
     resume: {
-        summary: "Software engineer focused on workflow and data systems. Builds C#/.NET desktop apps, browser-based reporting tools, Python/SQL automation, API integrations, Excel exports, and AI-assisted internal software for MSU Libraries and Mississippi Library Partnership workflows.",
+        summary: "Software engineer focused on workflow, data, and production web systems. Builds C#/.NET desktop apps, browser-based reporting tools, Firebase-backed web platforms, Python/SQL automation, API integrations, Excel exports, and AI-assisted internal software.",
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
             { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2, MSIX Packaging" },
@@ -381,6 +382,27 @@ window.profileData = {
             featuredOnResume: true
         },
         {
+            title: "Afternoon Adventure Website",
+            githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
+            liveUrl: "https://afternoonadventure.org/",
+            siteType: "Live Nonprofit Website | Firebase-Backed Staff & Family Portal",
+            siteDescription: "Custom-domain nonprofit web platform for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, combining a responsive GitHub Pages public site with Firebase-powered family accounts, staff dashboard tools, editable managed content, online enrollment, generated PDFs, email notifications, Storage-backed media/documents, and SEO metadata.",
+            siteHighlights: [
+                "Built a public website for a real 501(c)(3) afterschool and tutoring center",
+                "Organizes programs, registration, transportation, tuition, resources, events, donations, and contact details for families",
+                "Uses Firebase Authentication, Firestore, and Storage for Google sign-in, family account history, editable site content, admin roles, private submissions, public photos, and managed PDFs",
+                "Built an online enrollment workflow that generates a completed PDF preview in the browser, stores the generated PDF and structured fields, and supports staff review",
+                "Includes a staff/admin dashboard with live Firestore listeners, on-site edit controls, content reordering, question/enrollment review, staff permission management, and center settings management",
+                "Uses deployed Firebase Gen 2 Functions for question notifications, enrollment receipts with PDF attachments, dashboard replies, enrollment status emails, and staff account lookup",
+                "Includes PDF.js document viewing, PDF-LIB form generation, full-screen media galleries, community updates/events, a tuition calculator, SEO metadata, sitemap, robots file, and custom-domain GitHub Pages hosting"
+            ],
+            siteTags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "PDF.js", "PDF-LIB", "GitHub Pages", "SEO Metadata"],
+            resumeSubtitle: "Firebase-Backed Nonprofit Web Platform | HTML, CSS, JavaScript",
+            resumeDescription: "Responsive custom-domain nonprofit web platform with Firebase Auth, Firestore-managed content, Storage-backed media/PDFs, generated enrollment PDFs, family account tracking, staff dashboard tools, live notification functions, and SEO metadata.",
+            featuredOnSite: true,
+            featuredOnResume: true
+        },
+        {
             title: "Ady Resolver",
             githubUrl: "https://github.com/bt1142msstate/Ady-Resolver",
             siteType: "Data Cleanup Case Study | Address Resolution Toolkit",
@@ -450,27 +472,6 @@ window.profileData = {
             resumeDescription: "WinUI 3 desktop app for batch converting HTML files, folders, and ZIP archives to PDF with drag-and-drop intake, WebView2 rendering, and output archiving.",
             featuredOnSite: true,
             featuredOnResume: false
-        },
-        {
-            title: "Afternoon Adventure Website",
-            githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
-            liveUrl: "https://afternoonadventure.org/",
-            siteType: "Live Nonprofit Website | Firebase-Backed Staff & Family Portal",
-            siteDescription: "Custom-domain nonprofit web platform for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, combining a responsive GitHub Pages public site with Firebase-powered family accounts, staff dashboard tools, editable managed content, online enrollment, generated PDFs, email notifications, Storage-backed media/documents, and SEO metadata.",
-            siteHighlights: [
-                "Built a public website for a real 501(c)(3) afterschool and tutoring center",
-                "Organizes programs, registration, transportation, tuition, resources, events, donations, and contact details for families",
-                "Uses Firebase Authentication, Firestore, and Storage for Google sign-in, family account history, editable site content, admin roles, private submissions, public photos, and managed PDFs",
-                "Built an online enrollment workflow that generates a completed PDF preview in the browser, stores the generated PDF and structured fields, and supports staff review",
-                "Includes a staff/admin dashboard with live Firestore listeners, on-site edit controls, content reordering, question/enrollment review, staff permission management, and center settings management",
-                "Uses deployed Firebase Gen 2 Functions for question notifications, enrollment receipts with PDF attachments, dashboard replies, enrollment status emails, and staff account lookup",
-                "Includes PDF.js document viewing, PDF-LIB form generation, full-screen media galleries, community updates/events, a tuition calculator, SEO metadata, sitemap, robots file, and custom-domain GitHub Pages hosting"
-            ],
-            siteTags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "PDF.js", "PDF-LIB", "GitHub Pages", "SEO Metadata"],
-            resumeSubtitle: "Firebase-Backed Nonprofit Web Platform | HTML, CSS, JavaScript",
-            resumeDescription: "Responsive custom-domain nonprofit web platform with Firebase Auth, Firestore-managed content, Storage-backed media/PDFs, generated enrollment PDFs, family account tracking, staff dashboard tools, live notification functions, and SEO metadata.",
-            featuredOnSite: true,
-            featuredOnResume: true
         },
         {
             title: "connect4-ai",
