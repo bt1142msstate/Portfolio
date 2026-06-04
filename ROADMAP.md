@@ -32,7 +32,7 @@ Planned before v1 is considered complete:
 - Define how the lifestyle app handles wellness or therapy-adjacent features, including safety boundaries, disclaimers, privacy expectations, and whether any licensed professional support is needed later.
 - Build the v1 site narrative around product ownership, cross-platform release, subscriptions, AI-enabled features, and maintainable software execution.
 - Keep MSU Libraries, MetaTable, Query, Ady Resolver, and earlier projects as supporting proof of engineering ability, not the long-term center of the brand.
-- Move portfolio contact to a domain-based email address once it is set up.
+- Keep portfolio contact routed through the domain-based email address.
 - Update public profile links if the GitHub handle changes to a more name-based account.
 - Keep the public site recruiter-focused, clean, and professional.
 
