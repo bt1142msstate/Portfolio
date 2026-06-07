@@ -275,6 +275,17 @@ window.profileData = {
                     "Translate staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
                     "Use AI-assisted development while applying C# and C++ systems fundamentals, data structures, debugging, tests, and code review to validate generated code for correctness, performance, and maintainability."
                 ]
+            },
+            {
+                title: "Contract Software Engineer / Web Developer",
+                organization: "Afternoon Adventure Learning Center",
+                location: "Newton, MS",
+                date: "2026",
+                bullets: [
+                    "Delivered a paid client web platform for a 501(c)(3) afterschool and tutoring center, combining a public custom-domain website with staff and family portal workflows.",
+                    "Implemented Firebase Auth, Firestore, Storage, Cloud Functions, protected submissions, generated enrollment PDFs, staff dashboard tools, managed content, and email notification workflows.",
+                    "Worked directly with center stakeholders to translate registration, tuition, transportation, resources, events, donations, and content-management needs into maintainable software."
+                ]
             }
         ],
         additional: [
@@ -400,7 +411,7 @@ window.profileData = {
             resumeSubtitle: "Firebase-Backed Nonprofit Web Platform | HTML, CSS, JavaScript",
             resumeDescription: "Responsive custom-domain nonprofit web platform with Firebase Auth, Firestore-managed content, Storage-backed media/PDFs, generated enrollment PDFs, family account tracking, staff dashboard tools, live notification functions, and SEO metadata.",
             featuredOnSite: true,
-            featuredOnResume: true
+            featuredOnResume: false
         },
         {
             title: "Ady Resolver",
@@ -438,7 +449,7 @@ window.profileData = {
             resumeSubtitle: "WinUI 3 Video + Telemetry Viewer | C#, .NET 8, FFmpeg",
             resumeDescription: "Windows TeslaCam viewer with stitched multi-camera playback, telemetry HUD, timeline markers, MP4/ZIP export, local caching, installer scripts, CI, and Store-readiness documentation.",
             featuredOnSite: true,
-            featuredOnResume: true
+            featuredOnResume: false
         },
         {
             title: "Mac Window Arranger",
