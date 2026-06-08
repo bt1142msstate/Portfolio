@@ -37,7 +37,7 @@ window.profileData = {
             },
             {
                 title: "Backend, Cloud & Hosting",
-                items: ["Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "GitHub Pages"]
+                items: ["Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "Firebase Security Rules", "Firebase App Check", "GitHub Pages"]
             },
             {
                 title: ".NET, Desktop & Native Apps",
@@ -45,11 +45,11 @@ window.profileData = {
             },
             {
                 title: "Data & APIs",
-                items: ["SQL Server", "PostgreSQL", "EF Core", "SirsiDynix APIs", "REST APIs", "CGI", "JSON", "MARC", "CSV/XLSX Workflows", "Excel Export", "Address Resolution", "Record Linkage", "Data Pipelines"]
+                items: ["SQL Server", "PostgreSQL", "EF Core", "SirsiDynix APIs", "REST APIs", "CGI", "JSON", "NDJSON/JSONL", "MARC", "CSV/XLSX Workflows", "Excel Export", "Virtualized Tables", "Address Resolution", "Record Linkage", "Data Pipelines"]
             },
             {
                 title: "Libraries & Packages",
-                items: ["EPPlus", "ExcelJS", "PDF.js", "PDF-LIB", "MetadataExtractor", "ImageSharp", "FFmpeg"]
+                items: ["EPPlus", "ExcelJS", "PDF.js", "PDF-LIB", "Nodemailer", "MetadataExtractor", "ImageSharp", "FFmpeg"]
             },
             {
                 title: "Tools, Testing & Delivery",
@@ -90,6 +90,8 @@ window.profileData = {
             "Firebase Authentication": "https://firebase.google.com/docs/auth",
             "Firebase Storage": "https://firebase.google.com/docs/storage",
             "Cloud Functions": "https://firebase.google.com/docs/functions",
+            "Firebase Security Rules": "https://firebase.google.com/docs/rules",
+            "Firebase App Check": "https://firebase.google.com/docs/app-check",
             ".NET 8/9": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
             ".NET 8": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
             ".NET 9": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview",
@@ -105,10 +107,12 @@ window.profileData = {
             "REST APIs": "https://developer.mozilla.org/en-US/docs/Glossary/REST",
             "CGI": "https://en.wikipedia.org/wiki/Common_Gateway_Interface",
             "JSON": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+            "NDJSON/JSONL": "https://jsonlines.org/",
             "MARC": "https://www.loc.gov/marc/",
             "CSV/XLSX Workflows": "https://en.wikipedia.org/wiki/Comma-separated_values",
             "CSV/XLSX": "https://en.wikipedia.org/wiki/Comma-separated_values",
             "Excel Export": "https://learn.microsoft.com/en-us/office/open-xml/spreadsheet/working-with-sheets",
+            "Virtualized Tables": "https://developer.mozilla.org/en-US/docs/Web/Performance",
             "Address Resolution": "https://en.wikipedia.org/wiki/Record_linkage",
             "Address Matching": "https://en.wikipedia.org/wiki/Record_linkage",
             "Record Linkage": "https://en.wikipedia.org/wiki/Record_linkage",
@@ -118,6 +122,7 @@ window.profileData = {
             "ExcelJS": "https://github.com/exceljs/exceljs",
             "PDF.js": "https://mozilla.github.io/pdf.js/",
             "PDF-LIB": "https://pdf-lib.js.org/",
+            "Nodemailer": "https://nodemailer.com/about/",
             "MetadataExtractor": "https://github.com/drewnoakes/metadata-extractor-dotnet",
             "ImageSharp": "https://docs.sixlabors.com/",
             "FFmpeg": "https://ffmpeg.org/documentation.html",
@@ -184,6 +189,8 @@ window.profileData = {
             "Firebase Authentication": "Firebase Authentication provides account sign-in. Afternoon Adventure uses Google sign-in for family accounts and staff tools, with dashboard access controlled by approved Firestore admin records.",
             "Firebase Storage": "Firebase Storage stores uploaded files. Afternoon Adventure uses it for managed public photos, PDFs, closure calendars, and generated enrollment application PDFs protected by Storage rules.",
             "Cloud Functions": "Cloud Functions run backend code in response to events. Afternoon Adventure uses deployed functions for question notifications, enrollment receipts with PDF attachments, dashboard replies, enrollment status emails, and staff account lookup.",
+            "Firebase Security Rules": "Firebase Security Rules define who can read and write Firestore and Storage data. Afternoon Adventure uses them to separate public content, family submissions, staff tools, private PDFs, metrics, and admin-only workflows.",
+            "Firebase App Check": "Firebase App Check helps protect callable Firebase workflows from unauthorized clients. Afternoon Adventure uses App Check around public callables for contact submissions, enrollment workflows, metrics, and secured PDF access.",
             ".NET 8/9": ".NET is the application platform I use for modern C# desktop and backend-style work. MetaTable targets .NET 9, while HTMLConverter uses .NET 8.",
             ".NET 8": ".NET 8 is a long-term-support .NET release used for modern C# applications, services, and desktop tooling.",
             ".NET 9": ".NET 9 is the newer .NET release used by current C# projects such as MetaTable for modern runtime and platform capabilities.",
@@ -199,10 +206,12 @@ window.profileData = {
             "REST APIs": "REST APIs are HTTP-based service interfaces. I use them in browser apps, internal tool integrations, and API-backed reporting workflows.",
             "CGI": "CGI is a server-side web scripting model used in legacy and operational library tooling. I work with CGI-style Perl scripts for internal web reports and tools.",
             "JSON": "JSON is the data format used for API payloads, configuration, manifests, model files, and browser-to-backend communication across several projects.",
+            "NDJSON/JSONL": "NDJSON/JSONL streams one JSON object per line. Query uses this style of result stream so rows, progress, and completion events can move from a backend to the browser predictably.",
             "MARC": "MARC is a library metadata format. I work around MARC-related cleanup, item records, metadata extraction, and public-note workflows in library systems.",
             "CSV/XLSX Workflows": "CSV/XLSX workflows cover importing, transforming, and exporting spreadsheet-style data. They appear in Query, Ady Resolver, MetaTable, and MSU reporting work.",
             "CSV/XLSX": "CSV/XLSX covers plain-text and Excel spreadsheet formats used for exports, imports, reporting, and staff-facing data handoffs.",
             "Excel Export": "Excel export is a practical reporting deliverable. I build tools that turn operational data into structured workbooks staff can use immediately.",
+            "Virtualized Tables": "Virtualized tables render only the rows needed for the visible viewport. Query uses virtualization so large result sets remain usable in the browser.",
             "Address Resolution": "Address resolution is the process of standardizing messy address input and matching it to reliable reference data. Ady Resolver is built around this problem.",
             "Address Matching": "Address matching compares messy or incomplete addresses against reference records so the best candidate can be selected with confidence.",
             "Record Linkage": "Record linkage means matching imperfect records that may refer to the same real-world entity. Ady Resolver uses this concept for address matching and confidence scoring.",
@@ -212,6 +221,7 @@ window.profileData = {
             "ExcelJS": "ExcelJS is a JavaScript library for building Excel files in browser or Node workflows. Query uses it for client-side report exports.",
             "PDF.js": "PDF.js is Mozilla's browser PDF viewer library. Afternoon Adventure uses it for on-page document viewing and generated enrollment PDF previews.",
             "PDF-LIB": "PDF-LIB is a JavaScript library for creating and editing PDFs in the browser. Afternoon Adventure uses it to generate completed enrollment application PDFs from form data.",
+            "Nodemailer": "Nodemailer is a Node.js email library. Afternoon Adventure uses backend email functions for question notifications, enrollment receipts, staff replies, and parent-facing confirmations.",
             "MetadataExtractor": "MetadataExtractor is a .NET library for reading file metadata. It supports MetaTable's file inspection and metadata reporting features.",
             "ImageSharp": "ImageSharp is a .NET imaging library. It supports image-related processing needs in desktop tooling such as metadata and file analysis workflows.",
             "FFmpeg": "FFmpeg is a media processing toolkit. I use it in TeslaCamViewer for stream-copy stitching and marked-range video export workflows.",
@@ -254,8 +264,9 @@ window.profileData = {
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
             { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2, MSIX Packaging" },
-            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, Firebase Auth, Firestore, Firebase Storage, Cloud Functions, SirsiDynix APIs, CGI, JSON, MARC, Record Linkage" },
-            { label: "Libraries", value: "EPPlus, ExcelJS, PDF.js, PDF-LIB, MetadataExtractor, ImageSharp, AutoNumeric, FFmpeg" },
+            { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, JSONL/NDJSON, SirsiDynix APIs, CGI, JSON, MARC, Record Linkage" },
+            { label: "Cloud & Firebase", value: "Firebase Auth, Firestore, Firebase Storage, Cloud Functions, Firebase Security Rules, App Check, GitHub Pages" },
+            { label: "Libraries", value: "EPPlus, ExcelJS, PDF.js, PDF-LIB, Nodemailer, MetadataExtractor, ImageSharp, AutoNumeric, FFmpeg" },
             { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, VS Code, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell, CI/CD" },
             { label: "Methods & AI", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
         ]
@@ -270,7 +281,7 @@ window.profileData = {
                 bullets: [
                     "Build and maintain internal software for MSU Libraries and Mississippi Library Partnership operations serving 12 library systems and 76 branches/campus libraries.",
                     "Automate reporting, file processing, metadata extraction, data cleanup, and Excel-ready staff workflows using C#, .NET, Python, Perl, SQL, JavaScript, HTML/CSS, and shell scripts.",
-                    "Developed Query, a browser-based reporting tool with configurable filters, API-backed payloads, report history, and Excel export for live library item data.",
+                    "Developed Query, a browser-based reporting frontend with API-backed field metadata, configurable filters/forms, query history/templates, JSONL result handling, and Excel export.",
                     "Created MetaTable, a C# WPF metadata scanner for large directory trees with real-time progress tracking and structured Excel exports.",
                     "Translate staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
                     "Use AI-assisted development while applying C# and C++ systems fundamentals, data structures, debugging, tests, and code review to validate generated code for correctness, performance, and maintainability."
@@ -283,7 +294,7 @@ window.profileData = {
                 date: "2026",
                 bullets: [
                     "Delivered a paid client web platform for a 501(c)(3) afterschool and tutoring center, combining a public custom-domain website with staff and family portal workflows.",
-                    "Implemented Firebase Auth, Firestore, Storage, Cloud Functions, protected submissions, generated enrollment PDFs, staff dashboard tools, managed content, and email notification workflows.",
+                    "Implemented Firebase Auth, Firestore, Storage, Gen 2 Cloud Functions, App Check-protected callables, Security Rules, generated enrollment PDFs, staff dashboard tools, traffic metrics, and email workflows.",
                     "Worked directly with center stakeholders to translate registration, tuition, transportation, resources, events, donations, and content-management needs into maintainable software."
                 ]
             }
@@ -360,17 +371,17 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/Query",
             liveUrl: "https://bt1142msstate.github.io/Query/",
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
-            siteDescription: "Browser-based reporting tool for MSU Libraries staff that converts live library item data into configurable reports with API-backed payloads, reusable history, and Excel export.",
+            siteDescription: "Backend-driven browser reporting frontend for MSU Libraries workflows, with API-backed field metadata, configurable filters and form-mode reports, query history/templates, JSONL result streaming, virtualized tables, post-filters, and Excel export.",
             caseStudy: true,
-            caseStudyOutcome: "Highlights practical web tooling with user-facing filters, API payload design, persistent report history, and staff-ready Excel exports.",
+            caseStudyOutcome: "Highlights practical web tooling with backend contracts, user-facing filters, JSONL result handling, virtualized result tables, reusable report workflows, and staff-ready Excel exports.",
             siteHighlights: [
-                "Configurable filters and API-backed query payloads",
-                "Persistent report history for repeatable staff workflows",
-                "Excel export for live library item data"
+                "Backend-driven field metadata and configurable query payloads",
+                "Query history, reusable templates, form-mode reports, and shareable URLs",
+                "Virtualized large-result table with post-filters, split-column handling, and ExcelJS export"
             ],
-            siteTags: ["JavaScript", "HTML", "CSS", "ExcelJS", "Tailwind CSS", "Playwright"],
+            siteTags: ["JavaScript", "HTML", "CSS", "REST APIs", "JSON", "NDJSON/JSONL", "Virtualized Tables", "ExcelJS", "AutoNumeric", "Tailwind CSS", "ESLint", "Playwright", "GitHub Actions"],
             resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
-            resumeDescription: "Browser-based MSU Libraries report builder with configurable filters, API-backed payloads, report history, and Excel export for live item data.",
+            resumeDescription: "Browser reporting frontend with API-backed field metadata, configurable filters/forms, query history/templates, JSONL result handling, virtualized tables, and Excel export.",
             featuredOnSite: true,
             featuredOnResume: true
         },
@@ -397,21 +408,21 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
             liveUrl: "https://afternoonadventure.org/",
             siteType: "Live Nonprofit Website | Firebase-Backed Staff & Family Portal",
-            siteDescription: "Custom-domain nonprofit web platform for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, combining a responsive GitHub Pages public site with Firebase-powered family accounts, staff dashboard tools, editable managed content, online enrollment, generated PDFs, email notifications, Storage-backed media/documents, and SEO metadata.",
+            siteDescription: "Custom-domain nonprofit web platform for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, combining a responsive GitHub Pages public site with Firebase-powered family accounts, staff dashboard tools, editable managed content, online enrollment, generated PDFs, secure submissions, backend email workflows, Storage-backed media/documents, traffic metrics, and SEO metadata.",
             siteHighlights: [
                 "Built a public website for a real 501(c)(3) afterschool and tutoring center",
                 "Organizes programs, registration, transportation, tuition, resources, events, donations, and contact details for families",
-                "Uses Firebase Authentication, Firestore, and Storage for Google sign-in, family account history, editable site content, admin roles, private submissions, public photos, and managed PDFs",
+                "Uses Firebase Authentication, Firestore, Storage, Security Rules, and App Check-protected callables for Google sign-in, family account history, editable content, admin roles, private submissions, public photos, metrics, and managed PDFs",
                 "Built an online enrollment workflow that generates a completed PDF preview in the browser, stores the generated PDF and structured fields, and supports staff review",
                 "Includes a staff/admin dashboard with live Firestore listeners, on-site edit controls, content reordering, question/enrollment review, staff permission management, and center settings management",
-                "Uses deployed Firebase Gen 2 Functions for question notifications, enrollment receipts with PDF attachments, dashboard replies, enrollment status emails, and staff account lookup",
-                "Includes PDF.js document viewing, PDF-LIB form generation, full-screen media galleries, community updates/events, a tuition calculator, SEO metadata, sitemap, robots file, and custom-domain GitHub Pages hosting"
+                "Uses deployed Firebase Gen 2 Functions and Nodemailer for question notifications, enrollment receipts with PDF attachments, dashboard replies, enrollment status emails, and staff account lookup",
+                "Includes PDF.js document viewing, PDF-LIB form generation, full-screen media galleries, community updates/events, a tuition calculator, SEO metadata, sitemap, robots file, Playwright smoke tests, Firestore rules tests, and custom-domain GitHub Pages hosting"
             ],
-            siteTags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "PDF.js", "PDF-LIB", "GitHub Pages", "SEO Metadata"],
+            siteTags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "Firebase Security Rules", "Firebase App Check", "Nodemailer", "PDF.js", "PDF-LIB", "Playwright", "GitHub Pages", "SEO Metadata"],
             resumeSubtitle: "Firebase-Backed Nonprofit Web Platform | HTML, CSS, JavaScript",
-            resumeDescription: "Responsive custom-domain nonprofit web platform with Firebase Auth, Firestore-managed content, Storage-backed media/PDFs, generated enrollment PDFs, family account tracking, staff dashboard tools, live notification functions, and SEO metadata.",
+            resumeDescription: "Paid nonprofit web platform with Firebase Auth, Firestore/Storage, Security Rules/App Check, staff dashboard tools, enrollment PDF generation, Nodemailer email functions, family accounts, and SEO metadata.",
             featuredOnSite: true,
-            featuredOnResume: false
+            featuredOnResume: true
         },
         {
             title: "Ady Resolver",
@@ -429,7 +440,7 @@ window.profileData = {
             resumeSubtitle: "Mississippi Address Resolution Toolkit | Python, Machine Learning",
             resumeDescription: "Python address-resolution toolkit with cached public data, staged matching, typo-heavy evaluation data, local browser tooling, and lightweight ML.",
             featuredOnSite: true,
-            featuredOnResume: true
+            featuredOnResume: false
         },
         {
             title: "TeslaCamViewer",
