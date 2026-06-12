@@ -17,7 +17,7 @@ window.profileData = {
         about: [
             "I build workflow, data, and production web systems that turn real operational needs into maintainable software: C#/.NET desktop apps, browser-based reporting, Firebase-backed web platforms, Python/SQL automation, API integrations, and Excel-ready reports.",
             "At MSU Libraries, my strongest projects come from live operational needs. I built Query for API-backed report generation and Excel export, MetaTable for file-system metadata scanning, and automation utilities for reporting, cleanup, and support workflows.",
-            "I also ship public-facing systems such as Afternoon Adventure, a live nonprofit platform with Firebase Auth, Firestore, Storage, staff dashboard tools, family accounts, generated enrollment PDFs, protected submissions, and notification workflows.",
+            "I also ship public-facing systems such as Afternoon Adventure, a live nonprofit platform with Firebase Auth, Firestore, Storage, staff dashboard tools, family accounts, attendance, time-clock/payroll workflows, generated PDFs, protected submissions, and notification workflows.",
             "I use AI as an implementation accelerator, but the engineering judgment stays human: requirements clarification, data structures, debugging, tests, user feedback, and code review."
         ],
         proofPoints: [
@@ -93,6 +93,7 @@ window.profileData = {
             "Firebase Security Rules": "https://firebase.google.com/docs/rules",
             "Firebase App Check": "https://firebase.google.com/docs/app-check",
             "Role-Based Access Control": "https://csrc.nist.gov/glossary/term/role_based_access_control",
+            "QR Code Workflows": "https://en.wikipedia.org/wiki/QR_code",
             ".NET 8/9": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
             ".NET 8": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
             ".NET 9": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview",
@@ -193,6 +194,7 @@ window.profileData = {
             "Firebase Security Rules": "Firebase Security Rules define who can read and write Firestore and Storage data. Afternoon Adventure uses them to separate public content, family submissions, staff tools, private PDFs, metrics, and admin-only workflows.",
             "Firebase App Check": "Firebase App Check helps protect callable Firebase workflows from unauthorized clients. Afternoon Adventure uses App Check around public callables for contact submissions, enrollment workflows, metrics, and secured PDF access.",
             "Role-Based Access Control": "Role-based access control limits features by assigned staff role and permission. Afternoon Adventure uses role and room-scoped permissions for staff access, attendance tools, content editing, and admin workflows.",
+            "QR Code Workflows": "QR code workflows connect physical scanning to digital actions. Afternoon Adventure uses QR-based staff time-clock flows with server-verified scan sessions for clock-in and clock-out.",
             ".NET 8/9": ".NET is the application platform I use for modern C# desktop and backend-style work. MetaTable targets .NET 9, while HTMLConverter uses .NET 8.",
             ".NET 8": ".NET 8 is a long-term-support .NET release used for modern C# applications, services, and desktop tooling.",
             ".NET 9": ".NET 9 is the newer .NET release used by current C# projects such as MetaTable for modern runtime and platform capabilities.",
@@ -295,8 +297,8 @@ window.profileData = {
                 location: "Newton, MS",
                 date: "2026",
                 bullets: [
-                    "Delivered a paid client web platform for a 501(c)(3) afterschool and tutoring center, combining a public custom-domain website with family portal, attendance, and staff dashboard workflows.",
-                    "Implemented Firebase Auth, Firestore, Storage, Gen 2 Cloud Functions, App Check-protected callables, Security Rules, role-based staff permissions, generated PDFs, traffic metrics, and email workflows.",
+                    "Delivered a paid client web platform for a 501(c)(3) afterschool and tutoring center, combining a public custom-domain website with family portal, attendance, QR-based staff time-clock/payroll, and staff dashboard workflows.",
+                    "Implemented Firebase Auth, Firestore, Storage, Gen 2 Cloud Functions, App Check-protected callables, Security Rules, role-based staff permissions, secure account deletion, generated PDFs/reports, traffic metrics, and email workflows.",
                     "Worked directly with center stakeholders to translate registration, tuition, transportation, resources, events, donations, and content-management needs into maintainable software."
                 ]
             }
@@ -410,19 +412,20 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
             liveUrl: "https://afternoonadventure.org/",
             siteType: "Live Nonprofit Website | Firebase-Backed Staff & Family Portal",
-            siteDescription: "Custom-domain nonprofit web platform for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, combining a responsive GitHub Pages public site with Firebase-powered family accounts, staff dashboard tools, attendance workflows, editable managed content, online enrollment, generated PDFs, secure submissions, backend email workflows, Storage-backed media/documents, traffic metrics, and SEO metadata.",
+            siteDescription: "Custom-domain nonprofit web platform for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, combining a responsive GitHub Pages public site with Firebase-powered family accounts, staff dashboard tools, attendance, QR-based staff time-clock/payroll workflows, editable managed content, online enrollment, generated PDFs, secure submissions, backend email workflows, Storage-backed media/documents, traffic metrics, and SEO metadata.",
             siteHighlights: [
                 "Built a public website for a real 501(c)(3) afterschool and tutoring center",
-                "Uses Firebase Authentication, Firestore, Storage, Security Rules, and App Check-protected callables for Google sign-in, family account history, editable content, admin roles, private submissions, public photos, metrics, and managed PDFs",
+                "Uses Firebase Authentication, Firestore, Storage, Security Rules, and App Check-protected callables for Google sign-in, family account history, editable content, admin roles, private submissions, public photos, staff time records, metrics, and managed PDFs",
                 "Built an online enrollment workflow that generates a completed PDF preview in the browser, stores the generated PDF and structured fields, and supports staff review",
                 "Built attendance tools for room/group setup, guardian/student linking, daily check-in/check-out records, absence/status movement, attendance reports, and family-visible attendance history",
-                "Includes a staff/admin dashboard with live Firestore listeners, on-site edit controls, content reordering, question/enrollment review, role-based staff permissions, and center settings management",
+                "Added staff time-clock operations with QR-based clock-in/out, personal and team hours, pay snapshots, correction tools, PDF reports, and payroll CSV exports",
+                "Includes a staff/admin dashboard with live Firestore listeners, on-site edit controls, content reordering, question/enrollment review, role-based staff permissions, secure account deletion, and center settings management",
                 "Uses deployed Firebase Gen 2 Functions and Nodemailer for question notifications, enrollment receipts with PDF attachments, dashboard replies, enrollment status emails, and staff account lookup",
                 "Includes PDF.js document viewing, PDF-LIB form generation, full-screen media galleries, community updates/events, a tuition calculator, SEO metadata, sitemap, robots file, Playwright smoke tests, Firestore rules tests, CSS audits, generated artifact checks, and custom-domain GitHub Pages hosting"
             ],
-            siteTags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "Firebase Security Rules", "Firebase App Check", "Role-Based Access Control", "Nodemailer", "PDF.js", "PDF-LIB", "Playwright", "GitHub Pages", "SEO Metadata"],
+            siteTags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "Firebase Security Rules", "Firebase App Check", "Role-Based Access Control", "QR Code Workflows", "CSV/XLSX Workflows", "Nodemailer", "PDF.js", "PDF-LIB", "Playwright", "GitHub Pages", "SEO Metadata"],
             resumeSubtitle: "Firebase-Backed Nonprofit Web Platform | HTML, CSS, JavaScript",
-            resumeDescription: "Paid nonprofit web platform with Firebase Auth, Firestore/Storage, Security Rules/App Check, staff dashboard tools, attendance/guardian workflows, enrollment PDF generation, Nodemailer email functions, family accounts, and SEO metadata.",
+            resumeDescription: "Paid nonprofit web platform with Firebase Auth, Firestore/Storage, Security Rules/App Check, staff dashboard tools, attendance/guardian workflows, QR-based staff time clock, payroll CSV/PDF reports, enrollment PDF generation, family accounts, and SEO metadata.",
             featuredOnSite: true,
             featuredOnResume: true
         },
