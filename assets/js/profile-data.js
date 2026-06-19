@@ -37,7 +37,7 @@ window.profileData = {
             },
             {
                 title: "Backend, Cloud & Hosting",
-                items: ["Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "Firebase Security Rules", "Firebase App Check", "GitHub Pages"]
+                items: ["Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "Firebase Security Rules", "Firebase App Check", "AWS Cloud Foundations", "GitHub Pages"]
             },
             {
                 title: ".NET, Desktop & Native Apps",
@@ -92,6 +92,7 @@ window.profileData = {
             "Cloud Functions": "https://firebase.google.com/docs/functions",
             "Firebase Security Rules": "https://firebase.google.com/docs/rules",
             "Firebase App Check": "https://firebase.google.com/docs/app-check",
+            "AWS Cloud Foundations": "https://www.credly.com/go/voxSqWpQ",
             "Role-Based Access Control": "https://csrc.nist.gov/glossary/term/role_based_access_control",
             "QR Code Workflows": "https://en.wikipedia.org/wiki/QR_code",
             ".NET 8/9": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
@@ -195,6 +196,7 @@ window.profileData = {
             "Cloud Functions": "Cloud Functions run backend code in response to events. Afternoon Adventure uses deployed functions for question notifications, enrollment receipts with PDF attachments, dashboard replies, enrollment status emails, and staff account lookup.",
             "Firebase Security Rules": "Firebase Security Rules define who can read and write Firestore and Storage data. Afternoon Adventure uses them to separate public content, family submissions, staff tools, private PDFs, metrics, and admin-only workflows.",
             "Firebase App Check": "Firebase App Check helps protect callable Firebase workflows from unauthorized clients. Afternoon Adventure uses App Check around public callables for contact submissions, enrollment workflows, metrics, and secured PDF access.",
+            "AWS Cloud Foundations": "AWS Cloud Foundations is the AWS Academy cloud fundamentals training badge I completed through graduate coursework. It covered IAM, VPCs, EC2, EBS, database servers, load balancing, Elastic Beanstalk, and Lambda labs.",
             "Role-Based Access Control": "Role-based access control limits features by assigned staff role and permission. Afternoon Adventure uses role and room-scoped permissions for staff access, attendance tools, content editing, and admin workflows.",
             "QR Code Workflows": "QR code workflows connect physical scanning to digital actions. Afternoon Adventure uses QR-based staff time-clock flows with server-verified scan sessions for clock-in and clock-out.",
             ".NET 8/9": ".NET is the application platform I use for modern C# desktop and backend-style work. MetaTable targets .NET 9, while HTMLConverter uses .NET 8.",
@@ -273,7 +275,7 @@ window.profileData = {
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
             { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2, MSIX Packaging" },
             { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, JSONL/NDJSON, SirsiDynix APIs, CGI, JSON, MARC, Record Linkage" },
-            { label: "Cloud & Firebase", value: "Firebase Auth, Firestore, Firebase Storage, Cloud Functions, Firebase Security Rules, App Check, GitHub Pages" },
+            { label: "Cloud & Firebase", value: "Firebase Auth, Firestore, Firebase Storage, Cloud Functions, Firebase Security Rules, App Check, AWS Cloud Foundations, GitHub Pages" },
             { label: "Libraries", value: "EPPlus, ExcelJS, PDF.js, PDF-LIB, Nodemailer, MetadataExtractor, ImageSharp, AutoNumeric, FFmpeg" },
             { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, VS Code, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell, CI/CD" },
             { label: "Methods & AI", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
@@ -346,7 +348,8 @@ window.profileData = {
             school: "Mississippi State University",
             location: "Starkville, MS",
             date: "Aug 21, 2024 - May 2027 (Expected)",
-            gpa: "4.0/4.0"
+            gpa: "4.0/4.0",
+            honorsLines: ["Credential: AWS Academy Graduate - Cloud Foundations (Credly), Jun 2026; 99.47% course total, 100% labs"]
         },
         {
             degree: "Bachelor of Science in Computer Science",
