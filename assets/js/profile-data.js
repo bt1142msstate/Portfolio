@@ -418,6 +418,7 @@ window.profileData = {
         {
             title: "Afternoon Adventure Website",
             githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
+            repositoryVisibility: "private",
             liveUrl: "https://afternoonadventure.org/",
             siteType: "Live Nonprofit Website | Firebase-Backed Staff & Family Portal",
             siteDescription: "Custom-domain nonprofit web platform for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, combining a responsive GitHub Pages public site with Firebase-powered family accounts, staff dashboard tools, attendance, QR-based staff time-clock/payroll workflows, account data exports, editable managed content, online enrollment, generated PDFs, secure submissions, backend email workflows, Storage-backed media/documents, traffic metrics, and SEO metadata.",

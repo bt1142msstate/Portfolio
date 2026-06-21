@@ -85,8 +85,9 @@
         }
 
         return '<ul class="skill-overlay-work-list">' + projects.map(function (project) {
+            var href = getPublicProjectUrl(project);
             return '<li>' +
-                '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(project.title) + "</a>" +
+                '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(project.title) + "</a>" +
                 '<span>' + escapeHtml(project.siteType) + "</span>" +
                 "</li>";
         }).join("") + "</ul>";
@@ -231,6 +232,14 @@
         balanceGridRequest = window.requestAnimationFrame(balanceCardGrids);
     }
 
+    function hasPublicRepository(project) {
+        return project.githubUrl && project.repositoryVisibility !== "private";
+    }
+
+    function getPublicProjectUrl(project) {
+        return project.liveUrl || (hasPublicRepository(project) ? project.githubUrl : "");
+    }
+
     function renderProjectStructuredData(data) {
         var existingScript = document.getElementById("project-structured-data");
         var script = existingScript || document.createElement("script");
@@ -243,21 +252,26 @@
             "@id": "https://brandontemple.com/#software-projects",
             name: "Brandon Temple software projects",
             itemListElement: featuredProjects.map(function (project, index) {
+                var item = {
+                    "@type": "SoftwareSourceCode",
+                    "@id": "https://brandontemple.com/#project-" + slugify(project.title),
+                    name: project.title,
+                    description: project.siteDescription,
+                    url: getPublicProjectUrl(project) || project.githubUrl,
+                    programmingLanguage: project.siteTags || [],
+                    author: {
+                        "@id": "https://brandontemple.com/#brandon-temple"
+                    }
+                };
+
+                if (hasPublicRepository(project)) {
+                    item.codeRepository = project.githubUrl;
+                }
+
                 return {
                     "@type": "ListItem",
                     position: index + 1,
-                    item: {
-                        "@type": "SoftwareSourceCode",
-                        "@id": "https://brandontemple.com/#project-" + slugify(project.title),
-                        name: project.title,
-                        description: project.siteDescription,
-                        codeRepository: project.githubUrl,
-                        url: project.liveUrl || project.githubUrl,
-                        programmingLanguage: project.siteTags || [],
-                        author: {
-                            "@id": "https://brandontemple.com/#brandon-temple"
-                        }
-                    }
+                    item: item
                 };
             })
         };
@@ -339,9 +353,9 @@
                 '<div class="project-header">' +
                 "<h3>" + escapeHtml(project.title) + "</h3>" +
                 '<div class="project-header-links">' +
-                '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View source code for ' + escapeHtml(project.title) + ' on GitHub" class="project-link">' +
-                githubIconSvg(20) +
-                "</a>" +
+                (hasPublicRepository(project)
+                    ? '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View source code for ' + escapeHtml(project.title) + ' on GitHub" class="project-link">' + githubIconSvg(20) + "</a>"
+                    : "") +
                 (project.liveUrl
                     ? '<a href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" aria-label="Open live site for ' + escapeHtml(project.title) + '" class="project-link">' + externalLinkIconSvg(20) + "</a>"
                     : "") +
@@ -479,11 +493,15 @@
         projects.innerHTML = data.projects.filter(function (project) {
             return project.featuredOnResume;
         }).map(function (project) {
+            var href = getPublicProjectUrl(project);
+            var linkMarkup = href
+                ? '<p class="project-link"><a href="' + escapeHtml(href) + '">' + escapeHtml(href.replace(/^https?:\/\//, "")) + "</a></p>"
+                : "";
             return '<article class="project">' +
                 "<h3>" + escapeHtml(project.title) + "</h3>" +
                 '<p class="project-subtitle">' + escapeHtml(project.resumeSubtitle) + "</p>" +
                 "<p>" + escapeHtml(project.resumeDescription) + "</p>" +
-                '<p class="project-link"><a href="' + escapeHtml(project.githubUrl) + '">' + escapeHtml(project.githubUrl.replace(/^https?:\/\//, "")) + "</a></p>" +
+                linkMarkup +
                 "</article>";
         }).join("");
     }
