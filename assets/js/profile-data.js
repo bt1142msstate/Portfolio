@@ -417,7 +417,6 @@ window.profileData = {
         },
         {
             title: "Afternoon Adventure Website",
-            githubUrl: "https://github.com/bt1142msstate/afternoon-adventure",
             repositoryVisibility: "private",
             liveUrl: "https://afternoonadventure.org/",
             siteType: "Live Nonprofit Website | Firebase-Backed Staff & Family Portal",
