@@ -36,6 +36,18 @@
             "</svg>";
     }
 
+    function redditIconSvg(size) {
+        return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+            '<circle cx="12" cy="13" r="6"/>' +
+            '<path d="M14.8 7.6 16 4.5l3 .7"/>' +
+            '<circle cx="9.5" cy="12.5" r=".7" fill="currentColor" stroke="none"/>' +
+            '<circle cx="14.5" cy="12.5" r=".7" fill="currentColor" stroke="none"/>' +
+            '<path d="M9.5 15.5c1.5 1 3.5 1 5 0"/>' +
+            '<path d="M5.7 10.5 4 9.2"/>' +
+            '<path d="M18.3 10.5 20 9.2"/>' +
+            "</svg>";
+    }
+
     function indeedIconSvg(size) {
         return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">' +
             '<circle cx="12" cy="5" r="1.8" fill="currentColor" stroke="none"/>' +
@@ -408,6 +420,10 @@
             '<a href="' + escapeHtml(data.contact.instagramUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             instagramIconSvg(24) +
             "<span>Instagram</span>" +
+            "</a>" +
+            '<a href="' + escapeHtml(data.contact.redditUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
+            redditIconSvg(24) +
+            "<span>Reddit</span>" +
             "</a>" +
             '<a href="' + escapeHtml(data.contact.indeedUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
             indeedIconSvg(24) +

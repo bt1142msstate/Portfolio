@@ -10,6 +10,8 @@ window.profileData = {
         linkedinLabel: "linkedin.com/in/brandon-temple-763619407",
         instagramUrl: "https://www.instagram.com/brandonvtemple/",
         instagramLabel: "instagram.com/brandonvtemple",
+        redditUrl: "https://www.reddit.com/user/brandonvtemple/",
+        redditLabel: "reddit.com/user/brandonvtemple",
         indeedUrl: "https://profile.indeed.com/p/nvwkkmq",
         indeedLabel: "profile.indeed.com/p/nvwkkmq"
     },
