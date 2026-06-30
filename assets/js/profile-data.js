@@ -18,12 +18,13 @@ window.profileData = {
             "I build workflow, data, and production web systems that turn real operational needs into maintainable software: C#/.NET desktop apps, browser-based reporting, Firebase-backed web platforms, Python/SQL automation, API integrations, and Excel-ready reports.",
             "At MSU Libraries, my strongest projects come from live operational needs. I built Query for API-backed report generation and Excel export, MetaTable for file-system metadata scanning, and automation utilities for reporting, cleanup, and support workflows.",
             "I also ship public-facing systems such as Afternoon Adventure, a live nonprofit platform with Firebase Auth, Firestore, Storage, staff dashboard tools, family accounts, attendance, time-clock/payroll workflows, generated PDFs, protected submissions, and notification workflows.",
+            "My public project work also reaches native app and device prototypes, including SwiftUI/macOS tooling and a BLE-controlled door actuator prototype with nRF52840 firmware.",
             "I use AI as an implementation accelerator, but the engineering judgment stays human: requirements clarification, data structures, debugging, tests, user feedback, and code review."
         ],
         proofPoints: [
             { value: "12", label: "Library systems supported" },
             { value: "76", label: "Branches and campus libraries" },
-            { value: "8", label: "Featured software projects" }
+            { value: "9", label: "Featured software projects" }
         ],
         contactIntro: "I'm looking for software engineering roles where I can own practical workflow, data, and production web tooling: C#/.NET desktop apps, browser-based reporting, Firebase-backed web platforms, Python/SQL automation, API integrations, Excel exports, internal tools, and AI-assisted engineering.",
         skills: [
@@ -41,7 +42,11 @@ window.profileData = {
             },
             {
                 title: ".NET, Desktop & Native Apps",
-                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "WebView2", "SwiftUI", "AppKit", "macOS Accessibility APIs"]
+                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "WebView2", "SwiftUI", "AppKit", "WidgetKit", "App Intents", "macOS Accessibility APIs"]
+            },
+            {
+                title: "Device & Hardware Prototyping",
+                items: ["Bluetooth Low Energy", "Arduino", "IoT", "Hardware Prototyping", "USB Serial", "Secure Enclave"]
             },
             {
                 title: "Data & APIs",
@@ -53,7 +58,7 @@ window.profileData = {
             },
             {
                 title: "Tools, Testing & Delivery",
-                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
+                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Xcode", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
             },
             {
                 title: "Engineering Practices",
@@ -74,7 +79,15 @@ window.profileData = {
             "Swift": "https://www.swift.org/documentation/",
             "SwiftUI": "https://developer.apple.com/documentation/swiftui/",
             "AppKit": "https://developer.apple.com/documentation/appkit/",
+            "WidgetKit": "https://developer.apple.com/documentation/widgetkit/",
+            "App Intents": "https://developer.apple.com/documentation/appintents/",
             "macOS Accessibility APIs": "https://developer.apple.com/documentation/applicationservices",
+            "Bluetooth Low Energy": "https://developer.apple.com/bluetooth/",
+            "Arduino": "https://docs.arduino.cc/",
+            "IoT": "https://en.wikipedia.org/wiki/Internet_of_things",
+            "Hardware Prototyping": "https://en.wikipedia.org/wiki/Prototype",
+            "USB Serial": "https://en.wikipedia.org/wiki/USB",
+            "Secure Enclave": "https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web",
             "HTML": "https://developer.mozilla.org/en-US/docs/Web/HTML",
             "CSS": "https://developer.mozilla.org/en-US/docs/Web/CSS",
             "XAML": "https://learn.microsoft.com/en-us/dotnet/desktop/xaml-services/",
@@ -135,6 +148,7 @@ window.profileData = {
             "GitHub Releases": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases",
             "Visual Studio": "https://learn.microsoft.com/en-us/visualstudio/windows/",
             "VS Code": "https://code.visualstudio.com/docs",
+            "Xcode": "https://developer.apple.com/xcode/",
             "Postman": "https://learning.postman.com/docs/introduction/overview/",
             "MSTest": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-mstest-intro",
             "Python unittest": "https://docs.python.org/3/library/unittest.html",
@@ -171,14 +185,22 @@ window.profileData = {
             "SQL": "SQL is the query language behind reporting and data extraction. I use it to reason about structured library data, filters, report payloads, and database-backed workflows.",
             "JavaScript": "JavaScript powers the browser-based tools on the site and in projects like Query and connect4-ai. I use it for UI behavior, state management, validation, and client-side workflows.",
             "TypeScript": "TypeScript is JavaScript with static typing. I list it because it is part of my broader frontend and product-development direction, especially for maintainable web and app code.",
-            "C++": "C++ represents systems-level fundamentals. It supports my understanding of memory, performance, data structures, and lower-level tradeoffs when reviewing or designing software.",
+            "C++": "C++ represents systems-level fundamentals. It supports my understanding of memory, performance, data structures, lower-level tradeoffs, and firmware-adjacent work such as Door Unlocker's controller code.",
             "C": "C represents lower-level programming fundamentals. It helps anchor my understanding of compiled languages, memory, pointers, and performance-sensitive code.",
             "Java": "Java is part of my computer science background and object-oriented programming foundation. It transfers well to backend, Android, and enterprise-style engineering work.",
             "Kotlin": "Kotlin is relevant to Android development and future native mobile work. It fits the direction of shipping apps across Android alongside iOS and desktop platforms.",
-            "Swift": "Swift is relevant to iOS and Apple-platform development. It fits the direction of building native app experiences for iPhone, iPad, and Mac.",
-            "SwiftUI": "SwiftUI is Apple's declarative UI framework. I use it in Mac Window Arranger to build a native macOS utility interface.",
+            "Swift": "Swift is relevant to iOS and Apple-platform development. I use it in Mac Window Arranger, Door Unlocker, and private native app prototypes.",
+            "SwiftUI": "SwiftUI is Apple's declarative UI framework. I use it for native macOS and iPhone interfaces in Mac Window Arranger and Door Unlocker.",
             "AppKit": "AppKit is Apple's mature macOS application framework. Mac Window Arranger uses AppKit alongside SwiftUI for window behavior and desktop integration.",
+            "WidgetKit": "WidgetKit builds widgets for Apple platforms. Door Unlocker uses widgets and control surfaces so lock/unlock actions can be triggered outside the main app.",
+            "App Intents": "App Intents expose app actions to Siri, Shortcuts, widgets, and system controls. Door Unlocker uses them for voice and shortcut-based lock/unlock workflows.",
             "macOS Accessibility APIs": "macOS Accessibility APIs allow an authorized app to inspect and control windows from other apps. Mac Window Arranger uses them for window resizing and layout restoration.",
+            "Bluetooth Low Energy": "Bluetooth Low Energy is a short-range wireless protocol for devices. Door Unlocker uses BLE communication between the iPhone app and the XIAO nRF52840 controller.",
+            "Arduino": "Arduino is the firmware environment used by Door Unlocker's XIAO nRF52840 controller code for BLE commands, servo movement, LED state, and USB serial operations.",
+            "IoT": "IoT connects software to physical devices. Door Unlocker is a bench-tested IoT prototype combining firmware, BLE, mobile UI, widgets, and hardware wiring.",
+            "Hardware Prototyping": "Hardware prototyping means proving a device idea with real components before production. Door Unlocker includes a no-solder desk-test wiring reference and parts list.",
+            "USB Serial": "USB serial communication lets a desktop app manage a connected microcontroller. Door Unlocker's Mac admin app uses USB-C serial for pairing approval and controller operations.",
+            "Secure Enclave": "Secure Enclave protects cryptographic keys on supported Apple devices. Door Unlocker's iPhone app prefers Secure Enclave-backed keys for signed commands when available.",
             "HTML": "HTML defines the structure of web interfaces. I use it in portfolio work, Query, Ady Resolver's local browser app, and browser-based reporting tools.",
             "CSS": "CSS controls layout, visual design, responsiveness, and polish. I use it for the portfolio, Query, connect4-ai, MobileFlex, and local browser app interfaces.",
             "XAML": "XAML is the UI markup used by WPF and WinUI applications. I use it for Windows desktop interfaces in projects like MetaTable and HTMLConverter.",
@@ -239,6 +261,7 @@ window.profileData = {
             "GitHub Releases": "GitHub Releases package downloadable app builds, release notes, checksums, and installer assets. TeslaCamViewer uses release assets for preview setup, portable ZIP, and install/uninstall scripts.",
             "Visual Studio": "Visual Studio is my primary IDE for C# and Windows desktop projects. It supports .NET, WPF, WinUI, packaging, and debugging workflows.",
             "VS Code": "VS Code is a lightweight editor I use for web, Python, scripts, documentation, and mixed-language projects.",
+            "Xcode": "Xcode is Apple's IDE for Swift, SwiftUI, iOS, and macOS development. I use it for Apple-platform app work such as Mac Window Arranger and Door Unlocker.",
             "Postman": "Postman is used for testing and inspecting APIs. It helps validate request payloads, responses, and integration behavior.",
             "MSTest": "MSTest is Microsoft's test framework for .NET. I use it for C# unit testing and TDD-style validation.",
             "Python unittest": "Python unittest is the standard Python test framework. Ady Resolver uses it for regression, source parsing, resolver behavior, and smoke coverage.",
@@ -272,12 +295,12 @@ window.profileData = {
     resume: {
         summary: "Software engineer focused on workflow, data, and production web systems. Builds C#/.NET desktop apps, browser-based reporting tools, Firebase-backed web platforms, Python/SQL automation, API integrations, Excel exports, and AI-assisted internal software.",
         skills: [
-            { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++" },
-            { label: ".NET/Desktop", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2, MSIX Packaging" },
+            { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++, Swift" },
+            { label: "Desktop & Native Apps", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2, SwiftUI, AppKit, WidgetKit, App Intents, BLE/IoT prototypes" },
             { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, JSONL/NDJSON, SirsiDynix APIs, CGI, JSON, MARC, Record Linkage" },
             { label: "Cloud & Firebase", value: "Firebase Auth, Firestore, Firebase Storage, Cloud Functions, Firebase Security Rules, App Check, AWS Cloud Foundations, GitHub Pages" },
             { label: "Libraries", value: "EPPlus, ExcelJS, PDF.js, PDF-LIB, Nodemailer, MetadataExtractor, ImageSharp, AutoNumeric, FFmpeg" },
-            { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, VS Code, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell, CI/CD" },
+            { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, VS Code, Xcode, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell, CI/CD" },
             { label: "Methods & AI", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
         ]
     },
@@ -382,18 +405,19 @@ window.profileData = {
             githubUrl: "https://github.com/bt1142msstate/Query",
             liveUrl: "https://bt1142msstate.github.io/Query/",
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
-            siteDescription: "Backend-driven browser reporting frontend for MSU Libraries workflows, with API-backed field metadata, configurable filters and form-mode reports, query history/templates, JSONL result streaming, reusable virtualized tables, post-filters, and Excel export.",
+            siteDescription: "Backend-driven browser reporting frontend for MSU Libraries workflows, with API-backed field metadata, configurable filters and form-mode reports, query history/templates, JSONL result streaming, reusable virtualized tables, post-filters, CLI workflows, reusable ES module components, and Excel export.",
             caseStudy: true,
-            caseStudyOutcome: "Highlights practical web tooling with backend contracts, user-facing filters, JSONL result handling, reusable virtual table architecture, report workflows, and staff-ready Excel exports.",
+            caseStudyOutcome: "Highlights practical web tooling with backend contracts, user-facing filters, JSONL result handling, reusable component architecture, CLI/report workflows, and staff-ready Excel exports.",
             siteHighlights: [
                 "Backend-driven field metadata and configurable query payloads",
                 "Query history, reusable templates, form-mode reports, and shareable URLs",
-                "Virtualized large-result table with post-filters, split-column handling, and ExcelJS export",
-                "Recent work extracted reusable virtual-table components, optimized hot paths, added benchmarks, and improved persisted light/dark theme behavior"
+                "Virtualized large-result table with post-filters, column resize/drag-drop behavior, split-column handling, and custom XLSX export",
+                "Reusable ES module entrypoints for virtual tables, drag/drop, workbook export, date input, and tooltips",
+                "CLI workflows and docs for repeatable report configs, backend integration, authenticated deployment, and AI/API tool integrations"
             ],
-            siteTags: ["JavaScript", "HTML", "CSS", "REST APIs", "JSON", "NDJSON/JSONL", "Virtualized Tables", "ExcelJS", "AutoNumeric", "Tailwind CSS", "Performance Optimization", "ESLint", "Playwright", "GitHub Actions"],
+            siteTags: ["JavaScript", "HTML", "CSS", "REST APIs", "JSON", "NDJSON/JSONL", "Virtualized Tables", "Excel Export", "AutoNumeric", "Tailwind CSS", "Performance Optimization", "ESLint", "Playwright", "GitHub Actions"],
             resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
-            resumeDescription: "Browser reporting frontend with API-backed field metadata, configurable filters/forms, query history/templates, JSONL result handling, reusable virtualized tables, and Excel export.",
+            resumeDescription: "Browser reporting frontend with API-backed field metadata, configurable filters/forms, query history/templates, JSONL streaming, reusable virtualized-table components, CLI workflows, and Excel export.",
             featuredOnSite: true,
             featuredOnResume: true
         },
@@ -479,16 +503,36 @@ window.profileData = {
             title: "Mac Window Arranger",
             githubUrl: "https://github.com/bt1142msstate/mac-window-arranger",
             siteType: "Source-Available macOS Utility | SwiftUI Window Management",
-            siteDescription: "Native macOS SwiftUI utility for resizing and arranging windows, saving layouts, reopening apps, and restoring workspaces with Mini Mode, AppKit, URL-scheme automation, and Accessibility API integration.",
+            siteDescription: "Native macOS SwiftUI utility for resizing and arranging windows, saving layouts, reopening apps, restoring workspaces, checking GitHub releases, and installing direct-download updates with Mini Mode, AppKit, URL-scheme automation, reusable window-picking components, and Accessibility API integration.",
             siteHighlights: [
                 "Starts in compact Mini Mode, expands into resize or arrange workflows, then returns to a Dock-adjacent control",
                 "Resizes frontmost, picked, or selected-app windows and arranges saved layouts through Accessibility APIs",
+                "Includes reusable window-picking and Dock-attached surface components for native macOS apps",
                 "Supports Open & Arrange plus custom window-arranger:// URL calls for Shortcuts, launchers, scripts, and other apps",
-                "Build pipeline creates a signed universal app, drag-to-Applications DMG, privacy manifest, and stable Accessibility permission metadata"
+                "Build pipeline creates a signed universal app, drag-to-Applications DMG, privacy manifest, stable Accessibility permission metadata, and GitHub release update flow"
             ],
-            siteTags: ["Swift", "SwiftUI", "AppKit", "macOS Accessibility APIs", "Window Management", "URL Scheme", "Code Signing", "macOS App Distribution", "Privacy Manifest", "Shell"],
+            siteTags: ["Swift", "SwiftUI", "AppKit", "macOS Accessibility APIs", "Window Management", "URL Scheme", "Code Signing", "macOS App Distribution", "Privacy Manifest", "GitHub Releases", "Shell"],
             resumeSubtitle: "macOS Window Management Utility | Swift, SwiftUI, AppKit",
             resumeDescription: "Native macOS SwiftUI utility for resizing windows, saving layouts, reopening apps, and restoring workspaces with Accessibility API integration.",
+            featuredOnSite: true,
+            featuredOnResume: false
+        },
+        {
+            title: "Door Unlocker",
+            githubUrl: "https://github.com/bt1142msstate/door-unlocker",
+            liveUrl: "https://bt1142msstate.github.io/door-unlocker/",
+            siteType: "Open-Source IoT Prototype | SwiftUI + BLE + nRF52840 Firmware",
+            siteDescription: "Open-source desk-test prototype for a BLE-controlled servo actuator, combining XIAO nRF52840 firmware, a SwiftUI iPhone app, Siri/App Intents, widgets, Action Button support, a SwiftUI Mac admin app, USB-gated pairing, signed commands, and an interactive no-solder wiring guide.",
+            siteHighlights: [
+                "Built XIAO nRF52840 firmware for BLE control, authenticated commands, servo movement, auto-lock timing, USB serial management, and LED state feedback",
+                "Built a SwiftUI iPhone app with BLE pairing, lock/unlock controls, optional Face ID/passcode confirmation, Siri/App Shortcuts, widgets, Control Widget support, and Action Button workflows",
+                "Added a SwiftUI Mac admin app for USB-C controller status, pairing approval, trusted-device removal, timeout configuration, and direct lock/unlock commands",
+                "Designed a security model with local P-256 signing keys, USB-gated pairing approval, controller-side public-key verification, and no shared command secret in the repo",
+                "Published an interactive GitHub Pages wiring diagram with hardware images, costs, parts list, and safety boundaries for bench testing"
+            ],
+            siteTags: ["Swift", "SwiftUI", "C++", "Arduino", "Bluetooth Low Energy", "IoT", "Hardware Prototyping", "App Intents", "WidgetKit", "USB Serial", "Secure Enclave", "GitHub Pages"],
+            resumeSubtitle: "BLE Door Actuator Prototype | SwiftUI, C++, nRF52840",
+            resumeDescription: "Open-source BLE servo actuator prototype with nRF52840 firmware, SwiftUI iPhone app, widgets/App Intents, Mac admin app, USB-gated pairing, and signed commands.",
             featuredOnSite: true,
             featuredOnResume: false
         },
