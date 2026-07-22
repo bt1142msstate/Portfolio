@@ -17,18 +17,16 @@ window.profileData = {
     },
     site: {
         about: [
-            "I build workflow, data, and production web systems that turn real operational needs into maintainable software: C#/.NET desktop apps, browser-based reporting, Firebase-backed web platforms, Python/SQL automation, API integrations, and Excel-ready reports.",
-            "At MSU Libraries, my strongest projects come from live operational needs. I built Query for API-backed report generation and Excel export, MetaTable for file-system metadata scanning, and automation utilities for reporting, cleanup, and support workflows.",
-            "I also ship public-facing systems such as Afternoon Adventure, a live nonprofit platform with Firebase Auth, Firestore, Storage, staff dashboard tools, family accounts, attendance, time-clock/payroll workflows, generated PDFs, protected submissions, and notification workflows.",
-            "My public project work also reaches native app and device prototypes, including SwiftUI/macOS tooling and a BLE-controlled door actuator prototype with nRF52840 firmware.",
-            "I use AI as an implementation accelerator, but the engineering judgment stays human: requirements clarification, data structures, debugging, tests, user feedback, and code review."
+            "I build workflow, data, and product systems that turn operational friction into maintainable software: C#/.NET desktop apps, browser-based reporting, Firebase-backed platforms, Python/SQL automation, and native Apple-platform tools.",
+            "At MSU Libraries, I support 12 library systems and 76 branches and campus libraries. I built Query and MetaTable from staff needs, translating API, file-system, metadata, and reporting constraints into dependable workflows.",
+            "Beyond internal systems, I delivered Afternoon Adventure as a paid production platform and build native and device products including a private local-AI macOS recorder and Door Unlocker, a BLE hardware prototype. I use AI to accelerate implementation while keeping architecture, debugging, testing, and review human-led."
         ],
         proofPoints: [
             { value: "12", label: "Library systems supported" },
             { value: "76", label: "Branches and campus libraries" },
-            { value: "9", label: "Featured software projects" }
+            { value: "10", label: "Featured software projects" }
         ],
-        contactIntro: "I'm looking for software engineering roles where I can own practical workflow, data, and production web tooling: C#/.NET desktop apps, browser-based reporting, Firebase-backed web platforms, Python/SQL automation, API integrations, Excel exports, internal tools, and AI-assisted engineering.",
+        contactIntro: "I'm interested in software engineering work where I can own useful systems from requirements and architecture through delivery, testing, and iteration.",
         skills: [
             {
                 title: "Programming Languages",
@@ -44,11 +42,11 @@ window.profileData = {
             },
             {
                 title: ".NET, Desktop & Native Apps",
-                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "WebView2", "SwiftUI", "AppKit", "WidgetKit", "App Intents", "macOS Accessibility APIs"]
+                items: [".NET 8/9", "ASP.NET Core", "WPF", "WinUI 3", "Windows App SDK", "WebView2", "SwiftUI", "AppKit", "ScreenCaptureKit", "AVFoundation", "WidgetKit", "App Intents", "macOS Accessibility APIs"]
             },
             {
                 title: "Device & Hardware Prototyping",
-                items: ["Bluetooth Low Energy", "Arduino", "IoT", "Hardware Prototyping", "USB Serial", "Secure Enclave"]
+                items: ["Bluetooth Low Energy", "Arduino", "IoT", "Hardware Prototyping", "USB Serial", "Secure Enclave", "Signed Firmware Updates"]
             },
             {
                 title: "Data & APIs",
@@ -56,15 +54,15 @@ window.profileData = {
             },
             {
                 title: "Libraries & Packages",
-                items: ["EPPlus", "ExcelJS", "PDF.js", "PDF-LIB", "Nodemailer", "MetadataExtractor", "ImageSharp", "FFmpeg"]
+                items: ["EPPlus", "ExcelJS", "PDF.js", "PDF-LIB", "Nodemailer", "MetadataExtractor", "ImageSharp", "FFmpeg", "MLX", "Whisper", "llama.cpp"]
             },
             {
                 title: "Tools, Testing & Delivery",
-                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Xcode", "Postman", "MSTest", "Python unittest", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
+                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Xcode", "Postman", "MSTest", "Python unittest", "Swift Testing", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
             },
             {
                 title: "Engineering Practices",
-                items: ["AI-First Engineering", "Architectural Judgment", "Machine Learning", "Data Structures", "Algorithms", "TDD", "Agile", "Code Review", "Automation"]
+                items: ["AI-First Engineering", "Architectural Judgment", "Local AI", "Machine Learning", "Data Structures", "Algorithms", "TDD", "Agile", "Code Review", "Automation"]
             }
         ],
         skillLinks: {
@@ -81,6 +79,8 @@ window.profileData = {
             "Swift": "https://www.swift.org/documentation/",
             "SwiftUI": "https://developer.apple.com/documentation/swiftui/",
             "AppKit": "https://developer.apple.com/documentation/appkit/",
+            "ScreenCaptureKit": "https://developer.apple.com/documentation/screencapturekit/",
+            "AVFoundation": "https://developer.apple.com/documentation/avfoundation/",
             "WidgetKit": "https://developer.apple.com/documentation/widgetkit/",
             "App Intents": "https://developer.apple.com/documentation/appintents/",
             "macOS Accessibility APIs": "https://developer.apple.com/documentation/applicationservices",
@@ -90,6 +90,7 @@ window.profileData = {
             "Hardware Prototyping": "https://en.wikipedia.org/wiki/Prototype",
             "USB Serial": "https://en.wikipedia.org/wiki/USB",
             "Secure Enclave": "https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web",
+            "Signed Firmware Updates": "https://docs.zephyrproject.org/latest/services/device_mgmt/dfu.html",
             "HTML": "https://developer.mozilla.org/en-US/docs/Web/HTML",
             "CSS": "https://developer.mozilla.org/en-US/docs/Web/CSS",
             "XAML": "https://learn.microsoft.com/en-us/dotnet/desktop/xaml-services/",
@@ -144,6 +145,9 @@ window.profileData = {
             "MetadataExtractor": "https://github.com/drewnoakes/metadata-extractor-dotnet",
             "ImageSharp": "https://docs.sixlabors.com/",
             "FFmpeg": "https://ffmpeg.org/documentation.html",
+            "MLX": "https://ml-explore.github.io/mlx/build/html/index.html",
+            "Whisper": "https://github.com/openai/whisper",
+            "llama.cpp": "https://github.com/ggml-org/llama.cpp",
             "Git": "https://git-scm.com/doc",
             "GitHub Actions": "https://docs.github.com/en/actions",
             "GitHub Pages": "https://docs.github.com/en/pages",
@@ -154,6 +158,7 @@ window.profileData = {
             "Postman": "https://learning.postman.com/docs/introduction/overview/",
             "MSTest": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-mstest-intro",
             "Python unittest": "https://docs.python.org/3/library/unittest.html",
+            "Swift Testing": "https://developer.apple.com/documentation/testing/",
             "ESLint": "https://eslint.org/docs/latest/",
             "Playwright": "https://playwright.dev/docs/intro",
             "Make": "https://en.wikipedia.org/wiki/Make_(software)",
@@ -169,6 +174,7 @@ window.profileData = {
             "Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
             "AI-First Engineering": "https://en.wikipedia.org/wiki/AI-assisted_software_development",
             "Architectural Judgment": "https://en.wikipedia.org/wiki/Software_architecture",
+            "Local AI": "https://developer.apple.com/machine-learning/",
             "Machine Learning": "https://en.wikipedia.org/wiki/Machine_learning",
             "Data Structures": "https://en.wikipedia.org/wiki/Data_structure",
             "Algorithms": "https://en.wikipedia.org/wiki/Algorithm",
@@ -194,6 +200,8 @@ window.profileData = {
             "Swift": "Swift is relevant to iOS and Apple-platform development. I use it in Mac Window Arranger, Door Unlocker, and private native app prototypes.",
             "SwiftUI": "SwiftUI is Apple's declarative UI framework. I use it for native macOS and iPhone interfaces in Mac Window Arranger and Door Unlocker.",
             "AppKit": "AppKit is Apple's mature macOS application framework. Mac Window Arranger uses AppKit alongside SwiftUI for window behavior and desktop integration.",
+            "ScreenCaptureKit": "ScreenCaptureKit is Apple's framework for high-performance display and window capture. My private Recorder app uses it to capture a selected macOS window as part of a local recording workflow.",
+            "AVFoundation": "AVFoundation provides Apple-platform media capture, playback, and export APIs. I use it in Recorder for synchronized video and audio recording, playback, and media handling.",
             "WidgetKit": "WidgetKit builds widgets for Apple platforms. Door Unlocker uses widgets and control surfaces so lock/unlock actions can be triggered outside the main app.",
             "App Intents": "App Intents expose app actions to Siri, Shortcuts, widgets, and system controls. Door Unlocker uses them for voice and shortcut-based lock/unlock workflows.",
             "macOS Accessibility APIs": "macOS Accessibility APIs allow an authorized app to inspect and control windows from other apps. Mac Window Arranger uses them for window resizing and layout restoration.",
@@ -203,6 +211,7 @@ window.profileData = {
             "Hardware Prototyping": "Hardware prototyping means proving a device idea with real components before production. Door Unlocker includes a no-solder desk-test wiring reference and parts list.",
             "USB Serial": "USB serial communication lets a desktop app manage a connected microcontroller. Door Unlocker's Mac admin app uses USB-C serial for pairing approval and controller operations.",
             "Secure Enclave": "Secure Enclave protects cryptographic keys on supported Apple devices. Door Unlocker's iPhone app prefers Secure Enclave-backed keys for signed commands when available.",
+            "Signed Firmware Updates": "Signed firmware updates verify an image before installation. Door Unlocker uses a dual-bank OTA design so interrupted updates can recover without replacing the known-good firmware.",
             "HTML": "HTML defines the structure of web interfaces. I use it in portfolio work, Query, Ady Resolver's local browser app, and browser-based reporting tools.",
             "CSS": "CSS controls layout, visual design, responsiveness, and polish. I use it for the portfolio, Query, connect4-ai, MobileFlex, and local browser app interfaces.",
             "XAML": "XAML is the UI markup used by WPF and WinUI applications. I use it for Windows desktop interfaces in projects like MetaTable and HTMLConverter.",
@@ -257,6 +266,9 @@ window.profileData = {
             "MetadataExtractor": "MetadataExtractor is a .NET library for reading file metadata. It supports MetaTable's file inspection and metadata reporting features.",
             "ImageSharp": "ImageSharp is a .NET imaging library. It supports image-related processing needs in desktop tooling such as metadata and file analysis workflows.",
             "FFmpeg": "FFmpeg is a media processing toolkit. I use it in TeslaCamViewer for stream-copy stitching and marked-range video export workflows.",
+            "MLX": "MLX is Apple's machine-learning framework for Apple silicon. Recorder uses an MLX-based Whisper pipeline so transcription stays local on the Mac.",
+            "Whisper": "Whisper is a speech-recognition model. Recorder uses the large-v3-turbo model locally to turn captured audio into searchable transcripts.",
+            "llama.cpp": "llama.cpp runs language models locally with efficient native inference. Recorder uses it with a constrained JSON workflow for private, on-device summaries.",
             "Git": "Git is version control. I use it to manage source history, ship changes, collaborate through GitHub, and keep projects traceable.",
             "GitHub Actions": "GitHub Actions runs automated workflows in GitHub. I use it for build, validation, and test pipelines across public projects.",
             "GitHub Pages": "GitHub Pages hosts static sites directly from a repository. I use it for public project demos and static frontends such as the portfolio, Query, connect4-ai, and Afternoon Adventure.",
@@ -267,6 +279,7 @@ window.profileData = {
             "Postman": "Postman is used for testing and inspecting APIs. It helps validate request payloads, responses, and integration behavior.",
             "MSTest": "MSTest is Microsoft's test framework for .NET. I use it for C# unit testing and TDD-style validation.",
             "Python unittest": "Python unittest is the standard Python test framework. Ady Resolver uses it for regression, source parsing, resolver behavior, and smoke coverage.",
+            "Swift Testing": "Swift Testing is Apple's modern testing framework. I use it to validate native macOS application logic and local processing workflows.",
             "ESLint": "ESLint catches JavaScript quality and architecture issues. Query uses custom linting and module-boundary checks to keep the browser app maintainable.",
             "Playwright": "Playwright automates browser testing. Query uses it for smoke testing desktop and mobile UI flows.",
             "Make": "Make coordinates repeatable command-line workflows. Ady Resolver uses a Makefile for compile checks, JS syntax checks, unit tests, smoke tests, and local app launch.",
@@ -282,6 +295,7 @@ window.profileData = {
             "Privacy Manifest": "A privacy manifest documents privacy-sensitive data access and helps prepare Apple-platform apps for distribution requirements.",
             "AI-First Engineering": "AI-first engineering means using AI to accelerate implementation while still applying human review, architecture, testing, and debugging judgment.",
             "Architectural Judgment": "Architectural judgment is the ability to choose structure, boundaries, tradeoffs, and failure modes before code becomes hard to maintain.",
+            "Local AI": "Local AI runs models on the user's device instead of sending private input to a hosted service. Recorder uses local transcription, summarization, and optional visual analysis on Apple silicon.",
             "Machine Learning": "Machine learning appears in Ady Resolver's staged matching pipeline, where a lightweight model helps score and rank address candidates.",
             "Data Structures": "Data structures are the foundation for organizing data efficiently. They matter in search, matching, game AI, reporting tables, and file-processing tools.",
             "Algorithms": "Algorithms are repeatable problem-solving procedures. My work includes minimax search, alpha-beta pruning, matching logic, scoring, filtering, and workflow automation.",
@@ -295,15 +309,15 @@ window.profileData = {
         }
     },
     resume: {
-        summary: "Software engineer focused on workflow, data, and production web systems. Builds C#/.NET desktop apps, browser-based reporting tools, Firebase-backed web platforms, Python/SQL automation, API integrations, Excel exports, and AI-assisted internal software.",
+        summary: "Software engineer building workflow, data, and product systems across C#/.NET desktop apps, browser-based reporting, Firebase-backed platforms, Python/SQL automation, native Apple apps, API integrations, and local AI workflows.",
         skills: [
             { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++, Swift" },
-            { label: "Desktop & Native Apps", value: ".NET 8/9, ASP.NET Core, WPF, WinUI 3, Windows App SDK, WebView2, SwiftUI, AppKit, WidgetKit, App Intents, BLE/IoT prototypes" },
+            { label: "Desktop & Native Apps", value: ".NET 8/9, WPF, WinUI 3, WebView2, SwiftUI, AppKit, ScreenCaptureKit, AVFoundation, WidgetKit, App Intents, BLE/IoT" },
             { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, JSONL/NDJSON, SirsiDynix APIs, CGI, JSON, MARC, Record Linkage" },
             { label: "Cloud & Firebase", value: "Firebase Auth, Firestore, Firebase Storage, Cloud Functions, Firebase Security Rules, App Check, AWS Cloud Foundations, GitHub Pages" },
-            { label: "Libraries", value: "EPPlus, ExcelJS, PDF.js, PDF-LIB, Nodemailer, MetadataExtractor, ImageSharp, AutoNumeric, FFmpeg" },
-            { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, VS Code, Xcode, Postman, MSTest, Python unittest, ESLint, Playwright, Make, PowerShell/Shell, CI/CD" },
-            { label: "Methods & AI", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
+            { label: "Libraries & Local AI", value: "EPPlus, ExcelJS, PDF.js, PDF-LIB, Nodemailer, FFmpeg, MLX, Whisper, llama.cpp" },
+            { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, Xcode, Postman, MSTest, Python unittest, Swift Testing, ESLint, Playwright, CI/CD" },
+            { label: "Methods", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
         ]
     },
     experience: {
@@ -316,7 +330,7 @@ window.profileData = {
                 bullets: [
                     "Build and maintain internal software for MSU Libraries and Mississippi Library Partnership operations serving 12 library systems and 76 branches/campus libraries.",
                     "Automate reporting, file processing, metadata extraction, data cleanup, and Excel-ready staff workflows using C#, .NET, Python, Perl, SQL, JavaScript, HTML/CSS, and shell scripts.",
-                    "Developed Query, a browser-based reporting frontend with API-backed field metadata, configurable filters/forms, query history/templates, JSONL result handling, and Excel export.",
+                    "Developed Query, a browser-based reporting system with API-backed metadata, configurable filters/forms, authenticated sessions, protected history, JSONL result handling, and Excel export.",
                     "Created MetaTable, a C# WPF metadata scanner for large directory trees with real-time progress tracking and structured Excel exports.",
                     "Translate staff and member-library requests into SirsiDynix API/SQL integrations, documented support workflows, and Excel reports while communicating technical tradeoffs clearly to nontechnical users.",
                     "Use AI-assisted development while applying C# and C++ systems fundamentals, data structures, debugging, tests, and code review to validate generated code for correctness, performance, and maintainability."
@@ -328,9 +342,9 @@ window.profileData = {
                 location: "Newton, MS",
                 date: "2026",
                 bullets: [
-                    "Delivered a paid client web platform for a 501(c)(3) afterschool and tutoring center, combining a public custom-domain website with family portal, attendance, QR-based staff time-clock/payroll, and staff dashboard workflows.",
-                    "Implemented Firebase Auth, Firestore, Storage, Gen 2 Cloud Functions, App Check-protected callables, Security Rules, role-based staff permissions, secure account deletion, generated PDFs/reports, traffic metrics, and email workflows.",
-                    "Worked directly with center stakeholders to translate registration, tuition, transportation, resources, events, donations, and content-management needs into maintainable software."
+                    "Delivered a paid production platform for a 501(c)(3) afterschool and tutoring center, combining a public custom-domain site with family accounts, staff administration, attendance, enrollment, and QR-based time-clock/payroll workflows.",
+                    "Implemented Firebase Auth, Firestore, Storage, Gen 2 Functions, App Check, Security Rules, role-based permissions, family forms, generated PDF reports, privacy controls, and automated email workflows.",
+                    "Worked directly with stakeholders and built release gates, automated browser/rules tests, crawlable public resources, and deployment checks to keep the platform maintainable and discoverable."
                 ]
             }
         ],
@@ -406,30 +420,41 @@ window.profileData = {
             title: "Query",
             githubUrl: "https://github.com/bt1142msstate/Query",
             liveUrl: "https://bt1142msstate.github.io/Query/",
+            siteTier: "selected",
+            siteOrder: 2,
+            mediaUrl: "/assets/images/projects/query.webp?v=20260722-editorial",
+            mediaAlt: "Query browser reporting interface with configurable fields and filters",
+            mediaWidth: 1200,
+            mediaHeight: 676,
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
-            siteDescription: "Backend-driven browser reporting frontend for MSU Libraries workflows, with API-backed field metadata, configurable filters and form-mode reports, query history/templates, JSONL result streaming, reusable virtualized tables, post-filters, CLI workflows, reusable ES module components, and Excel export.",
+            siteDescription: "Browser-based reporting system for MSU Libraries with API-driven fields, configurable filters and forms, authenticated sessions, protected report history, a local demo backend, virtualized results, and custom Excel export.",
             caseStudy: true,
-            caseStudyOutcome: "Highlights practical web tooling with backend contracts, user-facing filters, JSONL result handling, reusable component architecture, CLI/report workflows, and staff-ready Excel exports.",
+            caseStudyOutcome: "Built from a live staff reporting workflow, not a sample dataset.",
             siteHighlights: [
-                "Backend-driven field metadata and configurable query payloads",
-                "Query history, reusable templates, form-mode reports, and shareable URLs",
-                "Virtualized large-result table with post-filters, column resize/drag-drop behavior, split-column handling, and custom XLSX export",
-                "Reusable ES module entrypoints for virtual tables, drag/drop, workbook export, date input, and tooltips",
-                "CLI workflows and docs for repeatable report configs, backend integration, authenticated deployment, and AI/API tool integrations"
+                "API-backed schemas, field descriptions, reusable templates, form-mode reports, and shareable URLs",
+                "Persistent authenticated sessions with report history limited to signed-in users",
+                "JSONL streaming, virtualized large-result tables, post-filters, column controls, and custom XLSX export",
+                "Browser-local demo backend, CLI workflows, reusable ES modules, Playwright coverage, and AI/API integration docs"
             ],
             siteTags: ["JavaScript", "HTML", "CSS", "REST APIs", "JSON", "NDJSON/JSONL", "Virtualized Tables", "Excel Export", "AutoNumeric", "Tailwind CSS", "Performance Optimization", "ESLint", "Playwright", "GitHub Actions"],
             resumeSubtitle: "Browser-Based Report Builder | JavaScript, HTML, CSS, ExcelJS",
-            resumeDescription: "Browser reporting frontend with API-backed field metadata, configurable filters/forms, query history/templates, JSONL streaming, reusable virtualized-table components, CLI workflows, and Excel export.",
+            resumeDescription: "Browser reporting system with API-backed metadata, configurable filters/forms, authenticated sessions, protected history, JSONL streaming, virtualized tables, CLI workflows, and Excel export.",
             featuredOnSite: true,
             featuredOnResume: true
         },
         {
             title: "MetaTable",
             githubUrl: "https://github.com/bt1142msstate/MetaTable",
+            siteTier: "selected",
+            siteOrder: 3,
+            mediaUrl: "/assets/images/projects/metatable.webp?v=20260722-editorial",
+            mediaAlt: "MetaTable desktop metadata scanner interface",
+            mediaWidth: 1086,
+            mediaHeight: 1016,
             siteType: "Operational Case Study | WPF File Metadata Scanner",
             siteDescription: "C# WPF desktop tool built for MSU Libraries to scan large directory trees, extract file metadata, show progress, and export structured Excel reports for staff review.",
             caseStudy: true,
-            caseStudyOutcome: "Highlights C# desktop engineering with file-system traversal, metadata extraction, progress reporting, and staff-ready Excel output.",
+            caseStudyOutcome: "Built to turn a slow file-review task into a repeatable staff workflow.",
             siteHighlights: [
                 "Recursive file-system traversal for large directory trees",
                 "Real-time progress tracking during long-running scans",
@@ -445,35 +470,62 @@ window.profileData = {
             title: "Afternoon Adventure Website",
             repositoryVisibility: "private",
             liveUrl: "https://afternoonadventure.org/",
+            siteTier: "selected",
+            siteOrder: 1,
+            mediaUrl: "/assets/images/projects/afternoon-adventure.webp?v=20260722-editorial",
+            mediaAlt: "Afternoon Adventure Learning Center production website",
+            mediaWidth: 1200,
+            mediaHeight: 676,
             siteType: "Live Nonprofit Website | Firebase-Backed Staff & Family Portal",
-            siteDescription: "Custom-domain nonprofit web platform for Afternoon Adventure Learning Center, a Newton, Mississippi afterschool and tutoring center, combining a responsive GitHub Pages public site with Firebase-powered family accounts, staff dashboard tools, attendance, QR-based staff time-clock/payroll workflows, account data exports, editable managed content, online enrollment, generated PDFs, secure submissions, backend email workflows, Storage-backed media/documents, traffic metrics, and SEO metadata.",
+            siteDescription: "Paid production platform for a Mississippi afterschool and tutoring center, combining a crawlable public site with Firebase-backed family accounts, staff operations, attendance, enrollment, reporting, content publishing, and privacy controls.",
+            caseStudy: true,
+            caseStudyOutcome: "Owned the platform from stakeholder requirements through production delivery, security rules, automated checks, and ongoing iteration.",
             siteHighlights: [
-                "Built a public website for a real 501(c)(3) afterschool and tutoring center",
-                "Uses Firebase Authentication, Firestore, Storage, Security Rules, and App Check-protected callables for Google sign-in, family account history, editable content, admin roles, private submissions, public photos, staff time records, metrics, and managed PDFs",
-                "Built an online enrollment workflow that generates a completed PDF preview in the browser, stores the generated PDF and structured fields, and supports staff review",
-                "Built attendance tools for room/group setup, guardian/student linking, daily check-in/check-out records, absence/status movement, attendance reports, monthly ledger PDFs, and family-visible attendance history",
-                "Added staff time-clock operations with QR-based clock-in/out, personal and team hours, compact PDF summaries, pay snapshots, correction tools, and payroll CSV exports",
-                "Includes a staff/admin dashboard with live Firestore listeners, on-site edit controls, content reordering, question/enrollment review, role-based staff permissions, account data exports, secure account deletion, and center settings management",
-                "Uses deployed Firebase Gen 2 Functions and Nodemailer for question notifications, enrollment receipts with PDF attachments, dashboard replies, enrollment status emails, and staff account lookup",
-                "Includes PDF.js document viewing, PDF-LIB form generation, full-screen media galleries, community updates/events, a tuition calculator, SEO metadata, sitemap, robots file, Playwright smoke tests, Firestore rules tests, staff permission audits, performance budgets, generated artifact checks, and custom-domain GitHub Pages hosting"
+                "Family forms with per-child responses, sortable results, and PDF exports with counts and percentages",
+                "Firebase Auth, Firestore, Storage, Gen 2 Functions, App Check, Security Rules, role-based staff access, and opt-in analytics",
+                "Attendance, enrollment PDFs, QR time clock, payroll exports, managed content, notifications, and family account history",
+                "Crawlable public documents and text, RSS/JSON publishing, a dynamic site guide, Workload Identity deployment, release gates, and automated browser/rules tests"
             ],
             siteTags: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore", "Firebase Authentication", "Firebase Storage", "Cloud Functions", "Firebase Security Rules", "Firebase App Check", "Role-Based Access Control", "QR Code Workflows", "CSV/XLSX Workflows", "Nodemailer", "PDF.js", "PDF-LIB", "Performance Optimization", "Playwright", "GitHub Pages", "SEO Metadata"],
             resumeSubtitle: "Firebase-Backed Nonprofit Web Platform | HTML, CSS, JavaScript",
-            resumeDescription: "Paid nonprofit web platform with Firebase Auth, Firestore/Storage, Security Rules/App Check, staff dashboard tools, attendance/ledger PDFs, QR-based staff time clock, payroll CSV/PDF reports, enrollment PDF generation, family accounts, and SEO metadata.",
+            resumeDescription: "Paid production platform with Firebase Auth, Firestore/Storage, Functions, Security Rules/App Check, family forms, staff administration, attendance, enrollment/PDF reporting, QR time clock, payroll exports, privacy controls, and release gates.",
             featuredOnSite: true,
             featuredOnResume: true
         },
         {
+            title: "Recorder",
+            repositoryVisibility: "private",
+            siteTier: "selected",
+            siteOrder: 4,
+            visualVariant: "local-ai",
+            siteType: "Private Native macOS App | Local AI Capture Workspace",
+            siteDescription: "SwiftUI macOS app that records a selected window with system audio, microphone, and optional camera, then creates searchable local transcripts, structured summaries, and optional visual notes without sending recordings to a hosted AI service.",
+            caseStudy: true,
+            caseStudyOutcome: "Designed as a privacy-first media pipeline where capture, indexing, transcription, and model inference stay on the user's Mac.",
+            siteHighlights: [
+                "ScreenCaptureKit, AVFoundation, and Core Audio capture into MOV plus separate lossless audio",
+                "On-device MLX Whisper large-v3-turbo transcription with searchable transcripts and playback anchors",
+                "Local Qwen3.5 summarization through llama.cpp with constrained JSON, repair, validation, and diagnostics",
+                "Optional visual transcript from sampled frames, recording library and imports, SHA-256 metadata, resource awareness, and Swift Testing coverage"
+            ],
+            siteTags: ["Swift", "SwiftUI", "AppKit", "ScreenCaptureKit", "AVFoundation", "MLX", "Whisper", "llama.cpp", "Local AI", "Swift Testing"],
+            resumeSubtitle: "Private macOS Capture + Local AI Workspace | SwiftUI, MLX",
+            resumeDescription: "Native macOS recording workspace with selected-window capture, searchable local Whisper transcripts, constrained local Qwen summaries, optional visual analysis, and Swift Testing coverage.",
+            featuredOnSite: true,
+            featuredOnResume: false
+        },
+        {
             title: "Ady Resolver",
             githubUrl: "https://github.com/bt1142msstate/Ady-Resolver",
+            siteTier: "additional",
             siteType: "Data Cleanup Case Study | Address Resolution Toolkit",
-            siteDescription: "Python data-quality toolkit for messy Mississippi address data, combining cached public sources, staged matching, typo-heavy evaluation data, local browser tooling, and lightweight ML-assisted scoring.",
+            siteDescription: "Python toolkit for messy Mississippi address data, combining expanded public reference sources, source aliases and deduplication, staged matching, realistic noise generation, local browser tooling, and lightweight ML-assisted scoring.",
             caseStudy: true,
             caseStudyOutcome: "Highlights practical data engineering with repeatable pipelines, record linkage, evaluation datasets, CSV/XLSX workflows, and ML-assisted candidate scoring.",
             siteHighlights: [
-                "Cached public data sources for repeatable local matching",
-                "Typo-heavy evaluation data for resolver validation",
-                "ML-assisted candidate scoring and CSV/XLSX workflows"
+                "Cached and deduplicated Mississippi public sources with normalized aliases",
+                "Typo and house-number noise generation for realistic evaluation data",
+                "Staged matching, ML-assisted candidate scoring, and CSV/XLSX workflows"
             ],
             siteTags: ["Python", "Machine Learning", "Record Linkage", "Address Matching", "Data Pipeline", "CSV/XLSX"],
             resumeSubtitle: "Mississippi Address Resolution Toolkit | Python, Machine Learning",
@@ -523,18 +575,24 @@ window.profileData = {
             title: "Door Unlocker",
             githubUrl: "https://github.com/bt1142msstate/door-unlocker",
             liveUrl: "https://bt1142msstate.github.io/door-unlocker/",
+            siteTier: "selected",
+            siteOrder: 5,
+            mediaUrl: "/assets/images/projects/door-unlocker.webp?v=20260722-editorial",
+            mediaAlt: "Door Unlocker desktop control and firmware management interface",
+            mediaWidth: 900,
+            mediaHeight: 1529,
             siteType: "Open-Source IoT Prototype | SwiftUI + BLE + nRF52840 Firmware",
-            siteDescription: "Open-source desk-test prototype for a BLE-controlled servo actuator, combining XIAO nRF52840 firmware, a SwiftUI iPhone app, Siri/App Intents, widgets, Action Button support, a SwiftUI Mac admin app, USB-gated pairing, signed commands, and an interactive no-solder wiring guide.",
+            siteDescription: "Open-source BLE actuator prototype spanning nRF52840 firmware, SwiftUI iPhone and Mac apps, signed commands, USB-gated pairing, Siri and widgets, and recoverable signed over-the-air firmware updates.",
             siteHighlights: [
                 "Built XIAO nRF52840 firmware for BLE control, authenticated commands, servo movement, auto-lock timing, USB serial management, and LED state feedback",
+                "Added signed dual-bank OTA firmware updates with interrupted-update recovery and a high-throughput BLE transfer path",
                 "Built a SwiftUI iPhone app with BLE pairing, lock/unlock controls, optional Face ID/passcode confirmation, Siri/App Shortcuts, widgets, Control Widget support, and Action Button workflows",
                 "Added a SwiftUI Mac admin app for USB-C controller status, pairing approval, trusted-device removal, timeout configuration, and direct lock/unlock commands",
-                "Designed a security model with local P-256 signing keys, USB-gated pairing approval, controller-side public-key verification, and no shared command secret in the repo",
-                "Published an interactive GitHub Pages wiring diagram with hardware images, costs, parts list, and safety boundaries for bench testing"
+                "Designed a security model with local P-256 signing keys, USB-gated pairing approval, controller-side verification, release-readiness checks, and physical housing/force studies"
             ],
-            siteTags: ["Swift", "SwiftUI", "C++", "Arduino", "Bluetooth Low Energy", "IoT", "Hardware Prototyping", "App Intents", "WidgetKit", "USB Serial", "Secure Enclave", "GitHub Pages"],
+            siteTags: ["Swift", "SwiftUI", "C++", "Arduino", "Bluetooth Low Energy", "IoT", "Hardware Prototyping", "App Intents", "WidgetKit", "USB Serial", "Secure Enclave", "Signed Firmware Updates", "GitHub Pages"],
             resumeSubtitle: "BLE Door Actuator Prototype | SwiftUI, C++, nRF52840",
-            resumeDescription: "Open-source BLE servo actuator prototype with nRF52840 firmware, SwiftUI iPhone app, widgets/App Intents, Mac admin app, USB-gated pairing, and signed commands.",
+            resumeDescription: "Open-source BLE actuator prototype with nRF52840 firmware, SwiftUI iPhone/Mac apps, signed commands, USB-gated pairing, widgets/App Intents, and signed dual-bank OTA updates.",
             featuredOnSite: true,
             featuredOnResume: false
         },

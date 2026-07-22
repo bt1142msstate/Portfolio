@@ -153,7 +153,7 @@ window.addEventListener("scroll", updateNavbarState);
 window.addEventListener("load", updateNavbarState);
 updateNavbarState();
 window.addEventListener("load", function () {
-    var heroElements = document.querySelectorAll(".hero-eyebrow, .hero-title, .hero-subtitle, .hero-description, .hero-buttons, .hero-social");
+    var heroElements = document.querySelectorAll(".hero-kicker, .hero-title, .hero-subtitle, .hero-description, .hero-buttons, .hero-proof, .hero-social, .hero-collage");
     heroElements.forEach(function (element, index) {
         setTimeout(function () {
             element.style.opacity = "1";

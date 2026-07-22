@@ -98,8 +98,11 @@
 
         return '<ul class="skill-overlay-work-list">' + projects.map(function (project) {
             var href = getPublicProjectUrl(project);
+            var projectName = href
+                ? '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(project.title) + "</a>"
+                : '<span class="skill-overlay-project-name">' + escapeHtml(project.title) + "</span>";
             return '<li>' +
-                '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(project.title) + "</a>" +
+                projectName +
                 '<span>' + escapeHtml(project.siteType) + "</span>" +
                 "</li>";
         }).join("") + "</ul>";
@@ -235,7 +238,7 @@
     }
 
     function balanceCardGrids() {
-        document.querySelectorAll(".skills-grid, .projects-grid, .education-grid").forEach(balanceCardGrid);
+        document.querySelectorAll(".skills-grid, .project-more-grid").forEach(balanceCardGrid);
     }
 
     var balanceGridRequest = 0;
@@ -250,6 +253,72 @@
 
     function getPublicProjectUrl(project) {
         return project.liveUrl || (hasPublicRepository(project) ? project.githubUrl : "");
+    }
+
+    function renderProjectVisual(project) {
+        if (project.mediaUrl) {
+            return '<figure class="project-media">' +
+                '<img src="' + escapeHtml(project.mediaUrl) + '" alt="' + escapeHtml(project.mediaAlt || (project.title + " interface")) + '" width="' + escapeHtml(project.mediaWidth || 1200) + '" height="' + escapeHtml(project.mediaHeight || 750) + '" loading="lazy" decoding="async">' +
+                "</figure>";
+        }
+
+        if (project.visualVariant === "local-ai") {
+            var bars = [36, 58, 82, 48, 72, 96, 62, 42, 88, 70, 52, 92, 66, 38, 78, 56, 86, 46].map(function (height) {
+                return '<span style="--wave-height:' + height + '%"></span>';
+            }).join("");
+            return '<div class="project-media project-media-local-ai" aria-hidden="true">' +
+                '<div class="local-ai-status"><span></span>Private native build</div>' +
+                '<div class="local-ai-waveform">' + bars + "</div>" +
+                '<div class="local-ai-flow"><strong>Capture</strong><span>Transcript</span><span>Summary</span></div>' +
+                '<p>Local processing on Apple silicon</p>' +
+                "</div>";
+        }
+
+        return "";
+    }
+
+    function renderProjectActions(project) {
+        var actions = [];
+        if (project.liveUrl) {
+            actions.push('<a href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" class="project-action">Live site ' + externalLinkIconSvg(16) + "</a>");
+        }
+        if (hasPublicRepository(project)) {
+            actions.push('<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" class="project-action">Source ' + githubIconSvg(16) + "</a>");
+        }
+        if (!actions.length && project.repositoryVisibility === "private") {
+            actions.push('<span class="project-private">Private project</span>');
+        }
+        return '<div class="project-actions">' + actions.join("") + "</div>";
+    }
+
+    function renderProjectCard(data, project, tier) {
+        var isSelected = tier === "selected";
+        var projectClass = "project-card project-card-" + tier + (project.caseStudy ? " project-card-case-study" : "");
+        var highlights = isSelected && project.siteHighlights ? project.siteHighlights.slice(0, 3) : [];
+        var highlightsMarkup = highlights.length
+            ? '<ul class="project-highlights">' + renderList(highlights) + "</ul>"
+            : "";
+        var outcomeMarkup = isSelected && project.caseStudyOutcome
+            ? '<p class="project-case-study-outcome">' + escapeHtml(project.caseStudyOutcome) + "</p>"
+            : "";
+        var tags = (project.siteTags || []).slice(0, isSelected ? 7 : 5);
+
+        return '<article class="' + projectClass + '">' +
+            renderProjectVisual(project) +
+            '<div class="project-body">' +
+            '<div class="project-header">' +
+            '<div><p class="project-type">' + escapeHtml(project.siteType) + "</p>" +
+            "<h3>" + escapeHtml(project.title) + "</h3></div>" +
+            renderProjectActions(project) +
+            "</div>" +
+            '<p class="project-description">' + escapeHtml(project.siteDescription) + "</p>" +
+            outcomeMarkup +
+            highlightsMarkup +
+            '<div class="project-tags">' + tags.map(function (tag) {
+                return renderSkillPill(data, tag, "project-tag");
+            }).join("") + "</div>" +
+            "</div>" +
+            "</article>";
     }
 
     function renderProjectStructuredData(data) {
@@ -305,8 +374,9 @@
         var projectsGrid = document.getElementById("projects-grid");
         var educationGrid = document.getElementById("education-grid");
         var contactIntro = document.getElementById("contact-intro");
+        var contactActions = document.getElementById("contact-actions");
         var contactInfo = document.getElementById("contact-info");
-        if (!aboutText || !skillsGrid || !experienceTimeline || !projectsGrid || !educationGrid || !contactIntro || !contactInfo) {
+        if (!aboutText || !skillsGrid || !experienceTimeline || !projectsGrid || !educationGrid || !contactIntro || !contactActions || !contactInfo) {
             return;
         }
 
@@ -350,57 +420,45 @@
                 "</div>";
         }).join("");
 
-        projectsGrid.innerHTML = data.projects.filter(function (project) {
+        var featuredProjects = data.projects.filter(function (project) {
             return project.featuredOnSite;
-        }).map(function (project) {
-            var projectClass = project.caseStudy ? "project-card project-card-case-study" : "project-card";
-            var caseStudyMarkup = project.caseStudy
-                ? '<p class="project-case-study-outcome">' + escapeHtml(project.caseStudyOutcome || "") + "</p>"
-                : "";
-            var highlightsMarkup = project.siteHighlights && project.siteHighlights.length
-                ? '<ul class="project-highlights">' + renderList(project.siteHighlights) + "</ul>"
-                : "";
-
-            return '<div class="' + projectClass + '">' +
-                '<div class="project-header">' +
-                "<h3>" + escapeHtml(project.title) + "</h3>" +
-                '<div class="project-header-links">' +
-                (hasPublicRepository(project)
-                    ? '<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View source code for ' + escapeHtml(project.title) + ' on GitHub" class="project-link">' + githubIconSvg(20) + "</a>"
-                    : "") +
-                (project.liveUrl
-                    ? '<a href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" aria-label="Open live site for ' + escapeHtml(project.title) + '" class="project-link">' + externalLinkIconSvg(20) + "</a>"
-                    : "") +
-                "</div>" +
-                "</div>" +
-                '<p class="project-type">' + escapeHtml(project.siteType) + "</p>" +
-                '<p class="project-description">' + escapeHtml(project.siteDescription) + "</p>" +
-                caseStudyMarkup +
-                highlightsMarkup +
-                '<div class="project-tags">' +
-                project.siteTags.map(function (tag) {
-                    return renderSkillPill(data, tag, "project-tag");
-                }).join("") +
-                "</div>" +
-                "</div>";
-        }).join("");
+        });
+        var selectedProjects = featuredProjects.filter(function (project) {
+            return project.siteTier === "selected";
+        }).sort(function (first, second) {
+            return (first.siteOrder || 100) - (second.siteOrder || 100);
+        });
+        var additionalProjects = featuredProjects.filter(function (project) {
+            return project.siteTier !== "selected";
+        });
+        projectsGrid.innerHTML =
+            '<div class="project-showcase">' + selectedProjects.map(function (project) {
+                return renderProjectCard(data, project, "selected");
+            }).join("") + "</div>" +
+            '<div class="project-more">' +
+            '<div class="project-more-heading"><p class="section-kicker">More Work</p><h3>Additional products and experiments</h3></div>' +
+            '<div class="project-more-grid">' + additionalProjects.map(function (project) {
+                return renderProjectCard(data, project, "additional");
+            }).join("") + "</div>" +
+            "</div>";
 
         educationGrid.innerHTML = data.education.map(function (item) {
             var inlineHonors = item.inlineHonors ? '<p class="education-honors">' + escapeHtml(item.inlineHonors) + "</p>" : "";
             var honorsList = item.honorsLines ? '<p class="education-honors-list">' + item.honorsLines.map(escapeHtml).join("<br>") + "</p>" : "";
             return '<div class="education-card">' +
-                '<div class="education-icon" aria-hidden="true">🎓</div>' +
-                "<h3>" + escapeHtml(item.degree) + "</h3>" +
-                inlineHonors +
-                '<p class="education-school">' + escapeHtml(item.school) + "</p>" +
+                '<div class="education-main"><h3>' + escapeHtml(item.degree) + "</h3>" + inlineHonors +
+                '<p class="education-school">' + escapeHtml(item.school) + "</p></div>" +
+                '<div class="education-meta"><p class="education-date">' + escapeHtml(item.date) + "</p>" +
                 '<p class="education-location">' + escapeHtml(item.location) + "</p>" +
-                '<p class="education-date">' + escapeHtml(item.date) + "</p>" +
-                '<p class="education-gpa">GPA: ' + escapeHtml(item.gpa) + "</p>" +
-                honorsList +
+                '<p class="education-gpa">GPA: ' + escapeHtml(item.gpa) + "</p></div>" +
+                '<div class="education-details">' + honorsList + "</div>" +
                 "</div>";
         }).join("");
 
         contactIntro.textContent = data.site.contactIntro;
+        contactActions.innerHTML =
+            '<a href="mailto:' + escapeHtml(data.contact.email) + '" class="btn btn-primary">Email Me</a>' +
+            '<a href="/resume/brandon-temple-resume.pdf" class="btn btn-secondary" download type="application/pdf">Download Resume</a>';
         contactInfo.innerHTML =
             '<a href="mailto:' + escapeHtml(data.contact.email) + '" class="contact-item">' +
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">' +
