@@ -4,5 +4,5 @@
       <rect width="64" height="64" rx="14"/>
     </clipPath>
   </defs>
-  <image href="brandon-profile-photo.jpg" width="64" height="64" preserveAspectRatio="xMidYMid slice" clip-path="url(#rounded-favicon)"/>
+  <image href="brandon-profile-photo-square.jpg" width="64" height="64" preserveAspectRatio="xMidYMid slice" clip-path="url(#rounded-favicon)"/>
 </svg>
