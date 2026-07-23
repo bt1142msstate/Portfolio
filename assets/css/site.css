@@ -1965,6 +1965,10 @@ body::before {
     animation-name: hero-workflow-surge-out;
 }
 
+.hero-workflow-surge-final {
+    animation-name: hero-workflow-surge-final;
+}
+
 .hero-workflow-surge-entry {
     stroke: #080808;
     filter: none;
@@ -2053,12 +2057,35 @@ body::before {
         opacity: 1;
     }
 
-    27% {
+    25% {
         opacity: 1;
         stroke-dashoffset: -0.82;
     }
 
-    29%,
+    27%,
+    100% {
+        opacity: 0;
+        stroke-dashoffset: -0.82;
+    }
+}
+
+@keyframes hero-workflow-surge-final {
+    0%,
+    23% {
+        opacity: 0;
+        stroke-dashoffset: 0.18;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    31% {
+        opacity: 1;
+        stroke-dashoffset: -0.82;
+    }
+
+    33%,
     100% {
         opacity: 0;
         stroke-dashoffset: -0.82;
@@ -2087,21 +2114,21 @@ body::before {
 
 @keyframes hero-workflow-surge-entry {
     0%,
-    26% {
+    29% {
         opacity: 0;
         stroke-dashoffset: 0.18;
     }
 
-    28% {
+    31% {
         opacity: 1;
     }
 
-    31% {
+    34% {
         opacity: 1;
         stroke-dashoffset: -0.82;
     }
 
-    33%,
+    36%,
     100% {
         opacity: 0;
         stroke-dashoffset: -0.82;
