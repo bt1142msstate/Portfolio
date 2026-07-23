@@ -1,5 +1,5 @@
 (function () {
-    var projectMediaVersion = "20260723-feature-gallery";
+    var projectMediaVersion = "20260723-aa-captures";
 
     function escapeHtml(value) {
         return String(value)

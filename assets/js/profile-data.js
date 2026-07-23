@@ -480,39 +480,39 @@ window.profileData = {
             liveUrl: "https://afternoonadventure.org/",
             siteTier: "selected",
             siteOrder: 1,
-            mediaUrl: "/assets/images/projects/afternoon-adventure-dashboard.webp?v=20260723-feature-gallery",
+            mediaUrl: "/assets/images/projects/afternoon-adventure-dashboard.webp?v=20260723-aa-captures",
             mediaAlt: "Afternoon Adventure staff operations dashboard with priority inbox and role-aware workspace tabs",
             mediaTitle: "Staff operations dashboard",
             mediaDescription: "This privacy-safe playground view shows the role-aware workspace for family questions, enrollment review, attendance, time clock, traffic, backups, utilities, forms, staff access, and site administration.",
-            mediaWidth: 1009,
+            mediaWidth: 994,
             mediaHeight: 760,
             mediaAlternates: [
                 {
-                    url: "/assets/images/projects/afternoon-adventure-forms.webp?v=20260723-feature-gallery",
+                    url: "/assets/images/projects/afternoon-adventure-forms.webp?v=20260723-aa-captures",
                     alt: "Afternoon Adventure family forms workspace with response totals and enrollment transportation form controls",
                     title: "Secure family forms and response tracking",
                     description: "The playground demonstrates how staff build forms, share secure family links, send email reminders, track per-child responses, filter results, and export response summaries as PDFs.",
-                    width: 1009,
+                    width: 994,
                     height: 760
                 },
                 {
-                    url: "/assets/images/projects/afternoon-adventure-attendance.webp?v=20260723-feature-gallery",
+                    url: "/assets/images/projects/afternoon-adventure-attendance.webp?v=20260723-aa-captures",
                     alt: "Afternoon Adventure daily attendance dashboard with roster totals and check-in status",
                     title: "Daily attendance operations",
                     description: "The playground roster demonstrates date-based attendance, status totals, room and group workflows, check-in and check-out records, and audit-friendly reporting without exposing live student data.",
-                    width: 1009,
+                    width: 994,
                     height: 760
                 },
                 {
-                    url: "/assets/images/projects/afternoon-adventure-time-clock.webp?v=20260723-feature-gallery",
+                    url: "/assets/images/projects/afternoon-adventure-time-clock.webp?v=20260723-aa-captures",
                     alt: "Afternoon Adventure QR-verified staff time clock configuration",
                     title: "QR-verified staff time clock",
                     description: "The playground demonstrates rotating center QR codes, saved-code restoration, validity windows, printable QR PDFs, staff verification, and payroll-ready time records.",
-                    width: 1009,
-                    height: 850
+                    width: 994,
+                    height: 760
                 },
                 {
-                    url: "/assets/images/projects/afternoon-adventure-enrollment.webp?v=20260723-feature-gallery",
+                    url: "/assets/images/projects/afternoon-adventure-enrollment.webp?v=20260723-aa-captures",
                     alt: "Afternoon Adventure mobile enrollment workflow with structured child information fields",
                     title: "Structured online enrollment",
                     description: "A responsive family workflow collects child, guardian, program, transportation, medical, and agreement details, then supports secure staff review and generated enrollment PDFs.",
@@ -520,7 +520,7 @@ window.profileData = {
                     height: 1100
                 },
                 {
-                    url: "/assets/images/projects/afternoon-adventure-home.webp?v=20260723-feature-gallery",
+                    url: "/assets/images/projects/afternoon-adventure-home.webp?v=20260723-aa-captures",
                     alt: "Afternoon Adventure mobile homepage showing the learning center and program overview",
                     title: "Responsive public program experience",
                     description: "The public site presents programs, enrollment, family resources, events, documents, and contact information in a responsive, crawlable experience backed by managed content.",
