@@ -1,4 +1,6 @@
 (function () {
+    var projectMediaVersion = "20260722-responsive-art";
+
     function escapeHtml(value) {
         return String(value)
             .replace(/&/g, "&amp;")
@@ -255,6 +257,19 @@
         return project.liveUrl || (hasPublicRepository(project) ? project.githubUrl : "");
     }
 
+    function getProjectMediaVariants(url) {
+        var sourcePath = String(url).split("?")[0];
+        var stem = sourcePath.replace(/\.webp$/i, "");
+        var version = "?v=" + projectMediaVersion;
+
+        return {
+            portrait: stem + "--4x5.webp" + version,
+            standard: stem + "--4x3.webp" + version,
+            wide: stem + "--16x10.webp" + version,
+            square: stem + "--1x1.webp" + version
+        };
+    }
+
     function getProjectMedia(project) {
         var media = [];
 
@@ -264,7 +279,8 @@
                 alt: project.mediaAlt || (project.title + " interface"),
                 width: project.mediaWidth || 1200,
                 height: project.mediaHeight || 750,
-                fit: project.mediaFit || "cover"
+                fit: project.mediaFit || "cover",
+                variants: getProjectMediaVariants(project.mediaUrl)
             });
         }
 
@@ -275,7 +291,8 @@
                     alt: item.alt || (project.title + " project view"),
                     width: item.width || 1200,
                     height: item.height || 750,
-                    fit: item.fit || "cover"
+                    fit: item.fit || "cover",
+                    variants: getProjectMediaVariants(item.url)
                 });
             }
         });
@@ -283,7 +300,29 @@
         return media;
     }
 
-    function renderProjectVisual(project) {
+    function renderProjectMediaFrame(item, index, project, tier) {
+        var activeClass = index === 0 ? " is-active" : "";
+        var fitClass = item.fit === "contain" ? " project-media-frame-fit-contain" : "";
+        var isLead = tier === "selected" && project.siteOrder === 1;
+        var isEditorial = project.mediaEditorial === true;
+        var desktopSource;
+
+        if (isEditorial) {
+            desktopSource = '<source media="(min-width: 769px)" type="image/webp" srcset="' + escapeHtml(item.variants.portrait) + '">';
+        } else if (isLead) {
+            desktopSource = '<source media="(min-width: 1280px)" type="image/webp" srcset="' + escapeHtml(item.variants.portrait) + '">';
+        } else {
+            desktopSource = '<source media="(min-width: 1101px)" type="image/webp" srcset="' + escapeHtml(item.variants.wide) + '">';
+        }
+
+        return '<picture class="project-media-frame project-media-responsive' + activeClass + fitClass + '" data-gallery-frame data-gallery-index="' + index + '" aria-hidden="' + (index === 0 ? "false" : "true") + '">' +
+            desktopSource +
+            '<source media="(min-width: 481px)" type="image/webp" srcset="' + escapeHtml(item.variants.standard) + '">' +
+            '<img class="project-media-frame-image" src="' + escapeHtml(item.variants.square) + '" alt="' + escapeHtml(item.alt) + '" width="960" height="960" loading="lazy" decoding="async">' +
+            "</picture>";
+    }
+
+    function renderProjectVisual(project, tier) {
         var media = getProjectMedia(project);
 
         if (media.length) {
@@ -293,9 +332,7 @@
                 ? ' data-project-gallery role="group" aria-label="Rotating views of ' + escapeHtml(project.title) + '"'
                 : "";
             var frames = media.map(function (item, index) {
-                var activeClass = index === 0 ? " is-active" : "";
-                var fitClass = item.fit === "contain" ? " project-media-frame-fit-contain" : "";
-                return '<img class="project-media-frame' + activeClass + fitClass + '" data-gallery-frame data-gallery-index="' + index + '" src="' + escapeHtml(item.url) + '" alt="' + escapeHtml(item.alt) + '" width="' + escapeHtml(item.width) + '" height="' + escapeHtml(item.height) + '" loading="lazy" decoding="async" aria-hidden="' + (index === 0 ? "false" : "true") + '">';
+                return renderProjectMediaFrame(item, index, project, tier);
             }).join("");
             var controls = isGallery
                 ? '<div class="project-gallery-controls">' +
@@ -385,7 +422,8 @@
             state.timer = window.setTimeout(function () {
                 var nextIndex = (state.index + 1) % state.frames.length;
                 var nextFrame = state.frames[nextIndex];
-                if (nextFrame.complete && nextFrame.naturalWidth) {
+                var nextImage = nextFrame.matches("img") ? nextFrame : nextFrame.querySelector("img");
+                if (nextImage && nextImage.complete && nextImage.naturalWidth) {
                     showGalleryFrame(state, nextIndex);
                 }
                 scheduleGallery(state);
@@ -480,7 +518,7 @@
         var tags = (project.siteTags || []).slice(0, isSelected ? 7 : 5);
 
         return '<article class="' + projectClass + '">' +
-            renderProjectVisual(project) +
+            renderProjectVisual(project, tier) +
             '<div class="project-body">' +
             '<div class="project-header">' +
             '<div><p class="project-type">' + escapeHtml(project.siteType) + "</p>" +

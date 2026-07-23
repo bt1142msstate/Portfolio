@@ -684,6 +684,7 @@ window.profileData = {
             mediaAlt: "Connect 4 AI game board with minimax controls and experiment statistics",
             mediaWidth: 800,
             mediaHeight: 989,
+            mediaEditorial: true,
             siteType: "Browser-Based Game AI Demo",
             siteDescription: "Playable browser game AI with minimax and alpha-beta pruning, replay tooling, experiment modes, and headless validation through GitHub Actions.",
             siteHighlights: [

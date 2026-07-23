@@ -1931,8 +1931,6 @@ body::before {
 }
 
 .hero-workflow-path,
-.hero-workflow-person,
-.hero-workflow-check,
 .hero-workflow-output-mark {
     fill: none;
     stroke-linecap: round;
@@ -1961,14 +1959,12 @@ body::before {
     stroke-width: 2;
 }
 
-.hero-workflow-head {
-    fill: rgba(255, 255, 255, 0.84);
+.hero-workflow-avatar {
+    filter: saturate(0.92) contrast(1.04);
 }
 
-.hero-workflow-person,
-.hero-workflow-check {
-    stroke: rgba(255, 255, 255, 0.84);
-    stroke-width: 2.4;
+.hero-workflow-openai-mark {
+    opacity: 0.94;
 }
 
 .hero-workflow-spark {
@@ -2113,14 +2109,14 @@ body::before {
 }
 
 .about-portrait-picture {
-    height: auto;
+    height: 100%;
     border-radius: inherit;
 }
 
 .about-portrait-image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     border-radius: inherit;
 }
 
@@ -2261,13 +2257,26 @@ body::before {
     object-position: top;
 }
 
-.project-media img.project-media-frame-fit-contain {
+.project-media > .project-media-frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.project-media .project-media-frame-fit-contain .project-media-frame-image {
     object-fit: contain;
     object-position: center;
     padding: clamp(0.55rem, 1vw, 0.9rem);
     background:
         radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.065), transparent 48%),
         #070707;
+}
+
+.project-media .project-media-responsive .project-media-frame-image {
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
+    background: none;
 }
 
 .project-media-gallery {
@@ -2623,6 +2632,11 @@ body::before {
     transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease;
 }
 
+.project-card-additional .project-media .project-media-responsive .project-media-frame-image {
+    object-fit: cover;
+    padding: 0;
+}
+
 .project-card-additional:hover .project-media img {
     filter: saturate(1) contrast(1.04);
     transform: scale(1.018);
@@ -2655,8 +2669,8 @@ body::before {
     }
 
     .project-more-grid .project-card-additional.grid-row-fill .project-media {
-        min-height: 360px;
-        aspect-ratio: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 5;
         border-right: 1px solid rgba(255, 255, 255, 0.075);
         border-bottom: 0;
     }
@@ -2790,6 +2804,17 @@ body::before {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+@media (max-width: 1279px) {
+    .project-card-selected:first-child {
+        display: flex;
+    }
+
+    .project-card-selected:first-child .project-media {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+}
+
 @media (max-width: 1100px) {
     .nav-links a {
         padding-inline: 0.55rem;
@@ -2805,12 +2830,36 @@ body::before {
         grid-template-columns: minmax(270px, 1.6fr) minmax(130px, 0.75fr);
     }
 
-    .project-card-selected:first-child {
-        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    .project-media,
+    .project-card-additional .project-media,
+    .project-card-selected:first-child .project-media {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .project-more-grid .project-card-additional.grid-row-fill .project-media {
+        aspect-ratio: 4 / 5;
     }
 
     .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-feature {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "about-portrait"
+            "about-text";
+        gap: 2.5rem;
+    }
+
+    .about-portrait-card {
+        align-self: auto;
+        width: min(100%, 720px);
+        max-width: none;
+        aspect-ratio: 4 / 3;
     }
 }
 
@@ -3000,8 +3049,14 @@ body::before {
     }
 
     .project-card-selected:first-child .project-media {
-        min-height: 260px;
-        aspect-ratio: 16 / 10;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .project-media,
+    .project-card-additional .project-media {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
     }
 
     .project-header {
@@ -3108,8 +3163,10 @@ body::before {
     }
 
     .project-media,
+    .project-card-additional .project-media,
     .project-card-selected:first-child .project-media {
-        min-height: 210px;
+        min-height: 0;
+        aspect-ratio: 1 / 1;
     }
 
     .project-body {
