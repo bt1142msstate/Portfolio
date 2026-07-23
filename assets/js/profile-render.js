@@ -263,7 +263,8 @@
                 url: project.mediaUrl,
                 alt: project.mediaAlt || (project.title + " interface"),
                 width: project.mediaWidth || 1200,
-                height: project.mediaHeight || 750
+                height: project.mediaHeight || 750,
+                fit: project.mediaFit || "cover"
             });
         }
 
@@ -273,7 +274,8 @@
                     url: item.url,
                     alt: item.alt || (project.title + " project view"),
                     width: item.width || 1200,
-                    height: item.height || 750
+                    height: item.height || 750,
+                    fit: item.fit || "cover"
                 });
             }
         });
@@ -292,7 +294,8 @@
                 : "";
             var frames = media.map(function (item, index) {
                 var activeClass = index === 0 ? " is-active" : "";
-                return '<img class="project-media-frame' + activeClass + '" data-gallery-frame data-gallery-index="' + index + '" src="' + escapeHtml(item.url) + '" alt="' + escapeHtml(item.alt) + '" width="' + escapeHtml(item.width) + '" height="' + escapeHtml(item.height) + '" loading="lazy" decoding="async" aria-hidden="' + (index === 0 ? "false" : "true") + '">';
+                var fitClass = item.fit === "contain" ? " project-media-frame-fit-contain" : "";
+                return '<img class="project-media-frame' + activeClass + fitClass + '" data-gallery-frame data-gallery-index="' + index + '" src="' + escapeHtml(item.url) + '" alt="' + escapeHtml(item.alt) + '" width="' + escapeHtml(item.width) + '" height="' + escapeHtml(item.height) + '" loading="lazy" decoding="async" aria-hidden="' + (index === 0 ? "false" : "true") + '">';
             }).join("");
             var controls = isGallery
                 ? '<div class="project-gallery-controls">' +
@@ -332,15 +335,12 @@
         }
 
         var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-        var supportsHover = window.matchMedia("(hover: hover)");
         var states = galleries.map(function (gallery, galleryIndex) {
             var frames = Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-frame]"));
             var card = gallery.closest(".project-card");
             var title = card && card.querySelector("h3") ? card.querySelector("h3").textContent : "project";
-            var requiresEngagement = Boolean(card && card.classList.contains("project-card-additional") && supportsHover.matches);
             return {
                 gallery: gallery,
-                card: card,
                 frames: frames,
                 dots: Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-dot]")),
                 count: gallery.querySelector("[data-gallery-count]"),
@@ -350,8 +350,6 @@
                 interval: 5200 + ((galleryIndex % 3) * 350),
                 timer: 0,
                 inViewport: false,
-                requiresEngagement: requiresEngagement,
-                engaged: !requiresEngagement,
                 paused: false
             };
         });
@@ -380,7 +378,7 @@
 
         function scheduleGallery(state) {
             clearGalleryTimer(state);
-            if (reduceMotion.matches || state.paused || !state.inViewport || !state.engaged || document.hidden) {
+            if (reduceMotion.matches || state.paused || !state.inViewport || document.hidden) {
                 return;
             }
 
@@ -404,38 +402,10 @@
             scheduleGallery(state);
         }
 
-        function setGalleryEngaged(state, engaged) {
-            if (state.engaged === engaged) {
-                return;
-            }
-            state.engaged = engaged;
-            if (engaged) {
-                showGalleryFrame(state, 0);
-            }
-            scheduleGallery(state);
-        }
-
         states.forEach(function (state) {
             if (state.toggle) {
                 state.toggle.addEventListener("click", function () {
                     setGalleryPaused(state, !state.paused);
-                });
-            }
-
-            if (state.requiresEngagement && state.card) {
-                state.card.addEventListener("mouseenter", function () {
-                    setGalleryEngaged(state, true);
-                });
-                state.card.addEventListener("mouseleave", function () {
-                    setGalleryEngaged(state, false);
-                });
-                state.card.addEventListener("focusin", function () {
-                    setGalleryEngaged(state, true);
-                });
-                state.card.addEventListener("focusout", function () {
-                    window.setTimeout(function () {
-                        setGalleryEngaged(state, state.card.contains(document.activeElement));
-                    }, 0);
                 });
             }
         });

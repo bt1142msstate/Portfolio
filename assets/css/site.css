@@ -1903,6 +1903,99 @@ body::before {
         #111;
 }
 
+.hero-workflow-card {
+    gap: 0.55rem;
+}
+
+.hero-workflow-heading {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.hero-workflow-heading .hero-focus-label {
+    margin: 0;
+}
+
+.hero-workflow-graphic {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 104px;
+    overflow: visible;
+}
+
+.hero-workflow-path,
+.hero-workflow-person,
+.hero-workflow-check,
+.hero-workflow-output-mark {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.hero-workflow-path {
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 2;
+}
+
+.hero-workflow-path-accent {
+    stroke: rgba(255, 255, 255, 0.78);
+    stroke-dasharray: 7 19;
+    animation: hero-workflow-flow 4.8s linear infinite;
+}
+
+.hero-workflow-path-delay {
+    animation-delay: -2.4s;
+}
+
+.hero-workflow-node,
+.hero-workflow-checkpoint {
+    fill: rgba(255, 255, 255, 0.055);
+    stroke: rgba(255, 255, 255, 0.58);
+    stroke-width: 2;
+}
+
+.hero-workflow-head {
+    fill: rgba(255, 255, 255, 0.84);
+}
+
+.hero-workflow-person,
+.hero-workflow-check {
+    stroke: rgba(255, 255, 255, 0.84);
+    stroke-width: 2.4;
+}
+
+.hero-workflow-spark {
+    fill: rgba(255, 255, 255, 0.9);
+}
+
+.hero-workflow-output {
+    fill: #fff;
+}
+
+.hero-workflow-output-mark {
+    stroke: #080808;
+    stroke-width: 4;
+}
+
+@keyframes hero-workflow-flow {
+    to {
+        stroke-dashoffset: -52;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-workflow-path-accent {
+        animation: none;
+    }
+}
+
 .hero-focus-index,
 .hero-focus-card > div {
     position: relative;
@@ -2166,6 +2259,15 @@ body::before {
     height: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+.project-media img.project-media-frame-fit-contain {
+    object-fit: contain;
+    object-position: center;
+    padding: clamp(0.55rem, 1vw, 0.9rem);
+    background:
+        radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.065), transparent 48%),
+        #070707;
 }
 
 .project-media-gallery {
@@ -2467,87 +2569,96 @@ body::before {
 .project-more-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0 clamp(2rem, 6vw, 6rem);
-    border-bottom: 1px solid var(--hairline);
+    gap: clamp(1.25rem, 2.5vw, 2rem);
 }
 
 .project-card-additional {
     position: relative;
     isolation: isolate;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     padding: 0;
-    border-top: 1px solid var(--hairline);
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
+    border: 0;
+    border-radius: 28px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018)),
+        #080808;
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.26),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.085);
 }
 
 .project-card-additional:hover {
-    transform: none;
-    box-shadow: none;
+    transform: translateY(-4px);
+    box-shadow:
+        0 26px 66px rgba(0, 0, 0, 0.38),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.13);
 }
 
 .project-card-additional .project-media {
-    position: absolute;
-    inset: 1px 0 1px auto;
-    z-index: 0;
+    position: relative;
+    inset: auto;
+    z-index: 1;
     display: block;
-    width: 44%;
+    width: 100%;
     min-height: 0;
-    aspect-ratio: auto;
-    background: #050505;
-    opacity: 0;
-    transform: translateX(10%) scale(1.02);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.82) 34%, #000 58%);
-    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.82) 34%, #000 58%);
-    pointer-events: none;
-    transition: opacity 0.34s ease, transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+    aspect-ratio: 16 / 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    background:
+        radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.07), transparent 48%),
+        #050505;
+    opacity: 1;
+    transform: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+    pointer-events: auto;
 }
 
 .project-card-additional .project-media img {
     object-fit: contain;
     object-position: center;
-    filter: saturate(0.82) contrast(1.04);
+    padding: clamp(0.55rem, 1vw, 0.85rem);
+    filter: saturate(0.9) contrast(1.035);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease;
 }
 
-.project-card-additional:hover .project-media,
-.project-card-additional:focus-within .project-media {
-    opacity: 0.82;
-    transform: translateX(0) scale(1);
+.project-card-additional:hover .project-media img {
+    filter: saturate(1) contrast(1.04);
+    transform: scale(1.018);
 }
 
 .project-card-additional .project-body {
     position: relative;
     z-index: 1;
-    max-width: 70%;
-    padding: 2rem 0;
+    width: 100%;
+    max-width: none;
+    padding: clamp(1.4rem, 2.5vw, 2rem);
 }
 
 .project-card-additional .project-header h3 {
-    font-size: 1.45rem;
+    font-size: clamp(1.45rem, 2.2vw, 1.85rem);
 }
 
 .project-card-additional .project-description {
     font-size: 0.94rem;
 }
 
-@media (hover: none) {
-    .project-card-additional .project-media {
-        position: relative;
-        inset: auto;
-        width: 100%;
-        margin-top: 1.35rem;
-        aspect-ratio: 16 / 10;
-        border-radius: 22px;
-        opacity: 1;
-        transform: none;
-        -webkit-mask-image: none;
-        mask-image: none;
+.project-card-additional .project-media-local-ai {
+    display: flex;
+}
+
+@media (min-width: 769px) {
+    .project-more-grid .project-card-additional.grid-row-fill {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
     }
 
-    .project-card-additional .project-body {
-        max-width: none;
-        padding-top: 1.4rem;
+    .project-more-grid .project-card-additional.grid-row-fill .project-media {
+        min-height: 360px;
+        aspect-ratio: auto;
+        border-right: 1px solid rgba(255, 255, 255, 0.075);
+        border-bottom: 0;
     }
 }
 

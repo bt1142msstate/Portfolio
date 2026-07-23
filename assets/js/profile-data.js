@@ -422,16 +422,16 @@ window.profileData = {
             liveUrl: "https://bt1142msstate.github.io/Query/",
             siteTier: "selected",
             siteOrder: 2,
-            mediaUrl: "/assets/images/projects/query.webp?v=20260722-visual-refine",
-            mediaAlt: "Query reporting interface showing six configured fields and populated library item results",
-            mediaWidth: 1200,
-            mediaHeight: 676,
+            mediaUrl: "/assets/images/projects/query-workspace.webp?v=20260722-project-visuals",
+            mediaAlt: "Query reporting workspace showing six configured fields and populated library item results",
+            mediaWidth: 1265,
+            mediaHeight: 712,
             mediaAlternates: [
                 {
-                    url: "/assets/images/projects/query-field-picker.webp?v=20260722-project-galleries",
-                    alt: "Query field picker with searchable report fields and an inline filter preview",
-                    width: 1280,
-                    height: 720
+                    url: "/assets/images/projects/query-field-builder.webp?v=20260722-project-visuals",
+                    alt: "Query field builder with searchable report fields and an inline filter preview",
+                    width: 1265,
+                    height: 712
                 }
             ],
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
@@ -480,20 +480,20 @@ window.profileData = {
             liveUrl: "https://afternoonadventure.org/",
             siteTier: "selected",
             siteOrder: 1,
-            mediaUrl: "/assets/images/projects/afternoon-adventure.webp?v=20260722-visual-refine",
-            mediaAlt: "Afternoon Adventure program overview showing educational service components",
+            mediaUrl: "/assets/images/projects/afternoon-adventure-dashboard.webp?v=20260722-project-visuals",
+            mediaAlt: "Afternoon Adventure staff dashboard for family messages, enrollment, attendance, time clock, traffic, backups, and staff access",
             mediaWidth: 800,
-            mediaHeight: 1100,
+            mediaHeight: 1000,
             mediaAlternates: [
                 {
-                    url: "/assets/images/projects/afternoon-adventure-resources.webp?v=20260722-project-galleries",
-                    alt: "Afternoon Adventure parent resources page with enrollment, program, closure, reading evaluation, and events links",
+                    url: "/assets/images/projects/afternoon-adventure-enrollment.webp?v=20260722-project-visuals",
+                    alt: "Afternoon Adventure mobile enrollment workflow with structured child information fields",
                     width: 800,
                     height: 1100
                 },
                 {
-                    url: "/assets/images/projects/afternoon-adventure-community.webp?v=20260722-project-galleries",
-                    alt: "Afternoon Adventure community updates page with a published post and chronological archive",
+                    url: "/assets/images/projects/afternoon-adventure-home.webp?v=20260722-project-visuals",
+                    alt: "Afternoon Adventure mobile homepage showing the learning center and program overview",
                     width: 800,
                     height: 1100
                 }
@@ -627,22 +627,18 @@ window.profileData = {
             liveUrl: "https://bt1142msstate.github.io/door-unlocker/",
             siteTier: "selected",
             siteOrder: 5,
-            mediaUrl: "/assets/images/projects/door-unlocker.webp?v=20260722-editorial",
-            mediaAlt: "Door Unlocker clean bench wiring map for the BLE controller, servo, power converter, and battery",
-            mediaWidth: 900,
-            mediaHeight: 1529,
+            mediaUrl: "/assets/images/projects/door-unlocker-overview.webp?v=20260722-project-visuals",
+            mediaAlt: "Door Unlocker technical overview showing the desk-test architecture and clean bench wiring system",
+            mediaWidth: 1265,
+            mediaHeight: 712,
+            mediaFit: "contain",
             mediaAlternates: [
                 {
-                    url: "/assets/images/projects/door-unlocker-enclosure.webp?v=20260722-project-galleries",
+                    url: "/assets/images/projects/door-unlocker-enclosure.webp?v=20260722-project-visuals",
                     alt: "Door Unlocker phase-two enclosure concept with actuator, controller, solar panel, and battery housing",
                     width: 900,
-                    height: 1350
-                },
-                {
-                    url: "/assets/images/projects/door-unlocker-component.webp?v=20260722-project-galleries",
-                    alt: "Door Unlocker hardware catalog detail for the high-torque servo actuator",
-                    width: 900,
-                    height: 1264
+                    height: 1350,
+                    fit: "contain"
                 }
             ],
             siteType: "Open-Source IoT Prototype | SwiftUI + BLE + nRF52840 Firmware",
