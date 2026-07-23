@@ -1,5 +1,5 @@
 (function () {
-    var projectMediaVersion = "20260722-responsive-art";
+    var projectMediaVersion = "20260723-feature-gallery";
 
     function escapeHtml(value) {
         return String(value)
@@ -204,6 +204,94 @@
         });
     }
 
+    var activeProjectMediaTrigger = null;
+
+    function openProjectMediaOverlay(trigger) {
+        var overlay = document.getElementById("project-media-overlay");
+        var panel = document.getElementById("project-media-overlay-panel");
+        var image = document.getElementById("project-media-overlay-image");
+        var project = document.getElementById("project-media-overlay-project");
+        var title = document.getElementById("project-media-overlay-title");
+        var description = document.getElementById("project-media-overlay-description");
+        var sourceImage = trigger ? trigger.querySelector("img") : null;
+
+        if (!overlay || !panel || !image || !project || !title || !description || !trigger || !sourceImage) {
+            return;
+        }
+
+        activeProjectMediaTrigger = trigger;
+        image.src = trigger.getAttribute("data-project-media-source") || sourceImage.currentSrc || sourceImage.src;
+        image.alt = sourceImage.alt;
+        project.textContent = trigger.getAttribute("data-project-media-project") || "Project feature";
+        title.textContent = trigger.getAttribute("data-project-media-title") || sourceImage.alt;
+        description.textContent = trigger.getAttribute("data-project-media-description") || "";
+
+        overlay.hidden = false;
+        overlay.classList.add("is-open");
+        document.body.classList.add("project-media-overlay-open");
+        document.dispatchEvent(new Event("projectmedia:opened"));
+        window.requestAnimationFrame(function () {
+            panel.focus({ preventScroll: true });
+        });
+    }
+
+    function closeProjectMediaOverlay() {
+        var overlay = document.getElementById("project-media-overlay");
+        var image = document.getElementById("project-media-overlay-image");
+        if (!overlay || overlay.hidden) {
+            return;
+        }
+
+        overlay.classList.remove("is-open");
+        overlay.hidden = true;
+        document.body.classList.remove("project-media-overlay-open");
+        document.dispatchEvent(new Event("projectmedia:closed"));
+        if (image) {
+            image.removeAttribute("src");
+            image.alt = "";
+        }
+        if (activeProjectMediaTrigger) {
+            activeProjectMediaTrigger.focus({ preventScroll: true });
+        }
+        activeProjectMediaTrigger = null;
+    }
+
+    function setupProjectMediaOverlay() {
+        var overlay = document.getElementById("project-media-overlay");
+        if (!overlay || overlay.dataset.ready === "true") {
+            return;
+        }
+
+        overlay.dataset.ready = "true";
+        document.addEventListener("click", function (event) {
+            var mediaTrigger = event.target.closest("[data-project-media-trigger]");
+            if (mediaTrigger) {
+                event.preventDefault();
+                openProjectMediaOverlay(mediaTrigger);
+                return;
+            }
+
+            if (event.target.closest("[data-project-media-close]")) {
+                closeProjectMediaOverlay();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeProjectMediaOverlay();
+                return;
+            }
+
+            if (event.key === "Tab" && !overlay.hidden) {
+                var closeButton = overlay.querySelector("[data-project-media-close]");
+                if (closeButton) {
+                    event.preventDefault();
+                    closeButton.focus();
+                }
+            }
+        });
+    }
+
     function getGridColumnCount(grid) {
         var columns = window.getComputedStyle(grid).gridTemplateColumns;
         if (!columns || columns === "none") {
@@ -284,6 +372,8 @@
             media.push({
                 url: project.mediaUrl,
                 alt: project.mediaAlt || (project.title + " interface"),
+                title: project.mediaTitle || project.mediaAlt || (project.title + " interface"),
+                description: project.mediaDescription || project.siteDescription || "",
                 width: project.mediaWidth || 1200,
                 height: project.mediaHeight || 750,
                 fit: project.mediaFit || "cover",
@@ -296,6 +386,8 @@
                 media.push({
                     url: item.url,
                     alt: item.alt || (project.title + " project view"),
+                    title: item.title || item.alt || (project.title + " project view"),
+                    description: item.description || project.siteDescription || "",
                     width: item.width || 1200,
                     height: item.height || 750,
                     fit: item.fit || "cover",
@@ -322,11 +414,18 @@
             desktopSource = '<source media="(min-width: 1101px)" type="image/webp" srcset="' + escapeHtml(item.variants.wide) + '">';
         }
 
-        return '<picture class="project-media-frame project-media-responsive' + activeClass + fitClass + '" data-gallery-frame data-gallery-index="' + index + '" aria-hidden="' + (index === 0 ? "false" : "true") + '">' +
+        return '<button class="project-media-frame project-media-responsive' + activeClass + fitClass + '" type="button" data-gallery-frame data-gallery-index="' + index + '" data-project-media-trigger data-project-media-source="' + escapeHtml(item.url) + '" data-project-media-project="' + escapeHtml(project.title) + '" data-project-media-title="' + escapeHtml(item.title) + '" data-project-media-description="' + escapeHtml(item.description) + '" aria-hidden="' + (index === 0 ? "false" : "true") + '" aria-haspopup="dialog" aria-label="View feature details: ' + escapeHtml(item.title) + '" tabindex="' + (index === 0 ? "0" : "-1") + '">' +
+            '<picture class="project-media-picture">' +
             desktopSource +
             '<source media="(min-width: 481px)" type="image/webp" srcset="' + escapeHtml(item.variants.standard) + '">' +
             '<img class="project-media-frame-image" src="' + escapeHtml(item.variants.square) + '" alt="' + escapeHtml(item.alt) + '" width="960" height="960" loading="lazy" decoding="async">' +
-            "</picture>";
+            "</picture>" +
+            '<span class="project-media-view-cue" aria-hidden="true">' +
+            '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg>' +
+            "<span>View feature</span>" +
+            "</span>" +
+            '<span class="project-media-frame-summary">' + escapeHtml(item.title + ". " + item.description) + "</span>" +
+            "</button>";
     }
 
     function renderProjectVisual(project, tier) {
@@ -344,8 +443,8 @@
             var controls = isGallery
                 ? '<div class="project-gallery-controls">' +
                     '<span class="project-gallery-count" data-gallery-count aria-hidden="true">1 / ' + media.length + "</span>" +
-                    '<span class="project-gallery-dots" aria-hidden="true">' + media.map(function (_item, index) {
-                        return '<span class="project-gallery-dot' + (index === 0 ? " is-active" : "") + '" data-gallery-dot="' + index + '"></span>';
+                    '<span class="project-gallery-dots">' + media.map(function (item, index) {
+                        return '<button class="project-gallery-dot' + (index === 0 ? " is-active" : "") + '" type="button" data-gallery-dot="' + index + '" aria-label="Show image ' + (index + 1) + " of " + media.length + ": " + escapeHtml(item.title) + '"' + (index === 0 ? ' aria-current="true"' : "") + "></button>";
                     }).join("") + "</span>" +
                     '<button class="project-gallery-toggle" type="button" data-gallery-toggle aria-pressed="false" aria-label="Pause image rotation for ' + escapeHtml(project.title) + '">' +
                     '<svg class="project-gallery-pause-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg>' +
@@ -411,9 +510,16 @@
                 var isActive = index === nextIndex;
                 frame.classList.toggle("is-active", isActive);
                 frame.setAttribute("aria-hidden", isActive ? "false" : "true");
+                frame.tabIndex = isActive ? 0 : -1;
             });
             state.dots.forEach(function (dot, index) {
-                dot.classList.toggle("is-active", index === nextIndex);
+                var isActive = index === nextIndex;
+                dot.classList.toggle("is-active", isActive);
+                if (isActive) {
+                    dot.setAttribute("aria-current", "true");
+                } else {
+                    dot.removeAttribute("aria-current");
+                }
             });
             if (state.count) {
                 state.count.textContent = (nextIndex + 1) + " / " + state.frames.length;
@@ -422,11 +528,15 @@
 
         function scheduleGallery(state) {
             clearGalleryTimer(state);
-            if (reduceMotion.matches || state.paused || !state.inViewport || document.hidden) {
+            if (reduceMotion.matches || state.paused || !state.inViewport || document.hidden || document.body.classList.contains("project-media-overlay-open")) {
                 return;
             }
 
             state.timer = window.setTimeout(function () {
+                if (document.body.classList.contains("project-media-overlay-open")) {
+                    scheduleGallery(state);
+                    return;
+                }
                 var nextIndex = (state.index + 1) % state.frames.length;
                 var nextFrame = state.frames[nextIndex];
                 var nextImage = nextFrame.matches("img") ? nextFrame : nextFrame.querySelector("img");
@@ -448,6 +558,12 @@
         }
 
         states.forEach(function (state) {
+            state.dots.forEach(function (dot, index) {
+                dot.addEventListener("click", function () {
+                    showGalleryFrame(state, index);
+                    setGalleryPaused(state, true);
+                });
+            });
             if (state.toggle) {
                 state.toggle.addEventListener("click", function () {
                     setGalleryPaused(state, !state.paused);
@@ -480,6 +596,12 @@
         }
 
         document.addEventListener("visibilitychange", function () {
+            states.forEach(scheduleGallery);
+        });
+        document.addEventListener("projectmedia:opened", function () {
+            states.forEach(clearGalleryTimer);
+        });
+        document.addEventListener("projectmedia:closed", function () {
             states.forEach(scheduleGallery);
         });
 
@@ -587,14 +709,18 @@
                 if (programmingLanguages.length) {
                     item.programmingLanguage = programmingLanguages;
                 }
-                if (project.mediaUrl) {
-                    item.image = {
-                        "@type": "ImageObject",
-                        contentUrl: getAbsoluteSiteUrl(project.mediaUrl),
-                        caption: project.mediaAlt || (project.title + " interface"),
-                        width: project.mediaWidth || 1200,
-                        height: project.mediaHeight || 750
-                    };
+                var projectMedia = getProjectMedia(project);
+                if (projectMedia.length) {
+                    item.image = projectMedia.map(function (mediaItem) {
+                        return {
+                            "@type": "ImageObject",
+                            contentUrl: getAbsoluteSiteUrl(mediaItem.url),
+                            caption: mediaItem.title,
+                            description: mediaItem.description,
+                            width: mediaItem.width,
+                            height: mediaItem.height
+                        };
+                    });
                 }
 
                 return {
@@ -691,6 +817,7 @@
             "</div>";
 
         setupProjectGalleries();
+        setupProjectMediaOverlay();
 
         educationGrid.innerHTML = data.education.map(function (item) {
             var inlineHonors = item.inlineHonors ? '<p class="education-honors">' + escapeHtml(item.inlineHonors) + "</p>" : "";
