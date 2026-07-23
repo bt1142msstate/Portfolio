@@ -2137,12 +2137,14 @@ body::before {
 
 @keyframes hero-workflow-delivery-activate {
     0%,
-    84%,
+    10%,
+    34%,
     100% {
         filter: none;
     }
 
-    93% {
+    16%,
+    22% {
         filter:
             drop-shadow(0 0 4px rgba(255, 255, 255, 0.92))
             drop-shadow(0 0 12px rgba(255, 255, 255, 0.52));
