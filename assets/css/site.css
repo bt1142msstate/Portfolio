@@ -1951,7 +1951,7 @@ body::before {
     stroke-dashoffset: 0.18;
     opacity: 0;
     filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.82));
-    animation-duration: 5.6s;
+    animation-duration: 7.5s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
@@ -1982,19 +1982,24 @@ body::before {
 }
 
 .hero-workflow-chatgpt-mark,
+.hero-workflow-grok-mark,
 .hero-workflow-spark {
     opacity: 0.38;
     transform-box: fill-box;
     transform-origin: center;
-    animation: hero-workflow-logo-activate 5.6s ease-in-out infinite both;
+    animation: hero-workflow-logo-activate 7.5s ease-in-out infinite both;
 }
 
 .hero-workflow-spark {
     fill: #fff;
 }
 
+.hero-workflow-branch-grok {
+    animation-delay: 2.5s;
+}
+
 .hero-workflow-branch-chatgpt {
-    animation-delay: 2.8s;
+    animation-delay: 5s;
 }
 
 .hero-workflow-output {
@@ -2012,7 +2017,7 @@ body::before {
 }
 
 .hero-workflow-delivery {
-    animation: hero-workflow-delivery-activate 2.8s ease-in-out infinite;
+    animation: hero-workflow-delivery-activate 2.5s ease-in-out infinite;
 }
 
 @keyframes hero-workflow-surge-in {
@@ -2021,16 +2026,16 @@ body::before {
         stroke-dashoffset: 0.18;
     }
 
-    3% {
+    2% {
         opacity: 1;
     }
 
-    19% {
+    12% {
         opacity: 1;
         stroke-dashoffset: -0.82;
     }
 
-    22%,
+    14%,
     100% {
         opacity: 0;
         stroke-dashoffset: -0.82;
@@ -2039,21 +2044,21 @@ body::before {
 
 @keyframes hero-workflow-surge-out {
     0%,
-    25% {
+    18% {
         opacity: 0;
         stroke-dashoffset: 0.18;
     }
 
-    28% {
+    20% {
         opacity: 1;
     }
 
-    43% {
+    27% {
         opacity: 1;
         stroke-dashoffset: -0.82;
     }
 
-    46%,
+    29%,
     100% {
         opacity: 0;
         stroke-dashoffset: -0.82;
@@ -2062,16 +2067,16 @@ body::before {
 
 @keyframes hero-workflow-logo-activate {
     0%,
-    16%,
-    31%,
+    10%,
+    20%,
     100% {
         opacity: 0.38;
         filter: none;
         transform: scale(0.94);
     }
 
-    20%,
-    26% {
+    12%,
+    17% {
         opacity: 1;
         filter:
             drop-shadow(0 0 3px rgba(255, 255, 255, 0.98))
@@ -2082,21 +2087,21 @@ body::before {
 
 @keyframes hero-workflow-surge-entry {
     0%,
-    41% {
+    26% {
         opacity: 0;
         stroke-dashoffset: 0.18;
     }
 
-    44% {
+    28% {
         opacity: 1;
     }
 
-    49% {
+    31% {
         opacity: 1;
         stroke-dashoffset: -0.82;
     }
 
-    52%,
+    33%,
     100% {
         opacity: 0;
         stroke-dashoffset: -0.82;
@@ -2105,12 +2110,12 @@ body::before {
 
 @keyframes hero-workflow-delivery-activate {
     0%,
-    86%,
+    84%,
     100% {
         filter: none;
     }
 
-    96% {
+    93% {
         filter:
             drop-shadow(0 0 4px rgba(255, 255, 255, 0.92))
             drop-shadow(0 0 12px rgba(255, 255, 255, 0.52));
@@ -2123,6 +2128,7 @@ body::before {
     }
 
     .hero-workflow-chatgpt-mark,
+    .hero-workflow-grok-mark,
     .hero-workflow-spark,
     .hero-workflow-delivery {
         animation: none;
@@ -2131,6 +2137,7 @@ body::before {
     }
 
     .hero-workflow-chatgpt-mark,
+    .hero-workflow-grok-mark,
     .hero-workflow-spark {
         opacity: 0.9;
     }

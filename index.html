@@ -154,7 +154,7 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="./assets/css/site.css?v=20260722-workflow-check-entry">
+    <link rel="stylesheet" href="./assets/css/site.css?v=20260723-workflow-grok">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -269,28 +269,34 @@
                             <p class="hero-focus-label">How I work</p>
                             <span class="hero-focus-index">02</span>
                         </div>
-                        <svg class="hero-workflow-graphic" viewBox="0 0 220 104" role="img" aria-label="Brandon's illustrated avatar, Gemini-assisted acceleration, and ChatGPT-assisted review converging into tested delivery">
+                        <svg class="hero-workflow-graphic" viewBox="0 0 220 104" role="img" aria-label="Brandon's illustrated avatar with Gemini, Grok, and ChatGPT-assisted workflows converging into tested delivery">
                             <defs>
                                 <clipPath id="hero-workflow-avatar-clip">
                                     <circle cx="31" cy="52" r="18"></circle>
                                 </clipPath>
                             </defs>
-                            <path class="hero-workflow-path" d="M45 52H82C94 52 95 27 104 27"></path>
+                            <path class="hero-workflow-path" d="M82 52C94 52 95 27 104 27"></path>
                             <path class="hero-workflow-path" d="M128 27H134C144 27 140 52 150 52"></path>
-                            <path class="hero-workflow-path" d="M45 52H82C94 52 95 75 104 75"></path>
+                            <path class="hero-workflow-path" d="M45 52H104"></path>
+                            <path class="hero-workflow-path" d="M128 52H150"></path>
+                            <path class="hero-workflow-path" d="M82 52C94 52 95 75 104 75"></path>
                             <path class="hero-workflow-path" d="M128 75H134C144 75 140 52 150 52"></path>
                             <path class="hero-workflow-surge hero-workflow-surge-in hero-workflow-branch-gemini" pathLength="1" d="M45 52H82C94 52 95 27 104 27"></path>
+                            <path class="hero-workflow-surge hero-workflow-surge-in hero-workflow-branch-grok" pathLength="1" d="M45 52H104"></path>
                             <path class="hero-workflow-surge hero-workflow-surge-in hero-workflow-branch-chatgpt" pathLength="1" d="M45 52H82C94 52 95 75 104 75"></path>
                             <circle class="hero-workflow-node" cx="31" cy="52" r="20"></circle>
                             <image class="hero-workflow-avatar" href="/assets/images/brandon-illustrated-profile-photo-square-480.webp?v=20260722-workflow" x="13" y="34" width="36" height="36" preserveAspectRatio="xMidYMid slice" clip-path="url(#hero-workflow-avatar-clip)"></image>
                             <path class="hero-workflow-spark hero-workflow-branch-gemini" d="m116 16 3.4 7.6 7.6 3.4-7.6 3.4-3.4 7.6-3.4-7.6-7.6-3.4 7.6-3.4Z"></path>
+                            <image class="hero-workflow-grok-mark hero-workflow-branch-grok" href="/assets/images/grok-logo-white.svg?v=20260723-workflow-grok" x="105" y="41" width="22" height="22" aria-hidden="true"></image>
                             <image class="hero-workflow-chatgpt-mark hero-workflow-branch-chatgpt" href="/assets/images/chatgpt-logo-white.svg?v=20260722-chatgpt-mark" x="105" y="64" width="22" height="22" aria-hidden="true"></image>
                             <g class="hero-workflow-delivery">
                                 <rect class="hero-workflow-output" x="150" y="24" width="60" height="56" rx="17"></rect>
                                 <path class="hero-workflow-output-connector" d="M150 52L168 53"></path>
                                 <path class="hero-workflow-surge hero-workflow-surge-out hero-workflow-branch-gemini" pathLength="1" d="M128 27H134C144 27 140 52 150 52"></path>
+                                <path class="hero-workflow-surge hero-workflow-surge-out hero-workflow-branch-grok" pathLength="1" d="M128 52H150"></path>
                                 <path class="hero-workflow-surge hero-workflow-surge-out hero-workflow-branch-chatgpt" pathLength="1" d="M128 75H134C144 75 140 52 150 52"></path>
                                 <path class="hero-workflow-surge hero-workflow-surge-entry hero-workflow-branch-gemini" pathLength="1" d="M150 52L168 53"></path>
+                                <path class="hero-workflow-surge hero-workflow-surge-entry hero-workflow-branch-grok" pathLength="1" d="M150 52L168 53"></path>
                                 <path class="hero-workflow-surge hero-workflow-surge-entry hero-workflow-branch-chatgpt" pathLength="1" d="M150 52L168 53"></path>
                                 <path class="hero-workflow-output-mark" d="m168 53 9 9 17-19"></path>
                             </g>
