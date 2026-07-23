@@ -1932,6 +1932,7 @@ body::before {
 
 .hero-workflow-path,
 .hero-workflow-surge,
+.hero-workflow-output-connector,
 .hero-workflow-output-mark {
     fill: none;
     stroke-linecap: round;
@@ -1964,6 +1965,12 @@ body::before {
     animation-name: hero-workflow-surge-out;
 }
 
+.hero-workflow-surge-entry {
+    stroke: #080808;
+    filter: none;
+    animation-name: hero-workflow-surge-entry;
+}
+
 .hero-workflow-node {
     fill: rgba(255, 255, 255, 0.055);
     stroke: rgba(255, 255, 255, 0.58);
@@ -1994,14 +2001,17 @@ body::before {
     fill: #fff;
 }
 
+.hero-workflow-output-connector {
+    stroke: rgba(8, 8, 8, 0.28);
+    stroke-width: 2.4;
+}
+
 .hero-workflow-output-mark {
     stroke: #080808;
     stroke-width: 4;
 }
 
 .hero-workflow-delivery {
-    transform-box: fill-box;
-    transform-origin: center;
     animation: hero-workflow-delivery-activate 2.8s ease-in-out infinite;
 }
 
@@ -2070,19 +2080,40 @@ body::before {
     }
 }
 
-@keyframes hero-workflow-delivery-activate {
+@keyframes hero-workflow-surge-entry {
     0%,
-    76%,
-    100% {
-        filter: none;
-        transform: scale(1);
+    41% {
+        opacity: 0;
+        stroke-dashoffset: 0.18;
     }
 
-    86% {
+    44% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+        stroke-dashoffset: -0.82;
+    }
+
+    52%,
+    100% {
+        opacity: 0;
+        stroke-dashoffset: -0.82;
+    }
+}
+
+@keyframes hero-workflow-delivery-activate {
+    0%,
+    86%,
+    100% {
+        filter: none;
+    }
+
+    96% {
         filter:
             drop-shadow(0 0 4px rgba(255, 255, 255, 0.92))
             drop-shadow(0 0 12px rgba(255, 255, 255, 0.52));
-        transform: scale(1.04);
     }
 }
 
