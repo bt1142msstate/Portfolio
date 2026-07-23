@@ -2168,6 +2168,100 @@ body::before {
     object-position: top;
 }
 
+.project-media-gallery {
+    isolation: isolate;
+}
+
+.project-media-gallery .project-media-frame {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-media-gallery .project-media-frame.is-active {
+    opacity: 1;
+}
+
+.project-gallery-controls {
+    position: absolute;
+    right: 0.85rem;
+    bottom: 0.85rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 2.25rem;
+    padding: 0.25rem 0.3rem 0.25rem 0.72rem;
+    border-radius: 999px;
+    background: rgba(5, 5, 5, 0.72);
+    color: rgba(255, 255, 255, 0.88);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.16),
+        0 10px 28px rgba(0, 0, 0, 0.28);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
+    backdrop-filter: blur(16px) saturate(130%);
+    pointer-events: auto;
+}
+
+.project-gallery-count {
+    font-size: 0.67rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.project-gallery-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.24rem;
+}
+
+.project-gallery-dot {
+    width: 0.28rem;
+    height: 0.28rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.32);
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.project-gallery-dot.is-active {
+    width: 0.75rem;
+    background: #fff;
+}
+
+.project-gallery-toggle {
+    display: inline-grid;
+    width: 1.75rem;
+    height: 1.75rem;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-gallery-toggle:hover,
+.project-gallery-toggle:focus-visible {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.project-gallery-toggle:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.project-gallery-play-icon,
+.project-media-gallery.is-paused .project-gallery-pause-icon {
+    display: none;
+}
+
+.project-media-gallery.is-paused .project-gallery-play-icon {
+    display: block;
+}
+
 .project-card-selected:first-child .project-media {
     min-height: 100%;
     aspect-ratio: auto;
@@ -2947,9 +3041,15 @@ body::before {
 
 @media (prefers-reduced-motion: reduce) {
     .project-card,
+    .project-media-gallery .project-media-frame,
+    .project-gallery-dot,
     .project-tag,
     .skill-pill,
     .btn {
         transition: none !important;
+    }
+
+    .project-gallery-controls {
+        display: none;
     }
 }

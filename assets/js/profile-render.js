@@ -255,11 +255,59 @@
         return project.liveUrl || (hasPublicRepository(project) ? project.githubUrl : "");
     }
 
-    function renderProjectVisual(project) {
+    function getProjectMedia(project) {
+        var media = [];
+
         if (project.mediaUrl) {
-            return '<figure class="project-media">' +
-                '<img src="' + escapeHtml(project.mediaUrl) + '" alt="' + escapeHtml(project.mediaAlt || (project.title + " interface")) + '" width="' + escapeHtml(project.mediaWidth || 1200) + '" height="' + escapeHtml(project.mediaHeight || 750) + '" loading="lazy" decoding="async">' +
-                "</figure>";
+            media.push({
+                url: project.mediaUrl,
+                alt: project.mediaAlt || (project.title + " interface"),
+                width: project.mediaWidth || 1200,
+                height: project.mediaHeight || 750
+            });
+        }
+
+        (project.mediaAlternates || []).forEach(function (item) {
+            if (item.url) {
+                media.push({
+                    url: item.url,
+                    alt: item.alt || (project.title + " project view"),
+                    width: item.width || 1200,
+                    height: item.height || 750
+                });
+            }
+        });
+
+        return media;
+    }
+
+    function renderProjectVisual(project) {
+        var media = getProjectMedia(project);
+
+        if (media.length) {
+            var isGallery = media.length > 1;
+            var galleryClass = isGallery ? " project-media-gallery" : "";
+            var galleryAttributes = isGallery
+                ? ' data-project-gallery role="group" aria-label="Rotating views of ' + escapeHtml(project.title) + '"'
+                : "";
+            var frames = media.map(function (item, index) {
+                var activeClass = index === 0 ? " is-active" : "";
+                return '<img class="project-media-frame' + activeClass + '" data-gallery-frame data-gallery-index="' + index + '" src="' + escapeHtml(item.url) + '" alt="' + escapeHtml(item.alt) + '" width="' + escapeHtml(item.width) + '" height="' + escapeHtml(item.height) + '" loading="lazy" decoding="async" aria-hidden="' + (index === 0 ? "false" : "true") + '">';
+            }).join("");
+            var controls = isGallery
+                ? '<div class="project-gallery-controls">' +
+                    '<span class="project-gallery-count" data-gallery-count aria-hidden="true">1 / ' + media.length + "</span>" +
+                    '<span class="project-gallery-dots" aria-hidden="true">' + media.map(function (_item, index) {
+                        return '<span class="project-gallery-dot' + (index === 0 ? " is-active" : "") + '" data-gallery-dot="' + index + '"></span>';
+                    }).join("") + "</span>" +
+                    '<button class="project-gallery-toggle" type="button" data-gallery-toggle aria-pressed="false" aria-label="Pause image rotation for ' + escapeHtml(project.title) + '">' +
+                    '<svg class="project-gallery-pause-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg>' +
+                    '<svg class="project-gallery-play-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2.5 1.2 10 6l-7.5 4.8z"/></svg>' +
+                    "</button>" +
+                    "</div>"
+                : "";
+
+            return '<figure class="project-media' + galleryClass + '"' + galleryAttributes + ">" + frames + controls + "</figure>";
         }
 
         if (project.visualVariant === "local-ai") {
@@ -275,6 +323,164 @@
         }
 
         return "";
+    }
+
+    function setupProjectGalleries() {
+        var galleries = Array.prototype.slice.call(document.querySelectorAll("[data-project-gallery]"));
+        if (!galleries.length) {
+            return;
+        }
+
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var supportsHover = window.matchMedia("(hover: hover)");
+        var states = galleries.map(function (gallery, galleryIndex) {
+            var frames = Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-frame]"));
+            var card = gallery.closest(".project-card");
+            var title = card && card.querySelector("h3") ? card.querySelector("h3").textContent : "project";
+            var requiresEngagement = Boolean(card && card.classList.contains("project-card-additional") && supportsHover.matches);
+            return {
+                gallery: gallery,
+                card: card,
+                frames: frames,
+                dots: Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-dot]")),
+                count: gallery.querySelector("[data-gallery-count]"),
+                toggle: gallery.querySelector("[data-gallery-toggle]"),
+                title: title,
+                index: 0,
+                interval: 5200 + ((galleryIndex % 3) * 350),
+                timer: 0,
+                inViewport: false,
+                requiresEngagement: requiresEngagement,
+                engaged: !requiresEngagement,
+                paused: false
+            };
+        });
+
+        function clearGalleryTimer(state) {
+            if (state.timer) {
+                window.clearTimeout(state.timer);
+                state.timer = 0;
+            }
+        }
+
+        function showGalleryFrame(state, nextIndex) {
+            state.index = nextIndex;
+            state.frames.forEach(function (frame, index) {
+                var isActive = index === nextIndex;
+                frame.classList.toggle("is-active", isActive);
+                frame.setAttribute("aria-hidden", isActive ? "false" : "true");
+            });
+            state.dots.forEach(function (dot, index) {
+                dot.classList.toggle("is-active", index === nextIndex);
+            });
+            if (state.count) {
+                state.count.textContent = (nextIndex + 1) + " / " + state.frames.length;
+            }
+        }
+
+        function scheduleGallery(state) {
+            clearGalleryTimer(state);
+            if (reduceMotion.matches || state.paused || !state.inViewport || !state.engaged || document.hidden) {
+                return;
+            }
+
+            state.timer = window.setTimeout(function () {
+                var nextIndex = (state.index + 1) % state.frames.length;
+                var nextFrame = state.frames[nextIndex];
+                if (nextFrame.complete && nextFrame.naturalWidth) {
+                    showGalleryFrame(state, nextIndex);
+                }
+                scheduleGallery(state);
+            }, state.interval);
+        }
+
+        function setGalleryPaused(state, paused) {
+            state.paused = paused;
+            state.gallery.classList.toggle("is-paused", paused);
+            if (state.toggle) {
+                state.toggle.setAttribute("aria-pressed", paused ? "true" : "false");
+                state.toggle.setAttribute("aria-label", (paused ? "Resume" : "Pause") + " image rotation for " + state.title);
+            }
+            scheduleGallery(state);
+        }
+
+        function setGalleryEngaged(state, engaged) {
+            if (state.engaged === engaged) {
+                return;
+            }
+            state.engaged = engaged;
+            if (engaged) {
+                showGalleryFrame(state, 0);
+            }
+            scheduleGallery(state);
+        }
+
+        states.forEach(function (state) {
+            if (state.toggle) {
+                state.toggle.addEventListener("click", function () {
+                    setGalleryPaused(state, !state.paused);
+                });
+            }
+
+            if (state.requiresEngagement && state.card) {
+                state.card.addEventListener("mouseenter", function () {
+                    setGalleryEngaged(state, true);
+                });
+                state.card.addEventListener("mouseleave", function () {
+                    setGalleryEngaged(state, false);
+                });
+                state.card.addEventListener("focusin", function () {
+                    setGalleryEngaged(state, true);
+                });
+                state.card.addEventListener("focusout", function () {
+                    window.setTimeout(function () {
+                        setGalleryEngaged(state, state.card.contains(document.activeElement));
+                    }, 0);
+                });
+            }
+        });
+
+        if ("IntersectionObserver" in window) {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    var state = states.find(function (candidate) {
+                        return candidate.gallery === entry.target;
+                    });
+                    if (!state) {
+                        return;
+                    }
+                    state.inViewport = entry.isIntersecting && entry.intersectionRatio > 0.12;
+                    scheduleGallery(state);
+                });
+            }, { threshold: [0, 0.12, 0.4] });
+
+            states.forEach(function (state) {
+                observer.observe(state.gallery);
+            });
+        } else {
+            states.forEach(function (state) {
+                state.inViewport = true;
+                scheduleGallery(state);
+            });
+        }
+
+        document.addEventListener("visibilitychange", function () {
+            states.forEach(scheduleGallery);
+        });
+
+        var handleMotionPreference = function () {
+            states.forEach(function (state) {
+                if (reduceMotion.matches) {
+                    showGalleryFrame(state, 0);
+                }
+                scheduleGallery(state);
+            });
+        };
+        if (reduceMotion.addEventListener) {
+            reduceMotion.addEventListener("change", handleMotionPreference);
+        } else if (reduceMotion.addListener) {
+            reduceMotion.addListener(handleMotionPreference);
+        }
     }
 
     function renderProjectActions(project) {
@@ -441,6 +647,8 @@
                 return renderProjectCard(data, project, "additional");
             }).join("") + "</div>" +
             "</div>";
+
+        setupProjectGalleries();
 
         educationGrid.innerHTML = data.education.map(function (item) {
             var inlineHonors = item.inlineHonors ? '<p class="education-honors">' + escapeHtml(item.inlineHonors) + "</p>" : "";

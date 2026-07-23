@@ -426,6 +426,14 @@ window.profileData = {
             mediaAlt: "Query reporting interface showing six configured fields and populated library item results",
             mediaWidth: 1200,
             mediaHeight: 676,
+            mediaAlternates: [
+                {
+                    url: "/assets/images/projects/query-field-picker.webp?v=20260722-project-galleries",
+                    alt: "Query field picker with searchable report fields and an inline filter preview",
+                    width: 1280,
+                    height: 720
+                }
+            ],
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
             siteDescription: "Browser-based reporting system for MSU Libraries with API-driven fields, configurable filters and forms, authenticated sessions, protected report history, a local demo backend, virtualized results, and custom Excel export.",
             caseStudy: true,
@@ -476,6 +484,20 @@ window.profileData = {
             mediaAlt: "Afternoon Adventure program overview showing educational service components",
             mediaWidth: 800,
             mediaHeight: 1100,
+            mediaAlternates: [
+                {
+                    url: "/assets/images/projects/afternoon-adventure-resources.webp?v=20260722-project-galleries",
+                    alt: "Afternoon Adventure parent resources page with enrollment, program, closure, reading evaluation, and events links",
+                    width: 800,
+                    height: 1100
+                },
+                {
+                    url: "/assets/images/projects/afternoon-adventure-community.webp?v=20260722-project-galleries",
+                    alt: "Afternoon Adventure community updates page with a published post and chronological archive",
+                    width: 800,
+                    height: 1100
+                }
+            ],
             siteType: "Live Nonprofit Website | Firebase-Backed Staff & Family Portal",
             siteDescription: "Paid production platform for a Mississippi afterschool and tutoring center, combining a crawlable public site with Firebase-backed family accounts, staff operations, attendance, enrollment, reporting, content publishing, and privacy controls.",
             caseStudy: true,
@@ -545,6 +567,14 @@ window.profileData = {
             mediaAlt: "TeslaCamViewer multi-camera playback and vehicle telemetry dashboard",
             mediaWidth: 1000,
             mediaHeight: 615,
+            mediaAlternates: [
+                {
+                    url: "/assets/images/projects/teslacam-overview.webp?v=20260722-project-galleries",
+                    alt: "TeslaCamViewer drive browser with six-camera playback layout and telemetry panels",
+                    width: 1200,
+                    height: 738
+                }
+            ],
             siteType: "Product-Style Desktop App | WinUI 3 Video + Telemetry Viewer",
             siteDescription: "Source-available Windows app for reviewing TeslaCam footage with exact-timed virtual stitched multi-camera playback, telemetry indexing, manual-driving timeline ranges, IN/OUT markers, MP4/ZIP export, local caching, preview installers, in-app update status, and Store-readiness documentation.",
             caseStudy: true,
@@ -568,6 +598,14 @@ window.profileData = {
             mediaAlt: "Mac Window Arranger resize workflow for a selected application",
             mediaWidth: 760,
             mediaHeight: 352,
+            mediaAlternates: [
+                {
+                    url: "/assets/images/projects/mac-window-arranger-layout.webp?v=20260722-project-galleries",
+                    alt: "Mac Window Arranger saved workspace and three-column layout builder",
+                    width: 760,
+                    height: 552
+                }
+            ],
             siteType: "Source-Available macOS Utility | SwiftUI Window Management",
             siteDescription: "Native macOS SwiftUI utility for resizing and arranging windows, saving layouts, reopening apps, restoring workspaces, checking GitHub releases, and installing direct-download updates with Mini Mode, AppKit, URL-scheme automation, reusable window-picking components, and Accessibility API integration.",
             siteHighlights: [
@@ -590,9 +628,23 @@ window.profileData = {
             siteTier: "selected",
             siteOrder: 5,
             mediaUrl: "/assets/images/projects/door-unlocker.webp?v=20260722-editorial",
-            mediaAlt: "Door Unlocker desktop control and firmware management interface",
+            mediaAlt: "Door Unlocker clean bench wiring map for the BLE controller, servo, power converter, and battery",
             mediaWidth: 900,
             mediaHeight: 1529,
+            mediaAlternates: [
+                {
+                    url: "/assets/images/projects/door-unlocker-enclosure.webp?v=20260722-project-galleries",
+                    alt: "Door Unlocker phase-two enclosure concept with actuator, controller, solar panel, and battery housing",
+                    width: 900,
+                    height: 1350
+                },
+                {
+                    url: "/assets/images/projects/door-unlocker-component.webp?v=20260722-project-galleries",
+                    alt: "Door Unlocker hardware catalog detail for the high-torque servo actuator",
+                    width: 900,
+                    height: 1264
+                }
+            ],
             siteType: "Open-Source IoT Prototype | SwiftUI + BLE + nRF52840 Firmware",
             siteDescription: "Open-source BLE actuator prototype spanning nRF52840 firmware, SwiftUI iPhone and Mac apps, signed commands, USB-gated pairing, Siri and widgets, and recoverable signed over-the-air firmware updates.",
             siteHighlights: [
