@@ -1952,8 +1952,7 @@ body::before {
     animation-delay: -2.4s;
 }
 
-.hero-workflow-node,
-.hero-workflow-checkpoint {
+.hero-workflow-node {
     fill: rgba(255, 255, 255, 0.055);
     stroke: rgba(255, 255, 255, 0.58);
     stroke-width: 2;
@@ -1963,7 +1962,7 @@ body::before {
     filter: saturate(0.92) contrast(1.04);
 }
 
-.hero-workflow-openai-mark {
+.hero-workflow-chatgpt-mark {
     opacity: 0.94;
 }
 
