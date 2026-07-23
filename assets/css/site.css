@@ -1931,6 +1931,7 @@ body::before {
 }
 
 .hero-workflow-path,
+.hero-workflow-surge,
 .hero-workflow-output-mark {
     fill: none;
     stroke-linecap: round;
@@ -1942,14 +1943,25 @@ body::before {
     stroke-width: 2;
 }
 
-.hero-workflow-path-accent {
-    stroke: rgba(255, 255, 255, 0.78);
-    stroke-dasharray: 7 19;
-    animation: hero-workflow-flow 4.8s linear infinite;
+.hero-workflow-surge {
+    stroke: rgba(255, 255, 255, 0.96);
+    stroke-width: 2.6;
+    stroke-dasharray: 0.18 1;
+    stroke-dashoffset: 0.18;
+    opacity: 0;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.82));
+    animation-duration: 5.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
 }
 
-.hero-workflow-path-delay {
-    animation-delay: -2.4s;
+.hero-workflow-surge-in {
+    animation-name: hero-workflow-surge-in;
+}
+
+.hero-workflow-surge-out {
+    animation-name: hero-workflow-surge-out;
 }
 
 .hero-workflow-node {
@@ -1962,12 +1974,20 @@ body::before {
     filter: saturate(0.92) contrast(1.04);
 }
 
-.hero-workflow-chatgpt-mark {
-    opacity: 0.94;
+.hero-workflow-chatgpt-mark,
+.hero-workflow-spark {
+    opacity: 0.38;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: hero-workflow-logo-activate 5.6s ease-in-out infinite both;
 }
 
 .hero-workflow-spark {
-    fill: rgba(255, 255, 255, 0.9);
+    fill: #fff;
+}
+
+.hero-workflow-branch-chatgpt {
+    animation-delay: 2.8s;
 }
 
 .hero-workflow-output {
@@ -1979,15 +1999,109 @@ body::before {
     stroke-width: 4;
 }
 
-@keyframes hero-workflow-flow {
-    to {
-        stroke-dashoffset: -52;
+.hero-workflow-delivery {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: hero-workflow-delivery-activate 2.8s ease-in-out infinite;
+}
+
+@keyframes hero-workflow-surge-in {
+    0% {
+        opacity: 0;
+        stroke-dashoffset: 0.18;
+    }
+
+    3% {
+        opacity: 1;
+    }
+
+    19% {
+        opacity: 1;
+        stroke-dashoffset: -0.82;
+    }
+
+    22%,
+    100% {
+        opacity: 0;
+        stroke-dashoffset: -0.82;
+    }
+}
+
+@keyframes hero-workflow-surge-out {
+    0%,
+    25% {
+        opacity: 0;
+        stroke-dashoffset: 0.18;
+    }
+
+    28% {
+        opacity: 1;
+    }
+
+    43% {
+        opacity: 1;
+        stroke-dashoffset: -0.82;
+    }
+
+    46%,
+    100% {
+        opacity: 0;
+        stroke-dashoffset: -0.82;
+    }
+}
+
+@keyframes hero-workflow-logo-activate {
+    0%,
+    16%,
+    31%,
+    100% {
+        opacity: 0.38;
+        filter: none;
+        transform: scale(0.94);
+    }
+
+    20%,
+    26% {
+        opacity: 1;
+        filter:
+            drop-shadow(0 0 3px rgba(255, 255, 255, 0.98))
+            drop-shadow(0 0 10px rgba(255, 255, 255, 0.76));
+        transform: scale(1.13);
+    }
+}
+
+@keyframes hero-workflow-delivery-activate {
+    0%,
+    76%,
+    100% {
+        filter: none;
+        transform: scale(1);
+    }
+
+    86% {
+        filter:
+            drop-shadow(0 0 4px rgba(255, 255, 255, 0.92))
+            drop-shadow(0 0 12px rgba(255, 255, 255, 0.52));
+        transform: scale(1.04);
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-workflow-path-accent {
+    .hero-workflow-surge {
+        display: none;
+    }
+
+    .hero-workflow-chatgpt-mark,
+    .hero-workflow-spark,
+    .hero-workflow-delivery {
         animation: none;
+        filter: none;
+        transform: none;
+    }
+
+    .hero-workflow-chatgpt-mark,
+    .hero-workflow-spark {
+        opacity: 0.9;
     }
 }
 
