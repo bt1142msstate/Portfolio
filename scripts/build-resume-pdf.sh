@@ -6,12 +6,20 @@ PORT="${PORT:-8765}"
 PDF_PATH="$ROOT_DIR/resume/brandon-temple-resume.pdf"
 CHROME="${CHROME:-/Applications/Google Chrome.app/Contents/MacOS/Google Chrome}"
 TMP_DIR="$(mktemp -d /tmp/portfolio-resume-pdf.XXXXXX)"
-TMP_PDF="$TMP_DIR/brandon-temple-resume.pdf"
+TMP_PDF="$TMP_DIR/brandon-temple-resume-raw.pdf"
+METADATA_PDF="$TMP_DIR/brandon-temple-resume.pdf"
 
 if [[ ! -x "$CHROME" ]]; then
     echo "Google Chrome was not found at: $CHROME" >&2
     exit 1
 fi
+
+for command in qpdf pdftotext pdfinfo; do
+    if ! command -v "$command" >/dev/null 2>&1; then
+        echo "Required PDF validation command was not found: $command" >&2
+        exit 1
+    fi
+done
 
 cleanup() {
     if [[ -n "${CHROME_PID:-}" ]]; then
@@ -81,10 +89,22 @@ if [[ ! -s "$TMP_PDF" ]]; then
     exit 1
 fi
 
-if strings "$TMP_PDF" | grep -E "127\\.0\\.0\\.1|localhost|^[0-9]+/[0-9]+/[0-9]+" >/dev/null; then
+node "$ROOT_DIR/scripts/set-pdf-metadata.mjs" "$TMP_PDF" "$METADATA_PDF"
+
+if strings "$METADATA_PDF" | grep -E "127\\.0\\.0\\.1|localhost|^[0-9]+/[0-9]+/[0-9]+" >/dev/null; then
     echo "PDF appears to contain browser headers or a local URL." >&2
     exit 1
 fi
 
-cp "$TMP_PDF" "$PDF_PATH"
+qpdf --check "$METADATA_PDF" >/dev/null
+if ! pdftotext "$METADATA_PDF" - | grep -F "Brandon Temple" >/dev/null; then
+    echo "PDF text extraction validation failed." >&2
+    exit 1
+fi
+if ! pdfinfo "$METADATA_PDF" | grep -E "^Author:[[:space:]]+Brandon Vashun Temple$" >/dev/null; then
+    echo "PDF author metadata validation failed." >&2
+    exit 1
+fi
+
+cp "$METADATA_PDF" "$PDF_PATH"
 echo "Generated $PDF_PATH"

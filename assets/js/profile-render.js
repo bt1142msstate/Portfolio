@@ -68,6 +68,13 @@
         return String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
     }
 
+    function getAbsoluteSiteUrl(value) {
+        if (/^https?:\/\//i.test(value)) {
+            return value;
+        }
+        return "https://brandontemple.com/" + String(value).replace(/^\/+/, "");
+    }
+
     function getSkillLink(data, label) {
         return data.site.skillLinks && data.site.skillLinks[label]
             ? data.site.skillLinks[label]
@@ -517,7 +524,7 @@
             : "";
         var tags = (project.siteTags || []).slice(0, isSelected ? 7 : 5);
 
-        return '<article class="' + projectClass + '">' +
+        return '<article class="' + projectClass + '" id="project-' + slugify(project.title) + '">' +
             renderProjectVisual(project, tier) +
             '<div class="project-body">' +
             '<div class="project-header">' +
@@ -540,6 +547,13 @@
         var script = existingScript || document.createElement("script");
         var featuredProjects = data.projects.filter(function (project) {
             return project.featuredOnSite;
+        }).sort(function (first, second) {
+            var firstTier = first.siteTier === "selected" ? 0 : 1;
+            var secondTier = second.siteTier === "selected" ? 0 : 1;
+            if (firstTier !== secondTier) {
+                return firstTier - secondTier;
+            }
+            return (first.siteOrder || 100) - (second.siteOrder || 100);
         });
         var structuredData = {
             "@context": "https://schema.org",
@@ -547,20 +561,40 @@
             "@id": "https://brandontemple.com/#software-projects",
             name: "Brandon Temple software projects",
             itemListElement: featuredProjects.map(function (project, index) {
+                var projectId = "project-" + slugify(project.title);
+                var projectUrl = getPublicProjectUrl(project) || ("https://brandontemple.com/#" + projectId);
                 var item = {
                     "@type": "SoftwareSourceCode",
-                    "@id": "https://brandontemple.com/#project-" + slugify(project.title),
+                    "@id": "https://brandontemple.com/#" + projectId,
                     name: project.title,
                     description: project.siteDescription,
-                    url: getPublicProjectUrl(project) || project.githubUrl,
-                    programmingLanguage: project.siteTags || [],
+                    url: projectUrl,
+                    keywords: project.siteTags || [],
+                    isPartOf: {
+                        "@id": "https://brandontemple.com/#webpage"
+                    },
                     author: {
                         "@id": "https://brandontemple.com/#brandon-temple"
                     }
                 };
+                var programmingLanguages = (project.siteTags || []).filter(function (tag) {
+                    return ["C#", "C++", "JavaScript", "Python", "PowerShell", "Shell", "Swift"].indexOf(tag) !== -1;
+                });
 
                 if (hasPublicRepository(project)) {
                     item.codeRepository = project.githubUrl;
+                }
+                if (programmingLanguages.length) {
+                    item.programmingLanguage = programmingLanguages;
+                }
+                if (project.mediaUrl) {
+                    item.image = {
+                        "@type": "ImageObject",
+                        contentUrl: getAbsoluteSiteUrl(project.mediaUrl),
+                        caption: project.mediaAlt || (project.title + " interface"),
+                        width: project.mediaWidth || 1200,
+                        height: project.mediaHeight || 750
+                    };
                 }
 
                 return {
