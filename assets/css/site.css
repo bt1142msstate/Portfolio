@@ -2169,6 +2169,9 @@ body::before {
 
 .hero-workflow-output {
     fill: #fff;
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: 0;
+    animation: hero-workflow-output-glow 2.5s ease-out 2.48s infinite both;
 }
 
 .hero-workflow-output-connector {
@@ -2182,7 +2185,10 @@ body::before {
 }
 
 .hero-workflow-delivery {
-    animation: hero-workflow-delivery-activate 2.5s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: hero-workflow-delivery-activate 2.5s cubic-bezier(0.2, 0.85, 0.32, 1.18) 2.48s infinite both;
+    will-change: filter, transform;
 }
 
 @keyframes hero-workflow-surge-in {
@@ -2298,17 +2304,49 @@ body::before {
 
 @keyframes hero-workflow-delivery-activate {
     0%,
-    10%,
-    34%,
     100% {
         filter: none;
+        transform: scale(1);
     }
 
-    16%,
-    22% {
+    4% {
         filter:
-            drop-shadow(0 0 4px rgba(255, 255, 255, 0.92))
-            drop-shadow(0 0 12px rgba(255, 255, 255, 0.52));
+            drop-shadow(0 0 5px rgba(255, 255, 255, 0.98))
+            drop-shadow(0 0 15px rgba(255, 255, 255, 0.72));
+        transform: scale(1.14);
+    }
+
+    13% {
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.48));
+        transform: scale(1.055);
+    }
+
+    24% {
+        filter: none;
+        transform: scale(1);
+    }
+}
+
+@keyframes hero-workflow-output-glow {
+    0%,
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+        stroke-width: 0;
+    }
+
+    4% {
+        stroke: rgba(255, 255, 255, 0.96);
+        stroke-width: 5;
+    }
+
+    13% {
+        stroke: rgba(255, 255, 255, 0.42);
+        stroke-width: 3;
+    }
+
+    24% {
+        stroke: rgba(255, 255, 255, 0);
+        stroke-width: 0;
     }
 }
 
@@ -2320,6 +2358,7 @@ body::before {
     .hero-workflow-chatgpt-mark,
     .hero-workflow-grok-mark,
     .hero-workflow-spark,
+    .hero-workflow-output,
     .hero-workflow-delivery {
         animation: none;
         filter: none;
