@@ -2171,7 +2171,7 @@ body::before {
     fill: #fff;
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0;
-    animation: hero-workflow-output-glow 2.5s ease-out 2.48s infinite both;
+    animation: hero-workflow-output-glow 2.5s ease-in-out 2.55s infinite both;
 }
 
 .hero-workflow-output-connector {
@@ -2187,7 +2187,7 @@ body::before {
 .hero-workflow-delivery {
     transform-box: fill-box;
     transform-origin: center;
-    animation: hero-workflow-delivery-activate 2.5s cubic-bezier(0.2, 0.85, 0.32, 1.18) 2.48s infinite both;
+    animation: hero-workflow-delivery-activate 2.5s ease-in-out 2.55s infinite both;
     will-change: filter, transform;
 }
 
@@ -2309,19 +2309,19 @@ body::before {
         transform: scale(1);
     }
 
-    4% {
+    18% {
         filter:
             drop-shadow(0 0 5px rgba(255, 255, 255, 0.98))
             drop-shadow(0 0 15px rgba(255, 255, 255, 0.72));
-        transform: scale(1.14);
+        transform: scale(1.13);
     }
 
-    13% {
+    34% {
         filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.48));
-        transform: scale(1.055);
+        transform: scale(1.07);
     }
 
-    24% {
+    54% {
         filter: none;
         transform: scale(1);
     }
@@ -2334,17 +2334,17 @@ body::before {
         stroke-width: 0;
     }
 
-    4% {
+    18% {
         stroke: rgba(255, 255, 255, 0.96);
         stroke-width: 5;
     }
 
-    13% {
+    34% {
         stroke: rgba(255, 255, 255, 0.42);
         stroke-width: 3;
     }
 
-    24% {
+    54% {
         stroke: rgba(255, 255, 255, 0);
         stroke-width: 0;
     }
