@@ -123,9 +123,9 @@ button:focus-visible {
     left: 0;
     right: 0;
     width: 100%;
-    background: var(--nav-bg);
-    -webkit-backdrop-filter: blur(18px) saturate(145%);
-    backdrop-filter: blur(18px) saturate(145%);
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     box-shadow: none;
     border: none;
     border-radius: 0;
@@ -1812,9 +1812,9 @@ body::before {
 
 .nav-container {
     padding: 1rem clamp(1.25rem, 4vw, 3rem);
-    background: linear-gradient(180deg, rgba(3, 3, 3, 0.84), rgba(3, 3, 3, 0.48));
-    -webkit-backdrop-filter: blur(22px) saturate(140%);
-    backdrop-filter: blur(22px) saturate(140%);
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
 }
 
 .nav-container.is-scrolled {
@@ -3397,7 +3397,11 @@ body::before {
         scroll-padding-top: 74px;
     }
 
-    .nav-container,
+    .nav-container {
+        padding: 0.85rem 1rem;
+        background: transparent;
+    }
+
     .nav-container.is-scrolled {
         padding: 0.85rem 1rem;
         background: rgba(3, 3, 3, 0.88);
