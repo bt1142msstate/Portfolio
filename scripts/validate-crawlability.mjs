@@ -122,7 +122,7 @@ assert(resumeHtml.includes('type="application/pdf" href="https://brandontemple.c
     "Afternoon Adventure Website",
     "Query",
     "MetaTable",
-    "Software Engineer (Data Systems) / Technology Coordinator",
+    "Technology &amp; Support Services Coordinator",
     "Master of Science in Software Engineering"
 ].forEach((text) => {
     assert(indexHtml.includes(text), `Homepage initial HTML is missing: ${text}.`);

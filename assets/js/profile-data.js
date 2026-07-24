@@ -323,7 +323,7 @@ window.profileData = {
     experience: {
         professional: [
             {
-                title: "Software Engineer (Data Systems) / Technology Coordinator",
+                title: "Technology & Support Services Coordinator",
                 organization: "MSU Libraries, Mississippi State University",
                 location: "Starkville, MS",
                 date: "Aug 2024 - Present",
