@@ -1,0 +1,876 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1536" height="888" version="1.1" viewBox="-32 -32 1577 911.1" role="img" aria-labelledby="logo-title logo-desc" preserveAspectRatio="xMidYMid meet" id="afternoon-adventure-kids-logo-editable-v10" inkscape:version="1.3-compatible">
+  <title id="logo-title">Afternoon Adventure Learning Center logo - editable vector</title>
+  <desc id="logo-desc">Cleaned cartoon illustration of five smiling children. This version keeps the final v9 artwork visually unchanged while organizing every visible vector shape into named, editable groups with unique path IDs, child/body-part classes, and color labels.</desc>
+  <metadata id="editability-metadata">
+  {
+  "source_file": "logo-cleaned-v9.svg",
+  "export_file": "logo-cleaned-v10-editable.svg",
+  "version": "v10-editable",
+  "edit_notes": [
+    "All visible paths are editable vector paths; no raster artwork is embedded.",
+    "Original paint order is preserved to avoid changing overlaps or facial details.",
+    "Every path and wrapper group has a unique ID and an Inkscape label.",
+    "Each path has data-child, data-part, class, and data-color-name attributes for easier selection/filtering.",
+    "Fills remain directly on each path for broad compatibility with Illustrator, Figma, Inkscape, and browser renderers."
+  ],
+  "children": [
+    "far-left-child",
+    "green-shirt-child",
+    "center-child",
+    "right-center-child",
+    "far-right-child"
+  ],
+  "color_palette": {
+    "#000000": "black",
+    "#F5D50C": "blonde-yellow",
+    "#37678A": "blue-pants",
+    "#FDEB02": "bright-yellow",
+    "#75B8EF": "light-blue",
+    "#03BB00": "green-shirt",
+    "#6FAED7": "soft-blue",
+    "#8E5D8D": "purple-pants",
+    "#D40000": "red-shirt",
+    "#646867": "gray-pants",
+    "#1B733E": "green-pants",
+    "#FBCC99": "warm-skin",
+    "#FAD8B9": "light-skin",
+    "#955520": "brown-skin",
+    "#8F6D51": "dark-warm-skin",
+    "#FAD7B9": "light-skin",
+    "#112BB5": "blue-pants",
+    "#916E06": "brown-hair",
+    "#A9B0AB": "warm-gray-shoe",
+    "#FAD7B8": "light-skin",
+    "#E9E9E7": "off-white-shoe",
+    "#616865": "dark-gray-shoe",
+    "#916F52": "dark-warm-skin",
+    "#FAD6B6": "light-skin",
+    "#94561F": "brown-skin",
+    "#FBD0A1": "peach-neck"
+  },
+  "path_manifest": [
+    {
+      "index": 1,
+      "path_id": "global-black-hair-and-main-outlines-compound-path",
+      "child": "global",
+      "part": "black hair and main outlines compound path",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 2,
+      "path_id": "center-child-blonde-hair-left-side-cleanup-fill",
+      "child": "center-child",
+      "part": "blonde hair left-side cleanup fill",
+      "fill": "#F5D50C",
+      "color_name": "blonde-yellow"
+    },
+    {
+      "index": 3,
+      "path_id": "center-child-blue-pants",
+      "child": "center-child",
+      "part": "blue pants",
+      "fill": "#37678A",
+      "color_name": "blue-pants"
+    },
+    {
+      "index": 4,
+      "path_id": "far-right-child-yellow-shirt-and-sleeve",
+      "child": "far-right-child",
+      "part": "yellow shirt and sleeve",
+      "fill": "#FDEB02",
+      "color_name": "bright-yellow"
+    },
+    {
+      "index": 5,
+      "path_id": "right-center-child-light-blue-shirt-and-arm",
+      "child": "right-center-child",
+      "part": "light blue shirt and arm",
+      "fill": "#75B8EF",
+      "color_name": "light-blue"
+    },
+    {
+      "index": 6,
+      "path_id": "green-shirt-child-green-shirt",
+      "child": "green-shirt-child",
+      "part": "green shirt",
+      "fill": "#03BB00",
+      "color_name": "green-shirt"
+    },
+    {
+      "index": 7,
+      "path_id": "far-left-child-light-blue-shirt",
+      "child": "far-left-child",
+      "part": "light blue shirt",
+      "fill": "#6FAED7",
+      "color_name": "soft-blue"
+    },
+    {
+      "index": 8,
+      "path_id": "right-center-child-purple-pants",
+      "child": "right-center-child",
+      "part": "purple pants",
+      "fill": "#8E5D8D",
+      "color_name": "purple-pants"
+    },
+    {
+      "index": 9,
+      "path_id": "center-child-red-shirt",
+      "child": "center-child",
+      "part": "red shirt",
+      "fill": "#D40000",
+      "color_name": "red-shirt"
+    },
+    {
+      "index": 10,
+      "path_id": "far-right-child-gray-pants",
+      "child": "far-right-child",
+      "part": "gray pants",
+      "fill": "#646867",
+      "color_name": "gray-pants"
+    },
+    {
+      "index": 11,
+      "path_id": "green-shirt-child-green-pants",
+      "child": "green-shirt-child",
+      "part": "green pants",
+      "fill": "#1B733E",
+      "color_name": "green-pants"
+    },
+    {
+      "index": 12,
+      "path_id": "green-shirt-child-face-and-skin-base",
+      "child": "green-shirt-child",
+      "part": "face and skin base",
+      "fill": "#FBCC99",
+      "color_name": "warm-skin"
+    },
+    {
+      "index": 13,
+      "path_id": "right-center-child-face-and-skin-base",
+      "child": "right-center-child",
+      "part": "face and skin base",
+      "fill": "#FAD8B9",
+      "color_name": "light-skin"
+    },
+    {
+      "index": 14,
+      "path_id": "far-right-child-face-and-skin-base",
+      "child": "far-right-child",
+      "part": "face and skin base",
+      "fill": "#955520",
+      "color_name": "brown-skin"
+    },
+    {
+      "index": 15,
+      "path_id": "far-left-child-face-and-skin-base",
+      "child": "far-left-child",
+      "part": "face and skin base",
+      "fill": "#8F6D51",
+      "color_name": "dark-warm-skin"
+    },
+    {
+      "index": 16,
+      "path_id": "center-child-face-and-skin-base",
+      "child": "center-child",
+      "part": "face and skin base",
+      "fill": "#FAD7B9",
+      "color_name": "light-skin"
+    },
+    {
+      "index": 17,
+      "path_id": "center-child-main-blonde-hair",
+      "child": "center-child",
+      "part": "main blonde hair",
+      "fill": "#F5D50C",
+      "color_name": "blonde-yellow"
+    },
+    {
+      "index": 18,
+      "path_id": "far-left-child-blue-pants",
+      "child": "far-left-child",
+      "part": "blue pants",
+      "fill": "#112BB5",
+      "color_name": "blue-pants"
+    },
+    {
+      "index": 19,
+      "path_id": "green-shirt-child-brown-hair",
+      "child": "green-shirt-child",
+      "part": "brown hair",
+      "fill": "#916E06",
+      "color_name": "brown-hair"
+    },
+    {
+      "index": 20,
+      "path_id": "green-shirt-child-raised-gray-shoe",
+      "child": "green-shirt-child",
+      "part": "raised gray shoe",
+      "fill": "#A9B0AB",
+      "color_name": "warm-gray-shoe"
+    },
+    {
+      "index": 21,
+      "path_id": "right-center-child-skin-colored-foot",
+      "child": "right-center-child",
+      "part": "skin-colored foot",
+      "fill": "#FAD7B8",
+      "color_name": "light-skin"
+    },
+    {
+      "index": 22,
+      "path_id": "center-child-left-white-shoe",
+      "child": "center-child",
+      "part": "left white shoe",
+      "fill": "#E9E9E7",
+      "color_name": "off-white-shoe"
+    },
+    {
+      "index": 23,
+      "path_id": "center-child-right-white-shoe",
+      "child": "center-child",
+      "part": "right white shoe",
+      "fill": "#E9E9E7",
+      "color_name": "off-white-shoe"
+    },
+    {
+      "index": 24,
+      "path_id": "far-left-child-left-gray-shoe",
+      "child": "far-left-child",
+      "part": "left gray shoe",
+      "fill": "#616865",
+      "color_name": "dark-gray-shoe"
+    },
+    {
+      "index": 25,
+      "path_id": "green-shirt-child-standing-gray-shoe",
+      "child": "green-shirt-child",
+      "part": "standing gray shoe",
+      "fill": "#A9B0AB",
+      "color_name": "warm-gray-shoe"
+    },
+    {
+      "index": 26,
+      "path_id": "far-left-child-left-hand",
+      "child": "far-left-child",
+      "part": "left hand",
+      "fill": "#916F52",
+      "color_name": "dark-warm-skin"
+    },
+    {
+      "index": 27,
+      "path_id": "right-center-child-skin-colored-foot-and-leg-detail",
+      "child": "right-center-child",
+      "part": "skin-colored foot and leg detail",
+      "fill": "#FAD6B6",
+      "color_name": "light-skin"
+    },
+    {
+      "index": 28,
+      "path_id": "far-right-child-right-hand-skin-fill",
+      "child": "far-right-child",
+      "part": "right hand skin fill",
+      "fill": "#94561F",
+      "color_name": "brown-skin"
+    },
+    {
+      "index": 29,
+      "path_id": "far-left-child-right-gray-shoe",
+      "child": "far-left-child",
+      "part": "right gray shoe",
+      "fill": "#616865",
+      "color_name": "dark-gray-shoe"
+    },
+    {
+      "index": 30,
+      "path_id": "center-child-black-smile-and-face-outlines",
+      "child": "center-child",
+      "part": "black smile and face outlines",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 31,
+      "path_id": "far-right-child-black-smile-and-face-outlines",
+      "child": "far-right-child",
+      "part": "black smile and face outlines",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 32,
+      "path_id": "right-center-child-black-smile-and-face-outlines",
+      "child": "right-center-child",
+      "part": "black smile and face outlines",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 33,
+      "path_id": "green-shirt-child-black-smile-and-face-outlines",
+      "child": "green-shirt-child",
+      "part": "black smile and face outlines",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 34,
+      "path_id": "far-left-child-black-smile-and-face-outlines",
+      "child": "far-left-child",
+      "part": "black smile and face outlines",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 35,
+      "path_id": "center-child-red-collar-base",
+      "child": "center-child",
+      "part": "red collar base",
+      "fill": "#D40000",
+      "color_name": "red-shirt"
+    },
+    {
+      "index": 36,
+      "path_id": "far-right-child-solid-mouth-interior",
+      "child": "far-right-child",
+      "part": "solid mouth interior",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 37,
+      "path_id": "right-center-child-solid-mouth-interior",
+      "child": "right-center-child",
+      "part": "solid mouth interior",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 38,
+      "path_id": "center-child-solid-mouth-interior",
+      "child": "center-child",
+      "part": "solid mouth interior",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 39,
+      "path_id": "far-left-child-blue-collar-base",
+      "child": "far-left-child",
+      "part": "blue collar base",
+      "fill": "#6FAED7",
+      "color_name": "soft-blue"
+    },
+    {
+      "index": 40,
+      "path_id": "far-left-child-solid-mouth-interior",
+      "child": "far-left-child",
+      "part": "solid mouth interior",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 41,
+      "path_id": "green-shirt-child-solid-mouth-interior",
+      "child": "green-shirt-child",
+      "part": "solid mouth interior",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 42,
+      "path_id": "far-left-child-neck-skin-fill",
+      "child": "far-left-child",
+      "part": "neck skin fill",
+      "fill": "#8F6D51",
+      "color_name": "dark-warm-skin"
+    },
+    {
+      "index": 43,
+      "path_id": "center-child-neck-skin-fill",
+      "child": "center-child",
+      "part": "neck skin fill",
+      "fill": "#FBD0A1",
+      "color_name": "peach-neck"
+    },
+    {
+      "index": 44,
+      "path_id": "far-right-child-neck-skin-fill",
+      "child": "far-right-child",
+      "part": "neck skin fill",
+      "fill": "#955520",
+      "color_name": "brown-skin"
+    },
+    {
+      "index": 45,
+      "path_id": "far-right-child-left-eye-and-brow-detail",
+      "child": "far-right-child",
+      "part": "left eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 46,
+      "path_id": "far-right-child-right-eye-and-brow-detail",
+      "child": "far-right-child",
+      "part": "right eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 47,
+      "path_id": "far-left-child-eye-and-brow-detail",
+      "child": "far-left-child",
+      "part": "eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 48,
+      "path_id": "green-shirt-child-left-eye-and-brow-detail",
+      "child": "green-shirt-child",
+      "part": "left eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 49,
+      "path_id": "right-center-child-eye-and-brow-detail",
+      "child": "right-center-child",
+      "part": "eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 50,
+      "path_id": "center-child-left-ear-hidden-under-hair-fill",
+      "child": "center-child",
+      "part": "left ear hidden under hair fill",
+      "fill": "#F5D50C",
+      "color_name": "blonde-yellow"
+    },
+    {
+      "index": 51,
+      "path_id": "center-child-left-ear-outline-cover-under-hair",
+      "child": "center-child",
+      "part": "left ear outline cover under hair",
+      "fill": "#F5D50C",
+      "color_name": "blonde-yellow"
+    },
+    {
+      "index": 52,
+      "path_id": "green-shirt-child-right-eye-and-brow-detail",
+      "child": "green-shirt-child",
+      "part": "right eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 53,
+      "path_id": "right-center-child-second-eye-and-brow-detail",
+      "child": "right-center-child",
+      "part": "second eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 54,
+      "path_id": "center-child-left-eye-and-brow-detail",
+      "child": "center-child",
+      "part": "left eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 55,
+      "path_id": "center-child-right-eye-and-brow-detail",
+      "child": "center-child",
+      "part": "right eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 56,
+      "path_id": "center-child-left-blonde-hair-side-fill",
+      "child": "center-child",
+      "part": "left blonde hair side fill",
+      "fill": "#FDEB02",
+      "color_name": "bright-yellow"
+    },
+    {
+      "index": 57,
+      "path_id": "green-shirt-child-ear-and-skin-cleanup-fill",
+      "child": "green-shirt-child",
+      "part": "ear and skin cleanup fill",
+      "fill": "#FBCC99",
+      "color_name": "warm-skin"
+    },
+    {
+      "index": 58,
+      "path_id": "far-left-child-second-eye-and-brow-detail",
+      "child": "far-left-child",
+      "part": "second eye and brow detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 59,
+      "path_id": "far-right-child-neck-and-face-cleanup-fill",
+      "child": "far-right-child",
+      "part": "neck and face cleanup fill",
+      "fill": "#955520",
+      "color_name": "brown-skin"
+    },
+    {
+      "index": 60,
+      "path_id": "center-child-right-ear-hidden-under-hair-base",
+      "child": "center-child",
+      "part": "right ear hidden under hair base",
+      "fill": "#F5D50C",
+      "color_name": "blonde-yellow"
+    },
+    {
+      "index": 61,
+      "path_id": "far-right-child-hand-outline-and-finger-detail",
+      "child": "far-right-child",
+      "part": "hand outline and finger detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 62,
+      "path_id": "far-right-child-face-detail-near-cheek",
+      "child": "far-right-child",
+      "part": "face detail near cheek",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 63,
+      "path_id": "center-child-right-ear-hidden-under-hair-fill",
+      "child": "center-child",
+      "part": "right ear hidden under hair fill",
+      "fill": "#F5D50C",
+      "color_name": "blonde-yellow"
+    },
+    {
+      "index": 64,
+      "path_id": "right-center-child-skin-colored-foot-cleanup",
+      "child": "right-center-child",
+      "part": "skin-colored foot cleanup",
+      "fill": "#FAD8B9",
+      "color_name": "light-skin"
+    },
+    {
+      "index": 65,
+      "path_id": "center-child-small-eye-detail",
+      "child": "center-child",
+      "part": "small eye detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 66,
+      "path_id": "far-left-child-small-face-detail",
+      "child": "far-left-child",
+      "part": "small face detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 67,
+      "path_id": "far-right-child-small-eye-detail",
+      "child": "far-right-child",
+      "part": "small eye detail",
+      "fill": "#000000",
+      "color_name": "black"
+    },
+    {
+      "index": 68,
+      "path_id": "far-left-child-small-face-cleanup-detail",
+      "child": "far-left-child",
+      "part": "small face cleanup detail",
+      "fill": "#000000",
+      "color_name": "black"
+    }
+  ]
+}
+</metadata>
+  <g id="artwork-all-children" class="aa-kids-logo editable-vector-artwork" inkscape:groupmode="layer" inkscape:label="Artwork - all children" transform="translate(-8.261 -36)">
+    <g id="editable-parts-in-original-paint-order" class="paint-order-parts" inkscape:label="Editable parts - original paint order">
+      <g id="part-01-global-black-hair-and-main-outlines-compound-path" class="logo-part-group logo-part global black outline hair compound" inkscape:label="01 Global - Black Hair And Main Outlines Compound Path" data-child="global" data-part="black hair and main outlines compound path" data-original-index="1" data-color-name="black" data-fill="#000000">
+        <title>01 Global - Black Hair And Main Outlines Compound Path</title>
+        <path d="m465 36c12.14 0.929 6.65 17.38 19.62 3.391 8.682-4.529 18.91-2.32 27.38 1.609-5.128 13.11 15.01 3.97 21.9 9.379 14.87 1.123-1.414 10.31 16.1 11.62 7.906 5.151 17.56 12.14 17.74 18.13 28.34 20.51 33.72 58.23 35.95 90.77 1.805 10.15 17.26 16.13 15.31 0.9029-2.484-34.39 6.49-70.79 31.42-95.71 23.72-24.81 60.16-35.93 93.89-29.8 12.84 0.6331 24.15 8.281 35.41 12.57 27.66-3.789 58.6 0.641 78.29 22.26 25.58 28.83 28.13 70.78 19.98 106.9 11.46 6.386 23.47 0.2553 32-8 5.406-4.348 13.89-12.33 21.32-17.24 20.04-15.51 47.12-17.26 70.68-9.761 11.03 4.498 14.59-11.15 24.38-13.54 20.95-14.18 46.03-21.97 71.42-19.46 42.39 1.393 76.56 38.53 83.2 79 0.6186-6.688-3.725-18.38 4-26 10.47-3.59 2.946-14.79 12.71-21.17 14.65-1.119 0.8104-14.06 7.212-23.3 4.587-10.6 15.78-16.27 27.08-14.53-7.801-13.43 3.47-32 19.2-30 10.36 3.627 3.501-14.75 15.06-17.51 7.018-7.759 19.48 0.9873 23.74-9.489 10.59-6.015 25.05-5.976 34 3 6.53-2.687 11.92-11.47 21.67-11.9 13.15-1.128 30.04 3.81 36.33 15.64 14.35-12.03 41.44-11.01 50.64 7.876 4.416 6.88 18.61-1.113 26.32 5.379 7.702 5.66 12.77 15.61 9.04 25.01 13.69-5.182 30.74 6.303 27 21.67-5.882 10.56 16.97 8.616 15.43 21.33 4.766 9.731-10.94 20.83 2.782 24.81 13.41 8.482 9.791 32.67-4.943 37.19 6.084 7.485 8.235 24.76-4.267 28 10.74 14.91-1.65 37-19 38 3.853 12.3-8.301 17.57-14.29 24.22-2.286 12.55-15.18 17.61-26.71 15.78-5.213 18.49-30.04 24.23-46.58 17.81-8.709 1.509-17.97 8.899-28.5 7.342-13.34 0.6957-19.54 1.421-4.216 8.015 23.76 18.44 26.35 51.13 37.24 77.31 7.942 23.82 16.6 48.09 33.06 67.53 14.46-8.941 33.48-11.66 49.39-5.96 11.19 3.794 11.43 19.98 0.036 23.43-17.23 4.525 3.904 11.61 9.853 17.49 8.294 5.627 24.29 14.66 16.34 26.08-7.736 2.236-1.372 18.02-14 18.71-9.593 1.777-14.85 12.97-26.08 11.46-25.04 5.014-45.4-13.25-63.05-28.08-27.23-14.22-41.08-43.81-55.75-69.38-6.386-11.18-11.2-23.15-16.75-34.76-2.63 30.92-2.674 62.18-5 93 6.643 49.04 13.69 98.25 27 146 18.7-22.54 62.31-12.1 66.22 17.72 3.165 35.86-7.839 73-28.46 102.3-6.046 7.896-10.14 12.48-18.23 18.52-18.76 12.26-49.06 18.42-64.39-2.083-9.469-11.68-2.212-28.29-6.456-40.62-20.16-19-28.49-47.03-38.77-72.1-8.913-24.84-16.38-50.2-22.91-75.77-16.12 50.36-26.33 102.5-38 154 14.86 20.02 27.94 48.49 15.04 72.44-14.97 22.62-47.23 22.75-70.57 15.23-19.05-6.583-40.07-19.77-42.47-41.67-23.34-5.237-34.76-29.17-46-48-34.1-21.46-57.93-55.25-81.96-86.86-18.64-26.15-34.13-54.3-50.04-82.14-7.39 48.04 0.3101 96.7 4.31 144.7-0.421 13.82 16.1 17.96 20.13 30.31 13.74 20.38 14.27 52.94-8.599 67.1-15.45 11.72-38.09 9.948-54.81 2.097-13.87-6.843-22.41-20.33-30.03-33.22-7.52 14.9-20.07 27.95-37.47 29.82-28.08 6.552-60.06-7.86-70.4-35.57-5.911-4.154-3.701-29.16-10.01-18.92-17.41 26.29-45.09 48.06-76.85 52.67-20.11 2.331-45.56-4.045-51.23-26.14-6.898-28.88 15.21-56.46 39.96-68.86 1.978-4.687-7.785-17.9-9.281-26.15-23.86-61.59-50.51-125.1-46.72-192.6 1.435-24.47-1.771-48.92 2.3-73.42 3.672-34.02 8.617-68.39 19.7-100.8-10.86 2.032-22.01 0.5476-33 1 3.124 58.56 4.885 117.2 8.802 175.7 3.775 72.05-21.54 142.1-17.8 214.2-0.793 11.42 8.257 20.62 8.937 32.16 6.211 21.99 8.413 52.63-14.51 65.63-19.71 10.74-44.22 8.959-64.95 2.444-19.94-6.994-28.2-29.1-25.48-48.77-0.4038-15.14 9.122-27.97 16.15-40.13 4.485-54.15 7.496-108.8 2.635-163-1.942-8.486-0.329-31.46-8.704-13.73-25.62 41.18-45.52 85.63-70.08 127.5 4.61 8.059 16.79 12.08 22.87 20.28 14.43 12.24 26.72 34.44 14 52.04-16.74 19.73-47.83 23.66-70.92 14.02-10.02-4.085-17.65-12.7-24.65-19.7-22.11-1.245-36.13-20.26-44.29-38.9-15.08-28.35-19.84-60.9-18.02-92.67 0.5164-17.36 5.73-34.36 15-49.07-3.835-8.172-9.106 14.9-10.98 20.6-8.836 37.68-12.12 76.56-15.35 115.1-2.59 31.27 8.692 65.23-7.655 94.18-11.08 19.68-34.72 26.73-56.08 24.16-24.25-0.8907-45.08-23.05-41.94-47.67-0.7493-24.93 13.12-46.96 24.28-68.05 9.124-51.95 16.95-104.6 12.72-157.5 5e-3 -11.94-1.881-25.24 7-34.8-0.1037-33.52-9.357-66.08-14-99-30.67 6.548-61.77 12.43-92.72 16.75-9.837-4.42-19.06-0.4904-28.28 4.245-23.23 7.432-51.54 8.005-71.17-7.707-5.943-9.969 1.772-15.97-12-20-10.18-9.837 13.46-16.73 8.503-21.51-10.03-6.027-2.064-19.36 7.581-20.3 6.597-5.502 26.86 1.758 25.53-5.581-7.688-10.28 1.108-26.91 14.55-22.9 13.14 3.72 22.68 13.65 33 22 42.15-4.058 81.49-21.67 117-44 4.246-3.092-16.76-2.543-22-6-9.647-10.83-18.68 2.126-29.67 0-21.78 2.389-37.65-24.9-25.33-43 15.16-4.114-1.224-9.717-3.42-18.68-5.361-6.824-12.15-15.53-6.387-24.9 7.278-8.772-12.35-13.2-6.675-24.6 4.51-8.791-1.87-18.02 1.258-27.38 8.819-7.929 6.739-14.59 7.166-25.81 1.479-12.58 17.59-12.09 20.06-23.64 6.894-10.23 20.83-9.744 28.59-18.68 8.451-6.373 20.7 0.8903 26.93-9.024 10.68-10.29 25.21-12.88 39.48-11.29 12.97-4.743 27.29-0.6443 38.39 5.726 11.81 0.1492 19.81 8.099 27.1 16.17 9.641 5.153 8.885 18.49 17.51 25.11-1.197 10.31 13.64 13.28 11 24.47-4.951 13.03 12.91 10.69 18.11 14.2 7.312-8.107 17.15-8.279 8.515-20.36-4.169-24.4-10.59-50.46 0.3757-74.11 3.22-9.229 1.061-17.84 9-26.2 8.911-7.727 9.526-11.77 15.1-19.19 7.667-6.918 19.83-6.782 17.82-17.69 15.78-4.901 32.76-6.367 49.08-3.116 2.24-4.225 1.609-11.73 6-14zm730 184c0.8086 14.66 9.859 10.72 0 0zm-581 6c-6.8 7.57-20.18 5.889-25.33 13.2 0.2693 6.448-17.03 23.59-4.561 20.82 8.191-2.833 23.22-1.81 27.19-7.602-7.276-8.806 0.936-20.19 4.929-25.97-0.1767-1.064-1.435-0.3787-2.225-0.4499zm-249 24c-2.253 12.04-17.81 12.34-18.49 24.3-3.358 14.05-10.65 26.72-18.51 38.7 21.9-7.444 43.43-15.98 65.93-21.64 10.78-3.37 22.08-4.783 33.07-7.356-4.909-7.667-16.08-12.78-21.58-21.46-8.506-3.953-20.4 1.114-29.19-5.092-4.246-1.151-6.623-7.865-11.23-7.446zm509 1c-12.11 13.66-28.38 23.37-46 28 14.13 4.917 32.6 7.231 47.09 14.93 17.1 7.705-2.112-4.675-3.086-12.93-3.198-9.757-0.0447-20.09 4-28.73 0.8822-1.971-0.9703-1.208-2-1.267zm328 22c-6.903 9.81-8.73 14.3-1 23 1.803 13.35-9.195 22.1-21 25 10.29 1.659 24.42-4.126 36.13-5.754 5.586-2.456 29.01-1.677 22.49-5.998-11.62-0.2915-13.53-10.25-17.23-17.89-12.26 0.09187-11.31-16.13-19.39-18.36zm-318 24c4.55 2.976 23.05 17.73 20 6-6.683-1.741-13.05-5.904-20-6zm-94 80c-5.418 30.28-4.339 62.56-3.368 93.64 3.491 74.1 27.54 145.7 30.37 219.8-0.1853 18.18 0.6187 36.4-1 54.53 15.83 9.673 26.31 24.64 36 40 0.8061-9.659-6.702-19.25-6.809-29.58-13.64-71.57-29.8-144.7-20.59-217.8 5.84-42.48 27.86-80.29 43.4-119.3-8.476-5.847-21.82-8.764-31.62-14.77-16.42-7.03-31.1-17.92-46.38-26.5zm-358 4c-23.06 5.392-47.12 5.498-70 11 6.59 44.98 20.46 89.26 20 135-1.796 9.667 7.879 17.79 7.535 28.42 2.73 8.853 0.9078 23.03 6.465 28.58 11.53-24.4 26.86-47.02 37-72-0.0844-24.11-4.694-47.99-3-72.2-0.7917-19.41 1.778-38.71 5-57.8l-1.644-0.548zm743 26c-19.26 3.151-39.25 2.595-58.22 6.287-27.98 12.09-51.31 32.83-73.91 52.84-12.11 10.52-21.97 23.57-23.84 39.96-3.066 18.46-7.513 37.92-5.171 56.42 29.99 51.53 59.82 104 101.1 147.5 5.508-2.847 3.614-19.91 6.318-28.14 7.475-44.71 13.04-90.4 29.09-133 6.631-19.5 2.874-41.35 7.7-61.54 3.306-27.39 11.78-54 18.89-80.3h-1.733zm-470 180c-4.338 33.88 4.33 68.49 19 99 1.122-17.74-3.905-35.9-4.426-53.88-1.335-15.66-4.886-31.28-12.57-45.12h-1.733z" fill="#000000" id="global-black-hair-and-main-outlines-compound-path" class="logo-part global black outline hair compound" inkscape:label="01 Global - Black Hair And Main Outlines Compound Path path" data-child="global" data-part="black hair and main outlines compound path" data-color-name="black" data-original-index="1" stroke="none"/>
+      </g>
+      <g id="part-02-center-child-blonde-hair-left-side-cleanup-fill" class="logo-part-group logo-part center-child blonde-yellow hair blonde cleanup" inkscape:label="02 Center Child - Blonde Hair Left-Side Cleanup Fill" data-child="center-child" data-part="blonde hair left-side cleanup fill" data-original-index="2" data-color-name="blonde-yellow" data-fill="#F5D50C">
+        <title>02 Center Child - Blonde Hair Left-Side Cleanup Fill</title>
+        <path id="center-child-blonde-hair-left-side-cleanup-fill" class="logo-part center-child blonde-yellow hair blonde cleanup" fill="#F5D50C" d="M 628.21 191.58 L 622.05 198.77 L 616.92 200.82 L 621.02 219.30 L 630.26 237.78 L 640.53 252.16 L 651.82 262.43 L 667.23 271.67 L 681.60 274.75 L 681.60 271.67 L 666.20 257.29 L 657.98 246.00 L 644.64 215.20 L 641.56 194.66 L 634.37 194.66 Z" data-original-id="blonde-left-hair-black-spill-fix" inkscape:label="02 Center Child - Blonde Hair Left-Side Cleanup Fill path" data-child="center-child" data-part="blonde hair left-side cleanup fill" data-color-name="blonde-yellow" data-original-index="2" stroke="none"/>
+      </g>
+      <g id="part-03-center-child-blue-pants" class="logo-part-group logo-part center-child blue-pants pants blue" inkscape:label="03 Center Child - Blue Pants" data-child="center-child" data-part="blue pants" data-original-index="3" data-color-name="blue-pants" data-fill="#37678A">
+        <title>03 Center Child - Blue Pants</title>
+        <path d="m716 489c20.31 0.1926 41.73-0.9529 61 6 9.234 50.86 18.69 101.8 26.9 152.9 4.118 31.76 6.232 64.31 2.103 96.13-0.3947 10.37-6.537 18.29-17 20-17.2 4.643-36.53-3.752-46.27-17.71-8.744-44.56-11.02-89.97-16.15-135-4.085-15.73-10.2-34.68-25.31-42.48-17.05-5.22-4.684 11.06-7.016 20.29-0.4232 28.49 1.112 57.69 14.12 83.65 11.04 26.14 22.97 53.36 22.62 82.22-10.14 17.59-34.71 17.67-52.25 14.78-17.04-7.712-19.39-29.55-27.19-44.87-23.84-56.75-45.2-116.7-42.56-179.2-1.88-18.08 9.252-35.88 26.99-40.87 25.38-9.821 52.82-14.84 80.01-15.87z" fill="#37678A" id="center-child-blue-pants" class="logo-part center-child blue-pants pants blue" inkscape:label="03 Center Child - Blue Pants path" data-child="center-child" data-part="blue pants" data-color-name="blue-pants" data-original-index="3" stroke="none"/>
+      </g>
+      <g id="part-04-far-right-child-yellow-shirt-and-sleeve" class="logo-part-group logo-part far-right-child bright-yellow shirt yellow" inkscape:label="04 Far Right Child - Yellow Shirt And Sleeve" data-child="far-right-child" data-part="yellow shirt and sleeve" data-original-index="4" data-color-name="bright-yellow" data-fill="#FDEB02">
+        <title>04 Far Right Child - Yellow Shirt And Sleeve</title>
+        <path d="m1249 321c12.46-3.556 17.61 3.677 20 15 11.51 22.05 44.15 25.75 61 8 23.77-1.724 42.24 18.22 48.74 39.42 13.28 36.19 20.55 76.1 44.58 107.2 12.71 7.322 0.395 16.34-6.898 22.06-6.605 6.313-10.29 20.75-14.74 24.23-25.36-21.8-39.47-53.44-54.17-82.8-6.206-15.81-15.36-31.07-17.51-48.07-6.174 5.271-3.483 19.53-5.235 28.29-2.443 34.51-2.004 69.14-2.765 103.7-23.19 15.67-52.46 18.51-79.64 21.62-26.25 0.618-54.29 2.775-78.36-9.617-10-10.02 1.886-23.97-0.07-36.1 2.75-38.73 13.2-76.45 24.6-113.3 5.46-18.09-5.754 3.304-16.6-1.39-12.98 1.272-25.95 2.544-38.93 3.816 16.71-14.53 37.94-23.29 55.52-36.96 21.48-13.3 38.16-33.13 60.48-45.04z" fill="#FDEB02" id="far-right-child-yellow-shirt-and-sleeve" class="logo-part far-right-child bright-yellow shirt yellow" inkscape:label="04 Far Right Child - Yellow Shirt And Sleeve path" data-child="far-right-child" data-part="yellow shirt and sleeve" data-color-name="bright-yellow" data-original-index="4" stroke="none"/>
+      </g>
+      <g id="part-05-right-center-child-light-blue-shirt-and-arm" class="logo-part-group logo-part right-center-child light-blue shirt blue" inkscape:label="05 Right Center Child - Light Blue Shirt And Arm" data-child="right-center-child" data-part="light blue shirt and arm" data-original-index="5" data-color-name="light-blue" data-fill="#75B8EF">
+        <title>05 Right Center Child - Light Blue Shirt And Arm</title>
+        <path d="m810 286c24.95-0.1805 48.31 11.38 71.28 19.93 15.4 6.951 32.27 14.58 38.63 31.51 6.103 9.364 14.72 18.49 22.19 25.11 26.43 21.42 62.18 29.37 95.31 22.02 24.37-4.239 45.53-18.51 69.86-22.73 39.28-12.82 76.47-32.77 117.7-38.83 4.038 4.086-15.05 11.24-19.26 17.84-35.56 29.27-75.11 52.93-114.7 76.16-25.33 17.61-51.52 35.43-71.34 59.24-5.634 7.432-13.56 17.58-9.15 22.19-3.563 20.7-4.91 41.65-6.51 62.57-44.54-14.18-92.04-12.68-138.2-11.31-11.25 0.4337-21.82 5.624-31.85 9.313-1.807-49.56 25.18-93.42 43.03-137.9 5.749-15.12 9.178-32.62 2.975-48.08 0.8621 18.53-6.509 9.13-10.33-2.65-15.31-30.44-36.17-58.49-61-81.79-1.994-0.7435 1.035-1.715 1.326-2.562z" fill="#75B8EF" id="right-center-child-light-blue-shirt-and-arm" class="logo-part right-center-child light-blue shirt blue" inkscape:label="05 Right Center Child - Light Blue Shirt And Arm path" data-child="right-center-child" data-part="light blue shirt and arm" data-color-name="light-blue" data-original-index="5" stroke="none"/>
+      </g>
+      <g id="part-06-green-shirt-child-green-shirt" class="logo-part-group logo-part green-shirt-child green-shirt shirt green" inkscape:label="06 Green Shirt Child - Green Shirt" data-child="green-shirt-child" data-part="green shirt" data-original-index="6" data-color-name="green-shirt" data-fill="#03BB00">
+        <title>06 Green Shirt Child - Green Shirt</title>
+        <path id="green-shirt-child-green-shirt" class="logo-part green-shirt-child green-shirt shirt green" d="m634 259c8.464 3.006 15.81 11.89 25.83 14.93-26.43 13.9-56.78 24.44-79.83 45.07-2.691 28.33 0.8777 57.66 0.9488 86.36 0.6281 34.92 4.322 69.72 4.051 104.6-26.18 16.29-57.68 23.04-88.2 23.79-19.64-0.09739-42.28-1.634-55.8-17.79-0.1775-29.13-3.216-58.15-2-87.33-1.965-31.07 8.541-60.91 15-90.67-7.179 13.43-13.83-1.703-13.37 16.31-0.1287 11.57-4.242 20.62-17.24 19.31-21.57 3.829-43.49 6.854-65.38 7.382 3.716-9.877 15.37-15.14 22.36-23.07 25.84-20.54 52.08-42.16 81.37-56.93 22.11 3.005 45.33 3.55 66.42-5.384 20.19-8.364 36.85-24.34 59.3-26.98 15.32-4.076 31.03-6.419 46.55-9.637z" fill="#03BB00" data-original-id="child-green-shirt" inkscape:label="06 Green Shirt Child - Green Shirt path" data-child="green-shirt-child" data-part="green shirt" data-color-name="green-shirt" data-original-index="6" stroke="none"/>
+      </g>
+      <g id="part-07-far-left-child-light-blue-shirt" class="logo-part-group logo-part far-left-child soft-blue shirt blue" inkscape:label="07 Far Left Child - Light Blue Shirt" data-child="far-left-child" data-part="light blue shirt" data-original-index="7" data-color-name="soft-blue" data-fill="#6FAED7">
+        <title>07 Far Left Child - Light Blue Shirt</title>
+        <path id="far-left-child-light-blue-shirt" class="logo-part far-left-child soft-blue shirt blue" d="m430 291c5.809-1.033 28.21 2.665 19.94 8.622-37.73 19.12-68.15 49.29-100.9 75.38-2.803 4.955 5.406 18.68 5.544 27.19 7.813 38.16 17.94 76.32 20.17 115.3 2.051 19.5-16.7 30.22-32.68 35.27-29.66 11.15-62.29 11.87-93.35 9.279-13.73-0.2631-10.91-14.38-11.47-24.05-1.518-26.89-8.775-53.34-12.87-79.65 10.65-9.423-9.89-8.819-17.78-7.896-28.82 2.801-56.94 11.21-85.56 14.6-0.5494-18.88-0.5767-39.7-11-56 45.78-6.033 87.61-27.34 126-52 9.464-1.694 8.988 13.1 19.56 15.49 11.06 6.849 26.02 5.702 37.97 2.203 16.86-3.857 32.14-19.52 28.46-37.82-6.3-11.94 8.653-14.56 17.26-18.37 29.42-11.86 59.94-20.12 90.74-27.49z" fill="#6FAED7" data-original-id="child-left-shirt" inkscape:label="07 Far Left Child - Light Blue Shirt path" data-child="far-left-child" data-part="light blue shirt" data-color-name="soft-blue" data-original-index="7" stroke="none"/>
+      </g>
+      <g id="part-08-right-center-child-purple-pants" class="logo-part-group logo-part right-center-child purple-pants pants purple" inkscape:label="08 Right Center Child - Purple Pants" data-child="right-center-child" data-part="purple pants" data-original-index="8" data-color-name="purple-pants" data-fill="#8E5D8D">
+        <title>08 Right Center Child - Purple Pants</title>
+        <path d="m874 556c44.18 0.0202 89.83-0.9489 132 14 26.21 39.1 47.31 81.84 77.16 118.5 8.303 11.25 17.27 22.52 28.84 30.45-5.176 6.616-16.29 11.35-22.18 19.27-9.008 12.86-25.3 19.58-30.82 34.73-9.247-4.045-17.88-12.75-23-20.73-20.61-16.01-35.73-39.27-50.69-60.8-19.52-26.69-31.69-57.92-51.31-84.46 0.6164-16.02-13.89-4.742-13.42 5.681-9.878 42.05-2.166 85.63 0.7666 128.1 0.4736 13.87 7.363 30.7-6.052 40.72-12.62 8.976-32.49 15.29-46.44 6.174-14.66-15.92-13.73-39.66-19.09-59.62-10.33-51.72-19.31-104.1-17.76-157.1 11.15-10.25 27.35-13.6 42-15z" fill="#8E5D8D" id="right-center-child-purple-pants" class="logo-part right-center-child purple-pants pants purple" inkscape:label="08 Right Center Child - Purple Pants path" data-child="right-center-child" data-part="purple pants" data-color-name="purple-pants" data-original-index="8" stroke="none"/>
+      </g>
+      <g id="part-09-center-child-red-shirt" class="logo-part-group logo-part center-child red-shirt shirt red" inkscape:label="09 Center Child - Red Shirt" data-child="center-child" data-part="red shirt" data-original-index="9" data-color-name="red-shirt" data-fill="#D40000">
+        <title>09 Center Child - Red Shirt</title>
+        <path d="m684 284c15.54-3.399-0.6796 12.61 3 20.93-0.9808 19.97 17.87 36.92 37.67 34.07 26.93-1.095 45.94-26.04 50.33-51 9.393-5.409 20.05-3.366 26.45 5.451 26.26 25.06 48.4 54.85 64.6 87.33 3.954 7.891 9.186 22.17 4.252 27.88-27.7-10.64-56.05-23.32-78.2-43.56-10.37-14.91-10.67-8e-3 -11.7 10.79-4.705 35.83-4.141 72.18-1.395 108.1-46.88-8.124-96.04-3.865-141.1 11.14-10.11 3.655-20.2 8.183-27.92 15.86-4.407-7.629 0.6564-20.71-0.1622-30.4 3.612-39.8 10.97-79.23 22.16-117.6-14.52-0.9996-30.17 0.6155-44-2-1.929-12.56-2.071-25.32-2-38 28.91-20.99 62.33-35.14 98-39z" fill="#D40000" id="center-child-red-shirt" class="logo-part center-child red-shirt shirt red" inkscape:label="09 Center Child - Red Shirt path" data-child="center-child" data-part="red shirt" data-color-name="red-shirt" data-original-index="9" stroke="none"/>
+      </g>
+      <g id="part-10-far-right-child-gray-pants" class="logo-part-group logo-part far-right-child gray-pants pants gray" inkscape:label="10 Far Right Child - Gray Pants" data-child="far-right-child" data-part="gray pants" data-original-index="10" data-color-name="gray-pants" data-fill="#646867">
+        <title>10 Far Right Child - Gray Pants</title>
+        <path d="m1319 551c7.45 3.956 4.391 20.24 7.675 29.09 5.667 38.94 13.78 77.57 23.32 115.6-1.453 10.57-11.93 14.1-14.3 24.36-10.62 17.93-18.73 37.39-22.7 57.9-12.34-8.051-15.42-24.76-22.26-37.23-16.12-39.57-30.07-80.22-40.74-121.5 2.889-17.32-12.67-6.952-12.12 4.333-16.87 53-28.75 107.5-40.97 161.7-2.664 12.33-21.19 6.718-15.77-6.389-2.449-12.85-11.07-24.3-17.69-34.67-10.99-9.999-22.34-21.12-36.45-27.22 6.633-53.14 15.59-106.2 29.64-157.9 11.82-0.5361 26.36 7.048 39.68 7.147 40.24 3.393 81.05-0.9516 119.3-14.21 1.12-0.336 2.24-0.672 3.36-1.008z" fill="#646867" id="far-right-child-gray-pants" class="logo-part far-right-child gray-pants pants gray" inkscape:label="10 Far Right Child - Gray Pants path" data-child="far-right-child" data-part="gray pants" data-color-name="gray-pants" data-original-index="10" stroke="none"/>
+      </g>
+      <g id="part-11-green-shirt-child-green-pants" class="logo-part-group logo-part green-shirt-child green-pants pants green" inkscape:label="11 Green Shirt Child - Green Pants" data-child="green-shirt-child" data-part="green pants" data-original-index="11" data-color-name="green-pants" data-fill="#1B733E">
+        <title>11 Green Shirt Child - Green Pants</title>
+        <path id="green-shirt-child-green-pants" class="logo-part green-shirt-child green-pants pants green" d="m581 520c8.677 11.55 6.649 29.04 7 43.33 0.3104 48.57-12.73 95.87-16.36 144.2-1.801 20.1-1.637 40.34-1.636 60.52-19.67 0.947-39.54-0.4764-59 3-0.2268-35.41 4.619-70.66 3-106.1 0.6917-30.13-1.985-60.35-8-89.87 8.063-4.765 26.56-12.74 7-9-9.027 2.709-22.76 2.548-29 6.733 14.16-2.661 7.573 10.41 2.183 17.22-29.72 47.03-51.98 98.33-82.18 145-4.242-11.73-4.758-27.77-8.796-40.91-4.671-23.19-10.97-46.6-17.86-68.79 6.779-12.22 16.09-24.15 23.19-36.75 12.9-20.94 24.55-42.62 37.47-63.55 9.079 2.565 16.83 10.47 27 12 31.43 6.404 64.82 3.114 95.1-7.085 7.324-2.686 14.58-5.197 20.9-9.915z" fill="#1B733E" data-original-id="child-green-pants" inkscape:label="11 Green Shirt Child - Green Pants path" data-child="green-shirt-child" data-part="green pants" data-color-name="green-pants" data-original-index="11" stroke="none"/>
+      </g>
+      <g id="part-12-green-shirt-child-face-and-skin-base" class="logo-part-group logo-part green-shirt-child warm-skin skin face" inkscape:label="12 Green Shirt Child - Face And Skin Base" data-child="green-shirt-child" data-part="face and skin base" data-original-index="12" data-color-name="warm-skin" data-fill="#FBCC99">
+        <title>12 Green Shirt Child - Face And Skin Base</title>
+        <path d="m472 103c6.655 15.78 12.34 35.1 29.09 43.32 11.52 5.522 25.19 6.526 37.91 6.68-5.166-3.736-13.2-24.88-5.424-21.68 16.62 15.25 37.51 26.53 48.58 46.98 4.946 14.3 16.43-3.645 23.62 8.255 7.189 11.74 7.399 32.07-7.775 37.45-10.72-1.211-14.47-11.97-16.1 5.407-7.923 32.18-36.79 55.62-68.34 63.07-23.43 4.914-49.59 4.63-70.51-8.456-15.77-9.54-31.32-21.83-39.05-39.02-6.559 12.66-24.04 10.07-30.56-1.217-10.03-9.439-9.639-33.03 7.031-33.78 14.79 4.327 8.223 5.766 10.94-8.167 7.218-14.24 19.31-25.54 26.18-40.18 8.872-1.518 13.02-12.62 17.22-20.99 2.181-13.72 10.99-14.64 17.91-5.493 15.58 3.518 10.67 3.312 10.77-8.152 2.32-8.176 5.703-16 8.506-24.02z" fill="#FBCC99" id="green-shirt-child-face-and-skin-base" class="logo-part green-shirt-child warm-skin skin face" inkscape:label="12 Green Shirt Child - Face And Skin Base path" data-child="green-shirt-child" data-part="face and skin base" data-color-name="warm-skin" data-original-index="12" stroke="none"/>
+      </g>
+      <g id="part-13-right-center-child-face-and-skin-base" class="logo-part-group logo-part right-center-child light-skin skin face" inkscape:label="13 Right Center Child - Face And Skin Base" data-child="right-center-child" data-part="face and skin base" data-original-index="13" data-color-name="light-skin" data-fill="#FAD8B9">
+        <title>13 Right Center Child - Face And Skin Base</title>
+        <path d="m1024 188c13.01 12.57 13.34 37.61 33 43-7.141-17.39 2.684-6.965 9.707 1.165 7.126 7.331 2.808-21.18 7.333 1.031 4.54 17.86 14.53 34.16 27.96 46.8 0.729 15.38-7.373 30.81-3 46 9.937 1.769 22.97 12.79 13.72 22.61-3.055 7.952-21.51 12.32-21.72 1.925-1.744-7.313-13.27 11.94-20.6 12.9-38.18 22.79-91.26 21.86-124.9-9.011-19.92-17.24-31.13-42.62-34.53-68.42-3.291 1.153-12.33 15.27-22.06 4.633-16.47-7.697-14.36-38.21 5.526-38.63 12.77-6.115 12.13 21.95 17.78 11.94 8.586-6.871 9.894-21.29 21.97-22.68 26.27-7.187 48.68-23.02 70.78-38.26-10.42 11.5-4.926 13.75 6.141 4.696 5.961-5.484 9.06-12.71 12.86-19.7z" fill="#FAD8B9" id="right-center-child-face-and-skin-base" class="logo-part right-center-child light-skin skin face" inkscape:label="13 Right Center Child - Face And Skin Base path" data-child="right-center-child" data-part="face and skin base" data-color-name="light-skin" data-original-index="13" stroke="none"/>
+      </g>
+      <g id="part-14-far-right-child-face-and-skin-base" class="logo-part-group logo-part far-right-child brown-skin skin face" inkscape:label="14 Far Right Child - Face And Skin Base" data-child="far-right-child" data-part="face and skin base" data-original-index="14" data-color-name="brown-skin" data-fill="#955520">
+        <title>14 Far Right Child - Face And Skin Base</title>
+        <path d="m1286 157c9.195 6.649 20.81 7.467 31 4 2.374 11.43 13.2 18.79 24.64 15.34 13.42-3.051 14.6-5.728 17.21 6.433 10.84 10.1 26.52 5.906 39.15 2.232-1.172 11.11 4.763 20.98 16.32 22.35 4.038 6.049-2.699 19.89 5.286 25.29 13.66 1.926 13.01 8.756 12.39 20.29-12.06 13.56 0.6463 5.777 10.1 9.618 14.54 6.287 6.273 23.92-3.056 31.18-6.638 8.264-27.55 10.42-25.67-4.633-2.428-11.04-7.272 12.57-14.05 14.58-19.17 21.64-48.55 33.38-77.39 30.32-34.71-1.065-67.65-25.01-78.72-58.15-7.354-23.91-6.605-52.89 8.162-73.8 7.478-6.415 12.51-14.86 11.62-25.05 11.07 1.499 19.88-5.266 21.51-16.26 0.4982-1.245 0.9963-2.491 1.494-3.736z" fill="#955520" id="far-right-child-face-and-skin-base" class="logo-part far-right-child brown-skin skin face" inkscape:label="14 Far Right Child - Face And Skin Base path" data-child="far-right-child" data-part="face and skin base" data-color-name="brown-skin" data-original-index="14" stroke="none"/>
+      </g>
+      <g id="part-15-far-left-child-face-and-skin-base" class="logo-part-group logo-part far-left-child dark-warm-skin skin face" inkscape:label="15 Far Left Child - Face And Skin Base" data-child="far-left-child" data-part="face and skin base" data-original-index="15" data-color-name="dark-warm-skin" data-fill="#8F6D51">
+        <title>15 Far Left Child - Face And Skin Base</title>
+        <path id="far-left-child-face-and-skin-base" class="logo-part far-left-child dark-warm-skin skin face" d="m233 168c9.885-0.5459 17.6 10.92 28.44 5.57 6.767 1.444 12.19 14.39 24.56 10.43 1.892 10.3 16.48 5.795 15 19 9.173 1.056 14.76 9.626 25.15 9.735 3.995 12.87 6.24 5.746 16.32 2.265 18.83-0.8328 23.22 27.88 10.1 38.33-10.48-7.438-9.291 4.058-12.65 14.41-8.124 36.71-37.4 67.03-73.84 76.37-24.72 7.029-53.29 8.359-76.38-4.243-7.937-5.844-12.87-19.44-13.87-1.691-2.381 11.11-19.63 7.782-26.05 1.607-10.52-9.266-7.302-32.78 9.692-30.77 13.62 6.99 12.59 4.848 7.432-8.925-5.791-10.61-1.142-18.86 4.484-26.52-1.443-10.57-1.428-18.18 2.617-27.75-4.388-11.33 1.766-17.47 9.55-24.9 3.856-9.748 0.02873-22.94 13.45-25.9 6.908-6.268 3.534-25.03 15.61-16.38 2.015 9.075 6.067 26.86 7.391 7.911-1.545-11.67-2.071-20.52 12.73-18.49z" fill="#8F6D51" data-original-id="child-left-face" inkscape:label="15 Far Left Child - Face And Skin Base path" data-child="far-left-child" data-part="face and skin base" data-color-name="dark-warm-skin" data-original-index="15" stroke="none"/>
+      </g>
+      <g id="part-16-center-child-face-and-skin-base" class="logo-part-group logo-part center-child light-skin skin face" inkscape:label="16 Center Child - Face And Skin Base" data-child="center-child" data-part="face and skin base" data-original-index="16" data-color-name="light-skin" data-fill="#FAD7B9">
+        <title>16 Center Child - Face And Skin Base</title>
+        <path d="m765 94c2.93 8.027 2.699 20.22 7.868 28.98 11.62 28.32 38.33 48.24 67.13 57.02-0.2344 30.81-10.56 62.7-35.18 82.61-22.79 19.86-55.56 25.36-84.5 19.54-32.75-7.578-59.35-34.66-66.7-67.48-5.28-17.83-7.998-43.91 11.9-53.63 23.01-14.72 50.48-21.08 71.76-38.86 10.68-7.761 20.57-17.01 27.72-28.18z" fill="#FAD7B9" id="center-child-face-and-skin-base" class="logo-part center-child light-skin skin face" inkscape:label="16 Center Child - Face And Skin Base path" data-child="center-child" data-part="face and skin base" data-color-name="light-skin" data-original-index="16" stroke="none"/>
+      </g>
+      <g id="part-17-center-child-main-blonde-hair" class="logo-part-group logo-part center-child blonde-yellow hair blonde" inkscape:label="17 Center Child - Main Blonde Hair" data-child="center-child" data-part="main blonde hair" data-original-index="17" data-color-name="blonde-yellow" data-fill="#F5D50C">
+        <title>17 Center Child - Main Blonde Hair</title>
+        <path d="m711 53c21.46-0.2616 46.29-1.993 63 14 26.69-4.995 57.79-2.835 76.9 18.9 22.99 22.61 23.22 58.44 19.52 88.38 0.3405 8.634-9.245 24.32 5.581 21.72 15.9 6.901 9.665 26.79 1.542 37.43-17.86 25.28-47.5 42.89-78.54 44.57 13.84-12.74 30.38-23.65 36.91-42.29 8.456-18.05 12.62-37.9 14.09-57.71 12.86-6.62-12.31-4.781-16.86-9.288-32.62-11.07-59.07-41.7-60.71-76.85 2.559-17.1-7.356-5.512-13.43 2.139-24.58 24.53-55.59 43.34-89 53-20.1-0.2101-4.868 1.304-8.924 8.861-10.1 1.177-13.72 19.22-19.85 17.06-5.033-4.554 0.9382-26.74-4.442-23.2-2.168 6.885 1.702 27.73-7.785 21.55-1.217-25.97 0.0474-53.99 16.73-75.36 14.91-22.18 39.04-37.95 65.27-42.91z" fill="#F5D50C" id="center-child-main-blonde-hair" class="logo-part center-child blonde-yellow hair blonde" inkscape:label="17 Center Child - Main Blonde Hair path" data-child="center-child" data-part="main blonde hair" data-color-name="blonde-yellow" data-original-index="17" stroke="none"/>
+      </g>
+      <g id="part-18-far-left-child-blue-pants" class="logo-part-group logo-part far-left-child blue-pants pants blue" inkscape:label="18 Far Left Child - Blue Pants" data-child="far-left-child" data-part="blue pants" data-original-index="18" data-color-name="blue-pants" data-fill="#112BB5">
+        <title>18 Far Left Child - Blue Pants</title>
+        <path id="far-left-child-blue-pants" class="logo-part far-left-child blue-pants pants blue" d="m375 543c9.098 3.634 5.262 19.57 8.345 28.31 0.2219 11.57 7.961 24.36-1.938 34.04-5.06 13.37-12.04 13.53-18.89 1.76-10.06-8.233-24.04-8.493-35.51-3.108-10.86-5.902-2.999-22.84-8.999-19.57-14.81 9.59-15.31 30.43-20.77 45.95-10.85 43.18-13.27 87.92-20.66 131.6-6.475 6.423-19.73 3.104-28.9 4.001-10.57-0.6497-20.34-6.783-28.67-13 1.293-24.48 9.846-48.16 11.55-72.75 4.998-37.36 0.6232-75.57 3.223-112.8 6.561-4.913 19.28 2.57 28.22 2.55 39.07 1.293 80.11-4.497 113-27z" fill="#112BB5" data-original-id="child-left-pants" inkscape:label="18 Far Left Child - Blue Pants path" data-child="far-left-child" data-part="blue pants" data-color-name="blue-pants" data-original-index="18" stroke="none"/>
+      </g>
+      <g id="part-19-green-shirt-child-brown-hair" class="logo-part-group logo-part green-shirt-child brown-hair hair brown" inkscape:label="19 Green Shirt Child - Brown Hair" data-child="green-shirt-child" data-part="brown hair" data-original-index="19" data-color-name="brown-hair" data-fill="#916E06">
+        <title>19 Green Shirt Child - Brown Hair</title>
+        <path d="m493 43c19.67-3.949-1.409 9.393 2.644 12.45 11.16-4.429 23.66-2.289 35.36-1.452-0.3826 3.544-23.48 4.73-1.104 7.379 8.192 3.298 24.23 6.219 24.26 15.98-13.6-2.477 8.54 5.391 11.29 11.09 22.13 21.94 29.07 55.23 27.55 85.55-8.594-0.992-13.29-15.92-22.03-21.03-6.675-2.399-11.03-28.63-13.24-13.82-4.553 3.436-14.85-9.752-21.06-13.58-5.562-6.905-16.82-22.34-13.67-4.164-1.578 6.965 10.47 29.67-2.372 21.87-9.656-6.145-13.51-18.07-17.63-28.27-1.185 10.41 5.058 20.63 8.225 28.55-21.35-6.132-31.85-32.08-32.73-53.2 1.527-17.41-9.121 5.817-13.08 11.28-3.22 5.427-7.381 31.13-11.84 15.88-4.93-20.22 0.3727 16.29-9.198 5.235-10.32-12.75-11.2 2.54-14.23 11.11-3.585 9.201-8.484 20.78-18.36 23.37-6.331 9.389-11.59 19.58-19.49 27.78-7.447-1.321-7.658 21.44-14.06 8.104-6.478-13-0.5724-28.51-8.223-41.11-2.295-20.01 4.998-40.43 20-54-16.57 7.211-3.914-8.89 2.402-14.02 4.536-4.485 24.35-12.86 8.598-11.98 7.998-7.135 19.84-7.107 30-9-11.41-6.231-11.41-9.198 3.199-9 7.138-0.06306 26.4-1.967 21.25 9.644 3.412 5.079 14.76-22.6 12.69-7.516-3.88 15.53 8.453-6.808 14.4-8.288 2.887-2.714 6.94-3.266 10.45-4.841z" fill="#916E06" id="green-shirt-child-brown-hair" class="logo-part green-shirt-child brown-hair hair brown" inkscape:label="19 Green Shirt Child - Brown Hair path" data-child="green-shirt-child" data-part="brown hair" data-color-name="brown-hair" data-original-index="19" stroke="none"/>
+      </g>
+      <g id="part-20-green-shirt-child-raised-gray-shoe" class="logo-part-group logo-part green-shirt-child warm-gray-shoe shoe gray" inkscape:label="20 Green Shirt Child - Raised Gray Shoe" data-child="green-shirt-child" data-part="raised gray shoe" data-original-index="20" data-color-name="warm-gray-shoe" data-fill="#A9B0AB">
+        <title>20 Green Shirt Child - Raised Gray Shoe</title>
+        <path id="green-shirt-child-raised-gray-shoe" class="logo-part green-shirt-child warm-gray-shoe shoe gray" d="m337 607c21.36-4.055 34.12 17.85 39.04 35.44 9.223 29.97 16.32 60.91 19.96 92.03 2.435 21.35-12.41 49.29-37 45.53-26.62-10.64-34.79-41.29-43-66-5.094-22.16-5.222-45.36-2.703-67.81 2.164-15.03 8.012-33.53 23.7-39.19z" fill="#A9B0AB" data-original-id="child-green-raised-shoe" inkscape:label="20 Green Shirt Child - Raised Gray Shoe path" data-child="green-shirt-child" data-part="raised gray shoe" data-color-name="warm-gray-shoe" data-original-index="20" stroke="none"/>
+      </g>
+      <g id="part-21-right-center-child-skin-colored-foot" class="logo-part-group logo-part right-center-child light-skin skin foot" inkscape:label="21 Right Center Child - Skin-Colored Foot" data-child="right-center-child" data-part="skin-colored foot" data-original-index="21" data-color-name="light-skin" data-fill="#FAD7B8">
+        <title>21 Right Center Child - Skin-Colored Foot</title>
+        <path d="m1115 727c19.24-1.076 33.84 15.54 45.89 28.49 10.42 13.39 16.04 32.35 6.33 47.66-11.3 22.78-43.41 33.72-65.56 20.75-15.01-11.04-25.71-27.86-32.66-44.64-2.516-14.42 14.82-19.84 21.8-30.07 7.918-7.58 14.96-16.15 24.2-22.2z" fill="#FAD7B8" id="right-center-child-skin-colored-foot" class="logo-part right-center-child light-skin skin foot" inkscape:label="21 Right Center Child - Skin-Colored Foot path" data-child="right-center-child" data-part="skin-colored foot" data-color-name="light-skin" data-original-index="21" stroke="none"/>
+      </g>
+      <g id="part-22-center-child-left-white-shoe" class="logo-part-group logo-part center-child off-white-shoe shoe white" inkscape:label="22 Center Child - Left White Shoe" data-child="center-child" data-part="left white shoe" data-original-index="22" data-color-name="off-white-shoe" data-fill="#E9E9E7">
+        <title>22 Center Child - Left White Shoe</title>
+        <path d="m813 755c17.43 5.819 26.26 25.26 33.17 41.26 6.208 14.28 9.193 33.93-5.122 44.46-13.69 14.22-36.43 11.9-53.53 6.379-28.52-13.96-35.64-48.59-36.24-77.57 1.185-7.992 17.02 6.276 24.93 2.464 13.5 0.7243 31.52-2.689 36.8-17z" fill="#E9E9E7" id="center-child-left-white-shoe" class="logo-part center-child off-white-shoe shoe white" inkscape:label="22 Center Child - Left White Shoe path" data-child="center-child" data-part="left white shoe" data-color-name="off-white-shoe" data-original-index="22" stroke="none"/>
+      </g>
+      <g id="part-23-center-child-right-white-shoe" class="logo-part-group logo-part center-child off-white-shoe shoe white" inkscape:label="23 Center Child - Right White Shoe" data-child="center-child" data-part="right white shoe" data-original-index="23" data-color-name="off-white-shoe" data-fill="#E9E9E7">
+        <title>23 Center Child - Right White Shoe</title>
+        <path d="m741 761c9.705 8.509 2.675 23.67-1.49 33.56-16.01 29.29-46.93 52.25-80.71 54.44-17.23 3.025-38.78-10.01-34.8-29.4 0.3822-20.25 16.54-38.49 34.32-46.6 9.744-5.686 17.34 7.136 27.68 4.996 19.19 0.2564 40.77-2.998 55-17z" fill="#E9E9E7" id="center-child-right-white-shoe" class="logo-part center-child off-white-shoe shoe white" inkscape:label="23 Center Child - Right White Shoe path" data-child="center-child" data-part="right white shoe" data-color-name="off-white-shoe" data-original-index="23" stroke="none"/>
+      </g>
+      <g id="part-24-far-left-child-left-gray-shoe" class="logo-part-group logo-part far-left-child dark-gray-shoe shoe gray" inkscape:label="24 Far Left Child - Left Gray Shoe" data-child="far-left-child" data-part="left gray shoe" data-original-index="24" data-color-name="dark-gray-shoe" data-fill="#616865">
+        <title>24 Far Left Child - Left Gray Shoe</title>
+        <path id="far-left-child-left-gray-shoe" class="logo-part far-left-child dark-gray-shoe shoe gray" d="m215 760c13.83 10.42 31.01 13.47 48.06 12 9.903 0.028 22.46-6.203 20.28 9.449 2.196 22.56-0.263 50.76-20.92 64.27-19.8 9.851-49.29 10.43-63.13-9.301-10.77-22.97-0.4357-49.52 10.7-70.42 2.7 0.4723 3.185-3.805 5-6z" fill="#616865" data-original-id="child-left-left-shoe" inkscape:label="24 Far Left Child - Left Gray Shoe path" data-child="far-left-child" data-part="left gray shoe" data-color-name="dark-gray-shoe" data-original-index="24" stroke="none"/>
+      </g>
+      <g id="part-25-green-shirt-child-standing-gray-shoe" class="logo-part-group logo-part green-shirt-child warm-gray-shoe shoe gray" inkscape:label="25 Green Shirt Child - Standing Gray Shoe" data-child="green-shirt-child" data-part="standing gray shoe" data-original-index="25" data-color-name="warm-gray-shoe" data-fill="#A9B0AB">
+        <title>25 Green Shirt Child - Standing Gray Shoe</title>
+        <path id="green-shirt-child-standing-gray-shoe" class="logo-part green-shirt-child warm-gray-shoe shoe gray" d="m525 774c15.71 0.1019 32.59-1.011 47 6 9.867 16.21 12.15 36.96 8.713 55.22-6.723 21.29-33 21.68-51.51 20.78-19.58-0.4581-39.76-16.46-36.2-37.67 0.1343-17.21 4.881-41.4 25.72-43.55 2.093-0.2617 4.187-0.5234 6.28-0.785z" fill="#A9B0AB" data-original-id="child-green-left-shoe" inkscape:label="25 Green Shirt Child - Standing Gray Shoe path" data-child="green-shirt-child" data-part="standing gray shoe" data-color-name="warm-gray-shoe" data-original-index="25" stroke="none"/>
+      </g>
+      <g id="part-26-far-left-child-left-hand" class="logo-part-group logo-part far-left-child dark-warm-skin skin hand" inkscape:label="26 Far Left Child - Left Hand" data-child="far-left-child" data-part="left hand" data-original-index="26" data-color-name="dark-warm-skin" data-fill="#916F52">
+        <title>26 Far Left Child - Left Hand</title>
+        <path id="far-left-child-left-hand" class="logo-part far-left-child dark-warm-skin skin hand" d="m58 387c18.44-2.962 28.24 16.21 42.55 24.16 13.99 6.148 7.377 22.79 13.45 33.84 2.946 11.23-3.615 19.57-14.13 22.98-17.43 6.679-37.65 11.34-55.87 6.021 2.72-4.588 27.83-11.7 14.94-10.8-10.64 1.536-23.19 8.575-32.94 2.796-0.7884-12.38 15.82-12.13 24.23-16.14 10.85-8.819-12.7-0.5305-18.23 0.1355-11.06 4.416-24.78-6.602-9.319-12.42 9.026-4.203 22.18-1.226 28.32-9.58-9.133-2.465-23.95 2.055-29-6.733 2.614-9.769 18.05-9.622 27.13-9.267 8.621 0.4104 23.16 0.2374 21.29 12.55 0.3128 11.11 12.04 15.34 21.58 13.45-10.09-2.054-18.5-10.13-17-21-2.458-9.631-18.68-9.937-19-21.73-0.03478-3.092-0.6411-5.989 2-8.267z" fill="#916F52" data-original-id="child-left-hand" inkscape:label="26 Far Left Child - Left Hand path" data-child="far-left-child" data-part="left hand" data-color-name="dark-warm-skin" data-original-index="26" stroke="none"/>
+      </g>
+      <g id="part-27-right-center-child-skin-colored-foot-and-leg-detail" class="logo-part-group logo-part right-center-child light-skin skin foot" inkscape:label="27 Right Center Child - Skin-Colored Foot And Leg Detail" data-child="right-center-child" data-part="skin-colored foot and leg detail" data-original-index="27" data-color-name="light-skin" data-fill="#FAD6B6">
+        <title>27 Right Center Child - Skin-Colored Foot And Leg Detail</title>
+        <path d="m928 781c14 5.535 20.33 22.37 25.34 35.7 6.446 22.83-15 47.26-38.47 43.3-26.65 0.0165-42.45-26.4-52.5-47.87-3.08-5.078-11.03-27.52 0.3993-17.29 13.85 8.139 32.12 4.121 46.28-1.489 6.912-3.288 13.13-7.381 18.95-12.36z" fill="#FAD6B6" id="right-center-child-skin-colored-foot-and-leg-detail" class="logo-part right-center-child light-skin skin foot" inkscape:label="27 Right Center Child - Skin-Colored Foot And Leg Detail path" data-child="right-center-child" data-part="skin-colored foot and leg detail" data-color-name="light-skin" data-original-index="27" stroke="none"/>
+      </g>
+      <g id="part-28-far-right-child-right-hand-skin-fill" class="logo-part-group logo-part far-right-child brown-skin skin hand" inkscape:label="28 Far Right Child - Right Hand Skin Fill" data-child="far-right-child" data-part="right hand skin fill" data-original-index="28" data-color-name="brown-skin" data-fill="#94561F">
+        <title>28 Far Right Child - Right Hand Skin Fill</title>
+        <path d="m1457 489c9.408 1.261 24.58-4.074 29 6.733 1.329 11.08-15.05 10.69-22.91 11.8-13.57-0.1064 10.72 9.717 14.35 14.3 8.775 7.682 23.53 11.52 27.56 22.9-1.326 9.923-15.18-7.201-22.22-8.02-15.66-6.611 5.538 9.714 10.47 12.73 9.612 4.08 9.041 18.31-3.251 14.56-9.671-7.024-19.96-13.4-31-18 5.044 5.434 14.4 11.62 21.46 17.04 15.6 7.544-3.469 14.76-10.98 7.376-6.211-4.257-19.64-15.88-23.2-12.25 3.949 6.683 20.54 12.7 17.72 18.83-19.42-0.2368-35.06-14.87-49-27-10.23-13.72 3.902-30.04 13.39-40.04 2.925-5.549 28.8-12.26 16.18-12.47-12.02 2.217 12.23-9.929 12.43-8.49z" fill="#94561F" id="far-right-child-right-hand-skin-fill" class="logo-part far-right-child brown-skin skin hand" inkscape:label="28 Far Right Child - Right Hand Skin Fill path" data-child="far-right-child" data-part="right hand skin fill" data-color-name="brown-skin" data-original-index="28" stroke="none"/>
+      </g>
+      <g id="part-29-far-left-child-right-gray-shoe" class="logo-part-group logo-part far-left-child dark-gray-shoe shoe gray" inkscape:label="29 Far Left Child - Right Gray Shoe" data-child="far-left-child" data-part="right gray shoe" data-original-index="29" data-color-name="dark-gray-shoe" data-fill="#616865">
+        <title>29 Far Left Child - Right Gray Shoe</title>
+        <path id="far-left-child-right-gray-shoe" class="logo-part far-left-child dark-gray-shoe shoe gray" d="m416 734c9.903 1.068 12.71 9.404 20 13 4.927 6.535 11.19 11.95 15.78 17.55 9.745 12.78 2.331 30.86-12.35 35.66-20.75 8.33-49.64 7.669-64.43-11.21 5.36-6.846 18.04-8.818 21.55-19.1 6.983-8.032 4.423-22.57 12.67-28.19 3.237-0.9506 5.122-5.032 6.782-7.713z" fill="#616865" data-original-id="child-left-right-shoe" inkscape:label="29 Far Left Child - Right Gray Shoe path" data-child="far-left-child" data-part="right gray shoe" data-color-name="dark-gray-shoe" data-original-index="29" stroke="none"/>
+      </g>
+      <g id="part-30-center-child-black-smile-and-face-outlines" class="logo-part-group logo-part center-child black face-detail mouth outline" inkscape:label="30 Center Child - Black Smile And Face Outlines" data-child="center-child" data-part="black smile and face outlines" data-original-index="30" data-color-name="black" data-fill="#000000">
+        <title>30 Center Child - Black Smile And Face Outlines</title>
+        <path d="m683 173c11.83 0.1588 10.34 17.85 20.92 21.86 28.37 20.65 70.37 10.73 93.2-13.6 5.108-17.95 20.96 9.874 7.872 4.736-6.82 8.308-16.73 14.66-24.55 20.64-6.764 20.52-23.1 45.56-47.85 42.36-22.07-3.512-30.17-28-34.6-47-9.485-4.451-9.632-21.16-20-21 0.189-3.911 1.49-6.144 5-8z" fill="#000000" id="center-child-black-smile-and-face-outlines" class="logo-part center-child black face-detail mouth outline" inkscape:label="30 Center Child - Black Smile And Face Outlines path" data-child="center-child" data-part="black smile and face outlines" data-color-name="black" data-original-index="30" stroke="none"/>
+      </g>
+      <g id="part-31-far-right-child-black-smile-and-face-outlines" class="logo-part-group logo-part far-right-child black face-detail mouth outline" inkscape:label="31 Far Right Child - Black Smile And Face Outlines" data-child="far-right-child" data-part="black smile and face outlines" data-original-index="31" data-color-name="black" data-fill="#000000">
+        <title>31 Far Right Child - Black Smile And Face Outlines</title>
+        <path d="m1275 211c12.01-0.0624 3 17.04 13.3 22.59 22.72 26.22 64.16 29.95 93.7 13.41-3.016-3.533 2.995-9.184 12-1 5.43 15.96-7.604 2.031-14.1 11.55-10.3 3.626-17.47 7.468-22.19 16.67-10.48 16.12-32.19 33.1-51.71 21.78-13.64-10.9-13.49-30.91-15-47-8.329-7.899-17.44-17.8-17-30-11.32 1.674-6.621-6.548 1-8z" fill="#000000" id="far-right-child-black-smile-and-face-outlines" class="logo-part far-right-child black face-detail mouth outline" inkscape:label="31 Far Right Child - Black Smile And Face Outlines path" data-child="far-right-child" data-part="black smile and face outlines" data-color-name="black" data-original-index="31" stroke="none"/>
+      </g>
+      <g id="part-32-right-center-child-black-smile-and-face-outlines" class="logo-part-group logo-part right-center-child black face-detail mouth outline" inkscape:label="32 Right Center Child - Black Smile And Face Outlines" data-child="right-center-child" data-part="black smile and face outlines" data-original-index="32" data-color-name="black" data-fill="#000000">
+        <title>32 Right Center Child - Black Smile And Face Outlines</title>
+        <path d="m968 243c16.8-1.476 2.91 9.654 9.333 19.2 8.338 23.74 33.39 41.84 59 37.8 8.607 0.0294 21.63-0.3093 26.67-6.733 3.717-14.43 18.62 15.95 7.225 10.18-6.281-3.458-18.18 7.85-27.66 6.98-8.954 2.011-12.45 14.83-21.29 19.53-11.89 11.08-33.44 12.88-42.27-2.956-8.592-15.2-3.636-33.45-4.775-49.55-6.563-7.68-6.307-21.02-8.958-27.45-8.015 0.5839-3.266-8.353 2.733-7z" fill="#000000" id="right-center-child-black-smile-and-face-outlines" class="logo-part right-center-child black face-detail mouth outline" inkscape:label="32 Right Center Child - Black Smile And Face Outlines path" data-child="right-center-child" data-part="black smile and face outlines" data-color-name="black" data-original-index="32" stroke="none"/>
+      </g>
+      <g id="part-33-green-shirt-child-black-smile-and-face-outlines" class="logo-part-group logo-part green-shirt-child black face-detail mouth outline" inkscape:label="33 Green Shirt Child - Black Smile And Face Outlines" data-child="green-shirt-child" data-part="black smile and face outlines" data-original-index="33" data-color-name="black" data-fill="#000000">
+        <title>33 Green Shirt Child - Black Smile And Face Outlines</title>
+        <path d="m549 192c16.79 2.8 8.16 9.709-0.5973 15.62-5.694 7.172-13.72 13.88-22.4 16.38-0.8922 19.72-16.41 41.97-38.4 38-16.25-1.533-29.08-16.45-34.6-30.73-7.548-2.563-17.31-8.612-22-17.27-16.87 5.223 2.167-16.67 7.704-7.416 7.294 20.14 33.67 21.88 51.86 19.06 20.8-2.884 43.46-12.1 54.86-30.33-0.2676-2.601 1.708-2.715 3.58-3.319z" fill="#000000" id="green-shirt-child-black-smile-and-face-outlines" class="logo-part green-shirt-child black face-detail mouth outline" inkscape:label="33 Green Shirt Child - Black Smile And Face Outlines path" data-child="green-shirt-child" data-part="black smile and face outlines" data-color-name="black" data-original-index="33" stroke="none"/>
+      </g>
+      <g id="part-34-far-left-child-black-smile-and-face-outlines" class="logo-part-group logo-part far-left-child black face-detail mouth outline" inkscape:label="34 Far Left Child - Black Smile And Face Outlines" data-child="far-left-child" data-part="black smile and face outlines" data-original-index="34" data-color-name="black" data-fill="#000000">
+        <title>34 Far Left Child - Black Smile And Face Outlines</title>
+        <path d="m292 223c15.26-0.0769 11.37 5.56 8 12.93 2.33 14.24-12.7 23.93-9 38.2 2.107 15.55-2.621 36.31-20.72 39.04-17.51 3.581-32.73-8.049-44.92-18.72-8.183-2.308-21.05-8.952-25-2-5.753-6.615 0.4977-22.51 10.64-21.45-8.861 10.36 7.577 14.8 15.67 13 27.93 3.776 56.51-15.14 64.3-42.14 9.022-15.67-11.94-6.566 1.039-18.86z" fill="#000000" id="far-left-child-black-smile-and-face-outlines" class="logo-part far-left-child black face-detail mouth outline" inkscape:label="34 Far Left Child - Black Smile And Face Outlines path" data-child="far-left-child" data-part="black smile and face outlines" data-color-name="black" data-original-index="34" stroke="none"/>
+      </g>
+      <g id="part-35-center-child-red-collar-base" class="logo-part-group logo-part center-child red-shirt collar shirt red" inkscape:label="35 Center Child - Red Collar Base" data-child="center-child" data-part="red collar base" data-original-index="35" data-color-name="red-shirt" data-fill="#D40000">
+        <title>35 Center Child - Red Collar Base</title>
+        <path d="m703 286c13.02-1.581 5.043 16.29 14 22 13.56 11.06 39.65 3.223 40-16 14.35-6.418 4.794 13.08 1 19-8.612 14.01-23.88 24.3-40.86 21-19.97-2.127-29.54-29.28-15.46-43.88l0.9185-1.47z" fill="#D40000" id="center-child-red-collar-base" class="logo-part center-child red-shirt collar shirt red" data-original-id="child-center-collar-base" inkscape:label="35 Center Child - Red Collar Base path" data-child="center-child" data-part="red collar base" data-color-name="red-shirt" data-original-index="35" stroke="none"/>
+      </g>
+      <g id="part-36-far-right-child-solid-mouth-interior" class="logo-part-group logo-part far-right-child black mouth interior" inkscape:label="36 Far Right Child - Solid Mouth Interior" data-child="far-right-child" data-part="solid mouth interior" data-original-index="36" data-color-name="black" data-fill="#000000">
+        <title>36 Far Right Child - Solid Mouth Interior</title>
+        <path d="m1301 254c14.19 9.25 30.61 14.97 47.63 11.22 5.57 4.822-10.28 15.47-14.07 22.11-9.443 9.98-27.12 5.304-29.14-8.762-2.785-7.793-4.823-16.23-4.425-24.56z" fill="#000000" id="far-right-child-solid-mouth-interior" class="logo-part far-right-child black mouth interior" data-original-id="mouth-interior-solid-black" inkscape:label="36 Far Right Child - Solid Mouth Interior path" data-child="far-right-child" data-part="solid mouth interior" data-color-name="black" data-original-index="36" stroke="none"/>
+      </g>
+      <g id="part-37-right-center-child-solid-mouth-interior" class="logo-part-group logo-part right-center-child black mouth interior" inkscape:label="37 Right Center Child - Solid Mouth Interior" data-child="right-center-child" data-part="solid mouth interior" data-original-index="37" data-color-name="black" data-fill="#000000">
+        <title>37 Right Center Child - Solid Mouth Interior</title>
+        <path d="m984 290c5.686 5.083 14.48 11.12 23 14.33 8.136 2.097 24.62 5.523 13.23 15.75-8.606 7.634-26.23 17.99-33.26 3.279-4.372-10.24-5.169-22.43-2.971-33.36z" fill="#000000" id="right-center-child-solid-mouth-interior" class="logo-part right-center-child black mouth interior" data-original-id="mouth-interior-solid-black" inkscape:label="37 Right Center Child - Solid Mouth Interior path" data-child="right-center-child" data-part="solid mouth interior" data-color-name="black" data-original-index="37" stroke="none"/>
+      </g>
+      <g id="part-38-center-child-solid-mouth-interior" class="logo-part-group logo-part center-child black mouth interior" inkscape:label="38 Center Child - Solid Mouth Interior" data-child="center-child" data-part="solid mouth interior" data-original-index="38" data-color-name="black" data-fill="#000000">
+        <title>38 Center Child - Solid Mouth Interior</title>
+        <path d="m710 208c16.1 8.6 34.43 7.474 52 6 4.669 13.55-12.62 27.76-25.93 26-10.72 1.116-14.18-9.554-17.11-16.63 0.4002-8.825-7.317-9.153-8.961-15.37z" fill="#000000" id="center-child-solid-mouth-interior" class="logo-part center-child black mouth interior" data-original-id="mouth-interior-solid-black" inkscape:label="38 Center Child - Solid Mouth Interior path" data-child="center-child" data-part="solid mouth interior" data-color-name="black" data-original-index="38" stroke="none"/>
+      </g>
+      <g id="part-39-far-left-child-blue-collar-base" class="logo-part-group logo-part far-left-child soft-blue collar shirt blue" inkscape:label="39 Far Left Child - Blue Collar Base" data-child="far-left-child" data-part="blue collar base" data-original-index="39" data-color-name="soft-blue" data-fill="#6FAED7">
+        <title>39 Far Left Child - Blue Collar Base</title>
+        <path id="far-left-child-blue-collar-base" class="logo-part far-left-child soft-blue collar shirt blue" d="m315 329c7.076 4.497 5.691 19.03 0.8998 26.2-12.03 19.18-42.68 26.37-60.96 12.43-6.455-7.061-12.29-14.89 2.064-12.63 12.27 13.2 35.04 10.75 47.78 1.45 9.207-7.016 4.539-20.37 10.11-27.37z" fill="#6FAED7" data-original-id="child-left-collar-base" inkscape:label="39 Far Left Child - Blue Collar Base path" data-child="far-left-child" data-part="blue collar base" data-color-name="soft-blue" data-original-index="39" stroke="none"/>
+      </g>
+      <g id="part-40-far-left-child-solid-mouth-interior" class="logo-part-group logo-part far-left-child black mouth interior" inkscape:label="40 Far Left Child - Solid Mouth Interior" data-child="far-left-child" data-part="solid mouth interior" data-original-index="40" data-color-name="black" data-fill="#000000">
+        <title>40 Far Left Child - Solid Mouth Interior</title>
+        <path id="far-left-child-solid-mouth-interior" class="logo-part far-left-child black mouth interior" d="m283 270c4.391 6.621 0.3225 18.87-2 27-4.621 11.98-18.77 13.67-28.77 7.446-9.229-3.321-20.04-14.08-3.14-13.97 12.94-3.175 24.85-10.76 33.91-20.48z" fill="#000000" data-original-id="child-left-mouth-solid-black" inkscape:label="40 Far Left Child - Solid Mouth Interior path" data-child="far-left-child" data-part="solid mouth interior" data-color-name="black" data-original-index="40" stroke="none"/>
+      </g>
+      <g id="part-41-green-shirt-child-solid-mouth-interior" class="logo-part-group logo-part green-shirt-child black mouth interior" inkscape:label="41 Green Shirt Child - Solid Mouth Interior" data-child="green-shirt-child" data-part="solid mouth interior" data-original-index="41" data-color-name="black" data-fill="#000000">
+        <title>41 Green Shirt Child - Solid Mouth Interior</title>
+        <path d="m515 229c3.062 8.629-6.241 21.45-15.29 25.1-15.19 5.303-29.2-6.604-34.71-20.1 16.79 2.189 34.04 0.7629 50-5z" fill="#000000" id="green-shirt-child-solid-mouth-interior" class="logo-part green-shirt-child black mouth interior" data-original-id="mouth-interior-solid-black" inkscape:label="41 Green Shirt Child - Solid Mouth Interior path" data-child="green-shirt-child" data-part="solid mouth interior" data-color-name="black" data-original-index="41" stroke="none"/>
+      </g>
+      <g id="part-42-far-left-child-neck-skin-fill" class="logo-part-group logo-part far-left-child dark-warm-skin skin neck" inkscape:label="42 Far Left Child - Neck Skin Fill" data-child="far-left-child" data-part="neck skin fill" data-original-index="42" data-color-name="dark-warm-skin" data-fill="#8F6D51">
+        <title>42 Far Left Child - Neck Skin Fill</title>
+        <path id="far-left-child-neck-skin-fill" class="logo-part far-left-child dark-warm-skin skin neck" d="m306 335c10.18 3.241 0.7911 19.31-6.932 22.2-11.15 7.288-28.22 7.233-38.07-2.199 5.19-6.62 19.32-6.067 27.53-10.82 5.824-3.06 11.56-6.285 17.47-9.184z" fill="#8F6D51" data-original-id="child-left-neck" inkscape:label="42 Far Left Child - Neck Skin Fill path" data-child="far-left-child" data-part="neck skin fill" data-color-name="dark-warm-skin" data-original-index="42" stroke="none"/>
+      </g>
+      <g id="part-43-center-child-neck-skin-fill" class="logo-part-group logo-part center-child peach-neck skin neck" inkscape:label="43 Center Child - Neck Skin Fill" data-child="center-child" data-part="neck skin fill" data-original-index="43" data-color-name="peach-neck" data-fill="#FBD0A1">
+        <title>43 Center Child - Neck Skin Fill</title>
+        <path d="m714 289c12.79 2.927 25.94 3.25 39 3 0.3991 18.51-29.39 27.12-36.97 8.901-3.623-3.057-1.461-7.872-2.031-11.9z" fill="#FBD0A1" id="center-child-neck-skin-fill" data-original-id="child-center-neck" class="logo-part center-child peach-neck skin neck" inkscape:label="43 Center Child - Neck Skin Fill path" data-child="center-child" data-part="neck skin fill" data-color-name="peach-neck" data-original-index="43" stroke="none"/>
+      </g>
+      <g id="part-44-far-right-child-neck-skin-fill" class="logo-part-group logo-part far-right-child brown-skin skin neck" inkscape:label="44 Far Right Child - Neck Skin Fill" data-child="far-right-child" data-part="neck skin fill" data-original-index="44" data-color-name="brown-skin" data-fill="#955520">
+        <title>44 Far Right Child - Neck Skin Fill</title>
+        <path d="m1271 324c16.04 7.825 31.99 17.02 50.5 16.72 3.408 4.266-15.86 9.924-22.86 9.219-12.68-1.977-27.88-11.65-27.64-25.94z" fill="#955520" id="far-right-child-neck-skin-fill" class="logo-part far-right-child brown-skin skin neck" inkscape:label="44 Far Right Child - Neck Skin Fill path" data-child="far-right-child" data-part="neck skin fill" data-color-name="brown-skin" data-original-index="44" stroke="none"/>
+      </g>
+      <g id="part-45-far-right-child-left-eye-and-brow-detail" class="logo-part-group logo-part far-right-child black face-detail eye brow" inkscape:label="45 Far Right Child - Left Eye And Brow Detail" data-child="far-right-child" data-part="left eye and brow detail" data-original-index="45" data-color-name="black" data-fill="#000000">
+        <title>45 Far Right Child - Left Eye And Brow Detail</title>
+        <path d="m1293 181c6.908-2.196 23.54 5.081 18 12-10.96-0.3533-21.59-1.503-32 3-15.11-2.676 8.7-14.65 14-15z" fill="#000000" id="far-right-child-left-eye-and-brow-detail" class="logo-part far-right-child black face-detail eye brow" inkscape:label="45 Far Right Child - Left Eye And Brow Detail path" data-child="far-right-child" data-part="left eye and brow detail" data-color-name="black" data-original-index="45" stroke="none"/>
+      </g>
+      <g id="part-46-far-right-child-right-eye-and-brow-detail" class="logo-part-group logo-part far-right-child black face-detail eye brow" inkscape:label="46 Far Right Child - Right Eye And Brow Detail" data-child="far-right-child" data-part="right eye and brow detail" data-original-index="46" data-color-name="black" data-fill="#000000">
+        <title>46 Far Right Child - Right Eye And Brow Detail</title>
+        <path d="m1371 203c12.07-1.403 29.34 8.316 26 22-10.16-1.72-14.98-15.32-26.85-14.05-9.757 1.075-6.388-7.592 0.8517-7.946z" fill="#000000" id="far-right-child-right-eye-and-brow-detail" class="logo-part far-right-child black face-detail eye brow" inkscape:label="46 Far Right Child - Right Eye And Brow Detail path" data-child="far-right-child" data-part="right eye and brow detail" data-color-name="black" data-original-index="46" stroke="none"/>
+      </g>
+      <g id="part-47-far-left-child-eye-and-brow-detail" class="logo-part-group logo-part far-left-child black face-detail eye brow" inkscape:label="47 Far Left Child - Eye And Brow Detail" data-child="far-left-child" data-part="eye and brow detail" data-original-index="47" data-color-name="black" data-fill="#000000">
+        <title>47 Far Left Child - Eye And Brow Detail</title>
+        <path d="m205 219c16.52-2.927 12.6 8.223-0.442 10.96-6.779 2.525-17.47 21.98-17.42 5.16 0.5883-9.357 9.548-14.31 17.86-16.12z" fill="#000000" id="far-left-child-eye-and-brow-detail" class="logo-part far-left-child black face-detail eye brow" inkscape:label="47 Far Left Child - Eye And Brow Detail path" data-child="far-left-child" data-part="eye and brow detail" data-color-name="black" data-original-index="47" stroke="none"/>
+      </g>
+      <g id="part-48-green-shirt-child-left-eye-and-brow-detail" class="logo-part-group logo-part green-shirt-child black face-detail eye brow" inkscape:label="48 Green Shirt Child - Left Eye And Brow Detail" data-child="green-shirt-child" data-part="left eye and brow detail" data-original-index="48" data-color-name="black" data-fill="#000000">
+        <title>48 Green Shirt Child - Left Eye And Brow Detail</title>
+        <path d="m450 163c12.53-4.635 22.18 9.586 4.722 8.581-10.36 0.786-16.16 13.35-26.72 11.42 2.519-9.828 13.05-16.41 22-20z" fill="#000000" id="green-shirt-child-left-eye-and-brow-detail" class="logo-part green-shirt-child black face-detail eye brow" inkscape:label="48 Green Shirt Child - Left Eye And Brow Detail path" data-child="green-shirt-child" data-part="left eye and brow detail" data-color-name="black" data-original-index="48" stroke="none"/>
+      </g>
+      <g id="part-49-right-center-child-eye-and-brow-detail" class="logo-part-group logo-part right-center-child black face-detail eye brow" inkscape:label="49 Right Center Child - Eye And Brow Detail" data-child="right-center-child" data-part="eye and brow detail" data-original-index="49" data-color-name="black" data-fill="#000000">
+        <title>49 Right Center Child - Eye And Brow Detail</title>
+        <path d="m1058 246c12.83-0.4374 27.52 11.74 27 25-8.383 3.754-12.64-14.34-22.61-15.15-4.879-2.718-15.06-5.831-4.393-9.851z" fill="#000000" id="right-center-child-eye-and-brow-detail" class="logo-part right-center-child black face-detail eye brow" inkscape:label="49 Right Center Child - Eye And Brow Detail path" data-child="right-center-child" data-part="eye and brow detail" data-color-name="black" data-original-index="49" stroke="none"/>
+      </g>
+      <g id="part-50-center-child-left-ear-hidden-under-hair-fill" class="logo-part-group logo-part center-child blonde-yellow hair blonde ear-hide-fix" inkscape:label="50 Center Child - Left Ear Hidden Under Hair Fill" data-child="center-child" data-part="left ear hidden under hair fill" data-original-index="50" data-color-name="blonde-yellow" data-fill="#F5D50C">
+        <title>50 Center Child - Left Ear Hidden Under Hair Fill</title>
+        <path id="center-child-left-ear-hidden-under-hair-fill" class="logo-part center-child blonde-yellow hair blonde ear-hide-fix" d="m630 180c11.95-8.072 16.7 20.65 8.324 11.32-11.24-4.296-11.76 9.682-20.1 10.23-1.805-6.628 2.652-19.71 11.78-21.55z" fill="#F5D50C" data-original-id="child-center-left-ear-hidden-hair-fill" inkscape:label="50 Center Child - Left Ear Hidden Under Hair Fill path" data-child="center-child" data-part="left ear hidden under hair fill" data-color-name="blonde-yellow" data-original-index="50" stroke="none"/>
+      </g>
+      <g id="part-51-center-child-left-ear-outline-cover-under-hair" class="logo-part-group logo-part center-child blonde-yellow hair blonde ear-hide-fix" inkscape:label="51 Center Child - Left Ear Outline Cover Under Hair" data-child="center-child" data-part="left ear outline cover under hair" data-original-index="51" data-color-name="blonde-yellow" data-fill="#F5D50C">
+        <title>51 Center Child - Left Ear Outline Cover Under Hair</title>
+        <path id="center-child-left-ear-outline-cover-under-hair" class="logo-part center-child blonde-yellow hair blonde ear-hide-fix" fill="#F5D50C" d="M 620 181 C 627 174 639 174 646 181 C 651 188 649 197 642 202 C 635 206 625 204 619 199 C 616 194 616 186 620 181 Z" data-original-id="child-center-left-ear-outline-cover" inkscape:label="51 Center Child - Left Ear Outline Cover Under Hair path" data-child="center-child" data-part="left ear outline cover under hair" data-color-name="blonde-yellow" data-original-index="51" stroke="none"/>
+      </g>
+      <g id="part-52-green-shirt-child-right-eye-and-brow-detail" class="logo-part-group logo-part green-shirt-child black face-detail eye brow" inkscape:label="52 Green Shirt Child - Right Eye And Brow Detail" data-child="green-shirt-child" data-part="right eye and brow detail" data-original-index="52" data-color-name="black" data-fill="#000000">
+        <title>52 Green Shirt Child - Right Eye And Brow Detail</title>
+        <path d="m516 161c9.875-0.8839 24.4 0.7706 27 12-11.7-1.52-23.26-5.314-35-1-6.104-4.737 3.978-9.867 8-11z" fill="#000000" id="green-shirt-child-right-eye-and-brow-detail" class="logo-part green-shirt-child black face-detail eye brow" inkscape:label="52 Green Shirt Child - Right Eye And Brow Detail path" data-child="green-shirt-child" data-part="right eye and brow detail" data-color-name="black" data-original-index="52" stroke="none"/>
+      </g>
+      <g id="part-53-right-center-child-second-eye-and-brow-detail" class="logo-part-group logo-part right-center-child black face-detail eye brow" inkscape:label="53 Right Center Child - Second Eye And Brow Detail" data-child="right-center-child" data-part="second eye and brow detail" data-original-index="53" data-color-name="black" data-fill="#000000">
+        <title>53 Right Center Child - Second Eye And Brow Detail</title>
+        <path d="m996 221c7.5-2.179 26.58 2.942 22.28 9.809-12.36-1.564-24.9-0.8528-37.28 0.1914 2.276-6.335 9.063-8.417 15-10z" fill="#000000" id="right-center-child-second-eye-and-brow-detail" class="logo-part right-center-child black face-detail eye brow" inkscape:label="53 Right Center Child - Second Eye And Brow Detail path" data-child="right-center-child" data-part="second eye and brow detail" data-color-name="black" data-original-index="53" stroke="none"/>
+      </g>
+      <g id="part-54-center-child-left-eye-and-brow-detail" class="logo-part-group logo-part center-child black face-detail eye brow" inkscape:label="54 Center Child - Left Eye And Brow Detail" data-child="center-child" data-part="left eye and brow detail" data-original-index="54" data-color-name="black" data-fill="#000000">
+        <title>54 Center Child - Left Eye And Brow Detail</title>
+        <path d="m769 145c9.667-0.6269 21.33 5.441 23.66 14.7-4.346 6.853-16.52-10.91-26.33-5.699-11.98 2.907-4.265-9.289 2.665-9z" fill="#000000" id="center-child-left-eye-and-brow-detail" class="logo-part center-child black face-detail eye brow" inkscape:label="54 Center Child - Left Eye And Brow Detail path" data-child="center-child" data-part="left eye and brow detail" data-color-name="black" data-original-index="54" stroke="none"/>
+      </g>
+      <g id="part-55-center-child-right-eye-and-brow-detail" class="logo-part-group logo-part center-child black face-detail eye brow" inkscape:label="55 Center Child - Right Eye And Brow Detail" data-child="center-child" data-part="right eye and brow detail" data-original-index="55" data-color-name="black" data-fill="#000000">
+        <title>55 Center Child - Right Eye And Brow Detail</title>
+        <path d="m713 143c9.17-3.592 26.38 10.41 8.335 8-9.847-3.829-20.54 11.54-25.91 6.319 1.986-7.665 10.87-11.56 17.58-14.32z" fill="#000000" id="center-child-right-eye-and-brow-detail" class="logo-part center-child black face-detail eye brow" inkscape:label="55 Center Child - Right Eye And Brow Detail path" data-child="center-child" data-part="right eye and brow detail" data-color-name="black" data-original-index="55" stroke="none"/>
+      </g>
+      <g id="part-56-center-child-left-blonde-hair-side-fill" class="logo-part-group logo-part center-child bright-yellow hair blonde" inkscape:label="56 Center Child - Left Blonde Hair Side Fill" data-child="center-child" data-part="left blonde hair side fill" data-original-index="56" data-color-name="bright-yellow" data-fill="#FDEB02">
+        <title>56 Center Child - Left Blonde Hair Side Fill</title>
+        <path d="m619 232c2.968 5.998 19.31 22.36 6.083 20.46-11.96 5.458-14.82-12.52-7.755-18.46l1.109-1.331z" fill="#FDEB02" id="center-child-left-blonde-hair-side-fill" class="logo-part center-child bright-yellow hair blonde" inkscape:label="56 Center Child - Left Blonde Hair Side Fill path" data-child="center-child" data-part="left blonde hair side fill" data-color-name="bright-yellow" data-original-index="56" stroke="none"/>
+      </g>
+      <g id="part-57-green-shirt-child-ear-and-skin-cleanup-fill" class="logo-part-group logo-part green-shirt-child warm-skin skin ear" inkscape:label="57 Green Shirt Child - Ear And Skin Cleanup Fill" data-child="green-shirt-child" data-part="ear and skin cleanup fill" data-original-index="57" data-color-name="warm-skin" data-fill="#FBCC99">
+        <title>57 Green Shirt Child - Ear And Skin Cleanup Fill</title>
+        <path d="m763 99c2.822 3.854 10.95 24.46 0.8326 21.43-8.432-5.126-15.75-6.088-6.507-16.08 0.2096-4.937 6.699-1.374 5.675-5.35z" fill="#FBCC99" id="green-shirt-child-ear-and-skin-cleanup-fill" class="logo-part green-shirt-child warm-skin skin ear" inkscape:label="57 Green Shirt Child - Ear And Skin Cleanup Fill path" data-child="green-shirt-child" data-part="ear and skin cleanup fill" data-color-name="warm-skin" data-original-index="57" stroke="none"/>
+      </g>
+      <g id="part-58-far-left-child-second-eye-and-brow-detail" class="logo-part-group logo-part far-left-child black face-detail eye brow" inkscape:label="58 Far Left Child - Second Eye And Brow Detail" data-child="far-left-child" data-part="second eye and brow detail" data-original-index="58" data-color-name="black" data-fill="#000000">
+        <title>58 Far Left Child - Second Eye And Brow Detail</title>
+        <path d="m260 188c6.747-4.306 27.75 8.804 13.87 8.145-7.046-3.629-25.5 6.678-24.32-1.245 2.203-4.063 6.109-5.922 10.45-6.9z" fill="#000000" id="far-left-child-second-eye-and-brow-detail" class="logo-part far-left-child black face-detail eye brow" inkscape:label="58 Far Left Child - Second Eye And Brow Detail path" data-child="far-left-child" data-part="second eye and brow detail" data-color-name="black" data-original-index="58" stroke="none"/>
+      </g>
+      <g id="part-59-far-right-child-neck-and-face-cleanup-fill" class="logo-part-group logo-part far-right-child brown-skin skin neck cleanup" inkscape:label="59 Far Right Child - Neck And Face Cleanup Fill" data-child="far-right-child" data-part="neck and face cleanup fill" data-original-index="59" data-color-name="brown-skin" data-fill="#955520">
+        <title>59 Far Right Child - Neck And Face Cleanup Fill</title>
+        <path d="m1274 325c15.25 8.923 31.99 16.28 50 16-15.15 14.89-43.53 9.751-52-10 1.958-7.393 8.822 15.36 18.75 14.11 4.988 4.671 29.63 0.8985 21.84-2.75-14.12-1.319-26.69-8.12-38.59-15.36v-1.733z" fill="#955520" id="far-right-child-neck-and-face-cleanup-fill" class="logo-part far-right-child brown-skin skin neck cleanup" inkscape:label="59 Far Right Child - Neck And Face Cleanup Fill path" data-child="far-right-child" data-part="neck and face cleanup fill" data-color-name="brown-skin" data-original-index="59" stroke="none"/>
+      </g>
+      <g id="part-60-center-child-right-ear-hidden-under-hair-base" class="logo-part-group logo-part center-child blonde-yellow hair blonde ear-hide-fix" inkscape:label="60 Center Child - Right Ear Hidden Under Hair Base" data-child="center-child" data-part="right ear hidden under hair base" data-original-index="60" data-color-name="blonde-yellow" data-fill="#F5D50C">
+        <title>60 Center Child - Right Ear Hidden Under Hair Base</title>
+        <path id="center-child-right-ear-hidden-under-hair-base" class="logo-part center-child blonde-yellow hair blonde ear-hide-fix" d="m866 194c8.728 3.18 16.7 6.124 17 17-0.7672 10.69-17.65-6.374-5.86-0.5047-1.572-16.18-22.41 5.398-15.1-5.882 3.411-2.724 6.681-5.122 3.96-10.61z" fill="#F5D50C" data-original-id="child-center-right-ear-hidden-hair-fill-base" inkscape:label="60 Center Child - Right Ear Hidden Under Hair Base path" data-child="center-child" data-part="right ear hidden under hair base" data-color-name="blonde-yellow" data-original-index="60" stroke="none"/>
+      </g>
+      <g id="part-61-far-right-child-hand-outline-and-finger-detail" class="logo-part-group logo-part far-right-child black outline hand" inkscape:label="61 Far Right Child - Hand Outline And Finger Detail" data-child="far-right-child" data-part="hand outline and finger detail" data-original-index="61" data-color-name="black" data-fill="#000000">
+        <title>61 Far Right Child - Hand Outline And Finger Detail</title>
+        <path d="m1465 519c3.01 8.675-9.219 21.93-19.93 19-15.82-5.137-6.228-6.174 4.932-5 8.616-1.217 8.293-11.59 15-14z" fill="#000000" id="far-right-child-hand-outline-and-finger-detail" class="logo-part far-right-child black outline hand" inkscape:label="61 Far Right Child - Hand Outline And Finger Detail path" data-child="far-right-child" data-part="hand outline and finger detail" data-color-name="black" data-original-index="61" stroke="none"/>
+      </g>
+      <g id="part-62-far-right-child-face-detail-near-cheek" class="logo-part-group logo-part far-right-child black face-detail" inkscape:label="62 Far Right Child - Face Detail Near Cheek" data-child="far-right-child" data-part="face detail near cheek" data-original-index="62" data-color-name="black" data-fill="#000000">
+        <title>62 Far Right Child - Face Detail Near Cheek</title>
+        <path d="m1425 268c12.04-3.664 19.64 8.5 3.278 4.809-5.042 0.4295-11.62-1.758-3.278-4.809z" fill="#000000" id="far-right-child-face-detail-near-cheek" class="logo-part far-right-child black face-detail" inkscape:label="62 Far Right Child - Face Detail Near Cheek path" data-child="far-right-child" data-part="face detail near cheek" data-color-name="black" data-original-index="62" stroke="none"/>
+      </g>
+      <g id="part-63-center-child-right-ear-hidden-under-hair-fill" class="logo-part-group logo-part center-child blonde-yellow hair blonde ear-hide-fix" inkscape:label="63 Center Child - Right Ear Hidden Under Hair Fill" data-child="center-child" data-part="right ear hidden under hair fill" data-original-index="63" data-color-name="blonde-yellow" data-fill="#F5D50C">
+        <title>63 Center Child - Right Ear Hidden Under Hair Fill</title>
+        <path id="center-child-right-ear-hidden-under-hair-fill" class="logo-part center-child blonde-yellow hair blonde ear-hide-fix" d="m867 203c10.97-0.8171 14.84 13.97 2.301 5.34-9.399 3.299-10.28 0.2524-2.301-5.34z" fill="#F5D50C" data-original-id="child-center-right-ear-hidden-hair-fill" inkscape:label="63 Center Child - Right Ear Hidden Under Hair Fill path" data-child="center-child" data-part="right ear hidden under hair fill" data-color-name="blonde-yellow" data-original-index="63" stroke="none"/>
+      </g>
+      <g id="part-64-right-center-child-skin-colored-foot-cleanup" class="logo-part-group logo-part right-center-child light-skin skin foot" inkscape:label="64 Right Center Child - Skin-Colored Foot Cleanup" data-child="right-center-child" data-part="skin-colored foot cleanup" data-original-index="64" data-color-name="light-skin" data-fill="#FAD8B9">
+        <title>64 Right Center Child - Skin-Colored Foot Cleanup</title>
+        <path d="m1071 779c12.68 3.546 6.679 23.24 0.785 6.28-0.2616-2.093-0.5233-4.187-0.785-6.28z" fill="#FAD8B9" id="right-center-child-skin-colored-foot-cleanup" class="logo-part right-center-child light-skin skin foot" inkscape:label="64 Right Center Child - Skin-Colored Foot Cleanup path" data-child="right-center-child" data-part="skin-colored foot cleanup" data-color-name="light-skin" data-original-index="64" stroke="none"/>
+      </g>
+      <g id="part-65-center-child-small-eye-detail" class="logo-part-group logo-part center-child black face-detail eye" inkscape:label="65 Center Child - Small Eye Detail" data-child="center-child" data-part="small eye detail" data-original-index="65" data-color-name="black" data-fill="#000000">
+        <title>65 Center Child - Small Eye Detail</title>
+        <path d="m761 135c15.83-1.536 12.36 8.529-1.829 4.012 0.1834-0.9554 1.254-2.787 1.829-4.012z" fill="#000000" id="center-child-small-eye-detail" class="logo-part center-child black face-detail eye" inkscape:label="65 Center Child - Small Eye Detail path" data-child="center-child" data-part="small eye detail" data-color-name="black" data-original-index="65" stroke="none"/>
+      </g>
+      <g id="part-66-far-left-child-small-face-detail" class="logo-part-group logo-part far-left-child black face-detail" inkscape:label="66 Far Left Child - Small Face Detail" data-child="far-left-child" data-part="small face detail" data-original-index="66" data-color-name="black" data-fill="#000000">
+        <title>66 Far Left Child - Small Face Detail</title>
+        <path d="m344 222c14.08 1.646-20.94 14.37-3.991 2.28 1.33-0.7601 2.66-1.52 3.991-2.28z" fill="#000000" id="far-left-child-small-face-detail" class="logo-part far-left-child black face-detail" inkscape:label="66 Far Left Child - Small Face Detail path" data-child="far-left-child" data-part="small face detail" data-color-name="black" data-original-index="66" stroke="none"/>
+      </g>
+      <g id="part-67-far-right-child-small-eye-detail" class="logo-part-group logo-part far-right-child black face-detail eye" inkscape:label="67 Far Right Child - Small Eye Detail" data-child="far-right-child" data-part="small eye detail" data-original-index="67" data-color-name="black" data-fill="#000000">
+        <title>67 Far Right Child - Small Eye Detail</title>
+        <path d="m1372 194c15.6-1.531 15.63 7.912 0.1374 2.02-0.8039-0.0157-0.043-1.388-0.1374-2.02z" fill="#000000" id="far-right-child-small-eye-detail" class="logo-part far-right-child black face-detail eye" inkscape:label="67 Far Right Child - Small Eye Detail path" data-child="far-right-child" data-part="small eye detail" data-color-name="black" data-original-index="67" stroke="none"/>
+      </g>
+      <g id="part-68-far-left-child-small-face-cleanup-detail" class="logo-part-group logo-part far-left-child black face-detail" inkscape:label="68 Far Left Child - Small Face Cleanup Detail" data-child="far-left-child" data-part="small face cleanup detail" data-original-index="68" data-color-name="black" data-fill="#000000">
+        <title>68 Far Left Child - Small Face Cleanup Detail</title>
+        <path d="m158 318c22.77-0.3015-9.269 8.752-0.116 0.0773z" fill="#000000" id="far-left-child-small-face-cleanup-detail" class="logo-part far-left-child black face-detail" inkscape:label="68 Far Left Child - Small Face Cleanup Detail path" data-child="far-left-child" data-part="small face cleanup detail" data-color-name="black" data-original-index="68" stroke="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

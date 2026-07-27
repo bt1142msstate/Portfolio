@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640" role="img" aria-label="Sunny schoolyard doodle pattern">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g opacity=".48" stroke="#c99735" stroke-width="5">
+      <circle cx="96" cy="108" r="24" fill="#fff4b8"/>
+      <path d="M96 55v23M96 138v23M43 108h23M126 108h23M59 71l16 16M117 129l16 16M133 71l-16 16M75 129l-16 16"/>
+    </g>
+
+    <g opacity=".38" stroke="#0d6fa7" stroke-width="5">
+      <path d="M220 72c17-13 42-13 58 4 11-6 26-3 34 8 15-4 31 5 35 20H194c2-15 12-27 26-32z" fill="#ffffff"/>
+      <path d="M1084 98c18-14 42-12 58 5 10-6 26-3 34 8 15-4 31 5 35 20h-150c2-15 10-27 23-33z" fill="#ffffff"/>
+    </g>
+
+    <g opacity=".42" stroke="#2f6d55" stroke-width="5">
+      <path d="M1272 76c42 26 52 70 30 116"/>
+      <path d="M1275 84c22-14 43-14 63 0-12 21-33 27-63 18z" fill="#dff4f1"/>
+      <path d="M1292 132c24-7 45-2 62 16-17 17-39 18-66 2z" fill="#e8f3ed"/>
+      <path d="M1266 166c18 8 29 22 32 42-20 1-36-10-48-32z" fill="#dff4f1"/>
+    </g>
+
+    <g opacity=".34" stroke="#c83f3d" stroke-width="4">
+      <path d="M74 310h96v74H74z" fill="#fff8d5"/>
+      <path d="M62 310 122 266l60 44"/>
+      <path d="M108 384v-42h29v42M88 330h16M139 330h16"/>
+      <path d="M122 266v-28h36v54"/>
+    </g>
+
+    <g opacity=".36" stroke="#0d6fa7" stroke-width="4">
+      <path d="M1242 352h102c16 0 29 13 29 29v36h-161v-35c0-17 13-30 30-30z" fill="#ffffff"/>
+      <path d="M1232 418h150M1260 352v66M1318 352v66"/>
+      <circle cx="1260" cy="438" r="13" fill="#d6d3c4" stroke="#10263d"/>
+      <circle cx="1348" cy="438" r="13" fill="#d6d3c4" stroke="#10263d"/>
+      <path d="M1248 384h36M1300 384h40M1364 377h12" stroke="#2f6d55"/>
+    </g>
+
+    <g opacity=".36" stroke="#c99735" stroke-width="5">
+      <path d="M292 478c40-22 83-22 130 0s91 22 132 0 84-22 129 0" stroke-dasharray="10 16"/>
+      <path d="M794 134c34-17 70-17 108 0s74 17 108 0" stroke-dasharray="8 14"/>
+    </g>
+
+    <g opacity=".4" stroke="#c99735" stroke-width="3">
+      <path d="M1188 250h14l4-13 5 13h14l-11 8 4 14-12-8-11 8 4-14z" fill="#fff4b8"/>
+      <path d="M250 236h13l4-13 5 13h13l-10 8 4 13-12-8-11 8 4-13z" fill="#fff4b8"/>
+      <path d="M116 500h13l4-13 5 13h13l-10 8 4 13-12-8-11 8 4-13z" fill="#fff4b8"/>
+    </g>
+
+    <g opacity=".32" stroke="#2f6d55" stroke-width="4">
+      <path d="M1090 480c20-14 40-14 60 0-13 20-33 25-60 14z" fill="#e8f3ed"/>
+      <path d="M1144 506c20-9 39-5 56 13-18 16-38 16-61-1z" fill="#dff4f1"/>
+      <path d="M1088 480c27 22 58 34 96 37"/>
+    </g>
+  </g>
+</svg>

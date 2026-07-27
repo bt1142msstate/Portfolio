@@ -1,0 +1,131 @@
+{
+  "offline": true,
+  "assetPipelineVersion": 2,
+  "audit": {
+    "htmlFiles": 11,
+    "cssFiles": 3,
+    "remoteReferences": 0,
+    "pagesWithScriptsOrFrames": 0
+  },
+  "mediaAudit": {
+    "meaningfulImageElements": 88,
+    "localImages": 88,
+    "dataImages": 0,
+    "invalidImages": 0
+  },
+  "prunedAssets": [
+    "assets/sample-avatar.svg"
+  ],
+  "pages": [
+    {
+      "source": "offline-capture",
+      "sourceState": "public-home",
+      "sourceUrl": "https://afternoonadventure.org/#top",
+      "output": "public/index.html",
+      "staff": false,
+      "replacements": 5,
+      "materializedCanvases": 3,
+      "bytes": 129869
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "public-enrollment",
+      "sourceUrl": "https://afternoonadventure.org/#enrollment-form",
+      "output": "enrollment/index.html",
+      "staff": false,
+      "replacements": 5,
+      "materializedCanvases": 3,
+      "bytes": 129196
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "family-dashboard",
+      "sourceUrl": "https://afternoonadventure.org/account/",
+      "output": "family-dashboard/index.html",
+      "staff": true,
+      "replacements": 4,
+      "materializedCanvases": 0,
+      "bytes": 48370
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "staff-dashboard",
+      "sourceUrl": "https://afternoonadventure.org/account/staff/inbox/",
+      "output": "dashboard/index.html",
+      "staff": true,
+      "replacements": 11,
+      "materializedCanvases": 0,
+      "bytes": 78000
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "staff-enrollment-review",
+      "sourceUrl": "https://afternoonadventure.org/account/staff/inbox/",
+      "output": "enrollment-review/index.html",
+      "staff": true,
+      "replacements": 9,
+      "materializedCanvases": 0,
+      "bytes": 76829
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "staff-content-editor",
+      "sourceUrl": "https://afternoonadventure.org/account/staff/inbox/",
+      "output": "content-editor/index.html",
+      "staff": true,
+      "replacements": 4,
+      "materializedCanvases": 0,
+      "bytes": 66370
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "staff-attendance",
+      "sourceUrl": "https://afternoonadventure.org/account/staff/attendance/",
+      "output": "attendance/index.html",
+      "staff": true,
+      "replacements": 63,
+      "materializedCanvases": 0,
+      "bytes": 451883
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "staff-attendance-setup",
+      "sourceUrl": "https://afternoonadventure.org/account/",
+      "output": "attendance-setup/index.html",
+      "staff": true,
+      "replacements": 5,
+      "materializedCanvases": 0,
+      "bytes": 77016
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "staff-attendance-report",
+      "sourceUrl": "https://afternoonadventure.org/account/staff/attendance/",
+      "output": "attendance-report/index.html",
+      "staff": true,
+      "replacements": 2,
+      "materializedCanvases": 0,
+      "bytes": 27996
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "staff-forms",
+      "sourceUrl": "https://afternoonadventure.org/account/staff/forms/",
+      "output": "forms/index.html",
+      "staff": true,
+      "replacements": 60,
+      "materializedCanvases": 0,
+      "bytes": 160159
+    },
+    {
+      "source": "offline-capture",
+      "sourceState": "staff-time-clock",
+      "sourceUrl": "https://afternoonadventure.org/account/staff/time-clock/",
+      "output": "time-clock/index.html",
+      "staff": true,
+      "replacements": 27,
+      "materializedCanvases": 0,
+      "bytes": 199120
+    }
+  ]
+}

@@ -969,6 +969,77 @@ button:focus-visible {
     object-fit: contain;
     border-radius: clamp(14px, 2vw, 24px);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+    transition: opacity 0.28s ease;
+}
+
+.project-media-overlay-stage.is-capture {
+    height: min(68vh, 690px);
+    overflow: hidden;
+    border-radius: clamp(14px, 2vw, 24px);
+    background: #f4f4f2;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+    overscroll-behavior: contain;
+}
+
+.project-media-overlay-stage.is-capture > img {
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.project-media-overlay-stage.is-capture-ready > img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-media-overlay-capture {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease;
+}
+
+.project-media-overlay-capture[hidden] {
+    display: none;
+}
+
+.project-media-overlay-stage.is-capture-ready .project-media-overlay-capture {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.project-media-overlay-capture-status {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    margin: 0;
+    padding: 0.5rem 0.72rem;
+    border-radius: 999px;
+    background: rgba(4, 4, 4, 0.76);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.025em;
+    pointer-events: none;
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    backdrop-filter: blur(14px) saturate(120%);
+}
+
+.project-media-overlay-capture-status[hidden] {
+    display: none;
 }
 
 .project-media-overlay-nav {
@@ -1213,6 +1284,22 @@ button:focus-visible {
 
     .project-media-overlay-stage > img {
         max-height: 50vh;
+    }
+
+    .project-media-overlay-stage.is-capture {
+        height: min(58svh, 620px);
+        min-height: 24rem;
+    }
+
+    .project-media-overlay-stage.is-capture > img {
+        max-height: none;
+    }
+
+    .project-media-overlay-capture-status {
+        top: 0.55rem;
+        left: 0.55rem;
+        max-width: calc(100% - 7rem);
+        font-size: 0.65rem;
     }
 
     .project-media-overlay-nav {

@@ -485,6 +485,7 @@ window.profileData = {
             siteTier: "selected",
             siteOrder: 1,
             mediaUrl: "/assets/images/projects/afternoon-adventure-home.webp?v=20260727-studio-captures",
+            mediaCaptureUrl: "/showcase/afternoon-adventure/public/index.html?v=20260727-scrollable-captures",
             mediaAlt: "Afternoon Adventure public homepage with full desktop navigation and the learning center exterior",
             mediaTitle: "Responsive public program experience",
             mediaDescription: "The public site presents programs, enrollment, family resources, events, documents, and contact information in a responsive, crawlable experience backed by managed content.",
@@ -493,6 +494,7 @@ window.profileData = {
             mediaAlternates: [
                 {
                     url: "/assets/images/projects/afternoon-adventure-dashboard.webp?v=20260727-studio-captures",
+                    captureUrl: "/showcase/afternoon-adventure/dashboard/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure staff operations dashboard with priority inbox and role-aware workspace tabs",
                     title: "Staff operations dashboard",
                     description: "This public-safe captured view shows the role-aware workspace for family questions, enrollment review, attendance, time clock, traffic, backups, utilities, forms, staff access, and site administration.",
@@ -501,6 +503,7 @@ window.profileData = {
                 },
                 {
                     url: "/assets/images/projects/afternoon-adventure-forms.webp?v=20260727-studio-captures",
+                    captureUrl: "/showcase/afternoon-adventure/forms/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure family forms workspace with response totals and enrollment transportation form controls",
                     title: "Secure family forms and response tracking",
                     description: "Staff can build forms, share secure family links, send email reminders, track per-child responses, filter results, and export response summaries as PDFs.",
@@ -509,6 +512,7 @@ window.profileData = {
                 },
                 {
                     url: "/assets/images/projects/afternoon-adventure-attendance.webp?v=20260727-studio-captures",
+                    captureUrl: "/showcase/afternoon-adventure/attendance/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure daily attendance dashboard with roster totals and check-in status",
                     title: "Daily attendance operations",
                     description: "The daily roster combines date-based attendance, status totals, room and group workflows, check-in and check-out records, and audit-friendly reporting using fictional demonstration data.",
@@ -517,6 +521,7 @@ window.profileData = {
                 },
                 {
                     url: "/assets/images/projects/afternoon-adventure-time-clock.webp?v=20260723-aa-captures",
+                    captureUrl: "/showcase/afternoon-adventure/time-clock/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure QR-verified staff time clock configuration",
                     title: "QR-verified staff time clock",
                     description: "The playground demonstrates rotating center QR codes, saved-code restoration, validity windows, printable QR PDFs, staff verification, and payroll-ready time records.",
@@ -525,6 +530,7 @@ window.profileData = {
                 },
                 {
                     url: "/assets/images/projects/afternoon-adventure-enrollment.webp?v=20260727-studio-captures",
+                    captureUrl: "/showcase/afternoon-adventure/enrollment/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure desktop enrollment workflow with structured child and guardian information fields",
                     title: "Structured online enrollment",
                     description: "A responsive family workflow collects child, guardian, program, transportation, medical, and agreement details, then supports secure staff review and generated enrollment PDFs.",

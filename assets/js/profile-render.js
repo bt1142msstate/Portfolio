@@ -1,5 +1,5 @@
 (function () {
-    var projectMediaVersion = "20260727-afternoon-adventure-media";
+    var projectMediaVersion = "20260727-scrollable-captures";
 
     function escapeHtml(value) {
         return String(value)
@@ -241,6 +241,10 @@
 
     function showProjectMediaOverlayItem(nextIndex) {
         var image = document.getElementById("project-media-overlay-image");
+        var capture = document.getElementById("project-media-overlay-capture");
+        var captureStatus = document.getElementById("project-media-overlay-capture-status");
+        var captureStatusText = document.getElementById("project-media-overlay-capture-status-text");
+        var stage = document.querySelector(".project-media-overlay-stage");
         var project = document.getElementById("project-media-overlay-project");
         var title = document.getElementById("project-media-overlay-title");
         var description = document.getElementById("project-media-overlay-description");
@@ -266,6 +270,31 @@
         project.textContent = trigger.getAttribute("data-project-media-project") || "Project feature";
         title.textContent = trigger.getAttribute("data-project-media-title") || sourceImage.alt;
         description.textContent = trigger.getAttribute("data-project-media-description") || "";
+
+        var captureUrl = trigger.getAttribute("data-project-media-capture-url") || "";
+        if (capture && stage && captureUrl) {
+            stage.classList.add("is-capture", "is-capture-loading");
+            stage.classList.remove("is-capture-ready");
+            capture.hidden = false;
+            capture.title = title.textContent + " interactive captured interface";
+            capture.dataset.currentSource = captureUrl;
+            capture.src = captureUrl;
+            if (captureStatus) {
+                captureStatus.hidden = false;
+            }
+            if (captureStatusText) {
+                captureStatusText.textContent = "Loading scrollable capture";
+            }
+        } else if (capture && stage) {
+            stage.classList.remove("is-capture", "is-capture-loading", "is-capture-ready");
+            capture.dataset.currentSource = "";
+            capture.src = "about:blank";
+            capture.hidden = true;
+            capture.title = "";
+            if (captureStatus) {
+                captureStatus.hidden = true;
+            }
+        }
 
         var hasMultipleItems = projectMediaOverlayTriggers.length > 1;
         if (count) {
@@ -332,6 +361,9 @@
     function closeProjectMediaOverlay() {
         var overlay = document.getElementById("project-media-overlay");
         var image = document.getElementById("project-media-overlay-image");
+        var capture = document.getElementById("project-media-overlay-capture");
+        var captureStatus = document.getElementById("project-media-overlay-capture-status");
+        var stage = document.querySelector(".project-media-overlay-stage");
         if (!overlay || overlay.hidden) {
             return;
         }
@@ -343,6 +375,18 @@
         if (image) {
             image.removeAttribute("src");
             image.alt = "";
+        }
+        if (capture) {
+            capture.dataset.currentSource = "";
+            capture.src = "about:blank";
+            capture.hidden = true;
+            capture.title = "";
+        }
+        if (captureStatus) {
+            captureStatus.hidden = true;
+        }
+        if (stage) {
+            stage.classList.remove("is-capture", "is-capture-loading", "is-capture-ready");
         }
         var thumbnails = document.getElementById("project-media-overlay-thumbnails");
         if (thumbnails) {
@@ -363,6 +407,26 @@
         }
 
         overlay.dataset.ready = "true";
+        var capture = document.getElementById("project-media-overlay-capture");
+        if (capture) {
+            capture.addEventListener("load", function () {
+                var stage = capture.closest(".project-media-overlay-stage");
+                var captureStatusText = document.getElementById("project-media-overlay-capture-status-text");
+                if (!stage || !capture.dataset.currentSource || capture.src === "about:blank") {
+                    return;
+                }
+                var expectedSource = new URL(capture.dataset.currentSource, window.location.href).href;
+                if (!capture.contentWindow || capture.contentWindow.location.href !== expectedSource) {
+                    return;
+                }
+                stage.classList.remove("is-capture-loading");
+                stage.classList.add("is-capture-ready");
+                if (captureStatusText) {
+                    captureStatusText.textContent = "Scrollable capture - scroll to explore";
+                }
+            });
+        }
+
         document.addEventListener("click", function (event) {
             var mediaTrigger = event.target.closest("[data-project-media-trigger]");
             if (mediaTrigger) {
@@ -416,7 +480,7 @@
 
             if (event.key === "Tab") {
                 var focusable = Array.prototype.slice.call(overlay.querySelectorAll(
-                    'button:not([disabled]):not([hidden]), a[href]:not([hidden]), [tabindex]:not([tabindex="-1"])'
+                    'button:not([disabled]):not([hidden]), a[href]:not([hidden]), iframe:not([hidden]), [tabindex]:not([tabindex="-1"])'
                 )).filter(function (element) {
                     return !element.closest("[hidden]");
                 });
@@ -521,6 +585,7 @@
                 width: project.mediaWidth || 1200,
                 height: project.mediaHeight || 750,
                 fit: project.mediaFit || "cover",
+                captureUrl: project.mediaCaptureUrl || "",
                 variants: getProjectMediaVariants(project.mediaUrl)
             });
         }
@@ -535,6 +600,7 @@
                     width: item.width || 1200,
                     height: item.height || 750,
                     fit: item.fit || "cover",
+                    captureUrl: item.captureUrl || "",
                     variants: getProjectMediaVariants(item.url)
                 });
             }
@@ -554,6 +620,11 @@
         var sourceUrlAttribute = hasPublicRepository(project)
             ? ' data-project-media-source-url="' + escapeHtml(project.githubUrl) + '"'
             : "";
+        var captureUrlAttribute = item.captureUrl
+            ? ' data-project-media-capture-url="' + escapeHtml(item.captureUrl) + '"'
+            : "";
+        var viewCue = item.captureUrl ? "Explore capture" : "View feature";
+        var viewLabel = item.captureUrl ? "Explore scrollable capture: " : "View feature details: ";
         var desktopSource;
 
         if (isEditorial) {
@@ -564,7 +635,7 @@
             desktopSource = '<source media="(min-width: 1101px)" type="image/webp" srcset="' + escapeHtml(item.variants.wide) + '">';
         }
 
-        return '<button class="project-media-frame project-media-responsive' + activeClass + fitClass + '" type="button" data-gallery-frame data-gallery-index="' + index + '" data-project-media-trigger data-project-media-source="' + escapeHtml(item.url) + '" data-project-media-project="' + escapeHtml(project.title) + '" data-project-media-title="' + escapeHtml(item.title) + '" data-project-media-description="' + escapeHtml(item.description) + '"' + liveUrlAttribute + sourceUrlAttribute + ' aria-hidden="' + (index === 0 ? "false" : "true") + '" aria-haspopup="dialog" aria-label="View feature details: ' + escapeHtml(item.title) + '" tabindex="' + (index === 0 ? "0" : "-1") + '">' +
+        return '<button class="project-media-frame project-media-responsive' + activeClass + fitClass + '" type="button" data-gallery-frame data-gallery-index="' + index + '" data-project-media-trigger data-project-media-source="' + escapeHtml(item.url) + '" data-project-media-project="' + escapeHtml(project.title) + '" data-project-media-title="' + escapeHtml(item.title) + '" data-project-media-description="' + escapeHtml(item.description) + '"' + captureUrlAttribute + liveUrlAttribute + sourceUrlAttribute + ' aria-hidden="' + (index === 0 ? "false" : "true") + '" aria-haspopup="dialog" aria-label="' + viewLabel + escapeHtml(item.title) + '" tabindex="' + (index === 0 ? "0" : "-1") + '">' +
             '<picture class="project-media-picture">' +
             desktopSource +
             '<source media="(min-width: 481px)" type="image/webp" srcset="' + escapeHtml(item.variants.standard) + '">' +
@@ -572,7 +643,7 @@
             "</picture>" +
             '<span class="project-media-view-cue" aria-hidden="true">' +
             '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg>' +
-            "<span>View feature</span>" +
+            "<span>" + viewCue + "</span>" +
             "</span>" +
             '<span class="project-media-frame-summary">' + escapeHtml(item.title + ". " + item.description) + "</span>" +
             "</button>";
