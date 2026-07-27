@@ -48,16 +48,37 @@ render_project_variant() {
     cwebp -quiet -q 80 -m 6 -metadata none "$temporary" -o "$output"
 }
 
-# The About portrait uses focal crops instead of stretching one composition.
-render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--3x4-540.webp" 540 720 "crop=1050:1400:35:0"
-render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--3x4-810.webp" 810 1080 "crop=1050:1400:35:0"
-render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--2x3-480.webp" 480 720 "crop=932:1398:94:1"
-render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--2x3-720.webp" 720 1080 "crop=932:1398:94:1"
-render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--4x3-720.webp" 720 540 "crop=1120:840:0:180"
-render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--4x3-1080.webp" 1080 810 "crop=1120:840:0:180"
+project_inputs=()
+
+if (($#)); then
+    for input in "$@"; do
+        if [[ "$input" != /* ]]; then
+            input="$PROJECT_DIR/$input"
+        fi
+
+        if [[ ! -f "$input" ]]; then
+            echo "Project image not found: $input" >&2
+            exit 1
+        fi
+
+        project_inputs+=("$input")
+    done
+else
+    # The About portrait uses focal crops instead of stretching one composition.
+    render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--3x4-540.webp" 540 720 "crop=1050:1400:35:0"
+    render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--3x4-810.webp" 810 1080 "crop=1050:1400:35:0"
+    render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--2x3-480.webp" 480 720 "crop=932:1398:94:1"
+    render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--2x3-720.webp" 720 1080 "crop=932:1398:94:1"
+    render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--4x3-720.webp" 720 540 "crop=1120:840:0:180"
+    render_crop "$ILLUSTRATION_SOURCE" "$IMAGE_DIR/brandon-illustrated-profile-photo--4x3-1080.webp" 1080 810 "crop=1120:840:0:180"
+
+    for input in "$PROJECT_DIR"/*.webp; do
+        project_inputs+=("$input")
+    done
+fi
 
 # Project screenshots keep their full interface inside four reusable card shapes.
-for input in "$PROJECT_DIR"/*.webp; do
+for input in "${project_inputs[@]}"; do
     case "$input" in
         *--4x5.webp|*--4x3.webp|*--16x10.webp|*--1x1.webp)
             continue
