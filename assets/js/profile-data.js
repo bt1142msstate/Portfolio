@@ -720,20 +720,22 @@ window.profileData = {
             title: "connect4-ai",
             githubUrl: "https://github.com/bt1142msstate/connect4-ai",
             liveUrl: "https://bt1142msstate.github.io/connect4-ai/",
-            mediaUrl: "/assets/images/projects/connect4-ai-gameplay.webp?v=20260726-publication-media",
-            mediaAlt: "Connect 4 AI game in progress with red and yellow pieces, difficulty controls, and alpha-beta pruning enabled",
-            mediaTitle: "Playable minimax game",
-            mediaDescription: "A live game state shows the responsive board, difficulty controls, AI statistics, and alpha-beta configuration.",
+            mediaUrl: "/assets/images/projects/connect4-ai-gameplay.webp?v=20260727-connect4-responsive-media",
+            mediaAlt: "Completed Connect 4 AI autopilot match with the full board, difficulty controls, alpha-beta pruning, and last-move statistics visible",
+            mediaTitle: "Complete minimax match",
+            mediaDescription: "A completed AI-vs-AI match keeps the full board, controls, and last-move statistics visible in one frame.",
             mediaWidth: 1440,
             mediaHeight: 900,
+            mediaFit: "contain",
             mediaAlternates: [
                 {
-                    url: "/assets/images/projects/connect4-ai-experiment.webp?v=20260726-publication-media",
-                    alt: "Connect 4 AI Experiment Lab showing a completed minimax benchmark with 93 percent node reduction and 24 of 24 checks passing",
-                    title: "Search Experiment Lab",
-                    description: "A completed benchmark compares plain minimax with alpha-beta pruning, reports node reduction, runs validation checks, and exposes downloadable evidence.",
+                    url: "/assets/images/projects/connect4-ai-experiment.webp?v=20260727-connect4-responsive-media",
+                    alt: "Connect 4 AI Experiment Lab results showing 93 percent node reduction, 24 of 24 validation checks, and passed search-equivalence evidence",
+                    title: "Verified search benchmark",
+                    description: "A focused result view shows 93% node reduction, 24/24 validation checks, and passed equivalence, rule, and matchup evidence.",
                     width: 1440,
-                    height: 900
+                    height: 900,
+                    fit: "contain"
                 },
                 {
                     url: "/assets/images/projects/connect4-ai.webp?v=20260722-visual-refine",

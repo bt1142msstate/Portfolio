@@ -1,5 +1,5 @@
 (function () {
-    var projectMediaVersion = "20260727-scrollable-captures";
+    var projectMediaVersion = "20260727-connect4-responsive-media";
 
     function escapeHtml(value) {
         return String(value)
