@@ -422,16 +422,20 @@ window.profileData = {
             liveUrl: "https://bt1142msstate.github.io/Query/",
             siteTier: "selected",
             siteOrder: 2,
-            mediaUrl: "/assets/images/projects/query-workspace.webp?v=20260722-project-visuals",
-            mediaAlt: "Query reporting workspace showing six configured fields and populated library item results",
-            mediaWidth: 1265,
-            mediaHeight: 712,
+            mediaUrl: "/assets/images/projects/query-workspace.webp?v=20260726-publication-media",
+            mediaAlt: "Query reporting workspace with six configured fields and a populated table of fictional library item records",
+            mediaTitle: "Live reporting workspace",
+            mediaDescription: "The public demo shows six configured fields, a virtualized result table, and export-oriented controls using fictional library records.",
+            mediaWidth: 1440,
+            mediaHeight: 900,
             mediaAlternates: [
                 {
-                    url: "/assets/images/projects/query-field-builder.webp?v=20260722-project-visuals",
-                    alt: "Query field builder with searchable report fields and an inline filter preview",
-                    width: 1265,
-                    height: 712
+                    url: "/assets/images/projects/query-field-builder.webp?v=20260726-publication-media",
+                    alt: "Query field chooser showing searchable fields, category filtering, and an inline Author filter preview",
+                    title: "Field and filter builder",
+                    description: "The field chooser combines searchable metadata, categories, field descriptions, and an inline filter preview over the reporting workspace.",
+                    width: 1440,
+                    height: 900
                 }
             ],
             siteType: "Operational Case Study | Browser-Based Reporting Tool",
@@ -710,11 +714,31 @@ window.profileData = {
             title: "connect4-ai",
             githubUrl: "https://github.com/bt1142msstate/connect4-ai",
             liveUrl: "https://bt1142msstate.github.io/connect4-ai/",
-            mediaUrl: "/assets/images/projects/connect4-ai.webp?v=20260722-visual-refine",
-            mediaAlt: "Connect 4 AI game board with minimax controls and experiment statistics",
-            mediaWidth: 800,
-            mediaHeight: 989,
-            mediaEditorial: true,
+            mediaUrl: "/assets/images/projects/connect4-ai-gameplay.webp?v=20260726-publication-media",
+            mediaAlt: "Connect 4 AI game in progress with red and yellow pieces, difficulty controls, and alpha-beta pruning enabled",
+            mediaTitle: "Playable minimax game",
+            mediaDescription: "A live game state shows the responsive board, difficulty controls, AI statistics, and alpha-beta configuration.",
+            mediaWidth: 1440,
+            mediaHeight: 900,
+            mediaAlternates: [
+                {
+                    url: "/assets/images/projects/connect4-ai-experiment.webp?v=20260726-publication-media",
+                    alt: "Connect 4 AI Experiment Lab showing a completed minimax benchmark with 93 percent node reduction and 24 of 24 checks passing",
+                    title: "Search Experiment Lab",
+                    description: "A completed benchmark compares plain minimax with alpha-beta pruning, reports node reduction, runs validation checks, and exposes downloadable evidence.",
+                    width: 1440,
+                    height: 900
+                },
+                {
+                    url: "/assets/images/projects/connect4-ai.webp?v=20260722-visual-refine",
+                    alt: "Complete Connect 4 AI interface with game board, minimax controls, and experiment statistics",
+                    title: "Complete game and analysis workspace",
+                    description: "The full interface combines the playable board, AI configuration, move statistics, replay tooling, and experiment entry points.",
+                    width: 800,
+                    height: 989,
+                    fit: "contain"
+                }
+            ],
             siteType: "Browser-Based Game AI Demo",
             siteDescription: "Playable browser game AI with minimax and alpha-beta pruning, replay tooling, experiment modes, and headless validation through GitHub Actions.",
             siteHighlights: [

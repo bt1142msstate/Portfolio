@@ -1,5 +1,5 @@
 (function () {
-    var projectMediaVersion = "20260723-aa-captures";
+    var projectMediaVersion = "20260726-publication-media";
 
     function escapeHtml(value) {
         return String(value)
@@ -205,33 +205,127 @@
     }
 
     var activeProjectMediaTrigger = null;
+    var projectMediaOverlayTriggers = [];
+    var projectMediaOverlayIndex = 0;
 
-    function openProjectMediaOverlay(trigger) {
-        var overlay = document.getElementById("project-media-overlay");
-        var panel = document.getElementById("project-media-overlay-panel");
+    function setProjectMediaOverlayAction(link, url, label) {
+        if (!link) {
+            return;
+        }
+        if (url) {
+            link.href = url;
+            link.setAttribute("aria-label", label);
+            link.hidden = false;
+        } else {
+            link.removeAttribute("href");
+            link.hidden = true;
+        }
+    }
+
+    function renderProjectMediaOverlayThumbnails() {
+        var thumbnails = document.getElementById("project-media-overlay-thumbnails");
+        if (!thumbnails) {
+            return;
+        }
+
+        thumbnails.hidden = projectMediaOverlayTriggers.length <= 1;
+        thumbnails.innerHTML = projectMediaOverlayTriggers.map(function (trigger, index) {
+            var sourceImage = trigger.querySelector("img");
+            var source = sourceImage ? (sourceImage.currentSrc || sourceImage.src) : "";
+            var title = trigger.getAttribute("data-project-media-title") || ("Feature " + (index + 1));
+            return '<button type="button" class="project-media-overlay-thumbnail" data-project-media-overlay-index="' + index + '" aria-label="Show feature ' + (index + 1) + ": " + escapeHtml(title) + '">' +
+                '<img src="' + escapeHtml(source) + '" alt="" loading="lazy" decoding="async">' +
+                "</button>";
+        }).join("");
+    }
+
+    function showProjectMediaOverlayItem(nextIndex) {
         var image = document.getElementById("project-media-overlay-image");
         var project = document.getElementById("project-media-overlay-project");
         var title = document.getElementById("project-media-overlay-title");
         var description = document.getElementById("project-media-overlay-description");
-        var sourceImage = trigger ? trigger.querySelector("img") : null;
+        var count = document.getElementById("project-media-overlay-count");
+        var previous = document.querySelector("[data-project-media-previous]");
+        var next = document.querySelector("[data-project-media-next]");
+        var liveLink = document.getElementById("project-media-overlay-live");
+        var sourceLink = document.getElementById("project-media-overlay-source");
 
-        if (!overlay || !panel || !image || !project || !title || !description || !trigger || !sourceImage) {
+        if (!image || !project || !title || !description || !projectMediaOverlayTriggers.length) {
             return;
         }
 
-        activeProjectMediaTrigger = trigger;
+        projectMediaOverlayIndex = (nextIndex + projectMediaOverlayTriggers.length) % projectMediaOverlayTriggers.length;
+        var trigger = projectMediaOverlayTriggers[projectMediaOverlayIndex];
+        var sourceImage = trigger.querySelector("img");
+        if (!sourceImage) {
+            return;
+        }
+
         image.src = trigger.getAttribute("data-project-media-source") || sourceImage.currentSrc || sourceImage.src;
         image.alt = sourceImage.alt;
         project.textContent = trigger.getAttribute("data-project-media-project") || "Project feature";
         title.textContent = trigger.getAttribute("data-project-media-title") || sourceImage.alt;
         description.textContent = trigger.getAttribute("data-project-media-description") || "";
 
+        var hasMultipleItems = projectMediaOverlayTriggers.length > 1;
+        if (count) {
+            count.textContent = "Feature " + (projectMediaOverlayIndex + 1) + " of " + projectMediaOverlayTriggers.length;
+            count.hidden = !hasMultipleItems;
+        }
+        if (previous) {
+            previous.hidden = !hasMultipleItems;
+        }
+        if (next) {
+            next.hidden = !hasMultipleItems;
+        }
+
+        document.querySelectorAll("[data-project-media-overlay-index]").forEach(function (thumbnail) {
+            var isActive = Number(thumbnail.getAttribute("data-project-media-overlay-index")) === projectMediaOverlayIndex;
+            thumbnail.classList.toggle("is-active", isActive);
+            if (isActive) {
+                thumbnail.setAttribute("aria-current", "true");
+            } else {
+                thumbnail.removeAttribute("aria-current");
+            }
+        });
+
+        var projectName = project.textContent;
+        setProjectMediaOverlayAction(
+            liveLink,
+            trigger.getAttribute("data-project-media-live-url") || "",
+            "Open the live " + projectName + " project in a new tab"
+        );
+        setProjectMediaOverlayAction(
+            sourceLink,
+            trigger.getAttribute("data-project-media-source-url") || "",
+            "View source for " + projectName + " in a new tab"
+        );
+    }
+
+    function openProjectMediaOverlay(trigger) {
+        var overlay = document.getElementById("project-media-overlay");
+        var panel = document.getElementById("project-media-overlay-panel");
+        var gallery = trigger ? trigger.closest("[data-project-gallery]") : null;
+
+        if (!overlay || !panel || !trigger || !trigger.querySelector("img")) {
+            return;
+        }
+
+        activeProjectMediaTrigger = trigger;
+        projectMediaOverlayTriggers = gallery
+            ? Array.prototype.slice.call(gallery.querySelectorAll("[data-project-media-trigger]"))
+            : [trigger];
+        projectMediaOverlayIndex = Math.max(0, projectMediaOverlayTriggers.indexOf(trigger));
+        renderProjectMediaOverlayThumbnails();
+        showProjectMediaOverlayItem(projectMediaOverlayIndex);
+
         overlay.hidden = false;
         overlay.classList.add("is-open");
         document.body.classList.add("project-media-overlay-open");
         document.dispatchEvent(new Event("projectmedia:opened"));
         window.requestAnimationFrame(function () {
-            panel.focus({ preventScroll: true });
+            var closeButton = overlay.querySelector(".project-media-overlay-close");
+            (closeButton || panel).focus({ preventScroll: true });
         });
     }
 
@@ -250,10 +344,16 @@
             image.removeAttribute("src");
             image.alt = "";
         }
+        var thumbnails = document.getElementById("project-media-overlay-thumbnails");
+        if (thumbnails) {
+            thumbnails.innerHTML = "";
+        }
         if (activeProjectMediaTrigger) {
             activeProjectMediaTrigger.focus({ preventScroll: true });
         }
         activeProjectMediaTrigger = null;
+        projectMediaOverlayTriggers = [];
+        projectMediaOverlayIndex = 0;
     }
 
     function setupProjectMediaOverlay() {
@@ -271,6 +371,22 @@
                 return;
             }
 
+            if (event.target.closest("[data-project-media-previous]")) {
+                showProjectMediaOverlayItem(projectMediaOverlayIndex - 1);
+                return;
+            }
+
+            if (event.target.closest("[data-project-media-next]")) {
+                showProjectMediaOverlayItem(projectMediaOverlayIndex + 1);
+                return;
+            }
+
+            var overlayThumbnail = event.target.closest("[data-project-media-overlay-index]");
+            if (overlayThumbnail) {
+                showProjectMediaOverlayItem(Number(overlayThumbnail.getAttribute("data-project-media-overlay-index")));
+                return;
+            }
+
             if (event.target.closest("[data-project-media-close]")) {
                 closeProjectMediaOverlay();
             }
@@ -282,11 +398,39 @@
                 return;
             }
 
-            if (event.key === "Tab" && !overlay.hidden) {
-                var closeButton = overlay.querySelector("[data-project-media-close]");
-                if (closeButton) {
+            if (overlay.hidden) {
+                return;
+            }
+
+            if (event.key === "ArrowLeft" && projectMediaOverlayTriggers.length > 1) {
+                event.preventDefault();
+                showProjectMediaOverlayItem(projectMediaOverlayIndex - 1);
+                return;
+            }
+
+            if (event.key === "ArrowRight" && projectMediaOverlayTriggers.length > 1) {
+                event.preventDefault();
+                showProjectMediaOverlayItem(projectMediaOverlayIndex + 1);
+                return;
+            }
+
+            if (event.key === "Tab") {
+                var focusable = Array.prototype.slice.call(overlay.querySelectorAll(
+                    'button:not([disabled]):not([hidden]), a[href]:not([hidden]), [tabindex]:not([tabindex="-1"])'
+                )).filter(function (element) {
+                    return !element.closest("[hidden]");
+                });
+                if (!focusable.length) {
+                    return;
+                }
+                var first = focusable[0];
+                var last = focusable[focusable.length - 1];
+                if (event.shiftKey && (document.activeElement === first || document.activeElement === overlay)) {
                     event.preventDefault();
-                    closeButton.focus();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
                 }
             }
         });
@@ -404,6 +548,12 @@
         var fitClass = item.fit === "contain" ? " project-media-frame-fit-contain" : "";
         var isLead = tier === "selected" && project.siteOrder === 1;
         var isEditorial = project.mediaEditorial === true;
+        var liveUrlAttribute = project.liveUrl
+            ? ' data-project-media-live-url="' + escapeHtml(project.liveUrl) + '"'
+            : "";
+        var sourceUrlAttribute = hasPublicRepository(project)
+            ? ' data-project-media-source-url="' + escapeHtml(project.githubUrl) + '"'
+            : "";
         var desktopSource;
 
         if (isEditorial) {
@@ -414,7 +564,7 @@
             desktopSource = '<source media="(min-width: 1101px)" type="image/webp" srcset="' + escapeHtml(item.variants.wide) + '">';
         }
 
-        return '<button class="project-media-frame project-media-responsive' + activeClass + fitClass + '" type="button" data-gallery-frame data-gallery-index="' + index + '" data-project-media-trigger data-project-media-source="' + escapeHtml(item.url) + '" data-project-media-project="' + escapeHtml(project.title) + '" data-project-media-title="' + escapeHtml(item.title) + '" data-project-media-description="' + escapeHtml(item.description) + '" aria-hidden="' + (index === 0 ? "false" : "true") + '" aria-haspopup="dialog" aria-label="View feature details: ' + escapeHtml(item.title) + '" tabindex="' + (index === 0 ? "0" : "-1") + '">' +
+        return '<button class="project-media-frame project-media-responsive' + activeClass + fitClass + '" type="button" data-gallery-frame data-gallery-index="' + index + '" data-project-media-trigger data-project-media-source="' + escapeHtml(item.url) + '" data-project-media-project="' + escapeHtml(project.title) + '" data-project-media-title="' + escapeHtml(item.title) + '" data-project-media-description="' + escapeHtml(item.description) + '"' + liveUrlAttribute + sourceUrlAttribute + ' aria-hidden="' + (index === 0 ? "false" : "true") + '" aria-haspopup="dialog" aria-label="View feature details: ' + escapeHtml(item.title) + '" tabindex="' + (index === 0 ? "0" : "-1") + '">' +
             '<picture class="project-media-picture">' +
             desktopSource +
             '<source media="(min-width: 481px)" type="image/webp" srcset="' + escapeHtml(item.variants.standard) + '">' +

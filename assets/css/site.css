@@ -943,8 +943,9 @@ button:focus-visible {
 
 .project-media-overlay-visual {
     display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0.75rem;
     min-height: min(72vh, 720px);
-    place-items: center;
     padding: clamp(0.75rem, 2vw, 1.4rem);
     overflow: hidden;
     background:
@@ -952,14 +953,136 @@ button:focus-visible {
         #030303;
 }
 
-.project-media-overlay-visual img {
+.project-media-overlay-stage {
+    position: relative;
+    display: grid;
+    width: 100%;
+    min-height: 0;
+    place-items: center;
+}
+
+.project-media-overlay-stage > img {
     display: block;
     width: 100%;
     height: auto;
-    max-height: min(76vh, 760px);
+    max-height: min(68vh, 690px);
     object-fit: contain;
     border-radius: clamp(14px, 2vw, 24px);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+.project-media-overlay-nav {
+    appearance: none;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: grid;
+    width: 2.8rem;
+    height: 2.8rem;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(4, 4, 4, 0.72);
+    color: #fff;
+    cursor: pointer;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.34),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    transform: translateY(-50%);
+    -webkit-backdrop-filter: blur(14px) saturate(125%);
+    backdrop-filter: blur(14px) saturate(125%);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.project-media-overlay-nav[hidden] {
+    display: none;
+}
+
+.project-media-overlay-previous {
+    left: 0.9rem;
+}
+
+.project-media-overlay-next {
+    right: 0.9rem;
+}
+
+.project-media-overlay-nav:hover,
+.project-media-overlay-nav:focus-visible {
+    background: rgba(255, 255, 255, 0.95);
+    color: #050505;
+    transform: translateY(-50%) scale(1.06);
+}
+
+.project-media-overlay-nav:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+.project-media-overlay-count {
+    position: absolute;
+    right: 0.9rem;
+    bottom: 0.9rem;
+    z-index: 2;
+    margin: 0;
+    padding: 0.5rem 0.72rem;
+    border-radius: 999px;
+    background: rgba(4, 4, 4, 0.72);
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}
+
+.project-media-overlay-thumbnails {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0.1rem 0.15rem 0.35rem;
+    overflow-x: auto;
+    scrollbar-color: rgba(255, 255, 255, 0.32) transparent;
+}
+
+.project-media-overlay-thumbnails[hidden] {
+    display: none;
+}
+
+.project-media-overlay-thumbnail {
+    appearance: none;
+    flex: 0 0 5.5rem;
+    aspect-ratio: 16 / 10;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 10px;
+    background: #080808;
+    cursor: pointer;
+    opacity: 0.52;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-media-overlay-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-media-overlay-thumbnail:hover,
+.project-media-overlay-thumbnail.is-active {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.92),
+        0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.project-media-overlay-thumbnail:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
 }
 
 .project-media-overlay-copy {
@@ -989,6 +1112,51 @@ button:focus-visible {
     color: var(--text-gray);
     font-size: clamp(0.98rem, 1.5vw, 1.1rem);
     line-height: 1.72;
+}
+
+.project-media-overlay-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.55rem;
+}
+
+.project-media-overlay-action {
+    display: inline-flex;
+    min-height: 2.8rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.project-media-overlay-action[hidden] {
+    display: none;
+}
+
+.project-media-overlay-action-primary {
+    background: #fff;
+    color: #050505;
+}
+
+.project-media-overlay-action:hover,
+.project-media-overlay-action:focus-visible {
+    background: rgba(255, 255, 255, 0.94);
+    color: #050505;
+    transform: translateY(-2px);
+}
+
+.project-media-overlay-action:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
 }
 
 .project-media-overlay-close {
@@ -1043,8 +1211,30 @@ button:focus-visible {
         padding: 0.65rem;
     }
 
-    .project-media-overlay-visual img {
-        max-height: 56vh;
+    .project-media-overlay-stage > img {
+        max-height: 50vh;
+    }
+
+    .project-media-overlay-nav {
+        width: 2.45rem;
+        height: 2.45rem;
+    }
+
+    .project-media-overlay-previous {
+        left: 0.55rem;
+    }
+
+    .project-media-overlay-next {
+        right: 0.55rem;
+    }
+
+    .project-media-overlay-count {
+        right: 0.55rem;
+        bottom: 0.55rem;
+    }
+
+    .project-media-overlay-thumbnail {
+        flex-basis: 4.7rem;
     }
 
     .project-media-overlay-copy {
