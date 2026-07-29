@@ -81,13 +81,19 @@ function localPathForUrl(url) {
 
 const indexHtml = read("index.html");
 const resumeHtml = read("resume/index.html");
+const privacyHtml = read("privacy/index.html");
+const accessibilityHtml = read("accessibility/index.html");
 const robots = read("robots.txt");
 const sitemap = read("sitemap.xml");
 
 assert(!/<meta\b[^>]*content=["'][^"']*\bnoindex\b/i.test(indexHtml), "Homepage contains a noindex directive.");
 assert(!/<meta\b[^>]*content=["'][^"']*\bnoindex\b/i.test(resumeHtml), "Resume page contains a noindex directive.");
+assert(!/<meta\b[^>]*content=["'][^"']*\bnoindex\b/i.test(privacyHtml), "Privacy page contains a noindex directive.");
+assert(!/<meta\b[^>]*content=["'][^"']*\bnoindex\b/i.test(accessibilityHtml), "Accessibility page contains a noindex directive.");
 assert(indexHtml.includes('<link rel="canonical" href="https://brandontemple.com/">'), "Homepage canonical URL is missing or incorrect.");
 assert(resumeHtml.includes('<link rel="canonical" href="https://brandontemple.com/resume/">'), "Resume canonical URL is missing or incorrect.");
+assert(privacyHtml.includes('<link rel="canonical" href="https://brandontemple.com/privacy/">'), "Privacy canonical URL is missing or incorrect.");
+assert(accessibilityHtml.includes('<link rel="canonical" href="https://brandontemple.com/accessibility/">'), "Accessibility canonical URL is missing or incorrect.");
 assert(indexHtml.includes('type="application/pdf" href="https://brandontemple.com/resume/brandon-temple-resume.pdf"'), "Homepage does not declare the PDF resume.");
 assert(resumeHtml.includes('type="application/pdf" href="https://brandontemple.com/resume/brandon-temple-resume.pdf"'), "Resume page does not declare the PDF resume.");
 
@@ -139,7 +145,15 @@ assert(resumeHtml.includes('type="application/pdf" href="https://brandontemple.c
 
 validateJsonLd(indexHtml, "index.html");
 validateJsonLd(resumeHtml, "resume/index.html");
+validateJsonLd(privacyHtml, "privacy/index.html");
+validateJsonLd(accessibilityHtml, "accessibility/index.html");
 validateImages(indexHtml, "index.html");
+
+[indexHtml, resumeHtml, privacyHtml, accessibilityHtml].forEach((source, index) => {
+    const fileName = ["index.html", "resume/index.html", "privacy/index.html", "accessibility/index.html"][index];
+    assert(source.includes('href="/privacy/"'), `${fileName} does not link to the privacy policy.`);
+    assert(source.includes('href="/accessibility/"'), `${fileName} does not link to the accessibility statement.`);
+});
 
 assert(/User-agent:\s*\*/i.test(robots), "robots.txt does not include a wildcard user agent.");
 assert(/Allow:\s*\/\s*$/im.test(robots), "robots.txt does not allow the public site.");

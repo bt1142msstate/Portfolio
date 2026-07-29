@@ -81,15 +81,16 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="resume.css?v=20260523-monochrome-theme">
+    <link rel="stylesheet" href="resume.css?v=20260729-accessibility-policies">
     <link rel="stylesheet" href="resume-print.css?v=20260514-modern-resume" media="print">
 </head>
 <body data-page="resume">
-    <div class="resume-actions no-print">
+    <a href="#resume-content" class="resume-skip-link no-print">Skip to resume content</a>
+    <nav class="resume-actions no-print" aria-label="Resume actions">
         <a href="/" class="resume-action-link">Back to Site</a>
-        <a href="brandon-temple-resume.pdf" class="resume-action-button" download type="application/pdf">Download PDF</a>
-    </div>
-    <main class="resume">
+        <a href="brandon-temple-resume.pdf" class="resume-action-button" download>Download PDF</a>
+    </nav>
+    <main class="resume" id="resume-content" tabindex="-1">
         <header class="hero">
             <div>
                 <p class="eyebrow">Software Engineer</p>
@@ -152,8 +153,15 @@
             </div>
         </section>
     </main>
+    <footer class="resume-footer no-print">
+        <p>&copy; 2026 Brandon Temple.</p>
+        <nav aria-label="Policies">
+            <a href="/privacy/">Privacy Policy</a>
+            <a href="/accessibility/">Accessibility</a>
+        </nav>
+    </footer>
     <script src="../assets/js/profile-data.js?v=20260727-connect4-responsive-media" defer></script>
-    <script src="../assets/js/profile-render.js?v=20260727-connect4-responsive-media" defer></script>
-    <script src="print.js?v=20260521-recruiter-copy" defer></script>
+    <script src="../assets/js/profile-render.js?v=20260729-accessibility-policies" defer></script>
+    <script src="print.js?v=20260729-accessibility-policies" defer></script>
 </body>
 </html>

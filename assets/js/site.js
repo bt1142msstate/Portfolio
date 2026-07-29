@@ -1,22 +1,58 @@
 var mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 var navLinks = document.querySelector(".nav-links");
 var navbar = document.querySelector(".nav-container");
+
+function setMobileMenuState(isOpen, returnFocus) {
+    if (!mobileMenuToggle || !navLinks) {
+        return;
+    }
+
+    mobileMenuToggle.classList.toggle("active", isOpen);
+    navLinks.classList.toggle("active", isOpen);
+    mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+
+    if (!isOpen && returnFocus) {
+        mobileMenuToggle.focus({ preventScroll: true });
+    }
+}
+
 if (mobileMenuToggle && navLinks) {
     mobileMenuToggle.addEventListener("click", function () {
         var isExpanded = mobileMenuToggle.getAttribute("aria-expanded") === "true";
-        mobileMenuToggle.classList.toggle("active");
-        navLinks.classList.toggle("active");
-        mobileMenuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        setMobileMenuState(!isExpanded, false);
     });
 }
+
 var navLinkItems = document.querySelectorAll(".nav-links a");
 navLinkItems.forEach(function (link) {
     link.addEventListener("click", function () {
-        mobileMenuToggle === null || mobileMenuToggle === void 0 ? void 0 : mobileMenuToggle.classList.remove("active");
-        navLinks === null || navLinks === void 0 ? void 0 : navLinks.classList.remove("active");
-        mobileMenuToggle === null || mobileMenuToggle === void 0 ? void 0 : mobileMenuToggle.setAttribute("aria-expanded", "false");
+        setMobileMenuState(false, false);
     });
 });
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && mobileMenuToggle && mobileMenuToggle.getAttribute("aria-expanded") === "true") {
+        event.preventDefault();
+        setMobileMenuState(false, true);
+    }
+});
+
+document.addEventListener("click", function (event) {
+    if (!navbar || !mobileMenuToggle || mobileMenuToggle.getAttribute("aria-expanded") !== "true") {
+        return;
+    }
+    if (!navbar.contains(event.target)) {
+        setMobileMenuState(false, false);
+    }
+});
+
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+        setMobileMenuState(false, false);
+    }
+});
+
 var skipLink = document.querySelector(".skip-link");
 if (skipLink) {
     skipLink.addEventListener("click", function () {
@@ -46,7 +82,7 @@ function setActiveNavItem(activeSectionId) {
         item.removeAttribute("aria-current");
         if (activeSectionId && item.getAttribute("href") === "#".concat(activeSectionId)) {
             item.classList.add("active");
-            item.setAttribute("aria-current", "page");
+            item.setAttribute("aria-current", "location");
         }
     });
 }
@@ -91,25 +127,32 @@ function highlightNavigation() {
 }
 window.addEventListener("load", highlightNavigation);
 window.addEventListener("hashchange", highlightNavigation);
+var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 var observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
 };
-var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-            var target = entry.target;
-            target.style.opacity = "1";
-            target.style.transform = "translateY(0)";
-        }
-    });
-}, observerOptions);
+var observer = "IntersectionObserver" in window
+    ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                var target = entry.target;
+                target.style.opacity = "1";
+                target.style.transform = "translateY(0)";
+            }
+        });
+    }, observerOptions)
+    : null;
 var animatedElements = document.querySelectorAll(".timeline-item, .project-card, .education-card, .skill-category");
 function revealAnimatedElement(element) {
     element.style.opacity = "1";
     element.style.transform = "translateY(0)";
 }
 animatedElements.forEach(function (element) {
+    if (prefersReducedMotion.matches || !observer) {
+        revealAnimatedElement(element);
+        return;
+    }
     element.style.opacity = "0";
     element.style.transform = "translateY(30px)";
     element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
@@ -155,33 +198,15 @@ updateNavbarState();
 window.addEventListener("load", function () {
     var heroElements = document.querySelectorAll(".hero-kicker, .hero-title, .hero-subtitle, .hero-description, .hero-buttons, .hero-proof, .hero-social, .hero-collage");
     heroElements.forEach(function (element, index) {
+        if (prefersReducedMotion.matches) {
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+            return;
+        }
         setTimeout(function () {
             element.style.opacity = "1";
             element.style.transform = "translateY(0)";
         }, index * 150);
-    });
-});
-var emailLinks = document.querySelectorAll('a[href^="mailto"]');
-emailLinks.forEach(function (link) {
-    link.addEventListener("contextmenu", function (event) {
-        event.preventDefault();
-        var href = link.getAttribute("href");
-        if (!href) {
-            return;
-        }
-        var email = href.replace("mailto:", "");
-        navigator.clipboard.writeText(email).then(function () {
-            var tooltip = document.createElement("span");
-            tooltip.textContent = "Email copied!";
-            tooltip.style.cssText = "\n                position: absolute;\n                background: var(--maroon);\n                color: white;\n                padding: 0.5rem 1rem;\n                border-radius: 4px;\n                font-size: 0.875rem;\n                pointer-events: none;\n                z-index: 1000;\n                animation: fadeInUp 0.3s ease;\n            ";
-            document.body.appendChild(tooltip);
-            var rect = link.getBoundingClientRect();
-            tooltip.style.left = "".concat(rect.left + rect.width / 2 - tooltip.offsetWidth / 2, "px");
-            tooltip.style.top = "".concat(rect.top - tooltip.offsetHeight - 10, "px");
-            setTimeout(function () {
-                tooltip.remove();
-            }, 2000);
-        });
     });
 });
 if ("IntersectionObserver" in window) {

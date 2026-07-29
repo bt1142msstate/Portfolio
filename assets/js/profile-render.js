@@ -1,5 +1,5 @@
 (function () {
-    var projectMediaVersion = "20260727-connect4-responsive-media";
+    var projectMediaVersion = "20260729-accessibility-policies";
 
     function escapeHtml(value) {
         return String(value)
@@ -124,6 +124,60 @@
         return '<button type="button" class="' + escapeHtml(className) + '" data-skill-label="' + escapeHtml(label) + '"' + linkAttribute + ' aria-haspopup="dialog" aria-label="Open details for ' + escapeHtml(label) + '">' + escapeHtml(label) + "</button>";
     }
 
+    var modalBackgroundState = [];
+
+    function setModalBackgroundInert(overlay, isInert) {
+        if (isInert) {
+            modalBackgroundState = Array.prototype.slice.call(document.body.children)
+                .filter(function (element) {
+                    return element !== overlay && element.tagName !== "SCRIPT" && element.tagName !== "STYLE";
+                })
+                .map(function (element) {
+                    var state = { element: element, inert: element.inert };
+                    element.inert = true;
+                    return state;
+                });
+            return;
+        }
+
+        modalBackgroundState.forEach(function (state) {
+            state.element.inert = state.inert;
+        });
+        modalBackgroundState = [];
+    }
+
+    function getFocusableElements(container) {
+        return Array.prototype.slice.call(container.querySelectorAll(
+            'button:not([disabled]):not([hidden]), a[href]:not([hidden]), iframe:not([hidden]), input:not([disabled]):not([hidden]), select:not([disabled]):not([hidden]), textarea:not([disabled]):not([hidden]), [tabindex]:not([tabindex="-1"])'
+        )).filter(function (element) {
+            return !element.closest("[hidden]") && window.getComputedStyle(element).visibility !== "hidden";
+        });
+    }
+
+    function trapModalFocus(event, overlay, panel) {
+        if (event.key !== "Tab") {
+            return;
+        }
+
+        var focusable = getFocusableElements(overlay);
+        if (!focusable.length) {
+            event.preventDefault();
+            panel.focus();
+            return;
+        }
+
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        var activeElement = document.activeElement;
+        if (event.shiftKey && (activeElement === first || activeElement === panel || !overlay.contains(activeElement))) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && (activeElement === last || !overlay.contains(activeElement))) {
+            event.preventDefault();
+            first.focus();
+        }
+    }
+
     var activeSkillTrigger = null;
 
     function openSkillOverlay(data, label, trigger) {
@@ -149,16 +203,20 @@
         if (href) {
             externalLink.href = href;
             externalLink.textContent = "Read external reference";
+            externalLink.setAttribute("aria-label", "Read an external reference for " + label + " in a new tab");
             externalLink.hidden = false;
         } else {
+            externalLink.removeAttribute("aria-label");
             externalLink.hidden = true;
         }
 
         overlay.hidden = false;
         overlay.classList.add("is-open");
         document.body.classList.add("skill-overlay-open");
+        setModalBackgroundInert(overlay, true);
         window.requestAnimationFrame(function () {
-            panel.focus({ preventScroll: true });
+            var closeButton = overlay.querySelector(".skill-overlay-close");
+            (closeButton || panel).focus({ preventScroll: true });
         });
     }
 
@@ -171,6 +229,7 @@
         overlay.classList.remove("is-open");
         overlay.hidden = true;
         document.body.classList.remove("skill-overlay-open");
+        setModalBackgroundInert(overlay, false);
         if (activeSkillTrigger) {
             activeSkillTrigger.focus({ preventScroll: true });
         }
@@ -198,9 +257,17 @@
         });
 
         document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape") {
-                closeSkillOverlay();
+            if (overlay.hidden) {
+                return;
             }
+
+            if (event.key === "Escape") {
+                event.preventDefault();
+                closeSkillOverlay();
+                return;
+            }
+
+            trapModalFocus(event, overlay, document.getElementById("skill-overlay-panel"));
         });
     }
 
@@ -290,7 +357,7 @@
             capture.dataset.currentSource = "";
             capture.src = "about:blank";
             capture.hidden = true;
-            capture.title = "";
+            capture.title = "Interactive project interface capture";
             if (captureStatus) {
                 captureStatus.hidden = true;
             }
@@ -351,6 +418,7 @@
         overlay.hidden = false;
         overlay.classList.add("is-open");
         document.body.classList.add("project-media-overlay-open");
+        setModalBackgroundInert(overlay, true);
         document.dispatchEvent(new Event("projectmedia:opened"));
         window.requestAnimationFrame(function () {
             var closeButton = overlay.querySelector(".project-media-overlay-close");
@@ -371,6 +439,7 @@
         overlay.classList.remove("is-open");
         overlay.hidden = true;
         document.body.classList.remove("project-media-overlay-open");
+        setModalBackgroundInert(overlay, false);
         document.dispatchEvent(new Event("projectmedia:closed"));
         if (image) {
             image.removeAttribute("src");
@@ -380,7 +449,7 @@
             capture.dataset.currentSource = "";
             capture.src = "about:blank";
             capture.hidden = true;
-            capture.title = "";
+            capture.title = "Interactive project interface capture";
         }
         if (captureStatus) {
             captureStatus.hidden = true;
@@ -458,6 +527,7 @@
 
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
+                event.preventDefault();
                 closeProjectMediaOverlay();
                 return;
             }
@@ -478,25 +548,7 @@
                 return;
             }
 
-            if (event.key === "Tab") {
-                var focusable = Array.prototype.slice.call(overlay.querySelectorAll(
-                    'button:not([disabled]):not([hidden]), a[href]:not([hidden]), iframe:not([hidden]), [tabindex]:not([tabindex="-1"])'
-                )).filter(function (element) {
-                    return !element.closest("[hidden]");
-                });
-                if (!focusable.length) {
-                    return;
-                }
-                var first = focusable[0];
-                var last = focusable[focusable.length - 1];
-                if (event.shiftKey && (document.activeElement === first || document.activeElement === overlay)) {
-                    event.preventDefault();
-                    last.focus();
-                } else if (!event.shiftKey && document.activeElement === last) {
-                    event.preventDefault();
-                    first.focus();
-                }
-            }
+            trapModalFocus(event, overlay, document.getElementById("project-media-overlay-panel"));
         });
     }
 
@@ -714,7 +766,8 @@
                 interval: 5200 + ((galleryIndex % 3) * 350),
                 timer: 0,
                 inViewport: false,
-                paused: false
+                paused: false,
+                interactionPaused: false
             };
         });
 
@@ -749,7 +802,7 @@
 
         function scheduleGallery(state) {
             clearGalleryTimer(state);
-            if (reduceMotion.matches || state.paused || !state.inViewport || document.hidden || document.body.classList.contains("project-media-overlay-open")) {
+            if (reduceMotion.matches || state.paused || state.interactionPaused || !state.inViewport || document.hidden || document.body.classList.contains("project-media-overlay-open")) {
                 return;
             }
 
@@ -790,6 +843,25 @@
                     setGalleryPaused(state, !state.paused);
                 });
             }
+
+            state.gallery.addEventListener("mouseenter", function () {
+                state.interactionPaused = true;
+                scheduleGallery(state);
+            });
+            state.gallery.addEventListener("mouseleave", function () {
+                state.interactionPaused = false;
+                scheduleGallery(state);
+            });
+            state.gallery.addEventListener("focusin", function () {
+                state.interactionPaused = true;
+                scheduleGallery(state);
+            });
+            state.gallery.addEventListener("focusout", function (event) {
+                if (!state.gallery.contains(event.relatedTarget)) {
+                    state.interactionPaused = false;
+                    scheduleGallery(state);
+                }
+            });
         });
 
         if ("IntersectionObserver" in window) {
@@ -844,10 +916,10 @@
     function renderProjectActions(project) {
         var actions = [];
         if (project.liveUrl) {
-            actions.push('<a href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" class="project-action">Live site ' + externalLinkIconSvg(16) + "</a>");
+            actions.push('<a href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" class="project-action" aria-label="Open the live ' + escapeHtml(project.title) + ' project in a new tab">Live site ' + externalLinkIconSvg(16) + "</a>");
         }
         if (hasPublicRepository(project)) {
-            actions.push('<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" class="project-action">Source ' + githubIconSvg(16) + "</a>");
+            actions.push('<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" class="project-action" aria-label="View source for ' + escapeHtml(project.title) + ' in a new tab">Source ' + githubIconSvg(16) + "</a>");
         }
         if (!actions.length && project.repositoryVisibility === "private") {
             actions.push('<span class="project-private">Private project</span>');

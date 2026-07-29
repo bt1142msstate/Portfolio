@@ -2072,10 +2072,7 @@ button:focus-visible {
 }
 
 body {
-    background:
-        radial-gradient(circle at 76% 8%, rgba(255, 255, 255, 0.085), transparent 24rem),
-        radial-gradient(circle at 12% 42%, rgba(255, 255, 255, 0.045), transparent 28rem),
-        #030303;
+    background: #030303;
 }
 
 body::before {
@@ -2128,17 +2125,22 @@ body::before {
 .hero {
     min-height: 100svh;
     padding-top: 84px;
+    background: #050505;
+}
+
+.hero::before {
+    display: none;
+}
+
+.hero-atmosphere {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
     background:
         radial-gradient(circle at 74% 28%, rgba(255, 255, 255, 0.11), transparent 25rem),
         radial-gradient(circle at 8% 76%, rgba(255, 255, 255, 0.04), transparent 22rem),
         linear-gradient(145deg, #030303 0%, #090909 58%, #020202 100%);
-}
-
-.hero::before {
-    inset: 7rem auto auto 35%;
-    width: 24rem;
-    height: 24rem;
-    opacity: 0.45;
 }
 
 .hero::after {
@@ -2316,29 +2318,20 @@ body::before {
     min-height: 0;
     padding: clamp(1.15rem, 2vw, 1.55rem);
     border-radius: 24px;
-    background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.025)),
-        rgba(8, 8, 8, 0.72);
-    -webkit-backdrop-filter: blur(22px) saturate(135%);
-    backdrop-filter: blur(22px) saturate(135%);
+    background: #101010;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.4),
         inset 0 0 0 1px rgba(255, 255, 255, 0.09);
 }
 
 .hero-focus-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.13), transparent 36%);
-    opacity: 0.38;
+    display: none;
 }
 
 .hero-focus-card-strong {
-    background:
-        radial-gradient(circle at 84% 15%, rgba(255, 255, 255, 0.13), transparent 42%),
-        #111;
+    background: #111111;
 }
 
 .hero-workflow-card {
@@ -2656,7 +2649,7 @@ body::before {
 }
 
 .hero-focus-index {
-    color: rgba(255, 255, 255, 0.38);
+    color: rgba(255, 255, 255, 0.72);
     font-family: "Space Grotesk", sans-serif;
     font-size: 0.72rem;
     font-weight: 700;
@@ -2665,7 +2658,7 @@ body::before {
 
 .hero-focus-label {
     margin: 0 0 0.75rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.72);
     font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 0.11em;
@@ -3118,8 +3111,8 @@ body::before {
 .project-gallery-dot {
     appearance: none;
     display: grid;
-    width: 1rem;
-    height: 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
     place-items: center;
     padding: 0;
     border: 0;
@@ -3543,16 +3536,27 @@ body::before {
 }
 
 .contact-content {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     max-width: 1180px;
     padding: clamp(2rem, 6vw, 5.5rem);
     border-radius: 44px;
-    background:
-        radial-gradient(circle at 88% 16%, rgba(255, 255, 255, 0.12), transparent 20rem),
-        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.028));
+    background: #111111;
     box-shadow:
         0 30px 90px rgba(0, 0, 0, 0.35),
         inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     text-align: left;
+}
+
+.contact-atmosphere {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 88% 16%, rgba(255, 255, 255, 0.12), transparent 20rem),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.028));
 }
 
 .contact-content .section-title {
@@ -3608,6 +3612,253 @@ body::before {
 .footer {
     background: #030303;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+}
+
+.footer-inner p {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.footer-links a {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.28);
+    text-underline-offset: 0.24em;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    text-decoration-color: currentColor;
+}
+
+/* Policy pages */
+.policy-page {
+    min-height: 100vh;
+    background: #030303;
+}
+
+.policy-nav {
+    background: rgba(3, 3, 3, 0.92);
+    -webkit-backdrop-filter: blur(28px) saturate(150%);
+    backdrop-filter: blur(28px) saturate(150%);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+}
+
+.policy-back-link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    color: var(--text-gray);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.policy-back-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.policy-main {
+    padding: clamp(8.5rem, 14vw, 11rem) 0 clamp(5rem, 9vw, 8rem);
+}
+
+.policy-hero {
+    max-width: 960px;
+    margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.policy-kicker {
+    margin: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.policy-title {
+    max-width: 900px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 600;
+    letter-spacing: -0.075em;
+    line-height: 0.94;
+}
+
+.policy-summary {
+    max-width: 760px;
+    margin: 1.4rem 0 0;
+    color: var(--text-gray);
+    font-size: clamp(1.05rem, 2vw, 1.28rem);
+    line-height: 1.72;
+}
+
+.policy-updated {
+    margin: 1.2rem 0 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.policy-content {
+    display: grid;
+    gap: 1px;
+    max-width: 980px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: clamp(24px, 4vw, 36px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.policy-section {
+    padding: clamp(1.5rem, 4vw, 2.6rem);
+    background: #0b0b0b;
+}
+
+.policy-section h2 {
+    margin: 0 0 0.9rem;
+    color: #fff;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    letter-spacing: -0.035em;
+}
+
+.policy-section h3 {
+    margin: 1.4rem 0 0.55rem;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.policy-section p,
+.policy-section li {
+    color: var(--text-gray);
+    line-height: 1.78;
+}
+
+.policy-section p + p {
+    margin-top: 0.85rem;
+}
+
+.policy-section ul {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0.9rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.policy-section a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.2em;
+}
+
+.policy-section a:hover {
+    text-decoration-thickness: 0.14em;
+}
+
+.policy-contact {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    color: #050505 !important;
+    text-decoration: none !important;
+}
+
+.policy-note {
+    padding: 1rem 1.1rem;
+    border-left: 3px solid #fff;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.section[id],
+.project-card[id],
+#main-content,
+#resume-content {
+    scroll-margin-top: 6rem;
+}
+
+iframe:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .policy-main {
+        padding-top: 7.5rem;
+    }
+
+    .policy-nav {
+        padding: 0.85rem 1rem;
+    }
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --muted: rgba(255, 255, 255, 0.82);
+        --muted-strong: rgba(255, 255, 255, 0.94);
+        --hairline: rgba(255, 255, 255, 0.42);
+    }
+
+    .hero-kicker,
+    .section-kicker,
+    .policy-kicker {
+        color: rgba(255, 255, 255, 0.88);
+    }
+}
+
+@media (forced-colors: active) {
+    .nav-container,
+    .policy-nav,
+    .hero-focus-card,
+    .project-card,
+    .skill-category,
+    .education-card,
+    .policy-content,
+    .policy-section {
+        border: 1px solid CanvasText;
+        forced-color-adjust: auto;
+    }
+
+    .project-gallery-dot::before {
+        background: ButtonText;
+    }
 }
 
 @media (max-width: 1279px) {

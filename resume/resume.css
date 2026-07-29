@@ -15,9 +15,7 @@
 }
 
 html {
-    background:
-        radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 34rem),
-        linear-gradient(135deg, #050505 0%, #141414 44%, #f4f4f4 44%, #ededed 100%);
+    background: #ededed;
 }
 
 body {
@@ -33,6 +31,33 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 3px solid #111111;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px #ffffff;
+}
+
+.resume-skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 40;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #050505;
+    font-weight: 700;
+    transform: translateY(-180%);
+}
+
+.resume-skip-link:focus {
+    transform: translateY(0);
+}
+
+#resume-content:focus {
+    outline: none;
 }
 
 .resume-actions {
@@ -80,9 +105,7 @@ a {
     border: 1px solid rgba(0, 0, 0, 0.28);
     border-left: 0.08in solid var(--accent);
     border-radius: 0.18in;
-    background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 44%),
-        linear-gradient(120deg, #050505 0%, #171717 58%, #2a2a2a 100%);
+    background: #111111;
     color: #ffffff;
 }
 
@@ -253,6 +276,43 @@ li + li {
     color: #111111;
 }
 
+.resume-footer {
+    display: flex;
+    width: min(8.5in, 100%);
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 2rem;
+    color: #111111;
+    font-size: 0.9rem;
+}
+
+.resume-footer p {
+    margin: 0;
+}
+
+.resume-footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.resume-footer a {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.resume-footer a:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 640px) {
     .resume-actions {
         flex-direction: column;
@@ -279,5 +339,10 @@ li + li {
 
     .date {
         white-space: normal;
+    }
+
+    .resume-footer {
+        flex-direction: column;
+        text-align: center;
     }
 }
