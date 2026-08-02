@@ -96,6 +96,13 @@ assert(privacyHtml.includes('<link rel="canonical" href="https://brandontemple.c
 assert(accessibilityHtml.includes('<link rel="canonical" href="https://brandontemple.com/accessibility/">'), "Accessibility canonical URL is missing or incorrect.");
 assert(indexHtml.includes('type="application/pdf" href="https://brandontemple.com/resume/brandon-temple-resume.pdf"'), "Homepage does not declare the PDF resume.");
 assert(resumeHtml.includes('type="application/pdf" href="https://brandontemple.com/resume/brandon-temple-resume.pdf"'), "Resume page does not declare the PDF resume.");
+assert(indexHtml.includes('href="/favicon.ico" sizes="64x64"'), "Homepage favicon URL is missing, unstable, or incorrectly sized.");
+assert(!/["']\/favicon\.ico\?v=/i.test(indexHtml + resumeHtml + privacyHtml + accessibilityHtml), "A page uses a versioned favicon URL instead of the stable crawlable URL.");
+assert(indexHtml.includes('"alternateName": "Brandon Vashun Temple"'), "WebSite structured data does not declare the full-name alternate site name.");
+assert(indexHtml.includes('"dateCreated": "2026-04-12"'), "ProfilePage structured data does not declare its creation date.");
+assert(indexHtml.includes('"dateModified": "2026-08-02"'), "ProfilePage structured data does not declare its current modification date.");
+assert(indexHtml.includes('https://brandontemple.com/#profile-image-square'), "Homepage structured data does not declare the square profile image.");
+assert(indexHtml.includes('https://brandontemple.com/assets/images/brandon-profile-photo-square.jpg'), "Homepage structured data does not reference the square profile image file.");
 
 [
     "hero-proof",
@@ -129,7 +136,8 @@ assert(resumeHtml.includes('type="application/pdf" href="https://brandontemple.c
     "Query",
     "MetaTable",
     "Technology &amp; Support Services Coordinator",
-    "Master of Science in Software Engineering"
+    "Master of Science in Software Engineering",
+    "I am Brandon Vashun Temple"
 ].forEach((text) => {
     assert(indexHtml.includes(text), `Homepage initial HTML is missing: ${text}.`);
 });
@@ -161,6 +169,7 @@ assert(robots.includes("https://brandontemple.com/sitemap.xml"), "robots.txt doe
 
 const sitemapUrls = Array.from(sitemap.matchAll(/<(?:image:)?loc>([^<]+)<\/(?:image:)?loc>/g), (match) => match[1]);
 assert(sitemapUrls.length >= 3, "sitemap.xml does not include the primary pages and assets.");
+assert(sitemap.includes("https://brandontemple.com/assets/images/brandon-profile-photo-square.jpg"), "sitemap.xml does not include the square profile image.");
 sitemapUrls.forEach((url) => {
     const localPath = localPathForUrl(url);
     assert(localPath !== null, `Sitemap URL is outside the canonical domain: ${url}`);

@@ -17,7 +17,7 @@ window.profileData = {
     },
     site: {
         about: [
-            "I am the founder, owner, and software engineer behind Breauti LLC, a Mississippi startup spanning a fashion product platform and a custom digital studio. I take products from requirements and architecture through implementation, verification, launch, and iteration.",
+            "I am Brandon Vashun Temple, the founder, owner, and software engineer behind Breauti LLC, a Mississippi startup spanning a fashion product platform and a custom digital studio. I take products from requirements and architecture through implementation, verification, launch, and iteration.",
             "At MSU Libraries, I support 12 library systems and 76 branches and campus libraries. I built Query and MetaTable from staff needs, translating API, file-system, metadata, and reporting constraints into dependable workflows.",
             "Across Breauti and paid client work, I have built a Three.js fashion customizer, a Firebase-backed client platform, and Afternoon Adventure's production operations system. I also build native and device products, using AI to accelerate implementation while keeping architecture, debugging, testing, and review human-led."
         ],
