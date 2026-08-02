@@ -1074,6 +1074,11 @@
         setupSkillOverlay(data);
 
         experienceTimeline.innerHTML = data.experience.professional.map(function (role) {
+            var roleLinks = role.links && role.links.length
+                ? '<div class="timeline-links">' + role.links.map(function (link) {
+                    return '<a href="' + escapeHtml(link.url) + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + escapeHtml(link.label) + ' in a new tab">' + escapeHtml(link.label) + externalLinkIconSvg(14) + "</a>";
+                }).join("") + "</div>"
+                : "";
             return '<div class="timeline-item">' +
                 '<div class="timeline-marker"></div>' +
                 '<div class="timeline-content">' +
@@ -1082,6 +1087,7 @@
                 '<span class="timeline-date">' + escapeHtml(role.date) + "</span>" +
                 "</div>" +
                 '<p class="timeline-company">' + escapeHtml(role.organization + " | " + role.location) + "</p>" +
+                roleLinks +
                 '<ul class="timeline-list">' + renderList(role.bullets) + "</ul>" +
                 "</div>" +
                 "</div>";
@@ -1205,7 +1211,9 @@
                 "</article>";
         }).join("");
 
-        additionalExperience.innerHTML = data.experience.additional.map(function (role) {
+        additionalExperience.innerHTML = data.experience.additional.filter(function (role) {
+            return role.featuredOnResume !== false;
+        }).map(function (role) {
             return '<article class="entry compact">' +
                 '<div class="entry-header">' +
                 "<div>" +

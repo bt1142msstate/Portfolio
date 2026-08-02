@@ -17,14 +17,14 @@ window.profileData = {
     },
     site: {
         about: [
-            "I build workflow, data, and product systems that turn operational friction into maintainable software: C#/.NET desktop apps, browser-based reporting, Firebase-backed platforms, Python/SQL automation, and native Apple-platform tools.",
+            "I am the founder, owner, and software engineer behind Breauti LLC, a Mississippi startup spanning a fashion product platform and a custom digital studio. I take products from requirements and architecture through implementation, verification, launch, and iteration.",
             "At MSU Libraries, I support 12 library systems and 76 branches and campus libraries. I built Query and MetaTable from staff needs, translating API, file-system, metadata, and reporting constraints into dependable workflows.",
-            "Beyond internal systems, I delivered Afternoon Adventure as a paid production platform and build native and device products including a private local-AI macOS recorder and Door Unlocker, a BLE hardware prototype. I use AI to accelerate implementation while keeping architecture, debugging, testing, and review human-led."
+            "Across Breauti and paid client work, I have built a Three.js fashion customizer, a Firebase-backed client platform, and Afternoon Adventure's production operations system. I also build native and device products, using AI to accelerate implementation while keeping architecture, debugging, testing, and review human-led."
         ],
         proofPoints: [
+            { value: "Founder", label: "Breauti LLC" },
             { value: "12", label: "Library systems supported" },
-            { value: "76", label: "Branches and campus libraries" },
-            { value: "10", label: "Featured software projects" }
+            { value: "76", label: "Branches and campus libraries" }
         ],
         contactIntro: "I'm interested in software engineering work where I can own useful systems from requirements and architecture through delivery, testing, and iteration.",
         skills: [
@@ -34,7 +34,7 @@ window.profileData = {
             },
             {
                 title: "Web & UI",
-                items: ["HTML", "CSS", "XAML", "Node.js", "Tailwind CSS", "Responsive Design", "Accessibility", "AutoNumeric"]
+                items: ["HTML", "CSS", "XAML", "Node.js", "Three.js", "WebGL", "Tailwind CSS", "Responsive Design", "Accessibility", "AutoNumeric"]
             },
             {
                 title: "Backend, Cloud & Hosting",
@@ -58,7 +58,7 @@ window.profileData = {
             },
             {
                 title: "Tools, Testing & Delivery",
-                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Xcode", "Postman", "MSTest", "Python unittest", "Swift Testing", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
+                items: ["Git", "GitHub Actions", "Visual Studio", "VS Code", "Xcode", "Blender", "3D Asset Pipelines", "Postman", "MSTest", "Python unittest", "Swift Testing", "ESLint", "Playwright", "Make", "Shell", "PowerShell", "CI/CD", "MSIX Packaging"]
             },
             {
                 title: "Engineering Practices",
@@ -95,6 +95,8 @@ window.profileData = {
             "CSS": "https://developer.mozilla.org/en-US/docs/Web/CSS",
             "XAML": "https://learn.microsoft.com/en-us/dotnet/desktop/xaml-services/",
             "Node.js": "https://nodejs.org/en/learn",
+            "Three.js": "https://threejs.org/docs/",
+            "WebGL": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API",
             "Tailwind CSS": "https://tailwindcss.com/docs",
             "Responsive Design": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design",
             "Accessibility": "https://developer.mozilla.org/en-US/docs/Web/Accessibility",
@@ -155,6 +157,8 @@ window.profileData = {
             "Visual Studio": "https://learn.microsoft.com/en-us/visualstudio/windows/",
             "VS Code": "https://code.visualstudio.com/docs",
             "Xcode": "https://developer.apple.com/xcode/",
+            "Blender": "https://docs.blender.org/",
+            "3D Asset Pipelines": "https://www.khronos.org/gltf/",
             "Postman": "https://learning.postman.com/docs/introduction/overview/",
             "MSTest": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-mstest-intro",
             "Python unittest": "https://docs.python.org/3/library/unittest.html",
@@ -216,6 +220,8 @@ window.profileData = {
             "CSS": "CSS controls layout, visual design, responsiveness, and polish. I use it for the portfolio, Query, connect4-ai, MobileFlex, and local browser app interfaces.",
             "XAML": "XAML is the UI markup used by WPF and WinUI applications. I use it for Windows desktop interfaces in projects like MetaTable and HTMLConverter.",
             "Node.js": "Node.js lets JavaScript run outside the browser. I use it for tooling, tests, linting, browser smoke checks, and JavaScript project workflows.",
+            "Three.js": "Three.js is the browser 3D library behind Breauti's real-time sneaker customizer. I use it for model loading, materials, lighting, camera controls, responsive rendering, and product configuration.",
+            "WebGL": "WebGL provides GPU-accelerated 3D graphics in the browser. Breauti's customizer uses it through Three.js to render and update a high-detail product model interactively.",
             "Tailwind CSS": "Tailwind CSS is a utility-first CSS framework. I use and understand it as part of modern frontend styling and Query's browser-based UI stack.",
             "Responsive Design": "Responsive design means building interfaces that work cleanly across desktop and mobile. It matters across the portfolio, Query, connect4-ai, and app-style browser screens.",
             "Accessibility": "Accessibility means making interfaces usable through semantic HTML, keyboard interaction, labels, focus behavior, contrast, and assistive technology support.",
@@ -276,6 +282,8 @@ window.profileData = {
             "Visual Studio": "Visual Studio is my primary IDE for C# and Windows desktop projects. It supports .NET, WPF, WinUI, packaging, and debugging workflows.",
             "VS Code": "VS Code is a lightweight editor I use for web, Python, scripts, documentation, and mixed-language projects.",
             "Xcode": "Xcode is Apple's IDE for Swift, SwiftUI, iOS, and macOS development. I use it for Apple-platform app work such as Mac Window Arranger and Door Unlocker.",
+            "Blender": "Blender is the 3D authoring and rendering tool used in Breauti's product pipeline. I use it to maintain the canonical sneaker scene, materials, lighting, camera rigs, responsive renders, and web-export source.",
+            "3D Asset Pipelines": "A 3D asset pipeline moves authored models into validated delivery formats. For Breauti, I maintain scene provenance, GLB export rules, responsive render targets, model-size limits, named-node contracts, and automated validation before web delivery.",
             "Postman": "Postman is used for testing and inspecting APIs. It helps validate request payloads, responses, and integration behavior.",
             "MSTest": "MSTest is Microsoft's test framework for .NET. I use it for C# unit testing and TDD-style validation.",
             "Python unittest": "Python unittest is the standard Python test framework. Ady Resolver uses it for regression, source parsing, resolver behavior, and smoke coverage.",
@@ -309,19 +317,35 @@ window.profileData = {
         }
     },
     resume: {
-        summary: "Software engineer building workflow, data, and product systems across C#/.NET desktop apps, browser-based reporting, Firebase-backed platforms, Python/SQL automation, native Apple apps, API integrations, and local AI workflows.",
+        summary: "Founder and software engineer building production web, data, and product systems with JavaScript/Three.js, Firebase, C#/.NET, Python/SQL, Swift, and local AI. Own and lead Breauti LLC, delivering software from requirements and architecture through testing, launch, and iteration.",
         skills: [
-            { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, XAML, C++, Swift" },
+            { label: "Languages & UI", value: "C#, Python, Perl, SQL, JavaScript, TypeScript, HTML/CSS, Three.js/WebGL, XAML, C++, Swift" },
             { label: "Desktop & Native Apps", value: ".NET 8/9, WPF, WinUI 3, WebView2, SwiftUI, AppKit, ScreenCaptureKit, AVFoundation, WidgetKit, App Intents, BLE/IoT" },
             { label: "Data & APIs", value: "SQL Server, PostgreSQL, EF Core, REST APIs, JSONL/NDJSON, SirsiDynix APIs, CGI, JSON, MARC, Record Linkage" },
             { label: "Cloud & Firebase", value: "Firebase Auth, Firestore, Firebase Storage, Cloud Functions, Firebase Security Rules, App Check, AWS Cloud Foundations, GitHub Pages" },
             { label: "Libraries & Local AI", value: "EPPlus, ExcelJS, PDF.js, PDF-LIB, Nodemailer, FFmpeg, MLX, Whisper, llama.cpp" },
-            { label: "Tools & Delivery", value: "Git, GitHub Actions, Visual Studio, Xcode, Postman, MSTest, Python unittest, Swift Testing, ESLint, Playwright, CI/CD" },
+            { label: "Tools & Delivery", value: "Git, GitHub Actions, Blender/GLB pipelines, Visual Studio, Xcode, Postman, MSTest, Python unittest, Swift Testing, ESLint, Playwright, CI/CD" },
             { label: "Methods", value: "Data Structures, Algorithms, TDD, Agile, AI-First Engineering, Code Review, Automation, Machine Learning" }
         ]
     },
     experience: {
         professional: [
+            {
+                title: "Founder & Software Engineer",
+                organization: "Breauti LLC",
+                location: "Mississippi / Remote",
+                date: "Jul 2026 - Present",
+                links: [
+                    { label: "Breauti Fashion", url: "https://breauti.com/" },
+                    { label: "Breauti Studio", url: "https://studio.breauti.com/" }
+                ],
+                bullets: [
+                    "Founded and own a Mississippi-registered startup; lead product strategy, software architecture, engineering, verification, and launch across Breauti Fashion and Breauti Studio.",
+                    "Built breauti.com, a responsive fashion platform for a customizable luxury sneaker concept, including a real-time Three.js style customizer, transparent product-development plan, accessibility/privacy controls, and transaction launch gates.",
+                    "Built studio.breauti.com as a Firebase-backed digital services platform with Google sign-in, role-aware client workspaces, project intake, agreements, messages, Drive-folder access, revision tracking, and transactional email workflows.",
+                    "Created a reusable Blender-to-WebGL asset pipeline with scene provenance, responsive render automation, GLB validation, and a controlled macOS/Windows RTX render workflow."
+                ]
+            },
             {
                 title: "Technology & Support Services Coordinator",
                 organization: "MSU Libraries, Mississippi State University",
@@ -363,6 +387,7 @@ window.profileData = {
                 title: "STEM Leader & Math Tutor",
                 organization: "Afternoon Adventure Learning Center",
                 date: "2018 - 2021",
+                featuredOnResume: false,
                 bullets: [
                     "Tutored students in math, science, and technology.",
                     "Prepared students for exams and improved study strategies.",
@@ -373,6 +398,7 @@ window.profileData = {
                 title: "Computer Science Lab Monitor",
                 organization: "East Central Community College",
                 date: "2019 - 2020",
+                featuredOnResume: false,
                 bullets: [
                     "Maintained and troubleshot lab computers and systems.",
                     "Assisted students with technical issues and software use.",

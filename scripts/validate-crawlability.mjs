@@ -176,13 +176,13 @@ const prerenderResult = spawnSync(process.execPath, ["scripts/prerender-profile-
 assert(prerenderResult.status === 0, prerenderResult.stderr.trim() || "Pre-rendered content is out of date.");
 
 const pdfInfo = run("pdfinfo", ["resume/brandon-temple-resume.pdf"]);
-assert(/^Title:\s+Brandon Temple Resume \| Software Engineer$/m.test(pdfInfo), "PDF title metadata is missing or incorrect.");
+assert(/^Title:\s+Brandon Temple Resume \| Software Engineer & Founder$/m.test(pdfInfo), "PDF title metadata is missing or incorrect.");
 assert(/^Author:\s+Brandon Vashun Temple$/m.test(pdfInfo), "PDF author metadata is missing or incorrect.");
 assert(/^Tagged:\s+yes$/m.test(pdfInfo), "PDF is not tagged.");
 assert(/^Encrypted:\s+no$/m.test(pdfInfo), "PDF is encrypted.");
 
 const pdfText = run("pdftotext", ["resume/brandon-temple-resume.pdf", "-"]);
-["Brandon Temple", "PROFESSIONAL EXPERIENCE", "PROJECTS", "TECHNICAL SKILLS", "EDUCATION"].forEach((text) => {
+["Brandon Temple", "Founder & Software Engineer", "Breauti LLC", "PROFESSIONAL EXPERIENCE", "PROJECTS", "TECHNICAL SKILLS", "EDUCATION"].forEach((text) => {
     assert(pdfText.includes(text), `PDF text extraction is missing: ${text}.`);
 });
 run("qpdf", ["--check", "resume/brandon-temple-resume.pdf"]);

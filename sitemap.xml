@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://brandontemple.com/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -99,7 +99,7 @@
   </url>
   <url>
     <loc>https://brandontemple.com/resume/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://brandontemple.com/resume/brandon-temple-resume.pdf</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

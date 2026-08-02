@@ -45,10 +45,10 @@ if (!infoObject?.value) {
     process.exit(1);
 }
 
-infoObject.value["/Title"] = "u:Brandon Temple Resume | Software Engineer";
+infoObject.value["/Title"] = "u:Brandon Temple Resume | Software Engineer & Founder";
 infoObject.value["/Author"] = "u:Brandon Vashun Temple";
-infoObject.value["/Subject"] = "u:Software engineering resume covering professional experience, projects, technical skills, and education.";
-infoObject.value["/Keywords"] = "u:Brandon Temple, Brandon Vashun Temple, software engineer, C#, .NET, Python, SQL, JavaScript, Firebase, data systems, workflow automation";
+infoObject.value["/Subject"] = "u:Founder and software engineering resume covering Breauti LLC, professional experience, production products, technical skills, and education.";
+infoObject.value["/Keywords"] = "u:Brandon Temple, Brandon Vashun Temple, Breauti LLC, founder, software engineer, Three.js, WebGL, Blender, C#, .NET, Python, SQL, JavaScript, Firebase, data systems, workflow automation";
 
 const update = {
     version: 2,
