@@ -135,6 +135,8 @@ assert(indexHtml.includes('https://brandontemple.com/assets/images/brandon-profi
     "Afternoon Adventure Website",
     "Query",
     "MetaTable",
+    "Built and operate Breauti Studio",
+    "custom websites, web/mobile apps, and practical operational systems",
     "Technology &amp; Support Services Coordinator",
     "Master of Science in Software Engineering",
     "I am Brandon Vashun Temple"

@@ -17,9 +17,9 @@ window.profileData = {
     },
     site: {
         about: [
-            "I am Brandon Vashun Temple, the founder, owner, and software engineer behind Breauti LLC, a Mississippi startup spanning a fashion product platform and a custom digital studio. I take products from requirements and architecture through implementation, verification, launch, and iteration.",
+            "I am Brandon Vashun Temple, the founder, owner, and software engineer behind Breauti LLC. Breauti develops its own fashion platform, while Breauti Studio is its founder-led digital product branch, helping clients plan, design, build, launch, and maintain custom websites, web and mobile apps, and practical digital systems. Breauti Studio can start from scratch or adapt a proven feature suite, such as the Education Suite, when that is the better foundation.",
             "At MSU Libraries, I support 12 library systems and 76 branches and campus libraries. I built Query and MetaTable from staff needs, translating API, file-system, metadata, and reporting constraints into dependable workflows.",
-            "Across Breauti and paid client work, I have built a Three.js fashion customizer, a Firebase-backed client platform, and Afternoon Adventure's production operations system. I also build native and device products, using AI to accelerate implementation while keeping architecture, debugging, testing, and review human-led."
+            "Across Breauti's own products and Breauti Studio client work, I have built a Three.js fashion customizer, a Firebase-backed service-delivery platform, and Afternoon Adventure's production operations system. I also build native and device products, using AI to accelerate implementation while keeping architecture, debugging, testing, and review human-led."
         ],
         proofPoints: [
             { value: "Founder", label: "Breauti LLC" },
@@ -342,7 +342,7 @@ window.profileData = {
                 bullets: [
                     "Founded and own a Mississippi-registered startup; lead product strategy, software architecture, engineering, verification, and launch across Breauti Fashion and Breauti Studio.",
                     "Built breauti.com, a responsive fashion platform for a customizable luxury sneaker concept, including a real-time Three.js style customizer, transparent product-development plan, accessibility/privacy controls, and transaction launch gates.",
-                    "Built studio.breauti.com as a Firebase-backed digital services platform with Google sign-in, role-aware client workspaces, project intake, agreements, messages, Drive-folder access, revision tracking, and transactional email workflows.",
+                    "Built and operate Breauti Studio, a founder-led digital product studio for custom websites, web/mobile apps, and practical operational systems; engineered its Firebase-backed intake and delivery platform with Google sign-in, client workspaces, agreements, messaging, Drive access, revision tracking, and transactional email workflows.",
                     "Created a reusable Blender-to-WebGL asset pipeline with scene provenance, responsive render automation, GLB validation, and a controlled macOS/Windows RTX render workflow."
                 ]
             },
