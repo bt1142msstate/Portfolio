@@ -8,98 +8,66 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/brandon-profile-photo.jpg</image:loc>
-      <image:title>Brandon Temple profile portrait</image:title>
-      <image:caption>Brandon Temple wearing a light gray zip jacket in a bright white gallery beside an abstract loop sculpture and olive tree</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/brandon-profile-photo-square.jpg</image:loc>
-      <image:title>Brandon Temple square profile portrait</image:title>
-      <image:caption>Square professional headshot of software engineer and Breauti LLC founder Brandon Vashun Temple</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-4x3.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-16x9.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/brandon-illustrated-profile-photo.jpg</image:loc>
-      <image:title>Illustrated portrait of Brandon Temple</image:title>
-      <image:caption>Illustrated portrait of Brandon Temple wearing a white jacket in a warmly lit coffee shop</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/social-preview.png</image:loc>
-      <image:title>Brandon Temple software engineer portfolio preview</image:title>
-      <image:caption>Software engineer portfolio card with Brandon Temple's bright gallery portrait and C#, Python, WinUI, and machine learning skills</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/afternoon-adventure-dashboard.webp</image:loc>
-      <image:title>Afternoon Adventure staff dashboard</image:title>
-      <image:caption>Staff dashboard for family messages, enrollment, attendance, time clock, traffic, backups, and access management</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/afternoon-adventure-enrollment.webp</image:loc>
-      <image:title>Afternoon Adventure enrollment workflow</image:title>
-      <image:caption>Mobile enrollment workflow with structured child information fields</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/afternoon-adventure-home.webp</image:loc>
-      <image:title>Afternoon Adventure public website</image:title>
-      <image:caption>Mobile homepage for the Mississippi afterschool and tutoring center</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/query-workspace.webp</image:loc>
-      <image:title>Query reporting workspace</image:title>
-      <image:caption>Browser reporting workspace showing configured fields and populated library item results</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/query-field-builder.webp</image:loc>
-      <image:title>Query report field builder</image:title>
-      <image:caption>Searchable report field builder with an inline filter preview</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/metatable.webp</image:loc>
-      <image:title>MetaTable metadata scanner</image:title>
-      <image:caption>WPF desktop metadata scanner for directory trees and structured Excel export</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/ady-resolver.webp</image:loc>
-      <image:title>Ady Resolver address matching interface</image:title>
-      <image:caption>Address resolution interface showing a matched address and ranked candidates</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/teslacam-viewer.webp</image:loc>
-      <image:title>TeslaCamViewer playback dashboard</image:title>
-      <image:caption>Multi-camera TeslaCam playback and vehicle telemetry dashboard</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/teslacam-overview.webp</image:loc>
-      <image:title>TeslaCamViewer drive browser</image:title>
-      <image:caption>Drive browser with six-camera playback and telemetry panels</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/mac-window-arranger.webp</image:loc>
-      <image:title>Mac Window Arranger resize workflow</image:title>
-      <image:caption>Native macOS window resize workflow for a selected application</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/mac-window-arranger-layout.webp</image:loc>
-      <image:title>Mac Window Arranger layout builder</image:title>
-      <image:caption>Saved workspace and three-column macOS window layout builder</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/door-unlocker-overview.webp</image:loc>
-      <image:title>Door Unlocker technical overview</image:title>
-      <image:caption>BLE door actuator desk-test architecture and clean bench wiring system</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/door-unlocker-enclosure.webp</image:loc>
-      <image:title>Door Unlocker enclosure concept</image:title>
-      <image:caption>Enclosure concept with actuator, controller, solar panel, and battery housing</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/html-converter.webp</image:loc>
-      <image:title>HTMLConverter desktop interface</image:title>
-      <image:caption>WinUI desktop interface with HTML-to-PDF conversion and source controls</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/connect4-ai.webp</image:loc>
-      <image:title>Connect 4 AI game interface</image:title>
-      <image:caption>Connect 4 game board with minimax controls and experiment statistics</image:caption>
     </image:image>
   </url>
   <url>
@@ -109,8 +77,6 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/social-preview.png</image:loc>
-      <image:title>Brandon Temple resume preview</image:title>
-      <image:caption>Software engineer portfolio card with Brandon Temple's bright gallery portrait and C#, Python, WinUI, and machine learning skills</image:caption>
     </image:image>
   </url>
   <url>

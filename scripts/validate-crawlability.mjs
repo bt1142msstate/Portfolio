@@ -103,6 +103,10 @@ assert(indexHtml.includes('"dateCreated": "2026-04-12"'), "ProfilePage structure
 assert(indexHtml.includes('"dateModified": "2026-08-02"'), "ProfilePage structured data does not declare its current modification date.");
 assert(indexHtml.includes('https://brandontemple.com/#profile-image-square'), "Homepage structured data does not declare the square profile image.");
 assert(indexHtml.includes('https://brandontemple.com/assets/images/brandon-profile-photo-square.jpg'), "Homepage structured data does not reference the square profile image file.");
+assert(indexHtml.includes('https://brandontemple.com/#profile-image-4x3'), "Homepage structured data does not declare the 4:3 profile image.");
+assert(indexHtml.includes('https://brandontemple.com/#profile-image-16x9'), "Homepage structured data does not declare the 16:9 profile image.");
+assert(indexHtml.includes('<figcaption class="hero-photo-caption">'), "Homepage profile portrait does not have a visible caption.");
+assert(indexHtml.includes('<strong>Brandon Vashun Temple</strong>'), "Homepage profile portrait caption does not identify Brandon Vashun Temple.");
 
 [
     "hero-proof",
@@ -172,6 +176,9 @@ assert(robots.includes("https://brandontemple.com/sitemap.xml"), "robots.txt doe
 const sitemapUrls = Array.from(sitemap.matchAll(/<(?:image:)?loc>([^<]+)<\/(?:image:)?loc>/g), (match) => match[1]);
 assert(sitemapUrls.length >= 3, "sitemap.xml does not include the primary pages and assets.");
 assert(sitemap.includes("https://brandontemple.com/assets/images/brandon-profile-photo-square.jpg"), "sitemap.xml does not include the square profile image.");
+assert(sitemap.includes("https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-4x3.jpg"), "sitemap.xml does not include the 4:3 profile image.");
+assert(sitemap.includes("https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-16x9.jpg"), "sitemap.xml does not include the 16:9 profile image.");
+assert(!/<image:(?:caption|title|geo_location|license)>/i.test(sitemap), "sitemap.xml includes deprecated image sitemap metadata.");
 sitemapUrls.forEach((url) => {
     const localPath = localPathForUrl(url);
     assert(localPath !== null, `Sitemap URL is outside the canonical domain: ${url}`);

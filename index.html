@@ -62,6 +62,12 @@
                     },
                     {
                         "@id": "https://brandontemple.com/#profile-image-square"
+                    },
+                    {
+                        "@id": "https://brandontemple.com/#profile-image-4x3"
+                    },
+                    {
+                        "@id": "https://brandontemple.com/#profile-image-16x9"
                     }
                 ],
                 "email": "mailto:me@brandontemple.com",
@@ -179,6 +185,10 @@
                 "name": "Brandon Temple profile portrait",
                 "caption": "Brandon Temple wearing a light gray zip jacket in a bright white gallery beside an abstract loop sculpture and olive tree.",
                 "description": "Primary professional portrait of software engineer Brandon Vashun Temple.",
+                "encodingFormat": "image/jpeg",
+                "about": {
+                    "@id": "https://brandontemple.com/#brandon-temple"
+                },
                 "representativeOfPage": true
             },
             {
@@ -190,7 +200,41 @@
                 "height": 512,
                 "name": "Brandon Temple square profile portrait",
                 "caption": "Square portrait of Brandon Temple wearing a light gray zip jacket in a bright white gallery.",
-                "description": "Square professional headshot of software engineer and Breauti LLC founder Brandon Vashun Temple."
+                "description": "Square professional headshot of software engineer and Breauti LLC founder Brandon Vashun Temple.",
+                "encodingFormat": "image/jpeg",
+                "about": {
+                    "@id": "https://brandontemple.com/#brandon-temple"
+                }
+            },
+            {
+                "@type": "ImageObject",
+                "@id": "https://brandontemple.com/#profile-image-4x3",
+                "url": "https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-4x3.jpg",
+                "contentUrl": "https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-4x3.jpg",
+                "width": 1024,
+                "height": 768,
+                "name": "Brandon Vashun Temple profile portrait in 4:3 format",
+                "caption": "Brandon Vashun Temple in a light gray zip jacket in a bright white gallery.",
+                "description": "High-resolution 4:3 professional portrait of Breauti LLC founder and software engineer Brandon Vashun Temple.",
+                "encodingFormat": "image/jpeg",
+                "about": {
+                    "@id": "https://brandontemple.com/#brandon-temple"
+                }
+            },
+            {
+                "@type": "ImageObject",
+                "@id": "https://brandontemple.com/#profile-image-16x9",
+                "url": "https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-16x9.jpg",
+                "contentUrl": "https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-16x9.jpg",
+                "width": 1024,
+                "height": 576,
+                "name": "Brandon Vashun Temple profile portrait in 16:9 format",
+                "caption": "Brandon Vashun Temple in a light gray zip jacket in a bright white gallery.",
+                "description": "High-resolution 16:9 professional portrait of Breauti LLC founder and software engineer Brandon Vashun Temple.",
+                "encodingFormat": "image/jpeg",
+                "about": {
+                    "@id": "https://brandontemple.com/#brandon-temple"
+                }
             },
             {
                 "@type": "ImageObject",
@@ -799,7 +843,7 @@
     }
     </script>
     <!-- profile:project-structured-data:end -->
-    <link rel="stylesheet" href="./assets/css/site.css?v=20260802-breauti-founder">
+    <link rel="stylesheet" href="./assets/css/site.css?v=20260802-image-search">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -888,11 +932,15 @@
                 </div>
             </div>
             <div class="hero-collage">
-                <div class="hero-photo-shell">
+                <figure class="hero-photo-shell">
                     <picture>
                         <source type="image/webp" srcset="/assets/images/brandon-profile-photo-420.webp?v=20260723-gallery-portrait 420w, /assets/images/brandon-profile-photo-720.webp?v=20260723-gallery-portrait 720w, /assets/images/brandon-profile-photo-960.webp?v=20260723-gallery-portrait 960w, /assets/images/brandon-profile-photo-1120.webp?v=20260723-gallery-portrait 1120w" sizes="(max-width: 768px) calc(100vw - 2rem), 390px">
                         <img src="/assets/images/brandon-profile-photo.jpg" alt="Brandon Temple wearing a light gray zip jacket in a bright white gallery beside an abstract loop sculpture and olive tree" width="1024" height="1280" class="hero-profile-image" fetchpriority="high" decoding="async">
                     </picture>
+                    <figcaption class="hero-photo-caption">
+                        <strong>Brandon Vashun Temple</strong>
+                        <span>Founder &amp; Software Engineer</span>
+                    </figcaption>
                     <a href="/assets/images/brandon-profile-photo.jpg" download="brandon-temple-gallery-profile-photo.jpg" class="image-download-button" aria-label="Download Brandon Temple profile photo">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                             <path d="M12 3v12"></path>
@@ -900,7 +948,7 @@
                             <path d="M5 21h14"></path>
                         </svg>
                     </a>
-                </div>
+                </figure>
                 <section class="hero-focus-stack" aria-label="Engineering focus">
                     <div class="hero-focus-card">
                         <span class="hero-focus-index">01</span>
