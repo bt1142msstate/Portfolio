@@ -655,9 +655,10 @@
 
     function renderProjectActions(project) {
         var actions = [];
+        if (getProjectMedia(project).length) actions.push('<button class="project-action" type="button" data-project-open="project-' + slugify(project.title) + '" aria-haspopup="dialog" aria-label="View project: ' + escapeHtml(project.title) + '">View project ' + externalLinkIconSvg(16) + '</button>');
         if (project.liveUrl) actions.push('<a class="project-action" href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" aria-label="Open the live ' + escapeHtml(project.title) + ' project in a new tab">Live project ' + externalLinkIconSvg(16) + '</a>');
         if (hasPublicRepository(project)) actions.push('<a class="project-action" href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View source for ' + escapeHtml(project.title) + ' in a new tab">Source ' + externalLinkIconSvg(16) + '</a>');
-        if (!actions.length) actions.push('<span class="project-private">Private project</span>');
+        if (!actions.length) return '';
         return '<div class="project-actions">' + actions.join("") + '</div>';
     }
 
@@ -669,16 +670,16 @@
         var summary = project.siteSummary ? '<p class="project-summary">' + escapeHtml(project.siteSummary) + '</p>' : '';
         var action = '<button class="project-action" type="button" data-project-open="' + id + '" aria-haspopup="dialog" aria-label="View project: ' + escapeHtml(project.displayTitle || project.title) + '">View project ' + externalLinkIconSvg(16) + '</button>';
         var heading = '<h3>' + escapeHtml(project.displayTitle || project.title) + '</h3>';
-        var copy = phone
-            ? status + '<div class="project-caption">' + heading + '</div>' + summary + action
-            : '<div class="project-caption"><div>' + heading + context + '</div>' + action + '</div>' + summary;
+        var copy = status + '<div class="project-caption">' + heading + context + '</div>' + summary + action;
         return '<article class="project-card project-card-selected' + (phone ? ' project-card-phone' : '') + '" id="' + id + '">' +
             renderProjectVisual(project, project.siteOrder === 1) + '<div class="project-body">' + copy + '</div></article>';
     }
 
     function renderAdditionalProject(project) {
-        return '<details class="project-row" id="project-' + slugify(project.title) + '"><summary><h3>' + escapeHtml(project.title) + '</h3><span>' + escapeHtml(project.siteIndexLabel || project.siteType) + '</span></summary>' +
-            '<div class="project-row-detail"><p>' + escapeHtml(project.siteDescription) + '</p>' + renderProjectActions(project) + renderProjectVisual(project, false) + '</div></details>';
+        var visual = renderProjectVisual(project, false);
+        return '<article class="project-card project-secondary' + (visual ? '' : ' project-secondary-text') + '" id="project-' + slugify(project.title) + '">' + visual +
+            '<div class="project-body"><h3>' + escapeHtml(project.title) + '</h3><p class="project-context">' + escapeHtml(project.siteIndexLabel || project.siteType) + '</p>' +
+            '<p class="project-summary">' + escapeHtml(project.siteDescription) + '</p>' + renderProjectActions(project) + '</div></article>';
     }
 
     function renderProjectStructuredData(data) {
@@ -770,22 +771,22 @@
 
         aboutText.innerHTML = data.site.about.map(function (paragraph) { return '<p>' + escapeHtml(paragraph) + '</p>'; }).join('');
         skillsGrid.innerHTML = data.site.skills.map(function (group) {
-            return '<section class="skill-category"><h3>' + escapeHtml(group.title) + '</h3><p>' + group.items.map(escapeHtml).join(', ') + '</p></section>';
+            return '<section class="skill-category"><h4>' + escapeHtml(group.title) + '</h4><p>' + group.items.map(escapeHtml).join(', ') + '</p></section>';
         }).join('');
         experienceTimeline.innerHTML = data.experience.professional.map(function (role) {
             var links = role.links ? '<div class="timeline-role-links">' + role.links.map(function (link) {
                 return '<a href="' + escapeHtml(link.url) + '" target="_blank" rel="noopener">' + escapeHtml(link.label) + '</a>';
             }).join('') + '</div>' : '';
-            return '<details class="experience-row"><summary><h3>' + escapeHtml(role.title) + '</h3><span class="experience-meta">' + escapeHtml(role.organization + ' · ' + role.date) + '</span></summary>' + links + '<ul class="timeline-list">' + renderList(role.bullets) + '</ul></details>';
+            return '<article class="experience-row"><header><h3>' + escapeHtml(role.title) + '</h3><p class="experience-meta">' + escapeHtml(role.organization + ' · ' + role.date) + '</p></header>' + links + '<ul class="timeline-list">' + renderList(role.bullets) + '</ul></article>';
         }).join('');
 
         var projects = data.projects.filter(function (project) { return project.featuredOnSite; }).sort(function (a, b) { return (a.siteOrder || 100) - (b.siteOrder || 100); });
         projectsGrid.innerHTML = '<div class="project-showcase">' + projects.filter(function (project) { return project.siteTier === 'selected'; }).map(function (project) { return renderProjectCard(data, project); }).join('') + '</div>' +
-            '<section class="project-more" aria-labelledby="more-work-title"><h2 id="more-work-title">More work</h2>' + projects.filter(function (project) { return project.siteTier !== 'selected'; }).map(renderAdditionalProject).join('') + '</section>';
+            '<section class="project-more" aria-labelledby="more-work-title"><h2 id="more-work-title">More work</h2><div class="project-more-list">' + projects.filter(function (project) { return project.siteTier !== 'selected'; }).map(renderAdditionalProject).join('') + '</div></section>';
         setupProjectMediaOverlay();
 
         educationGrid.innerHTML = data.education.map(function (item) {
-            return '<div class="education-card"><h3>' + escapeHtml(item.degree) + '</h3><p>' + escapeHtml(item.school) + '</p><p>' + escapeHtml(item.date) + '</p></div>';
+            return '<div class="education-card"><h4>' + escapeHtml(item.degree) + '</h4><p>' + escapeHtml(item.school) + '</p><p>' + escapeHtml(item.date) + '</p></div>';
         }).join('');
         contactIntro.textContent = data.site.contactIntro;
         contactActions.innerHTML = '<a href="mailto:' + escapeHtml(data.contact.email) + '" class="btn btn-primary">Email me</a><a class="text-link" href="/resume/brandon-temple-resume.pdf" download type="application/pdf">Download resume</a>';

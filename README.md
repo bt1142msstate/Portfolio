@@ -8,7 +8,7 @@ Live site: [brandontemple.com](https://brandontemple.com)
 
 - Professional experience, education, and contact information
 - Large, vertically arranged project views for Afternoon Adventure, Query, and the upcoming USE Rideshare app
-- Additional projects, technical background, education, and experience in compact expandable rows
+- Additional projects with visible imagery and descriptions; technical background, education, and experience remain fully visible
 - Searchable resume PDF generated from the shared resume page with document metadata and extraction checks
 - Shared portfolio and resume content managed from `assets/js/profile-data.js` and pre-rendered into initial HTML for crawlers
 - Responsive single-page layout with a dark theme and art-directed project imagery
@@ -42,7 +42,7 @@ Then open `http://127.0.0.1:8000`.
 
 ## Project Images
 
-The homepage displays original project captures at their natural proportions. The first capture stays still; selecting the image or "View project" opens the full gallery and available scrollable demonstrations. The hero uses `assets/images/brandon-white-ribbed-portrait.webp`.
+The homepage displays original project captures at their natural proportions. The first capture stays still; selecting the image or "View project" opens the full gallery and available scrollable demonstrations. The hero uses `assets/images/brandon-natural-white-ribbed-portrait.webp`.
 
 The older image-variant generator remains available for other framed uses:
 

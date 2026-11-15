@@ -40,8 +40,8 @@ pages.forEach(([fileName, source]) => {
 });
 
 const indexHtml = pages[0][1];
-assert(/aria-controls=["']primary-navigation["']/i.test(indexHtml), "The mobile menu control is not associated with the primary navigation.");
-assert(/aria-expanded=["']false["']/i.test(indexHtml), "The mobile menu control is missing its collapsed state.");
+assert(/aria-label=["']Primary navigation["']/i.test(indexHtml), "Primary navigation is missing its accessible label.");
+assert(/id=["']primary-navigation["']/i.test(indexHtml), "Primary navigation links are missing.");
 assert(/role=["']dialog["'][^>]*aria-modal=["']true["']/i.test(indexHtml), "Project details must use modal dialog semantics.");
 assert(!/<iframe\b[^>]*\btitle=["']\s*["']/i.test(indexHtml), "An iframe has an empty title.");
 
@@ -52,7 +52,7 @@ assert(!/<iframe\b[^>]*\btitle=["']\s*["']/i.test(indexHtml), "An iframe has an 
     assert(css.includes(":focus-visible"), "Visible keyboard focus styles are missing.");
 });
 
-assert(/event\.key === ["']Escape["']/.test(siteScript), "The mobile menu cannot be dismissed with Escape.");
+assert(/event\.key === ["']Escape["']/.test(profileScript), "The project dialog cannot be dismissed with Escape.");
 assert(/setAttribute\(["']aria-current["'], ["']location["']\)/.test(siteScript), "Same-page navigation does not expose the current location.");
 assert(profileScript.includes("trapModalFocus"), "Modal dialogs do not contain keyboard focus.");
 assert(profileScript.includes("setModalBackgroundInert"), "Modal dialogs do not make background content inert.");

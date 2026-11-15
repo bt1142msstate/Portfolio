@@ -109,4 +109,8 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
+    <url>
+        <loc>https://brandontemple.com/assets/images/brandon-natural-white-ribbed-portrait.webp</loc>
+        <lastmod>2026-11-15</lastmod>
+    </url>
 </urlset>
