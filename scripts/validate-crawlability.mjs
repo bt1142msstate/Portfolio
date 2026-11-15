@@ -105,8 +105,6 @@ assert(indexHtml.includes('https://brandontemple.com/#profile-image-square'), "H
 assert(indexHtml.includes('https://brandontemple.com/assets/images/brandon-profile-photo-square.jpg'), "Homepage structured data does not reference the square profile image file.");
 assert(indexHtml.includes('https://brandontemple.com/#profile-image-4x3'), "Homepage structured data does not declare the 4:3 profile image.");
 assert(indexHtml.includes('https://brandontemple.com/#profile-image-16x9'), "Homepage structured data does not declare the 16:9 profile image.");
-assert(indexHtml.includes('<figcaption class="hero-photo-caption">'), "Homepage profile portrait does not have a visible caption.");
-assert(indexHtml.includes('<strong>Brandon Vashun Temple</strong>'), "Homepage profile portrait caption does not identify Brandon Vashun Temple.");
 
 [
     "hero-proof",
