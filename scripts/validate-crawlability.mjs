@@ -107,7 +107,6 @@ assert(indexHtml.includes('https://brandontemple.com/#profile-image-4x3'), "Home
 assert(indexHtml.includes('https://brandontemple.com/#profile-image-16x9'), "Homepage structured data does not declare the 16:9 profile image.");
 
 [
-    "hero-proof",
     "about",
     "experience",
     "projects",
@@ -141,7 +140,7 @@ assert(indexHtml.includes('https://brandontemple.com/#profile-image-16x9'), "Hom
     "custom websites, web/mobile apps, and practical operational systems",
     "Technology &amp; Support Services Coordinator",
     "Master of Science in Software Engineering",
-    "I am Brandon Vashun Temple"
+    "I run Breauti LLC and Breauti Studio"
 ].forEach((text) => {
     assert(indexHtml.includes(text), `Homepage initial HTML is missing: ${text}.`);
 });

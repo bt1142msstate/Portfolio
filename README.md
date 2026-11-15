@@ -7,7 +7,8 @@ Live site: [brandontemple.com](https://brandontemple.com)
 ## Highlights
 
 - Professional experience, education, and contact information
-- Workflow software and data-quality case studies for `Query`, `MetaTable`, and `Ady Resolver`, with supporting project cards for `Mac Window Arranger`, `HTMLConverter`, and `connect4-ai`
+- Large, vertically arranged project views for Afternoon Adventure, Query, and the upcoming USE Rideshare app
+- Additional projects, technical background, education, and experience in compact expandable rows
 - Searchable resume PDF generated from the shared resume page with document metadata and extraction checks
 - Shared portfolio and resume content managed from `assets/js/profile-data.js` and pre-rendered into initial HTML for crawlers
 - Responsive single-page layout with a dark theme and art-directed project imagery
@@ -15,7 +16,8 @@ Live site: [brandontemple.com](https://brandontemple.com)
 ## Project Structure
 
 - `index.html` - main portfolio site
-- `assets/css/site.css` - site styling
+- `assets/css/portfolio.css` - editorial homepage and project preview styling
+- `assets/css/site.css` - privacy and accessibility page styling
 - `assets/js/site.js` - navigation and UI behavior
 - `assets/js/profile-data.js` - shared portfolio and resume content source
 - `assets/js/profile-render.js` - renders shared content into the site and resume
@@ -38,9 +40,13 @@ python3 -m http.server 8000
 
 Then open `http://127.0.0.1:8000`.
 
-## Responsive Images
+## Project Images
 
-Regenerate the illustrated portrait crops and project screenshot variants after replacing a source image:
+The homepage displays original project captures at their natural proportions. The first capture stays still; selecting the image or "View project" opens the full gallery and available scrollable demonstrations. The hero uses `assets/images/brandon-white-ribbed-portrait.webp`.
+
+The older image-variant generator remains available for other framed uses:
+
+Regenerate portrait crops and framed project screenshot variants after replacing a source image:
 
 ```bash
 ./scripts/build-responsive-images.sh

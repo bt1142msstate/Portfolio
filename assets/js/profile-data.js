@@ -17,16 +17,10 @@ window.profileData = {
     },
     site: {
         about: [
-            "I am Brandon Vashun Temple, the founder, owner, and software engineer behind Breauti LLC. Breauti develops its own fashion platform, while Breauti Studio is its founder-led digital product branch, helping clients plan, design, build, launch, and maintain custom websites, web and mobile apps, and practical digital systems. Breauti Studio can start from scratch or adapt a proven feature suite, such as the Education Suite, when that is the better foundation.",
-            "At MSU Libraries, I support 12 library systems and 76 branches and campus libraries. I built Query and MetaTable from staff needs, translating API, file-system, metadata, and reporting constraints into dependable workflows.",
-            "Across Breauti's own products and Breauti Studio client work, I have built a Three.js fashion customizer, a Firebase-backed service-delivery platform, and Afternoon Adventure's production operations system. I also build native and device products, using AI to accelerate implementation while keeping architecture, debugging, testing, and review human-led."
+            "I run Breauti LLC and Breauti Studio, building websites, apps, and operational software from the first requirements through launch and ongoing care.",
+            "At MSU Libraries, I develop internal tools and support 12 library systems across 76 branches and campus libraries. My work spans browser reporting, native apps, automation, and connected devices."
         ],
-        proofPoints: [
-            { value: "Founder", label: "Breauti LLC" },
-            { value: "12", label: "Library systems supported" },
-            { value: "76", label: "Branches and campus libraries" }
-        ],
-        contactIntro: "I'm interested in software engineering work where I can own useful systems from requirements and architecture through delivery, testing, and iteration.",
+        contactIntro: "Have a project or a software engineering role in mind? I’d like to hear about it.",
         skills: [
             {
                 title: "Programming Languages",
@@ -444,10 +438,11 @@ window.profileData = {
     projects: [
         {
             title: "Query",
+            siteCaption: "Reporting tools · MSU Libraries",
             githubUrl: "https://github.com/bt1142msstate/Query",
             liveUrl: "https://bt1142msstate.github.io/Query/",
             siteTier: "selected",
-            siteOrder: 3,
+            siteOrder: 2,
             mediaUrl: "/assets/images/projects/query-workspace.webp?v=20260726-publication-media",
             mediaAlt: "Query reporting workspace with six configured fields and a populated table of fictional library item records",
             mediaTitle: "Live reporting workspace",
@@ -482,8 +477,9 @@ window.profileData = {
         },
         {
             title: "MetaTable",
+            siteIndexLabel: "File metadata scanner",
             githubUrl: "https://github.com/bt1142msstate/MetaTable",
-            siteTier: "selected",
+            siteTier: "additional",
             siteOrder: 4,
             mediaUrl: "/assets/images/projects/metatable.webp?v=20260722-editorial",
             mediaAlt: "MetaTable desktop metadata scanner interface",
@@ -506,6 +502,9 @@ window.profileData = {
         },
         {
             title: "Afternoon Adventure Website",
+            displayTitle: "Afternoon Adventure",
+            siteCaption: "Website & staff portal · Client project",
+            siteSummary: "A public website and connected family and staff workflows.",
             repositoryVisibility: "private",
             liveUrl: "https://afternoonadventure.org/",
             siteTier: "selected",
@@ -584,8 +583,9 @@ window.profileData = {
             title: "USE Rideshare",
             repositoryVisibility: "private",
             siteTier: "selected",
-            siteOrder: 2,
-            siteStatus: "Upcoming · In development",
+            siteOrder: 3,
+            siteStatus: "Upcoming",
+            siteSummary: "A rideshare app in development for Up South Entertainment in Starkville, Mississippi.",
             mediaPresentation: "phone",
             mediaUrl: "/assets/images/projects/use-rider-booking.webp?v=20261115-use-preview",
             mediaAlt: "USE iPhone development preview with the gold Up South Entertainment logo and pickup and destination fields",
@@ -618,8 +618,9 @@ window.profileData = {
         },
         {
             title: "Recorder",
+            siteIndexLabel: "Private native macOS app",
             repositoryVisibility: "private",
-            siteTier: "selected",
+            siteTier: "additional",
             siteOrder: 5,
             visualVariant: "local-ai",
             siteType: "Private Native macOS App | Local AI Capture Workspace",
@@ -640,6 +641,7 @@ window.profileData = {
         },
         {
             title: "Ady Resolver",
+            siteIndexLabel: "Address resolution toolkit",
             githubUrl: "https://github.com/bt1142msstate/Ady-Resolver",
             siteTier: "additional",
             mediaUrl: "/assets/images/projects/ady-resolver.webp?v=20260722-visual-refine",
@@ -663,6 +665,7 @@ window.profileData = {
         },
         {
             title: "TeslaCamViewer",
+            siteIndexLabel: "Video & telemetry viewer",
             githubUrl: "https://github.com/bt1142msstate/TeslaCamViewer",
             liveUrl: "https://bt1142msstate.github.io/TeslaCamViewer/",
             mediaUrl: "/assets/images/projects/teslacam-viewer.webp?v=20260722-visual-refine",
@@ -695,6 +698,7 @@ window.profileData = {
         },
         {
             title: "Mac Window Arranger",
+            siteIndexLabel: "macOS window manager",
             githubUrl: "https://github.com/bt1142msstate/mac-window-arranger",
             mediaUrl: "/assets/images/projects/mac-window-arranger.webp?v=20260722-visual-refine",
             mediaAlt: "Mac Window Arranger resize workflow for a selected application",
@@ -725,9 +729,10 @@ window.profileData = {
         },
         {
             title: "Door Unlocker",
+            siteIndexLabel: "Hardware & native app prototype",
             githubUrl: "https://github.com/bt1142msstate/door-unlocker",
             liveUrl: "https://bt1142msstate.github.io/door-unlocker/",
-            siteTier: "selected",
+            siteTier: "additional",
             siteOrder: 6,
             mediaUrl: "/assets/images/projects/door-unlocker-overview.webp?v=20260722-project-visuals",
             mediaAlt: "Door Unlocker technical overview showing the desk-test architecture and clean bench wiring system",
@@ -760,6 +765,7 @@ window.profileData = {
         },
         {
             title: "HTMLConverter",
+            siteIndexLabel: "Batch PDF converter",
             githubUrl: "https://github.com/bt1142msstate/HTMLConverter",
             mediaUrl: "/assets/images/projects/html-converter.webp?v=20260722-visual-refine",
             mediaAlt: "HTMLConverter desktop interface with conversion and source controls",
@@ -780,6 +786,7 @@ window.profileData = {
         },
         {
             title: "connect4-ai",
+            siteIndexLabel: "Game AI",
             githubUrl: "https://github.com/bt1142msstate/connect4-ai",
             liveUrl: "https://bt1142msstate.github.io/connect4-ai/",
             mediaUrl: "/assets/images/projects/connect4-ai-gameplay.webp?v=20260727-connect4-responsive-media",
