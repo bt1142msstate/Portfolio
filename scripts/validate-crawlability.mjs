@@ -100,7 +100,7 @@ assert(indexHtml.includes('href="/favicon.ico" sizes="64x64"'), "Homepage favico
 assert(!/["']\/favicon\.ico\?v=/i.test(indexHtml + resumeHtml + privacyHtml + accessibilityHtml), "A page uses a versioned favicon URL instead of the stable crawlable URL.");
 assert(indexHtml.includes('"alternateName": "Brandon Vashun Temple"'), "WebSite structured data does not declare the full-name alternate site name.");
 assert(indexHtml.includes('"dateCreated": "2026-04-12"'), "ProfilePage structured data does not declare its creation date.");
-assert(indexHtml.includes('"dateModified": "2026-08-02"'), "ProfilePage structured data does not declare its current modification date.");
+assert(indexHtml.includes('"dateModified": "2026-11-15"'), "ProfilePage structured data does not declare its current modification date.");
 assert(indexHtml.includes('https://brandontemple.com/#profile-image-square'), "Homepage structured data does not declare the square profile image.");
 assert(indexHtml.includes('https://brandontemple.com/assets/images/brandon-profile-photo-square.jpg'), "Homepage structured data does not reference the square profile image file.");
 assert(indexHtml.includes('https://brandontemple.com/#profile-image-4x3'), "Homepage structured data does not declare the 4:3 profile image.");
