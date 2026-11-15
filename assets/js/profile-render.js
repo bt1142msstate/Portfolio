@@ -687,12 +687,16 @@
             desktopSource = '<source media="(min-width: 1101px)" type="image/webp" srcset="' + escapeHtml(item.variants.wide) + '">';
         }
 
+        var mediaMarkup = project.mediaPresentation === "phone"
+            ? '<img class="project-media-frame-image" src="' + escapeHtml(item.url) + '" alt="' + escapeHtml(item.alt) + '" width="' + item.width + '" height="' + item.height + '" loading="lazy" decoding="async">'
+            : '<picture class="project-media-picture">' +
+                desktopSource +
+                '<source media="(min-width: 481px)" type="image/webp" srcset="' + escapeHtml(item.variants.standard) + '">' +
+                '<img class="project-media-frame-image" src="' + escapeHtml(item.variants.square) + '" alt="' + escapeHtml(item.alt) + '" width="960" height="960" loading="lazy" decoding="async">' +
+                "</picture>";
+
         return '<button class="project-media-frame project-media-responsive' + activeClass + fitClass + '" type="button" data-gallery-frame data-gallery-index="' + index + '" data-project-media-trigger data-project-media-source="' + escapeHtml(item.url) + '" data-project-media-project="' + escapeHtml(project.title) + '" data-project-media-title="' + escapeHtml(item.title) + '" data-project-media-description="' + escapeHtml(item.description) + '"' + captureUrlAttribute + liveUrlAttribute + sourceUrlAttribute + ' aria-hidden="' + (index === 0 ? "false" : "true") + '" aria-haspopup="dialog" aria-label="' + viewLabel + escapeHtml(item.title) + '" tabindex="' + (index === 0 ? "0" : "-1") + '">' +
-            '<picture class="project-media-picture">' +
-            desktopSource +
-            '<source media="(min-width: 481px)" type="image/webp" srcset="' + escapeHtml(item.variants.standard) + '">' +
-            '<img class="project-media-frame-image" src="' + escapeHtml(item.variants.square) + '" alt="' + escapeHtml(item.alt) + '" width="960" height="960" loading="lazy" decoding="async">' +
-            "</picture>" +
+            mediaMarkup +
             '<span class="project-media-view-cue" aria-hidden="true">' +
             '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg>' +
             "<span>" + viewCue + "</span>" +
@@ -915,6 +919,9 @@
 
     function renderProjectActions(project) {
         var actions = [];
+        if (project.siteStatus) {
+            actions.push('<span class="project-status">' + escapeHtml(project.siteStatus) + '</span>');
+        }
         if (project.liveUrl) {
             actions.push('<a href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" class="project-action" aria-label="Open the live ' + escapeHtml(project.title) + ' project in a new tab">Live site ' + externalLinkIconSvg(16) + "</a>");
         }
@@ -929,7 +936,7 @@
 
     function renderProjectCard(data, project, tier) {
         var isSelected = tier === "selected";
-        var projectClass = "project-card project-card-" + tier + (project.caseStudy ? " project-card-case-study" : "");
+        var projectClass = "project-card project-card-" + tier + (project.caseStudy ? " project-card-case-study" : "") + (project.mediaPresentation === "phone" ? " project-card-phone" : "");
         var highlights = isSelected && project.siteHighlights ? project.siteHighlights.slice(0, 3) : [];
         var highlightsMarkup = highlights.length
             ? '<ul class="project-highlights">' + renderList(highlights) + "</ul>"

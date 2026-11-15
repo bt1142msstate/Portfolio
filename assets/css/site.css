@@ -4458,6 +4458,7 @@ iframe:focus-visible,
     grid-template-columns: minmax(112px, 0.9fr) minmax(0, 1.1fr);
     align-items: stretch;
     min-height: 112px;
+    height: 100%;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.11);
     border-radius: 17px;
@@ -4473,6 +4474,7 @@ iframe:focus-visible,
 }
 
 .hero-project-preview-media {
+    position: relative;
     display: block;
     min-width: 0;
     overflow: hidden;
@@ -4480,10 +4482,16 @@ iframe:focus-visible,
 }
 
 .hero-project-preview-media img {
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.hero-project-preview-media--phone img {
+    object-position: center 10%;
 }
 
 .hero-project-preview-copy {
@@ -4518,7 +4526,7 @@ iframe:focus-visible,
 
 .project-relationships {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.9rem;
     margin: 0 0 2rem;
     padding: 0;
@@ -4713,6 +4721,42 @@ iframe:focus-visible,
     margin-bottom: 1.5rem;
 }
 
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.95rem;
+    border: 1px solid rgba(215, 187, 116, 0.38);
+    border-radius: 999px;
+    background: rgba(215, 187, 116, 0.08);
+    color: #e5ca88;
+    font-size: 0.76rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.project-card-phone {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.project-card-phone .project-header {
+    flex-direction: column;
+}
+
+.project-card-phone .project-media {
+    min-height: 600px;
+    aspect-ratio: auto;
+}
+
+.project-card-phone .project-media .project-media-frame-image {
+    object-fit: contain;
+    object-position: center;
+    padding: 1.5rem;
+    background: #101313;
+}
+
 @media (max-width: 960px) {
     #projects.section {
         padding-top: 3.5rem;
@@ -4720,5 +4764,16 @@ iframe:focus-visible,
 
     #projects .section-title {
         font-size: clamp(2.3rem, 7vw, 3.6rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card-phone {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-card-phone .project-media {
+        min-height: 0;
+        aspect-ratio: 4 / 5;
     }
 }
