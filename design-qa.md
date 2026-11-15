@@ -19,9 +19,11 @@ Evidence directory: `/Users/brandont/Developer/output/portfolio-editorial-202611
 | `implementation-normalized.jpg`, `comparison-final.jpg` | Normalized comparison against the selected reference |
 | `comparison-hero.jpg`, `comparison-caption.jpg` | Focused typography, portrait, image and caption comparison |
 | `mobile-final.jpg`, `mobile-gallery.jpg` | Narrow layout and usable project dialog |
+| `mobile-disclosures.jpg` | Mobile disclosure marker and expanded MetaTable details |
 | `tablet.jpg` | Loaded intermediate-width layout |
 | `portrait-400-black.png` | White ribbing, identity, hair, alpha edges, no glasses |
 | `gallery-desktop.jpg` | Desktop project preview and captured interface |
+| `live-desktop.jpg`, `live-mobile.jpg`, `live-final.jpg`, `live-gallery.jpg` | Published hero, narrow layout, and working scrollable preview |
 
 Desktop viewport requested: 1440 × 1000. Chrome produced a 1425 × 990 viewport capture. The final full-page capture was cropped from the top to the reference's aspect ratio and resized to 607 × 1280 for the side-by-side comparison; no content was rearranged. The comparison represents the reference's visible opening sequence, rather than the entire longer implementation.
 
@@ -48,6 +50,7 @@ Intentional differences from the selected generated image: the requested white s
 | P2 | Closing a gallery opened from a caption returned focus to the image above. | Return focus to the actual caption trigger; rechecked Query on desktop and Afternoon Adventure on mobile. |
 | P2 | Back-to-top anchored below the navigation. | Moved the top anchor to the body; checked header position at desktop and mobile widths. |
 | P2 | Expandable rows needed a clearer affordance. | Restored native disclosure markers and verified project, experience, technical background, and education expansion. |
+| P2 | Production redirected captured `index.html` URLs to directory URLs, so the exact loaded-URL check never revealed the scrollable view. | Converted all six capture references to canonical directory URLs and refreshed the data cache key. Rechecked public and staff captures locally and on the live custom domain; both reached the ready state. |
 
 No open P0, P1, or P2 findings remain.
 
@@ -58,6 +61,16 @@ No open P0, P1, or P2 findings remain.
 - Tablet: loaded layout, image visibility, and overflow checks passed.
 - Browser console after local interactions: no warnings or errors.
 - JavaScript syntax, prerender consistency, crawlability, accessibility validation, and whitespace checks passed.
+
+## Production verification
+
+- Published application commit: `33db7eabcf4c711a2e653439c4fdb55b86a5d9fa`.
+- Cloudflare Pages production deployment: `d0c08e79-aca2-473f-81fa-33e2718bba75`, API status `success`.
+- `https://brandontemple.com/` and `https://www.brandontemple.com/` returned the updated content with HTTP 200.
+- Published CSS, JavaScript, portrait, and social preview bytes matched the checked local files. After the capture correction, the final data script was checked again.
+- Live desktop and mobile layout checks passed. The public and staff scrollable captures reached the ready state, with the staff view saved in `live-gallery.jpg`.
+- Live browser console returned no warnings or errors. The temporary viewport override was reset and the published page left open.
+- Deployment used the public file allowlist only; this QA report and local development files were excluded.
 
 ## Final result
 
