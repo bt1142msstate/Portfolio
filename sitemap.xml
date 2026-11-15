@@ -7,28 +7,7 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://brandontemple.com/assets/images/brandon-profile-photo.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://brandontemple.com/assets/images/brandon-profile-photo-square.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-4x3.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://brandontemple.com/assets/images/brandon-vashun-temple-profile-photo-16x9.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://brandontemple.com/assets/images/brandon-illustrated-profile-photo.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://brandontemple.com/assets/images/social-preview-editorial.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://brandontemple.com/assets/images/brandon-white-ribbed-portrait.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://brandontemple.com/assets/images/social-preview.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://brandontemple.com/assets/images/projects/afternoon-adventure-dashboard.webp</image:loc>
@@ -87,9 +66,6 @@
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://brandontemple.com/assets/images/social-preview.png</image:loc>
-    </image:image>
   </url>
   <url>
     <loc>https://brandontemple.com/resume/brandon-temple-resume.pdf</loc>
@@ -109,8 +85,4 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
-    <url>
-        <loc>https://brandontemple.com/assets/images/brandon-natural-white-ribbed-portrait.webp</loc>
-        <lastmod>2026-11-15</lastmod>
-    </url>
 </urlset>

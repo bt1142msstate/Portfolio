@@ -42,7 +42,7 @@ Then open `http://127.0.0.1:8000`.
 
 ## Project Images
 
-The homepage displays original project captures at their natural proportions. The first capture stays still; selecting the image or "View project" opens the full gallery and available scrollable demonstrations. The hero uses `assets/images/brandon-natural-white-ribbed-portrait.webp`.
+The homepage displays original project captures at their natural proportions. The first capture stays still; selecting the image or "View project" opens the full gallery and available scrollable demonstrations. The hero is typography-led, with no portrait.
 
 The older image-variant generator remains available for other framed uses:
 
