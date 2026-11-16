@@ -1,4 +1,5 @@
 (function () {
+    var projectMediaVersion = "20260729-accessibility-policies";
 
     function escapeHtml(value) {
         return String(value)
@@ -496,16 +497,6 @@
         }
 
         document.addEventListener("click", function (event) {
-            var projectOpen = event.target.closest("[data-project-open]");
-            if (projectOpen) {
-                var projectCard = document.getElementById(projectOpen.getAttribute("data-project-open"));
-                var firstMedia = projectCard && projectCard.querySelector("[data-project-media-trigger]");
-                if (firstMedia) {
-                    openProjectMediaOverlay(firstMedia);
-                    activeProjectMediaTrigger = projectOpen;
-                }
-                return;
-            }
             var mediaTrigger = event.target.closest("[data-project-media-trigger]");
             if (mediaTrigger) {
                 event.preventDefault();
@@ -621,65 +612,349 @@
         return project.liveUrl || (hasPublicRepository(project) ? project.githubUrl : "");
     }
 
+    function getProjectMediaVariants(url) {
+        var sourcePath = String(url).split("?")[0];
+        var stem = sourcePath.replace(/\.webp$/i, "");
+        var version = "?v=" + projectMediaVersion;
+
+        return {
+            portrait: stem + "--4x5.webp" + version,
+            standard: stem + "--4x3.webp" + version,
+            wide: stem + "--16x10.webp" + version,
+            square: stem + "--1x1.webp" + version
+        };
+    }
+
     function getProjectMedia(project) {
         var media = [];
-        if (project.mediaUrl) media.push({
-            url: project.mediaUrl,
-            alt: project.mediaAlt || (project.title + " interface"),
-            title: project.mediaTitle || project.mediaAlt || project.title,
-            description: project.mediaDescription || project.siteDescription || "",
-            width: project.mediaWidth || 1440,
-            height: project.mediaHeight || 900,
-            captureUrl: project.mediaCaptureUrl || ""
-        });
+
+        if (project.mediaUrl) {
+            media.push({
+                url: project.mediaUrl,
+                alt: project.mediaAlt || (project.title + " interface"),
+                title: project.mediaTitle || project.mediaAlt || (project.title + " interface"),
+                description: project.mediaDescription || project.siteDescription || "",
+                width: project.mediaWidth || 1200,
+                height: project.mediaHeight || 750,
+                fit: project.mediaFit || "cover",
+                captureUrl: project.mediaCaptureUrl || "",
+                variants: getProjectMediaVariants(project.mediaUrl)
+            });
+        }
+
         (project.mediaAlternates || []).forEach(function (item) {
-            if (item.url) media.push(item);
+            if (item.url) {
+                media.push({
+                    url: item.url,
+                    alt: item.alt || (project.title + " project view"),
+                    title: item.title || item.alt || (project.title + " project view"),
+                    description: item.description || project.siteDescription || "",
+                    width: item.width || 1200,
+                    height: item.height || 750,
+                    fit: item.fit || "cover",
+                    captureUrl: item.captureUrl || "",
+                    variants: getProjectMediaVariants(item.url)
+                });
+            }
         });
+
         return media;
     }
 
-    function renderProjectVisual(project, eager) {
+    function renderProjectMediaFrame(item, index, project, tier) {
+        var activeClass = index === 0 ? " is-active" : "";
+        var fitClass = item.fit === "contain" ? " project-media-frame-fit-contain" : "";
+        var isLead = tier === "selected" && project.siteOrder === 1;
+        var isEditorial = project.mediaEditorial === true;
+        var liveUrlAttribute = project.liveUrl
+            ? ' data-project-media-live-url="' + escapeHtml(project.liveUrl) + '"'
+            : "";
+        var sourceUrlAttribute = hasPublicRepository(project)
+            ? ' data-project-media-source-url="' + escapeHtml(project.githubUrl) + '"'
+            : "";
+        var captureUrlAttribute = item.captureUrl
+            ? ' data-project-media-capture-url="' + escapeHtml(item.captureUrl) + '"'
+            : "";
+        var viewCue = item.captureUrl ? "Explore capture" : "View feature";
+        var viewLabel = item.captureUrl ? "Explore scrollable capture: " : "View feature details: ";
+        var desktopSource;
+
+        if (isEditorial) {
+            desktopSource = '<source media="(min-width: 769px)" type="image/webp" srcset="' + escapeHtml(item.variants.portrait) + '">';
+        } else if (isLead) {
+            desktopSource = '<source media="(min-width: 1280px)" type="image/webp" srcset="' + escapeHtml(item.variants.portrait) + '">';
+        } else {
+            desktopSource = '<source media="(min-width: 1101px)" type="image/webp" srcset="' + escapeHtml(item.variants.wide) + '">';
+        }
+
+        return '<button class="project-media-frame project-media-responsive' + activeClass + fitClass + '" type="button" data-gallery-frame data-gallery-index="' + index + '" data-project-media-trigger data-project-media-source="' + escapeHtml(item.url) + '" data-project-media-project="' + escapeHtml(project.title) + '" data-project-media-title="' + escapeHtml(item.title) + '" data-project-media-description="' + escapeHtml(item.description) + '"' + captureUrlAttribute + liveUrlAttribute + sourceUrlAttribute + ' aria-hidden="' + (index === 0 ? "false" : "true") + '" aria-haspopup="dialog" aria-label="' + viewLabel + escapeHtml(item.title) + '" tabindex="' + (index === 0 ? "0" : "-1") + '">' +
+            '<picture class="project-media-picture">' +
+            desktopSource +
+            '<source media="(min-width: 481px)" type="image/webp" srcset="' + escapeHtml(item.variants.standard) + '">' +
+            '<img class="project-media-frame-image" src="' + escapeHtml(item.variants.square) + '" alt="' + escapeHtml(item.alt) + '" width="960" height="960" loading="lazy" decoding="async">' +
+            "</picture>" +
+            '<span class="project-media-view-cue" aria-hidden="true">' +
+            '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg>' +
+            "<span>" + viewCue + "</span>" +
+            "</span>" +
+            '<span class="project-media-frame-summary">' + escapeHtml(item.title + ". " + item.description) + "</span>" +
+            "</button>";
+    }
+
+    function renderProjectVisual(project, tier) {
         var media = getProjectMedia(project);
-        if (!media.length) return "";
-        var frames = media.map(function (item, index) {
-            var live = project.liveUrl ? ' data-project-media-live-url="' + escapeHtml(project.liveUrl) + '"' : "";
-            var source = hasPublicRepository(project) ? ' data-project-media-source-url="' + escapeHtml(project.githubUrl) + '"' : "";
-            var capture = item.captureUrl ? ' data-project-media-capture-url="' + escapeHtml(item.captureUrl) + '"' : "";
-            var title = item.title || item.alt || project.title;
-            return '<button class="project-media-frame' + (index === 0 ? ' is-active' : '') + '" type="button" data-project-media-trigger data-gallery-frame data-gallery-index="' + index + '" data-project-media-source="' + escapeHtml(item.url) + '" data-project-media-project="' + escapeHtml(project.title) + '" data-project-media-title="' + escapeHtml(title) + '" data-project-media-description="' + escapeHtml(item.description || project.siteDescription) + '"' + live + source + capture + ' aria-hidden="' + (index === 0 ? 'false' : 'true') + '" tabindex="' + (index === 0 ? '0' : '-1') + '" aria-haspopup="dialog" aria-label="View project details: ' + escapeHtml(title) + '">' +
-                '<img class="project-media-frame-image" src="' + escapeHtml(item.url) + '" alt="' + escapeHtml(item.alt || title) + '" width="' + (item.width || 1440) + '" height="' + (item.height || 900) + '" loading="' + (eager && index === 0 ? 'eager' : 'lazy') + '" decoding="async">' +
-                '<span class="project-media-view-cue" aria-hidden="true">Explore project ' + externalLinkIconSvg(15) + '</span></button>';
-        }).join("");
-        return '<figure class="project-media" data-project-gallery role="group" aria-label="Views of ' + escapeHtml(project.title) + '">' + frames + '</figure>';
+
+        if (media.length) {
+            var isGallery = media.length > 1;
+            var galleryClass = isGallery ? " project-media-gallery" : "";
+            var galleryAttributes = isGallery
+                ? ' data-project-gallery role="group" aria-label="Rotating views of ' + escapeHtml(project.title) + '"'
+                : "";
+            var frames = media.map(function (item, index) {
+                return renderProjectMediaFrame(item, index, project, tier);
+            }).join("");
+            var controls = isGallery
+                ? '<div class="project-gallery-controls">' +
+                    '<span class="project-gallery-count" data-gallery-count aria-hidden="true">1 / ' + media.length + "</span>" +
+                    '<span class="project-gallery-dots">' + media.map(function (item, index) {
+                        return '<button class="project-gallery-dot' + (index === 0 ? " is-active" : "") + '" type="button" data-gallery-dot="' + index + '" aria-label="Show image ' + (index + 1) + " of " + media.length + ": " + escapeHtml(item.title) + '"' + (index === 0 ? ' aria-current="true"' : "") + "></button>";
+                    }).join("") + "</span>" +
+                    '<button class="project-gallery-toggle" type="button" data-gallery-toggle aria-pressed="false" aria-label="Pause image rotation for ' + escapeHtml(project.title) + '">' +
+                    '<svg class="project-gallery-pause-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg>' +
+                    '<svg class="project-gallery-play-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2.5 1.2 10 6l-7.5 4.8z"/></svg>' +
+                    "</button>" +
+                    "</div>"
+                : "";
+
+            return '<figure class="project-media' + galleryClass + '"' + galleryAttributes + ">" + frames + controls + "</figure>";
+        }
+
+        if (project.visualVariant === "local-ai") {
+            var bars = [36, 58, 82, 48, 72, 96, 62, 42, 88, 70, 52, 92, 66, 38, 78, 56, 86, 46].map(function (height) {
+                return '<span style="--wave-height:' + height + '%"></span>';
+            }).join("");
+            return '<div class="project-media project-media-local-ai" aria-hidden="true">' +
+                '<div class="local-ai-status"><span></span>Private native build</div>' +
+                '<div class="local-ai-waveform">' + bars + "</div>" +
+                '<div class="local-ai-flow"><strong>Capture</strong><span>Transcript</span><span>Summary</span></div>' +
+                '<p>Local processing on Apple silicon</p>' +
+                "</div>";
+        }
+
+        return "";
+    }
+
+    function setupProjectGalleries() {
+        var galleries = Array.prototype.slice.call(document.querySelectorAll("[data-project-gallery]"));
+        if (!galleries.length) {
+            return;
+        }
+
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var states = galleries.map(function (gallery, galleryIndex) {
+            var frames = Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-frame]"));
+            var card = gallery.closest(".project-card");
+            var title = card && card.querySelector("h3") ? card.querySelector("h3").textContent : "project";
+            return {
+                gallery: gallery,
+                frames: frames,
+                dots: Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-dot]")),
+                count: gallery.querySelector("[data-gallery-count]"),
+                toggle: gallery.querySelector("[data-gallery-toggle]"),
+                title: title,
+                index: 0,
+                interval: 5200 + ((galleryIndex % 3) * 350),
+                timer: 0,
+                inViewport: false,
+                paused: false,
+                interactionPaused: false
+            };
+        });
+
+        function clearGalleryTimer(state) {
+            if (state.timer) {
+                window.clearTimeout(state.timer);
+                state.timer = 0;
+            }
+        }
+
+        function showGalleryFrame(state, nextIndex) {
+            state.index = nextIndex;
+            state.frames.forEach(function (frame, index) {
+                var isActive = index === nextIndex;
+                frame.classList.toggle("is-active", isActive);
+                frame.setAttribute("aria-hidden", isActive ? "false" : "true");
+                frame.tabIndex = isActive ? 0 : -1;
+            });
+            state.dots.forEach(function (dot, index) {
+                var isActive = index === nextIndex;
+                dot.classList.toggle("is-active", isActive);
+                if (isActive) {
+                    dot.setAttribute("aria-current", "true");
+                } else {
+                    dot.removeAttribute("aria-current");
+                }
+            });
+            if (state.count) {
+                state.count.textContent = (nextIndex + 1) + " / " + state.frames.length;
+            }
+        }
+
+        function scheduleGallery(state) {
+            clearGalleryTimer(state);
+            if (reduceMotion.matches || state.paused || state.interactionPaused || !state.inViewport || document.hidden || document.body.classList.contains("project-media-overlay-open")) {
+                return;
+            }
+
+            state.timer = window.setTimeout(function () {
+                if (document.body.classList.contains("project-media-overlay-open")) {
+                    scheduleGallery(state);
+                    return;
+                }
+                var nextIndex = (state.index + 1) % state.frames.length;
+                var nextFrame = state.frames[nextIndex];
+                var nextImage = nextFrame.matches("img") ? nextFrame : nextFrame.querySelector("img");
+                if (nextImage && nextImage.complete && nextImage.naturalWidth) {
+                    showGalleryFrame(state, nextIndex);
+                }
+                scheduleGallery(state);
+            }, state.interval);
+        }
+
+        function setGalleryPaused(state, paused) {
+            state.paused = paused;
+            state.gallery.classList.toggle("is-paused", paused);
+            if (state.toggle) {
+                state.toggle.setAttribute("aria-pressed", paused ? "true" : "false");
+                state.toggle.setAttribute("aria-label", (paused ? "Resume" : "Pause") + " image rotation for " + state.title);
+            }
+            scheduleGallery(state);
+        }
+
+        states.forEach(function (state) {
+            state.dots.forEach(function (dot, index) {
+                dot.addEventListener("click", function () {
+                    showGalleryFrame(state, index);
+                    setGalleryPaused(state, true);
+                });
+            });
+            if (state.toggle) {
+                state.toggle.addEventListener("click", function () {
+                    setGalleryPaused(state, !state.paused);
+                });
+            }
+
+            state.gallery.addEventListener("mouseenter", function () {
+                state.interactionPaused = true;
+                scheduleGallery(state);
+            });
+            state.gallery.addEventListener("mouseleave", function () {
+                state.interactionPaused = false;
+                scheduleGallery(state);
+            });
+            state.gallery.addEventListener("focusin", function () {
+                state.interactionPaused = true;
+                scheduleGallery(state);
+            });
+            state.gallery.addEventListener("focusout", function (event) {
+                if (!state.gallery.contains(event.relatedTarget)) {
+                    state.interactionPaused = false;
+                    scheduleGallery(state);
+                }
+            });
+        });
+
+        if ("IntersectionObserver" in window) {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    var state = states.find(function (candidate) {
+                        return candidate.gallery === entry.target;
+                    });
+                    if (!state) {
+                        return;
+                    }
+                    state.inViewport = entry.isIntersecting && entry.intersectionRatio > 0.12;
+                    scheduleGallery(state);
+                });
+            }, { threshold: [0, 0.12, 0.4] });
+
+            states.forEach(function (state) {
+                observer.observe(state.gallery);
+            });
+        } else {
+            states.forEach(function (state) {
+                state.inViewport = true;
+                scheduleGallery(state);
+            });
+        }
+
+        document.addEventListener("visibilitychange", function () {
+            states.forEach(scheduleGallery);
+        });
+        document.addEventListener("projectmedia:opened", function () {
+            states.forEach(clearGalleryTimer);
+        });
+        document.addEventListener("projectmedia:closed", function () {
+            states.forEach(scheduleGallery);
+        });
+
+        var handleMotionPreference = function () {
+            states.forEach(function (state) {
+                if (reduceMotion.matches) {
+                    showGalleryFrame(state, 0);
+                }
+                scheduleGallery(state);
+            });
+        };
+        if (reduceMotion.addEventListener) {
+            reduceMotion.addEventListener("change", handleMotionPreference);
+        } else if (reduceMotion.addListener) {
+            reduceMotion.addListener(handleMotionPreference);
+        }
     }
 
     function renderProjectActions(project) {
         var actions = [];
-        if (getProjectMedia(project).length) actions.push('<button class="project-action" type="button" data-project-open="project-' + slugify(project.title) + '" aria-haspopup="dialog" aria-label="View project: ' + escapeHtml(project.title) + '">View project ' + externalLinkIconSvg(16) + '</button>');
-        if (project.liveUrl) actions.push('<a class="project-action" href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" aria-label="Open the live ' + escapeHtml(project.title) + ' project in a new tab">Live project ' + externalLinkIconSvg(16) + '</a>');
-        if (hasPublicRepository(project)) actions.push('<a class="project-action" href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" aria-label="View source for ' + escapeHtml(project.title) + ' in a new tab">Source ' + externalLinkIconSvg(16) + '</a>');
-        if (!actions.length) return '';
-        return '<div class="project-actions">' + actions.join("") + '</div>';
+        if (project.liveUrl) {
+            actions.push('<a href="' + escapeHtml(project.liveUrl) + '" target="_blank" rel="noopener" class="project-action" aria-label="Open the live ' + escapeHtml(project.title) + ' project in a new tab">Live site ' + externalLinkIconSvg(16) + "</a>");
+        }
+        if (hasPublicRepository(project)) {
+            actions.push('<a href="' + escapeHtml(project.githubUrl) + '" target="_blank" rel="noopener" class="project-action" aria-label="View source for ' + escapeHtml(project.title) + ' in a new tab">Source ' + githubIconSvg(16) + "</a>");
+        }
+        if (!actions.length && project.repositoryVisibility === "private") {
+            actions.push('<span class="project-private">Private project</span>');
+        }
+        return '<div class="project-actions">' + actions.join("") + "</div>";
     }
 
-    function renderProjectCard(data, project) {
-        var phone = project.mediaPresentation === 'phone';
-        var id = 'project-' + slugify(project.title);
-        var status = project.siteStatus ? '<span class="project-status">' + escapeHtml(project.siteStatus) + '</span>' : '';
-        var context = project.siteCaption ? '<p class="project-context">' + escapeHtml(project.siteCaption) + '</p>' : '';
-        var summary = project.siteSummary ? '<p class="project-summary">' + escapeHtml(project.siteSummary) + '</p>' : '';
-        var action = '<button class="project-action" type="button" data-project-open="' + id + '" aria-haspopup="dialog" aria-label="View project: ' + escapeHtml(project.displayTitle || project.title) + '">View project ' + externalLinkIconSvg(16) + '</button>';
-        var heading = '<h3>' + escapeHtml(project.displayTitle || project.title) + '</h3>';
-        var copy = status + '<div class="project-caption">' + heading + context + '</div>' + summary + action;
-        return '<article class="project-card project-card-selected' + (phone ? ' project-card-phone' : '') + '" id="' + id + '">' +
-            renderProjectVisual(project, project.siteOrder === 1) + '<div class="project-body">' + copy + '</div></article>';
-    }
+    function renderProjectCard(data, project, tier) {
+        var isSelected = tier === "selected";
+        var projectClass = "project-card project-card-" + tier + (project.caseStudy ? " project-card-case-study" : "");
+        var highlights = isSelected && project.siteHighlights ? project.siteHighlights.slice(0, 3) : [];
+        var highlightsMarkup = highlights.length
+            ? '<ul class="project-highlights">' + renderList(highlights) + "</ul>"
+            : "";
+        var outcomeMarkup = isSelected && project.caseStudyOutcome
+            ? '<p class="project-case-study-outcome">' + escapeHtml(project.caseStudyOutcome) + "</p>"
+            : "";
+        var tags = (project.siteTags || []).slice(0, isSelected ? 7 : 5);
 
-    function renderAdditionalProject(project) {
-        var visual = renderProjectVisual(project, false);
-        return '<article class="project-card project-secondary' + (visual ? '' : ' project-secondary-text') + '" id="project-' + slugify(project.title) + '">' + visual +
-            '<div class="project-body"><h3>' + escapeHtml(project.title) + '</h3><p class="project-context">' + escapeHtml(project.siteIndexLabel || project.siteType) + '</p>' +
-            '<p class="project-summary">' + escapeHtml(project.siteDescription) + '</p>' + renderProjectActions(project) + '</div></article>';
+        return '<article class="' + projectClass + '" id="project-' + slugify(project.title) + '">' +
+            renderProjectVisual(project, tier) +
+            '<div class="project-body">' +
+            '<div class="project-header">' +
+            '<div><p class="project-type">' + escapeHtml(project.siteType) + "</p>" +
+            "<h3>" + escapeHtml(project.title) + "</h3></div>" +
+            renderProjectActions(project) +
+            "</div>" +
+            '<p class="project-description">' + escapeHtml(project.siteDescription) + "</p>" +
+            outcomeMarkup +
+            highlightsMarkup +
+            '<div class="project-tags">' + tags.map(function (tag) {
+                return renderSkillPill(data, tag, "project-tag");
+            }).join("") + "</div>" +
+            "</div>" +
+            "</article>";
     }
 
     function renderProjectStructuredData(data) {
@@ -759,6 +1034,7 @@
 
     function renderSite() {
         var data = window.profileData;
+        var heroProof = document.getElementById("hero-proof");
         var aboutText = document.getElementById("about-text");
         var skillsGrid = document.getElementById("skills-grid");
         var experienceTimeline = document.getElementById("experience-timeline");
@@ -767,30 +1043,135 @@
         var contactIntro = document.getElementById("contact-intro");
         var contactActions = document.getElementById("contact-actions");
         var contactInfo = document.getElementById("contact-info");
-        if (!aboutText || !skillsGrid || !experienceTimeline || !projectsGrid || !educationGrid || !contactIntro || !contactActions || !contactInfo) return;
+        if (!aboutText || !skillsGrid || !experienceTimeline || !projectsGrid || !educationGrid || !contactIntro || !contactActions || !contactInfo) {
+            return;
+        }
 
-        aboutText.innerHTML = data.site.about.map(function (paragraph) { return '<p>' + escapeHtml(paragraph) + '</p>'; }).join('');
+        aboutText.innerHTML = data.site.about.map(function (paragraph) {
+            return "<p>" + escapeHtml(paragraph) + "</p>";
+        }).join("");
+
+        if (heroProof && data.site.proofPoints) {
+            heroProof.innerHTML = data.site.proofPoints.map(function (point) {
+                return '<li class="hero-proof-item">' +
+                    "<strong>" + escapeHtml(point.value) + "</strong>" +
+                    "<span>" + escapeHtml(point.label) + "</span>" +
+                    "</li>";
+            }).join("");
+        }
+
         skillsGrid.innerHTML = data.site.skills.map(function (group) {
-            return '<section class="skill-category"><h4>' + escapeHtml(group.title) + '</h4><p>' + group.items.map(escapeHtml).join(', ') + '</p></section>';
-        }).join('');
-        experienceTimeline.innerHTML = data.experience.professional.map(function (role) {
-            var links = role.links ? '<div class="timeline-role-links">' + role.links.map(function (link) {
-                return '<a href="' + escapeHtml(link.url) + '" target="_blank" rel="noopener">' + escapeHtml(link.label) + '</a>';
-            }).join('') + '</div>' : '';
-            return '<article class="experience-row"><header><h3>' + escapeHtml(role.title) + '</h3><p class="experience-meta">' + escapeHtml(role.organization + ' · ' + role.date) + '</p></header>' + links + '<ul class="timeline-list">' + renderList(role.bullets) + '</ul></article>';
-        }).join('');
+            return '<div class="skill-category">' +
+                "<h3>" + escapeHtml(group.title) + "</h3>" +
+                '<div class="skill-tags">' +
+                group.items.map(function (item) {
+                    return renderSkillPill(data, item, "skill-pill");
+                }).join("") +
+                "</div>" +
+                "</div>";
+        }).join("");
 
-        var projects = data.projects.filter(function (project) { return project.featuredOnSite; }).sort(function (a, b) { return (a.siteOrder || 100) - (b.siteOrder || 100); });
-        projectsGrid.innerHTML = '<div class="project-showcase">' + projects.filter(function (project) { return project.siteTier === 'selected'; }).map(function (project) { return renderProjectCard(data, project); }).join('') + '</div>' +
-            '<section class="project-more" aria-labelledby="more-work-title"><h2 id="more-work-title">More work</h2><div class="project-more-list">' + projects.filter(function (project) { return project.siteTier !== 'selected'; }).map(renderAdditionalProject).join('') + '</div></section>';
+        setupSkillOverlay(data);
+
+        experienceTimeline.innerHTML = data.experience.professional.map(function (role) {
+            var roleLinks = role.links && role.links.length
+                ? '<div class="timeline-links">' + role.links.map(function (link) {
+                    return '<a href="' + escapeHtml(link.url) + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + escapeHtml(link.label) + ' in a new tab">' + escapeHtml(link.label) + externalLinkIconSvg(14) + "</a>";
+                }).join("") + "</div>"
+                : "";
+            return '<div class="timeline-item">' +
+                '<div class="timeline-marker"></div>' +
+                '<div class="timeline-content">' +
+                '<div class="timeline-header">' +
+                "<h3>" + escapeHtml(role.title) + "</h3>" +
+                '<span class="timeline-date">' + escapeHtml(role.date) + "</span>" +
+                "</div>" +
+                '<p class="timeline-company">' + escapeHtml(role.organization + " | " + role.location) + "</p>" +
+                roleLinks +
+                '<ul class="timeline-list">' + renderList(role.bullets) + "</ul>" +
+                "</div>" +
+                "</div>";
+        }).join("");
+
+        var featuredProjects = data.projects.filter(function (project) {
+            return project.featuredOnSite;
+        });
+        var selectedProjects = featuredProjects.filter(function (project) {
+            return project.siteTier === "selected";
+        }).sort(function (first, second) {
+            return (first.siteOrder || 100) - (second.siteOrder || 100);
+        });
+        var additionalProjects = featuredProjects.filter(function (project) {
+            return project.siteTier !== "selected";
+        });
+        projectsGrid.innerHTML =
+            '<div class="project-showcase">' + selectedProjects.map(function (project) {
+                return renderProjectCard(data, project, "selected");
+            }).join("") + "</div>" +
+            '<div class="project-more">' +
+            '<div class="project-more-heading"><p class="section-kicker">More Work</p><h3>Additional products and experiments</h3></div>' +
+            '<div class="project-more-grid">' + additionalProjects.map(function (project) {
+                return renderProjectCard(data, project, "additional");
+            }).join("") + "</div>" +
+            "</div>";
+
+        setupProjectGalleries();
         setupProjectMediaOverlay();
 
         educationGrid.innerHTML = data.education.map(function (item) {
-            return '<div class="education-card"><h4>' + escapeHtml(item.degree) + '</h4><p>' + escapeHtml(item.school) + '</p><p>' + escapeHtml(item.date) + '</p></div>';
-        }).join('');
+            var inlineHonors = item.inlineHonors ? '<p class="education-honors">' + escapeHtml(item.inlineHonors) + "</p>" : "";
+            var honorsList = item.honorsLines ? '<p class="education-honors-list">' + item.honorsLines.map(escapeHtml).join("<br>") + "</p>" : "";
+            return '<div class="education-card">' +
+                '<div class="education-main"><h3>' + escapeHtml(item.degree) + "</h3>" + inlineHonors +
+                '<p class="education-school">' + escapeHtml(item.school) + "</p></div>" +
+                '<div class="education-meta"><p class="education-date">' + escapeHtml(item.date) + "</p>" +
+                '<p class="education-location">' + escapeHtml(item.location) + "</p>" +
+                '<p class="education-gpa">GPA: ' + escapeHtml(item.gpa) + "</p></div>" +
+                '<div class="education-details">' + honorsList + "</div>" +
+                "</div>";
+        }).join("");
+
         contactIntro.textContent = data.site.contactIntro;
-        contactActions.innerHTML = '<a href="mailto:' + escapeHtml(data.contact.email) + '" class="btn btn-primary">Email me</a><a class="text-link" href="/resume/brandon-temple-resume.pdf" download type="application/pdf">Download resume</a>';
-        contactInfo.innerHTML = '<a href="' + escapeHtml(data.contact.githubUrl) + '" target="_blank" rel="me noopener">GitHub</a><a href="' + escapeHtml(data.contact.linkedinUrl) + '" target="_blank" rel="me noopener">LinkedIn</a>';
+        contactActions.innerHTML =
+            '<a href="mailto:' + escapeHtml(data.contact.email) + '" class="btn btn-primary">Email Me</a>' +
+            '<a href="/resume/brandon-temple-resume.pdf" class="btn btn-secondary" download type="application/pdf">Download Resume</a>';
+        contactInfo.innerHTML =
+            '<a href="mailto:' + escapeHtml(data.contact.email) + '" class="contact-item">' +
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">' +
+            '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>' +
+            '<polyline points="22,6 12,13 2,6"/>' +
+            "</svg>" +
+            "<span>" + escapeHtml(data.contact.email) + "</span>" +
+            "</a>" +
+            '<a href="' + escapeHtml(data.contact.githubUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
+            githubIconSvg(24) +
+            "<span>GitHub</span>" +
+            "</a>" +
+            '<a href="' + escapeHtml(data.contact.linkedinUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
+            linkedinIconSvg(24) +
+            "<span>LinkedIn</span>" +
+            "</a>" +
+            '<a href="' + escapeHtml(data.contact.instagramUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
+            instagramIconSvg(24) +
+            "<span>Instagram</span>" +
+            "</a>" +
+            '<a href="' + escapeHtml(data.contact.redditUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
+            redditIconSvg(24) +
+            "<span>Reddit</span>" +
+            "</a>" +
+            '<a href="' + escapeHtml(data.contact.indeedUrl) + '" target="_blank" rel="me noopener" class="contact-item">' +
+            indeedIconSvg(24) +
+            "<span>Indeed</span>" +
+            "</a>" +
+            '<div class="contact-item">' +
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">' +
+            '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>' +
+            '<circle cx="12" cy="10" r="3"/>' +
+            "</svg>" +
+            "<span>" + escapeHtml(data.contact.location) + "</span>" +
+            "</div>";
+
+        scheduleBalanceCardGrids();
         renderProjectStructuredData(data);
     }
 

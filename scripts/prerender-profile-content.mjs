@@ -178,6 +178,7 @@ function updateFile(relativePath, fragments) {
 }
 
 const site = renderProfilePage("site", [
+    "hero-proof",
     "about-text",
     "skills-grid",
     "experience-timeline",
@@ -190,6 +191,7 @@ const site = renderProfilePage("site", [
 const projectStructuredData = site.getAppendedElement("project-structured-data");
 const siteChanged = updateFile("index.html", {
     "project-structured-data": `<script id="project-structured-data" type="application/ld+json">\n${JSON.stringify(JSON.parse(projectStructuredData.text), null, 4)}\n</script>`,
+    "hero-proof": site.getElement("hero-proof").innerHTML,
     about: site.getElement("about-text").innerHTML,
     experience: site.getElement("experience-timeline").innerHTML,
     projects: site.getElement("projects-grid").innerHTML,

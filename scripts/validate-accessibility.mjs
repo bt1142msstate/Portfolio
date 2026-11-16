@@ -15,7 +15,6 @@ const pages = [
     ["accessibility/index.html", fs.readFileSync(path.join(rootDirectory, "accessibility/index.html"), "utf8")]
 ];
 const siteCss = fs.readFileSync(path.join(rootDirectory, "assets/css/site.css"), "utf8");
-const portfolioCss = fs.readFileSync(path.join(rootDirectory, "assets/css/portfolio.css"), "utf8");
 const siteScript = fs.readFileSync(path.join(rootDirectory, "assets/js/site.js"), "utf8");
 const profileScript = fs.readFileSync(path.join(rootDirectory, "assets/js/profile-render.js"), "utf8");
 
@@ -40,22 +39,21 @@ pages.forEach(([fileName, source]) => {
 });
 
 const indexHtml = pages[0][1];
-assert(/aria-label=["']Primary navigation["']/i.test(indexHtml), "Primary navigation is missing its accessible label.");
-assert(/id=["']primary-navigation["']/i.test(indexHtml), "Primary navigation links are missing.");
-assert(/role=["']dialog["'][^>]*aria-modal=["']true["']/i.test(indexHtml), "Project details must use modal dialog semantics.");
+assert(/aria-controls=["']primary-navigation["']/i.test(indexHtml), "The mobile menu control is not associated with the primary navigation.");
+assert(/aria-expanded=["']false["']/i.test(indexHtml), "The mobile menu control is missing its collapsed state.");
+assert(/role=["']dialog["'][^>]*aria-modal=["']true["']/i.test(indexHtml), "Project and skill details must use modal dialog semantics.");
 assert(!/<iframe\b[^>]*\btitle=["']\s*["']/i.test(indexHtml), "An iframe has an empty title.");
 
-[siteCss, portfolioCss].forEach((css) => {
-    assert(css.includes("@media (prefers-reduced-motion: reduce)"), "Reduced-motion styles are missing.");
-    assert(css.includes("@media (prefers-contrast: more)"), "Increased-contrast styles are missing.");
-    assert(css.includes("@media (forced-colors: active)"), "Forced-colors support is missing.");
-    assert(css.includes(":focus-visible"), "Visible keyboard focus styles are missing.");
-});
+assert(siteCss.includes("@media (prefers-reduced-motion: reduce)"), "Reduced-motion styles are missing.");
+assert(siteCss.includes("@media (prefers-contrast: more)"), "Increased-contrast styles are missing.");
+assert(siteCss.includes("@media (forced-colors: active)"), "Forced-colors support is missing.");
+assert(siteCss.includes(":focus-visible"), "Visible keyboard focus styles are missing.");
 
-assert(/event\.key === ["']Escape["']/.test(profileScript), "The project dialog cannot be dismissed with Escape.");
-assert(/setAttribute\(["']aria-current["'], ["']location["']\)/.test(siteScript), "Same-page navigation does not expose the current location.");
+assert(siteScript.includes('event.key === "Escape"'), "The mobile menu cannot be dismissed with Escape.");
+assert(siteScript.includes('aria-current", "location"'), "Same-page navigation does not expose the current location.");
 assert(profileScript.includes("trapModalFocus"), "Modal dialogs do not contain keyboard focus.");
 assert(profileScript.includes("setModalBackgroundInert"), "Modal dialogs do not make background content inert.");
+assert(profileScript.includes("interactionPaused"), "Automatic galleries do not pause during user interaction.");
 
 if (failures.length) {
     console.error(`Accessibility structure validation failed with ${failures.length} issue${failures.length === 1 ? "" : "s"}:`);

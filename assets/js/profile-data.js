@@ -17,10 +17,16 @@ window.profileData = {
     },
     site: {
         about: [
-            "I run Breauti LLC and Breauti Studio, building websites, apps, and operational software from the first requirements through launch and ongoing care.",
-            "At MSU Libraries, I develop internal tools and support 12 library systems across 76 branches and campus libraries. My work spans browser reporting, native apps, automation, and connected devices."
+            "I am Brandon Vashun Temple, the founder, owner, and software engineer behind Breauti LLC. Breauti develops its own fashion platform, while Breauti Studio is its founder-led digital product branch, helping clients plan, design, build, launch, and maintain custom websites, web and mobile apps, and practical digital systems. Breauti Studio can start from scratch or adapt a proven feature suite, such as the Education Suite, when that is the better foundation.",
+            "At MSU Libraries, I support 12 library systems and 76 branches and campus libraries. I built Query and MetaTable from staff needs, translating API, file-system, metadata, and reporting constraints into dependable workflows.",
+            "Across Breauti's own products and Breauti Studio client work, I have built a Three.js fashion customizer, a Firebase-backed service-delivery platform, and Afternoon Adventure's production operations system. I also build native and device products, using AI to accelerate implementation while keeping architecture, debugging, testing, and review human-led."
         ],
-        contactIntro: "Have a project or a software engineering role in mind? I’d like to hear about it.",
+        proofPoints: [
+            { value: "Founder", label: "Breauti LLC" },
+            { value: "12", label: "Library systems supported" },
+            { value: "76", label: "Branches and campus libraries" }
+        ],
+        contactIntro: "I'm interested in software engineering work where I can own useful systems from requirements and architecture through delivery, testing, and iteration.",
         skills: [
             {
                 title: "Programming Languages",
@@ -438,7 +444,6 @@ window.profileData = {
     projects: [
         {
             title: "Query",
-            siteCaption: "Reporting tools · MSU Libraries",
             githubUrl: "https://github.com/bt1142msstate/Query",
             liveUrl: "https://bt1142msstate.github.io/Query/",
             siteTier: "selected",
@@ -477,10 +482,9 @@ window.profileData = {
         },
         {
             title: "MetaTable",
-            siteIndexLabel: "File metadata scanner",
             githubUrl: "https://github.com/bt1142msstate/MetaTable",
-            siteTier: "additional",
-            siteOrder: 4,
+            siteTier: "selected",
+            siteOrder: 3,
             mediaUrl: "/assets/images/projects/metatable.webp?v=20260722-editorial",
             mediaAlt: "MetaTable desktop metadata scanner interface",
             mediaWidth: 1086,
@@ -502,15 +506,12 @@ window.profileData = {
         },
         {
             title: "Afternoon Adventure Website",
-            displayTitle: "Afternoon Adventure",
-            siteCaption: "Website & staff portal · Client project",
-            siteSummary: "A public website and connected family and staff workflows.",
             repositoryVisibility: "private",
             liveUrl: "https://afternoonadventure.org/",
             siteTier: "selected",
             siteOrder: 1,
             mediaUrl: "/assets/images/projects/afternoon-adventure-home.webp?v=20260727-studio-captures",
-            mediaCaptureUrl: "/showcase/afternoon-adventure/public/?v=20260727-scrollable-captures",
+            mediaCaptureUrl: "/showcase/afternoon-adventure/public/index.html?v=20260727-scrollable-captures",
             mediaAlt: "Afternoon Adventure public homepage with full desktop navigation and the learning center exterior",
             mediaTitle: "Responsive public program experience",
             mediaDescription: "The public site presents programs, enrollment, family resources, events, documents, and contact information in a responsive, crawlable experience backed by managed content.",
@@ -519,7 +520,7 @@ window.profileData = {
             mediaAlternates: [
                 {
                     url: "/assets/images/projects/afternoon-adventure-dashboard.webp?v=20260727-studio-captures",
-                    captureUrl: "/showcase/afternoon-adventure/dashboard/?v=20260727-scrollable-captures",
+                    captureUrl: "/showcase/afternoon-adventure/dashboard/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure staff operations dashboard with priority inbox and role-aware workspace tabs",
                     title: "Staff operations dashboard",
                     description: "This public-safe captured view shows the role-aware workspace for family questions, enrollment review, attendance, time clock, traffic, backups, utilities, forms, staff access, and site administration.",
@@ -528,7 +529,7 @@ window.profileData = {
                 },
                 {
                     url: "/assets/images/projects/afternoon-adventure-forms.webp?v=20260727-studio-captures",
-                    captureUrl: "/showcase/afternoon-adventure/forms/?v=20260727-scrollable-captures",
+                    captureUrl: "/showcase/afternoon-adventure/forms/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure family forms workspace with response totals and enrollment transportation form controls",
                     title: "Secure family forms and response tracking",
                     description: "Staff can build forms, share secure family links, send email reminders, track per-child responses, filter results, and export response summaries as PDFs.",
@@ -537,7 +538,7 @@ window.profileData = {
                 },
                 {
                     url: "/assets/images/projects/afternoon-adventure-attendance.webp?v=20260727-studio-captures",
-                    captureUrl: "/showcase/afternoon-adventure/attendance/?v=20260727-scrollable-captures",
+                    captureUrl: "/showcase/afternoon-adventure/attendance/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure daily attendance dashboard with roster totals and check-in status",
                     title: "Daily attendance operations",
                     description: "The daily roster combines date-based attendance, status totals, room and group workflows, check-in and check-out records, and audit-friendly reporting using fictional demonstration data.",
@@ -546,7 +547,7 @@ window.profileData = {
                 },
                 {
                     url: "/assets/images/projects/afternoon-adventure-time-clock.webp?v=20260723-aa-captures",
-                    captureUrl: "/showcase/afternoon-adventure/time-clock/?v=20260727-scrollable-captures",
+                    captureUrl: "/showcase/afternoon-adventure/time-clock/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure QR-verified staff time clock configuration",
                     title: "QR-verified staff time clock",
                     description: "The playground demonstrates rotating center QR codes, saved-code restoration, validity windows, printable QR PDFs, staff verification, and payroll-ready time records.",
@@ -555,7 +556,7 @@ window.profileData = {
                 },
                 {
                     url: "/assets/images/projects/afternoon-adventure-enrollment.webp?v=20260727-studio-captures",
-                    captureUrl: "/showcase/afternoon-adventure/enrollment/?v=20260727-scrollable-captures",
+                    captureUrl: "/showcase/afternoon-adventure/enrollment/index.html?v=20260727-scrollable-captures",
                     alt: "Afternoon Adventure desktop enrollment workflow with structured child and guardian information fields",
                     title: "Structured online enrollment",
                     description: "A responsive family workflow collects child, guardian, program, transportation, medical, and agreement details, then supports secure staff review and generated enrollment PDFs.",
@@ -580,48 +581,10 @@ window.profileData = {
             featuredOnResume: true
         },
         {
-            title: "USE Rideshare",
+            title: "Recorder",
             repositoryVisibility: "private",
             siteTier: "selected",
-            siteOrder: 3,
-            siteStatus: "Upcoming",
-            siteSummary: "A rideshare app in development for Up South Entertainment in Starkville, Mississippi.",
-            mediaPresentation: "phone",
-            mediaUrl: "/assets/images/projects/use-rider-booking.webp?v=20261115-use-preview",
-            mediaAlt: "USE iPhone development preview with the gold Up South Entertainment logo and pickup and destination fields",
-            mediaTitle: "Rider booking preview",
-            mediaDescription: "An early native iPhone preview of USE’s pickup and destination flow. Development screens are shown for this upcoming app; public launch is still ahead.",
-            mediaWidth: 1260,
-            mediaHeight: 2736,
-            mediaAlternates: [
-                {
-                    url: "/assets/images/projects/use-trip-tracking.webp?v=20261115-use-preview",
-                    alt: "USE rider trip preview showing a map, a fictional driver, and controls to find or message the driver",
-                    title: "Connected trip experience",
-                    description: "A development capture with a fictional driver and test GPS shows the shared trip map, driver details, and messaging entry points.",
-                    width: 1260,
-                    height: 2736
-                }
-            ],
-            siteType: "Client App in Development | Up South Entertainment",
-            siteDescription: "Upcoming rideshare app for Up South Entertainment in Starkville, Mississippi. I’m designing and developing connected rider, driver, and management experiences, from map-based booking and scheduling to trip coordination and shared chat.",
-            caseStudy: true,
-            caseStudyOutcome: "Developing the native iPhone experience and shared backend through a private pilot before public launch.",
-            siteHighlights: [
-                "Pickup and destination search, map pins, route previews, and scheduled ride requests",
-                "Connected rider and driver trip state, vehicle checks, location sharing, and chat",
-                "Management tools for driver access, vehicle setup, pricing, and ride policies"
-            ],
-            siteTags: ["Swift", "SwiftUI", "MapKit", "Core Location", "Cloudflare Workers", "Durable Objects", "JavaScript"],
-            featuredOnSite: true,
-            featuredOnResume: false
-        },
-        {
-            title: "Recorder",
-            siteIndexLabel: "Private native macOS app",
-            repositoryVisibility: "private",
-            siteTier: "additional",
-            siteOrder: 5,
+            siteOrder: 4,
             visualVariant: "local-ai",
             siteType: "Private Native macOS App | Local AI Capture Workspace",
             siteDescription: "SwiftUI macOS app that records a selected window with system audio, microphone, and optional camera, then creates searchable local transcripts, structured summaries, and optional visual notes without sending recordings to a hosted AI service.",
@@ -641,7 +604,6 @@ window.profileData = {
         },
         {
             title: "Ady Resolver",
-            siteIndexLabel: "Address resolution toolkit",
             githubUrl: "https://github.com/bt1142msstate/Ady-Resolver",
             siteTier: "additional",
             mediaUrl: "/assets/images/projects/ady-resolver.webp?v=20260722-visual-refine",
@@ -665,7 +627,6 @@ window.profileData = {
         },
         {
             title: "TeslaCamViewer",
-            siteIndexLabel: "Video & telemetry viewer",
             githubUrl: "https://github.com/bt1142msstate/TeslaCamViewer",
             liveUrl: "https://bt1142msstate.github.io/TeslaCamViewer/",
             mediaUrl: "/assets/images/projects/teslacam-viewer.webp?v=20260722-visual-refine",
@@ -698,7 +659,6 @@ window.profileData = {
         },
         {
             title: "Mac Window Arranger",
-            siteIndexLabel: "macOS window manager",
             githubUrl: "https://github.com/bt1142msstate/mac-window-arranger",
             mediaUrl: "/assets/images/projects/mac-window-arranger.webp?v=20260722-visual-refine",
             mediaAlt: "Mac Window Arranger resize workflow for a selected application",
@@ -729,11 +689,10 @@ window.profileData = {
         },
         {
             title: "Door Unlocker",
-            siteIndexLabel: "Hardware & native app prototype",
             githubUrl: "https://github.com/bt1142msstate/door-unlocker",
             liveUrl: "https://bt1142msstate.github.io/door-unlocker/",
-            siteTier: "additional",
-            siteOrder: 6,
+            siteTier: "selected",
+            siteOrder: 5,
             mediaUrl: "/assets/images/projects/door-unlocker-overview.webp?v=20260722-project-visuals",
             mediaAlt: "Door Unlocker technical overview showing the desk-test architecture and clean bench wiring system",
             mediaWidth: 1265,
@@ -765,7 +724,6 @@ window.profileData = {
         },
         {
             title: "HTMLConverter",
-            siteIndexLabel: "Batch PDF converter",
             githubUrl: "https://github.com/bt1142msstate/HTMLConverter",
             mediaUrl: "/assets/images/projects/html-converter.webp?v=20260722-visual-refine",
             mediaAlt: "HTMLConverter desktop interface with conversion and source controls",
@@ -786,7 +744,6 @@ window.profileData = {
         },
         {
             title: "connect4-ai",
-            siteIndexLabel: "Game AI",
             githubUrl: "https://github.com/bt1142msstate/connect4-ai",
             liveUrl: "https://bt1142msstate.github.io/connect4-ai/",
             mediaUrl: "/assets/images/projects/connect4-ai-gameplay.webp?v=20260727-connect4-responsive-media",
